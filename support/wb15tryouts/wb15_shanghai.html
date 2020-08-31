@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shanghai</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/shanghai.css" rel="stylesheet">
+<link href="css/wb15_shanghai.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="util.js"></script>
+<script src="carousel.js"></script>
+<script src="wb.panel.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#welcome']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#services1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services1').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#features']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_features').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#cardDeck']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#cardDeck').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#contactTop']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contactTop').offset().top }, 600, 'easeOutCirc');
+   });
+   $("#featuresCarousel").bootstrapcarousel({interval:3000, pause: false});
+   $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'top', toggle: true});
+   $("#PanelMenu1_markup ul li a").click(function(event)
+   {
+       $.panel.hide($("#PanelMenu1_panel"));
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_welcome').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerIcon">
+<div id="headerIcon"><i class="fa fa-undo"></i></div>
+</div>
+<div id="wb_headerLogo">
+<ul id="headerLogo">
+<li><a href="wb15_shanghai.html#services1">Shanghai</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerMenu">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" class="headerMenu-effect" href="wb15_shanghai.html#welcome" target="_self">HOME</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_shanghai.html#services1" target="_self">SERVICES</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_shanghai.html#features" target="_self">FEATURES</a>
+</li>
+<li><a role="menuitem" class="withsubmenu headerMenu-effect" href="wb15_shanghai.html#" target="_self">MY&nbsp;ACCOUNT</a>
+
+<ul role="menu">
+<li class="firstitem"><a role="menuitem" href="wb15_shanghai.html#features" target="_self">Downloads</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#features" target="_self">Profile</a>
+</li>
+<li class="lastitem"><a role="menuitem" href="wb15_shanghai.html#features" target="_self">Documentation</a>
+</li>
+</ul>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_shanghai.html#contactTop" target="_self">CONTACT</a>
+</li>
+</ul>
+
+</div>
+<a id="headerButton" href="https://www.wysiwygwebbuilder.com/purchase.html" target="_blank">BUY NOW</a>
+<div id="wb_PanelMenu1">
+<a href="wb15_shanghai.html#PanelMenu1_markup" id="PanelMenu1">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="PanelMenu1_markup">
+<ul role="menu">
+   <li role="menuitem"><a href="wb15_shanghai.html#welcome">HOME</a></li>
+   <li role="menuitem"><a href="wb15_shanghai.html#services1">SERVICES</a></li>
+   <li role="menuitem"><a href="wb15_shanghai.html#features">FEATURES</a></li>
+   <li role="menuitem"><a href="http://">MY ACCOUNT</a></li>
+   <li role="menuitem"><a href="wb15_shanghai.html#contactTop">CONTACT</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_welcome">
+<div id="welcome-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="welcome">
+<div class="col-1">
+<div id="wb_headerText" class="blurred-backdrop">
+<p style="font-size:15px;line-height:16.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">SHANGHAI WEB DESIGN</span></p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span></p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services1">
+<div id="services1">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard1">
+   <div id="servicesCard1-card-body">
+      <div id="servicesCard1-card-item0"><svg class="svg-icon" viewBox="0 0 300 236" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M270 87 C276 81, 279 73, 279 64 C279 55, 276 48, 270 42 C263 35, 256 32, 247 32 L236 32 L236 96 L247 96 C256 96, 263 93, 270 87 Z M0 193 L300 193 C300 205, 296 215, 288 223 C279 232, 269 236, 258 236 L43 236 C31 236, 21 232, 13 223 C5 215, 0 205, 0 193 Z M292 19 C305 31, 311 47, 311 64 C311 82, 305 97, 292 110 C280 122, 265 129, 247 129 L236 129 L236 134 C236 144, 232 153, 225 160 C218 168, 209 171, 199 171 L81 171 C71 171, 62 168, 54 160 C47 153, 43 144, 43 134 L43 11 C43 8, 44 5, 46 3 C49 1, 51 0, 54 0 L247 0 C265 0, 280 6, 292 19"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard1-card-item1">Branding</div>
+      <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard2">
+   <div id="servicesCard2-card-body">
+      <div id="servicesCard2-card-item0"><svg class="svg-icon" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M21 150 C21 132, 25 114, 32 98 L93 266 C72 255, 54 240, 41 219 C27 198, 21 175, 21 150 Z M236 144 C236 146, 236 148, 236 150 C236 152, 235 155, 234 158 C234 162, 233 164, 232 166 C232 167, 231 171, 229 176 C228 181, 227 184, 227 185 L214 228 L167 90 C172 90, 177 89, 182 89 C184 88, 186 87, 186 85 C187 84, 187 82, 186 80 C185 79, 183 78, 181 78 L147 80 C139 80, 127 79, 113 78 C112 78, 111 78, 110 79 C109 79, 108 80, 108 81 C107 82, 107 83, 107 84 C108 85, 108 86, 109 87 C110 88, 111 88, 112 89 L126 90 L146 145 L118 229 L71 90 C76 90, 81 89, 85 89 C88 88, 89 87, 90 85 C91 84, 90 82, 89 80 C88 79, 87 78, 85 78 L50 80 C50 80, 48 80, 46 80 C45 80, 43 79, 42 79 C54 62, 69 47, 88 37 C107 27, 127 21, 150 21 C166 21, 182 24, 197 30 C211 36, 225 45, 236 55 L235 55 C229 55, 223 57, 219 62 C215 67, 213 72, 213 78 C213 79, 213 81, 214 82 C214 83, 214 85, 214 86 C214 87, 215 88, 216 89 C216 91, 217 92, 217 93 C217 94, 218 95, 219 97 C220 98, 221 100, 221 100 C222 101, 222 102, 224 104 C225 106, 226 108, 226 108 C233 120, 236 132, 236 144 Z M152 161 L191 270 C192 270, 192 271, 192 272 C178 276, 164 279, 150 279 C137 279, 125 277, 113 274 Z M262 88 C273 108, 278 128, 278 150 C278 173, 272 195, 261 215 C249 234, 234 250, 214 261 L254 148 C260 129, 263 114, 263 102 C263 97, 263 92, 262 88 Z M91 12 C110 4, 129 0, 150 0 C170 0, 189 4, 208 12 C226 20, 242 31, 256 44 C269 57, 280 73, 288 92 C296 110, 300 130, 300 150 C300 170, 296 190, 288 208 C280 227, 269 243, 256 256 C242 270, 226 280, 208 288 C189 296, 170 300, 150 300 C129 300, 110 296, 91 288 C73 280, 57 270, 43 256 C30 243, 19 227, 11 208 C4 190, 0 170, 0 150 C0 130, 4 110, 11 92 C19 73, 30 57, 43 44 C57 31, 73 20, 91 12 Z M94 282 C112 289, 130 293, 150 293 C169 293, 187 289, 205 282 C223 274, 238 264, 251 251 C264 239, 274 223, 281 206 C289 188, 293 169, 293 150 C293 131, 289 112, 281 95 C274 77, 264 62, 251 49 C238 36, 223 26, 205 18 C187 11, 169 7, 150 7 C130 7, 112 11, 94 18 C76 26, 61 36, 48 49 C36 62, 25 77, 18 95 C10 112, 6 131, 6 150 C6 169, 10 188, 18 206 C25 223, 36 239, 48 251 C61 264, 76 274, 94 282"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard2-card-item1">Web Design</div>
+      <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_servicesCard3">
+   <div id="servicesCard3-card-body">
+      <div id="servicesCard3-card-item0"><svg class="svg-icon" viewBox="0 0 300 257" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M98 52 C104 58, 108 66, 108 75 C108 83, 104 91, 98 97 C92 104, 84 107, 75 107 C66 107, 59 104, 53 97 C46 91, 43 83, 43 75 C43 66, 46 58, 53 52 C59 46, 66 42, 75 42 C84 42, 92 46, 98 52 Z M279 139 L279 214 L43 214 L43 182 L97 128 L124 155 L209 69Z  M295 21 L27 21 C26 21, 25 22, 23 23 C22 24, 22 25, 22 26 L22 230 C22 231, 22 233, 23 234 C25 235, 26 235, 27 235 L295 235 C297 235, 298 235, 299 234 C300 233, 300 231, 300 230 L300 26 C300 25, 300 24, 299 23 C298 22, 297 21, 295 21 Z M322 26 L322 230 C322 237, 319 244, 314 249 C309 254, 302 257, 295 257 L27 257 C20 257, 14 254, 8 249 C3 244, 0 237, 0 230 L0 26 C0 19, 3 13, 8 7 C14 2, 20 0, 27 0 L295 0 C302 0, 309 2, 314 7 C319 13, 322 19, 322 26"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard3-card-item1">Photography</div>
+      <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-4">
+<div id="wb_servicesCard4">
+   <div id="servicesCard4-card-body">
+      <div id="servicesCard4-card-item0"><svg class="svg-icon" viewBox="0 0 300 230" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M96 188 L87 197 C86 198, 85 198, 83 198 C82 198, 81 198, 80 197 L2 119 C1 118, 0 116, 0 115 C0 113, 1 112, 2 111 L80 33 C81 32, 82 31, 83 31 C85 31, 86 32, 87 33 L96 41 C97 42, 97 44, 97 45 C97 47, 97 48, 96 49 L30 115 L96 181 C97 182, 97 183, 97 184 C97 186, 97 187, 96 188 Z M195 10 L132 226 C132 227, 131 228, 130 229 C128 230, 127 230, 126 230 L115 227 C114 226, 113 225, 112 224 C111 223, 111 221, 112 220 L174 4 C175 2, 175 1, 177 1 C178 0, 179 0, 181 0 L191 3 C192 3, 194 4, 194 6 C195 7, 195 8, 195 10 Z M305 119 L227 197 C226 198, 224 198, 223 198 C221 198, 220 198, 219 197 L211 188 C209 187, 209 186, 209 184 C209 183, 209 182, 211 181 L276 115 L211 49 C209 48, 209 47, 209 45 C209 44, 209 42, 211 41 L219 33 C220 32, 221 31, 223 31 C224 31, 226 32, 227 33 L305 111 C306 112, 306 113, 306 115 C306 116, 306 118, 305 119"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard4-card-item1">Programming</div>
+      <div id="servicesCard4-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services2">
+<div id="services2">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard5">
+   <div id="servicesCard5-card-body">
+      <div id="servicesCard5-card-item0"><svg class="svg-icon" viewBox="0 0 300 257" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M158 98 C167 106, 171 116, 171 128 C171 140, 167 150, 158 158 C150 167, 140 171, 128 171 C116 171, 106 167, 98 158 C89 150, 85 140, 85 128 C85 116, 89 106, 98 98 C106 89, 116 85, 128 85 C140 85, 150 89, 158 98 Z M174 174 C186 161, 192 146, 192 128 C192 110, 186 95, 174 83 C161 70, 146 64, 128 64 C110 64, 95 70, 83 83 C70 95, 64 110, 64 128 C64 146, 70 161, 83 174 C95 186, 110 192, 128 192 C146 192, 161 186, 174 174 Z M189 68 C205 84, 214 104, 214 128 C214 152, 205 172, 189 189 C172 205, 152 214, 128 214 C104 214, 84 205, 67 189 C51 172, 42 152, 42 128 C42 104, 51 84, 67 68 C84 51, 104 42, 128 42 C152 42, 172 51, 189 68 Z M227 170 C232 157, 235 143, 235 128 C235 114, 232 100, 227 87 C221 73, 213 62, 204 52 C194 43, 183 35, 170 30 C156 24, 143 21, 128 21 C114 21, 100 24, 86 30 C73 35, 62 43, 52 52 C43 62, 35 73, 29 87 C24 100, 21 114, 21 128 C21 143, 24 157, 29 170 C35 183, 43 194, 52 204 C62 213, 73 221, 86 227 C100 232, 114 235, 128 235 C143 235, 156 232, 170 227 C183 221, 194 213, 204 204 C213 194, 221 183, 227 170 Z M239 64 C251 83, 257 105, 257 128 C257 151, 251 173, 239 193 C228 212, 212 228, 193 239 C173 251, 151 257, 128 257 C105 257, 83 251, 64 239 C44 228, 28 212, 17 193 C5 173, 0 151, 0 128 C0 105, 5 83, 17 64 C28 44, 44 28, 64 17 C83 5, 105 0, 128 0 C151 0, 173 5, 193 17 C212 28, 228 44, 239 64"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard5-card-item1">Logo Design</div>
+      <div id="servicesCard5-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard6">
+   <div id="servicesCard6-card-body">
+      <div id="servicesCard6-card-item0"><svg class="svg-icon" viewBox="0 0 300 236" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M100 199 C105 203, 107 208, 107 214 C107 220, 105 225, 100 229 C96 234, 91 236, 85 236 C79 236, 74 234, 70 229 C66 225, 64 220, 64 214 C64 208, 66 203, 70 199 C74 195, 79 193, 85 193 C91 193, 96 195, 100 199 Z M250 199 C255 203, 257 208, 257 214 C257 220, 255 225, 250 229 C246 234, 241 236, 235 236 C229 236, 224 234, 220 229 C216 225, 214 220, 214 214 C214 208, 216 203, 220 199 C224 195, 229 193, 235 193 C241 193, 246 195, 250 199 Z M278 32 L278 118 C278 121, 277 123, 275 125 C274 127, 271 128, 269 129 L94 149 C95 156, 96 160, 96 161 C96 162, 95 166, 92 171 L246 171 C249 171, 251 172, 254 175 C256 177, 257 179, 257 182 C257 185, 256 188, 254 190 C251 192, 249 193, 246 193 L75 193 C72 193, 69 192, 67 190 C65 188, 64 185, 64 182 C64 181, 64 179, 65 177 C66 175, 67 173, 68 171 C69 169, 70 167, 71 164 C73 161, 74 160, 74 159 L44 21 L10 21 C7 21, 5 20, 3 18 C1 16, 0 14, 0 11 C0 8, 1 5, 3 3 C5 1, 7 0, 10 0 L53 0 C55 0, 56 0, 58 1 C59 2, 60 3, 61 4 C62 5, 63 6, 63 8 C64 10, 64 11, 65 12 C65 13, 65 15, 66 17 C66 19, 66 21, 66 21 L267 21 C270 21, 273 22, 275 25 C277 27, 278 29, 278 32"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard6-card-item1">Ecommerce</div>
+      <div id="servicesCard6-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_servicesCard7">
+   <div id="servicesCard7-card-body">
+      <div id="servicesCard7-card-item0"><svg class="svg-icon" viewBox="0 0 300 235" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M104 221 C106 219, 107 217, 107 214 C107 211, 106 208, 104 206 C101 204, 99 203, 96 203 C93 203, 91 204, 89 206 C86 208, 85 211, 85 214 C85 217, 86 219, 89 221 C91 224, 93 225, 96 225 C99 225, 101 224, 104 221 Z M171 187 L171 26 C171 25, 171 24, 169 23 C168 22, 167 21, 166 21 L26 21 C25 21, 24 22, 23 23 C22 24, 21 25, 21 26 L21 187 C21 189, 22 190, 23 191 C24 192, 25 192, 26 192 L166 192 C167 192, 168 192, 169 191 C171 190, 171 189, 171 187 Z M192 26 L192 208 C192 216, 190 222, 185 227 C179 233, 173 235, 166 235 L26 235 C19 235, 13 233, 8 227 C2 222, 0 216, 0 208 L0 26 C0 19, 2 13, 8 7 C13 2, 19 0, 26 0 L166 0 C173 0, 179 2, 185 7 C190 13, 192 19, 192 26"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard7-card-item1">Mobile Apps</div>
+      <div id="servicesCard7-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+<div class="col-4">
+<div id="wb_servicesCard8">
+   <div id="servicesCard8-card-body">
+      <div id="servicesCard8-card-item0"><svg class="svg-icon" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M54 122 C77 126, 102 129, 128 129 C155 129, 179 126, 202 122 C225 117, 243 110, 257 100 L257 129 C257 136, 251 144, 239 150 C228 157, 212 162, 193 166 C173 170, 151 172, 128 172 C105 172, 83 170, 64 166 C44 162, 28 157, 17 150 C5 144, 0 136, 0 129 L0 100 C13 110, 31 117, 54 122 Z M54 250 C77 255, 102 257, 128 257 C155 257, 179 255, 202 250 C225 245, 243 238, 257 229 L257 257 C257 265, 251 272, 239 279 C228 285, 212 291, 193 294 C173 298, 151 300, 128 300 C105 300, 83 298, 64 294 C44 291, 28 285, 17 279 C5 272, 0 265, 0 257 L0 229 C13 238, 31 245, 54 250 Z M54 186 C77 191, 102 193, 128 193 C155 193, 179 191, 202 186 C225 181, 243 174, 257 165 L257 193 C257 201, 251 208, 239 214 C228 221, 212 226, 193 230 C173 234, 151 236, 128 236 C105 236, 83 234, 64 230 C44 226, 28 221, 17 214 C5 208, 0 201, 0 193 L0 165 C13 174, 31 181, 54 186 Z M64 6 C83 2, 105 0, 128 0 C151 0, 173 2, 193 6 C212 10, 228 15, 239 22 C251 28, 257 35, 257 43 L257 64 C257 72, 251 79, 239 86 C228 92, 212 98, 193 102 C173 105, 151 107, 128 107 C105 107, 83 105, 64 102 C44 98, 28 92, 17 86 C5 79, 0 72, 0 64 L0 43 C0 35, 5 28, 17 22 C28 15, 44 10, 64 6"/>
+   </g>
+</svg>
+</div>
+      <div id="servicesCard8-card-item1">Hosting</div>
+      <div id="servicesCard8-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_features">
+<div id="features-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 458.89" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M394.87 433.4C488.07 402 572.38 322.71 656.53 241c-73.83 19-145.79 48.57-216.67 77.31-98.09 39.78-199.68 78.93-304.4 86.55 84.78 42.95 173.24 57.58 259.41 28.54zM656.53 241c45.78-11.75 92.27-19.4 139.69-20.19 70.57-1.16 138.4 12.7 203.78 36.37V0c-59.88 17.86-118.67 47.58-174.92 89.39C767.3 132.33 712 187.19 656.53 241zM135.46 404.86C88.86 381.25 43.38 349.08 0 310.9v82.75a378.35 378.35 0 0 0 81.63 12.23 485.13 485.13 0 0 0 53.83-1.02z"/>
+<path class="divider-fill" d="M1000 458.89V257.18c-65.38-23.67-133.21-37.53-203.78-36.37-47.42.79-93.91 8.44-139.69 20.19-84.15 81.71-168.46 161-261.66 192.4-86.17 29-174.63 14.41-259.41-28.54a485.13 485.13 0 0 1-53.83 1A378.35 378.35 0 0 1 0 393.65v65.24z"/>
+</svg></div>
+<div id="features-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 458.89" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M394.87 433.4C488.07 402 572.38 322.71 656.53 241c-73.83 19-145.79 48.57-216.67 77.31-98.09 39.78-199.68 78.93-304.4 86.55 84.78 42.95 173.24 57.58 259.41 28.54zM656.53 241c45.78-11.75 92.27-19.4 139.69-20.19 70.57-1.16 138.4 12.7 203.78 36.37V0c-59.88 17.86-118.67 47.58-174.92 89.39C767.3 132.33 712 187.19 656.53 241zM135.46 404.86C88.86 381.25 43.38 349.08 0 310.9v82.75a378.35 378.35 0 0 0 81.63 12.23 485.13 485.13 0 0 0 53.83-1.02z"/>
+<path class="divider-fill" d="M1000 458.89V257.18c-65.38-23.67-133.21-37.53-203.78-36.37-47.42.79-93.91 8.44-139.69 20.19-84.15 81.71-168.46 161-261.66 192.4-86.17 29-174.63 14.41-259.41-28.54a485.13 485.13 0 0 1-53.83 1A378.35 378.35 0 0 1 0 393.65v65.24z"/>
+</svg></div>
+<div id="features">
+<div class="row">
+<div class="col-1">
+<div id="wb_featuresText">
+<h1 id="featuresText">Check out key features</h1>
+</div>
+<div id="wb_featuresCarousel">
+<div id="featuresCarousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#featuresCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#featuresCarousel" data-slide-to="1"></li>
+<li data-target="#featuresCarousel" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item frame-1 active">
+<div class="carousel-innerframe">
+<div id="wb_featuresHeading1">
+<h3 id="featuresHeading1">This is a catchy headline 1</h3>
+</div>
+</div>
+</div>
+<div class="carousel-item frame-2">
+<div class="carousel-innerframe">
+<div id="wb_featuresHeading2">
+<h3 id="featuresHeading2">This is a catchy headline 2</h3>
+</div>
+</div>
+</div>
+<div class="carousel-item frame-3">
+<div class="carousel-innerframe">
+<div id="wb_featuresHeading3">
+<h3 id="featuresHeading3">This is a catchy headline 3</h3>
+</div>
+</div>
+</div>
+</div>
+<a class="carousel-item-left carousel-control" href="wb15_shanghai.html#featuresCarousel" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+</a>
+<a class="carousel-item-right carousel-control" href="wb15_shanghai.html#featuresCarousel" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wb_cardDeck">
+<div id="cardDeck">
+<div id="wb_Card1">
+   <div id="Card1-card-body">
+      <div style="overflow:hidden"><img id="Card1-card-item0" src="images/shanghai03.jpg" alt="" title=""></div>
+      <div id="Card1-card-item1">WEB DESIGN </div>
+      <div id="Card1-card-item2">Make your website with best visual web designer.</div>
+      <div id="Card1-card-item3">MARCH 28, 2019</div>
+      <div id="Card1-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="Card1-card-item5">READ MORE</div>
+   </div>
+
+</div>
+<div id="wb_Card2">
+   <div id="Card2-card-body">
+      <div style="overflow:hidden"><img id="Card2-card-item0" src="images/shanghai03.jpg" alt="" title=""></div>
+      <div id="Card2-card-item1">WEB DESIGN </div>
+      <div id="Card2-card-item2">Make your website with best visual web designer.</div>
+      <div id="Card2-card-item3">MARCH 28, 2019</div>
+      <div id="Card2-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="Card2-card-item5">READ MORE</div>
+   </div>
+
+</div>
+<div id="wb_Card3">
+   <div id="Card3-card-body">
+      <div style="overflow:hidden"><img id="Card3-card-item0" src="images/shanghai03.jpg" alt="" title=""></div>
+      <div id="Card3-card-item1">WEB DESIGN </div>
+      <div id="Card3-card-item2">Make your website with best visual web designer.</div>
+      <div id="Card3-card-item3">MARCH 28, 2019</div>
+      <div id="Card3-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="Card3-card-item5">READ MORE</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_contactTop">
+<div id="contactTop">
+<div class="row">
+<div class="col-1">
+<div id="wb_location-text">
+<p style="font-weight:bold;">Location</p>
+<p>234 Somewhere Street</p>
+<p>Somewhere Town</p>
+<p>10100 Planet Earth&nbsp; </p>
+<p>&nbsp;</p>
+<p style="font-weight:bold;"><span style="font-weight:bold;"><br /></span>Phone</p>
+<p>012 3456 7890 </p>
+<p>&nbsp;</p>
+<p style="font-weight:bold;"><span style="font-weight:bold;"><br /></span>Email</p>
+<p>info@something.com </p>
+<p>&nbsp;</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contactBottom">
+<div id="contactBottom">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_shanghai__.html"><div id="contactIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_contactIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_shanghai__.html"><div id="contactIcon2"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_contactIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_shanghai__.html"><div id="contactIcon3"><i class="fa fa-pinterest"></i></div></a>
+</div>
+<div id="wb_contactIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_shanghai__.html"><div id="contactIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_contactIcon5">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_shanghai__.html"><div id="contactIcon5"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_contactHeading">
+<h1 id="contactHeading">Send us a message</h1>
+</div>
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="E-mail">
+<input type="text" id="contactPhone" name="phone" value="" spellcheck="false" placeholder="Phone">
+<input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Name">
+<textarea name="message" id="contactMessage" rows="2" cols="35" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Submit">
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+<div id="wb_links">
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_linksText1">
+<p><strong>NAVIGATE</strong></p>
+
+</div>
+<div id="wb_linksMenu1">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_shanghai.html#" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Services</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Products</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_linksText2">
+<p><strong>CONNECT</strong></p>
+
+</div>
+<div id="wb_linksMenu2">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_shanghai.html#" target="_self">Facebook</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Instagram</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Twitter</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">YouTube</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_linksText3">
+<p><strong>MORE LINKS</strong></p>
+
+</div>
+<div id="wb_linksMenu3">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_shanghai.html#" target="_self">Lorem&nbsp;Ipsum</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Consectetur&nbsp;Adipisicing</a>
+</li>
+<li><a role="menuitem" href="wb15_shanghai.html#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="wb15_shanghai.html#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+
+</body>
+</html>

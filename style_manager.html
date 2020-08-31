@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Using the Style Manager</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/style_manager.css" rel="stylesheet" type="text/css">
+<script language="JavaScript1.2">
+
+isMouseover = false;
+isDragging = false;
+
+function MouseDownLayer(e)
+{
+   isIE = document.all;
+
+   documentTag = isIE ? "BODY" : "HTML";
+   srcElement = isIE ? event.srcElement : e.target;  
+   layerElement = isIE ? document.all.Layer1 : document.getElementById("Layer1");  
+
+   while (srcElement.id != "Layer1TitleBar" && srcElement.tagName != documentTag)
+   {
+      srcElement = isIE ? srcElement.parentElement : srcElement.parentNode;
+   }  
+   if (srcElement.id == "Layer1TitleBar")
+   {
+      offsetX = isIE ? event.clientX : e.clientX;
+      offsetY = isIE ? event.clientY : e.clientY;
+      currentX = parseInt(layerElement.style.left);
+      currentY = parseInt(layerElement.style.top);
+      isDragging = true;
+      document.onmousemove = MouseMoveLayer;
+  }
+}
+
+function MouseMoveLayer(e)
+{
+   if (!isDragging) return;
+   
+   // Internet Explorer ?
+   if (document.all)
+   {
+      layerElement.style.left = currentX+event.clientX-offsetX; 
+      layerElement.style.top = currentY+event.clientY-offsetY;
+   }
+   else
+   {
+      layerElement.style.left = currentX+e.clientX-offsetX; 
+      layerElement.style.top = currentY+e.clientY-offsetY;
+   }
+   return false;  
+}
+
+document.onmousedown = MouseDownLayer;
+document.onmouseup = Function("isDragging=false");
+
+</script></head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:15px;top:134px;width:940px;height:3701px;z-index:3;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage2" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:170px;width:808px;height:118px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Using the Style Manager<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>The Style Manager is a central place to add, edit or remove CSS style definitions for the entire website.<br>If you update a style in the Style Manager then all objects that use that style will automatically be updated. <br> <br>There are 6 standard heading styles (h1, h2, h3, h4, h5, h6), which <strong>should be used for text headings only</strong> to optimize your website for SEO. Other styles can be used for objects like form elements and tables.</span></div>
+<div id="wb_Text3" style="position:absolute;left:81px;top:831px;width:808px;height:48px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">When you add a new style then all attributes of the style will be empty. This means that default the browser's default values will be used. To change the value on an attrribute simply click the property and modfiy the value.<br>Only the atrributes you give a value will be included in the CSS style definition. You do not have to specify values for all attributes.</span></div>
+<div id="wb_Image3" style="position:absolute;left:81px;top:299px;width:486px;height:514px;z-index:7;">
+<img src="images/stylemanager1.jpg" id="Image3" alt=""></div>
+<div id="wb_Text1" style="position:absolute;left:81px;top:1464px;width:808px;height:236px;z-index:8;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">It's also possible to add custom style attributes. You may have noticed that we did this for the header styles (CustomStyle is display: inline), to make sure it is displayed correct in all browsers.<br>Custom attributes will not be recognized by WYSIWYG Web Builder, but they will be applied in preview or the published page.<br><br><strong>Import <br></strong>This option makes it possible to import styles from an external style sheet (CSS).<br><br><strong>Export<br></strong>This option makes it possible to export styles to an external style sheet (CSS). This can be useful to export/import styles to another project.<br><br></span><span style="color:#666666;font-family:Arial;font-size:19px;"><strong><br>Using styles on Text<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">To apply a style to the selected text, simply select one of the previously created styles from the style menu.</span></div>
+<div id="wb_Image4" style="position:absolute;left:81px;top:889px;width:468px;height:543px;z-index:9;">
+<img src="images/stylemanager2.jpg" id="Image4" alt=""></div>
+<div id="wb_Text4" style="position:absolute;left:79px;top:2047px;width:808px;height:54px;z-index:10;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Using styles on other objects<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Most standard HTML objects (like the Marquee, Editbox, TextArea, Combobox, Buttons) do have a Style tab in their properties. The predefined style will overwrite the object's standard style settings, so you can no longer change those.</span></div>
+<div id="wb_Image5" style="position:absolute;left:81px;top:1720px;width:696px;height:201px;z-index:11;">
+<img src="images/stylemanager3.jpg" id="Image5" alt=""></div>
+<div id="wb_Text5" style="position:absolute;left:79px;top:2631px;width:808px;height:112px;z-index:12;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Notes:</strong><br>- Not all style attributes apply to all objects! For example margins and padding are currently ignored by most Web Builder objects. These attributes where only added to fix browser incompatibility issues for header styles. <br><br>· Header styles (h1, h2 ...) can only be applied to text. <br> <br></span></div>
+<div id="wb_Image6" style="position:absolute;left:79px;top:2113px;width:516px;height:498px;z-index:13;">
+<img src="images/stylemanager4.jpg" id="Image6" alt=""></div>
+<div id="wb_Text6" style="position:absolute;left:80px;top:2738px;width:808px;height:246px;z-index:14;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Using Line Spacing in Styles<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">By default the Line Spacing option in Styles only affects the line spacing in the workspace. In previous versions of WWB this option forced the option 'Include &lt;div&gt; with position' for the text object. However this resulted in 'dirty' and non-responsive code. Since WB11 the option 'Include &lt;div&gt; with position' will not longer be forced. Now you will have to decide what output code you want to be generated.<br><br><strong>Option 1<br></strong>Enable 'Include &lt;div&gt; with position' in the text properties (to get the same result as in previous versions). <br>This will make the text object non-responsive and will result in more HTML (code bloat).<br><br>OR<br><br><strong>Option 2<br></strong>Add 'line-height: 1.5' (where 1.5 is the value of the line spacing) in the 'Custom styles' properties of the style. In that case 'line-spacing' will be used for the workspace and the line-height for the published text. The result will be much cleaner (and responsive) code. <br>Note that you may need to fine-tune this value based on the selected font family and size.</span></div>
+<div id="wb_Image1" style="position:absolute;left:79px;top:3003px;width:482px;height:385px;z-index:15;">
+<img src="images/style_lineheight.jpg" id="Image1" alt=""></div>
+<div id="wb_Text7" style="position:absolute;left:79px;top:3774px;width:577px;height:48px;z-index:16;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">Related tutorial: <br><a href="responsive_text.html" class="wwb_link">How to create Responsive Text</a><br></span></div>
+<div id="wb_Text8" style="position:absolute;left:81px;top:1947px;width:808px;height:73px;z-index:17;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">By default, the Style Manager includes 6 standard headings &lt;h1&gt; … &lt;h6&gt;, but you can also define your own heading styles:<br></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">make a copy of one of the existing heading<br></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">specify a valid class name. For example: <strong>my_heading1</strong>. <br></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Do not no spaces or other special characters. For example: &quot;<strong>my heading &lt;h1&gt;&quot;</strong> is not valid!</span></div>
+<div id="wb_Text9" style="position:absolute;left:81px;top:3413px;width:808px;height:332px;z-index:18;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>What is the different between a CSS &quot;class&quot; and &quot;style&quot;?<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">In WYSIWYG Web Builder, there are 2 different style types:<br></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Headings (h1, h2 ..), these are used for text only.<br></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Regular styles, which are used for all other objects.<br>In HTML, a regular style is referred to as a &quot;class&quot;. Headings are tags selectors.<br><br>So, heading styles will generate the following code:<br></span><span style="color:#3CB371;font-family:'Courier New';font-size:13px;"><strong>h1<br>{<br>&nbsp;&nbsp; font-family: arial;<br>&nbsp;&nbsp; font-size: 14px;<br>}<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>And regular styles will output:<br></span><span style="color:#3CB371;font-family:'Courier New';font-size:13px;"><strong>.customstyle<br>{<br>&nbsp;&nbsp; font-family: arial;<br>&nbsp;&nbsp; font-size: 14px;<br>}<br></strong></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Reveal objects with bookmark events</title>
+<meta name="generator" content="WYSIWYG Web Builder 10 - http://www.wysiwygwebbuilder.com">
+<style type="text/css">
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#Shape1
+{
+   width: 98px;
+   height: 98px;
+   background-color: #D0D0D0;
+   border: 1px #A0A0A0 solid;
+}
+#Shape2
+{
+   width: 98px;
+   height: 98px;
+   background-color: #C0C0C0;
+   border: 1px #A0A0A0 solid;
+}
+#Shape3
+{
+   width: 98px;
+   height: 98px;
+   background-color: #B0B0B0;
+   border: 1px #A0A0A0 solid;
+}
+#Shape4
+{
+   width: 98px;
+   height: 98px;
+   background-color: #A0A0A0;
+   border: 1px #A0A0A0 solid;
+}
+#Shape5
+{
+   width: 98px;
+   height: 98px;
+   background-color: #909090;
+   border: 1px #A0A0A0 solid;
+}
+#Shape6
+{
+   width: 98px;
+   height: 98px;
+   background-color: #808080;
+   border: 1px #A0A0A0 solid;
+}
+#Shape7
+{
+   width: 98px;
+   height: 98px;
+   background-color: #707070;
+   border: 1px #A0A0A0 solid;
+}
+#Shape8
+{
+   width: 98px;
+   height: 98px;
+   background-color: #606060;
+   border: 1px #A0A0A0 solid;
+}
+#Shape9
+{
+   width: 98px;
+   height: 98px;
+   background-color: #505050;
+   border: 1px #A0A0A0 solid;
+}
+#Shape10
+{
+   width: 98px;
+   height: 98px;
+   background-color: #404040;
+   border: 1px #A0A0A0 solid;
+}
+</style>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-blind.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-bounce.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-clip.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-drop.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-explode.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-fade.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-fold.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-highlight.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-pulsate.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-scale.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-shake.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/jquery.ui.effect-slide.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/bookmarkevents/wwb10.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   function Bookmark1Scroll()
+   {
+      var $obj = $("#wb_Bookmark1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape1', 1, 'fade', 1000);
+      }
+   }
+   Bookmark1Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark1Scroll();
+   });
+   function Bookmark2Scroll()
+   {
+      var $obj = $("#wb_Bookmark2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape2', 1, 'fade', 1000);
+      }
+   }
+   Bookmark2Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark2Scroll();
+   });
+   function Bookmark3Scroll()
+   {
+      var $obj = $("#wb_Bookmark3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape3', 1, 'fade', 1000);
+      }
+   }
+   Bookmark3Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark3Scroll();
+   });
+   function Bookmark4Scroll()
+   {
+      var $obj = $("#wb_Bookmark4");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape4', 1, 'fade', 1000);
+      }
+   }
+   Bookmark4Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark4Scroll();
+   });
+   function Bookmark5Scroll()
+   {
+      var $obj = $("#wb_Bookmark5");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape5', 1, 'fade', 1000);
+      }
+   }
+   Bookmark5Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark5Scroll();
+   });
+   function Bookmark6Scroll()
+   {
+      var $obj = $("#wb_Bookmark6");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape6', 1, 'fade', 1000);
+      }
+   }
+   Bookmark6Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark6Scroll();
+   });
+   function Bookmark7Scroll()
+   {
+      var $obj = $("#wb_Bookmark7");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape7', 1, 'fade', 1000);
+      }
+   }
+   Bookmark7Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark7Scroll();
+   });
+   function Bookmark8Scroll()
+   {
+      var $obj = $("#wb_Bookmark8");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape8', 1, 'fade', 1000);
+      }
+   }
+   Bookmark8Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark8Scroll();
+   });
+   function Bookmark9Scroll()
+   {
+      var $obj = $("#wb_Bookmark9");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape9', 1, 'fade', 1000);
+      }
+   }
+   Bookmark9Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark9Scroll();
+   });
+   function Bookmark10Scroll()
+   {
+      var $obj = $("#wb_Bookmark10");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         ShowObjectWithEffect('wb_Shape10', 1, 'fade', 1000);
+      }
+   }
+   Bookmark10Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark10Scroll();
+   });
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:435px;top:40px;width:100px;height:100px;visibility:hidden;z-index:0;">
+<div id="Shape1"></div></div>
+<div id="wb_Shape2" style="position:absolute;left:435px;top:215px;width:100px;height:100px;visibility:hidden;z-index:1;">
+<div id="Shape2"></div></div>
+<div id="wb_Shape3" style="position:absolute;left:435px;top:390px;width:100px;height:100px;visibility:hidden;z-index:2;">
+<div id="Shape3"></div></div>
+<div id="wb_Shape4" style="position:absolute;left:435px;top:565px;width:100px;height:100px;visibility:hidden;z-index:3;">
+<div id="Shape4"></div></div>
+<div id="wb_Shape5" style="position:absolute;left:435px;top:740px;width:100px;height:100px;visibility:hidden;z-index:4;">
+<div id="Shape5"></div></div>
+<div id="wb_Shape6" style="position:absolute;left:435px;top:915px;width:100px;height:100px;visibility:hidden;z-index:5;">
+<div id="Shape6"></div></div>
+<div id="wb_Shape7" style="position:absolute;left:435px;top:1090px;width:100px;height:100px;visibility:hidden;z-index:6;">
+<div id="Shape7"></div></div>
+<div id="wb_Shape8" style="position:absolute;left:435px;top:1265px;width:100px;height:100px;visibility:hidden;z-index:7;">
+<div id="Shape8"></div></div>
+<div id="wb_Shape9" style="position:absolute;left:435px;top:1440px;width:100px;height:100px;visibility:hidden;z-index:8;">
+<div id="Shape9"></div></div>
+<div id="wb_Shape10" style="position:absolute;left:435px;top:1615px;width:100px;height:100px;visibility:hidden;z-index:9;">
+<div id="Shape10"></div></div>
+<div id="wb_Bookmark1" style="position:absolute;left:555px;top:121px;width:20px;height:19px;z-index:10;">
+<a id="Bookmark1" name="bookmark1" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark2" style="position:absolute;left:555px;top:296px;width:20px;height:19px;z-index:11;">
+<a id="Bookmark2" name="bookmark2" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark3" style="position:absolute;left:555px;top:471px;width:20px;height:19px;z-index:12;">
+<a id="Bookmark3" name="bookmark3" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark4" style="position:absolute;left:555px;top:646px;width:20px;height:19px;z-index:13;">
+<a id="Bookmark4" name="bookmark4" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark5" style="position:absolute;left:555px;top:821px;width:20px;height:19px;z-index:14;">
+<a id="Bookmark5" name="bookmark5" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark6" style="position:absolute;left:555px;top:996px;width:20px;height:19px;z-index:15;">
+<a id="Bookmark6" name="bookmark6" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark7" style="position:absolute;left:555px;top:1171px;width:20px;height:19px;z-index:16;">
+<a id="Bookmark7" name="bookmark7" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark8" style="position:absolute;left:555px;top:1346px;width:20px;height:19px;z-index:17;">
+<a id="Bookmark8" name="bookmark8" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark9" style="position:absolute;left:555px;top:1521px;width:20px;height:19px;z-index:18;">
+<a id="Bookmark9" name="bookmark9" style="visibility:hidden">&nbsp;</a>
+</div>
+<div id="wb_Bookmark10" style="position:absolute;left:555px;top:1696px;width:20px;height:19px;z-index:19;">
+<a id="Bookmark10" name="bookmark10" style="visibility:hidden">&nbsp;</a>
+</div>
+</div>
+</body>
+</html>

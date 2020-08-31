@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Basic Template 6</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="basic-template6.css" rel="stylesheet">
+<link href="wb14_basic6.css" rel="stylesheet">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/transition.js"></script>
+<script src="js/collapse.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/affix.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#about']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#products']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#products').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#footer']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_footer').offset().top }, 600, 'easeInSine');
+      });
+      $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+   });
+</script>
+<script>   
+   // NOTE: this code will fix the header at the top of the page. It will also change the background when in fixed mode (via the CSS classes above).
+   $(document).ready(function()
+   {
+      $("#wb_navigation").affix({offset:{top: $("#wb_navigation").offset().top}});
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_FontAwesomeIcon1">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="FontAwesomeIcon1"><i class="fa fa-phone"></i></div></a>
+               </div>
+               <label for="" id="Label1">+123 456 789</label>
+            </div>
+            <div class="col-2">
+               <div id="wb_FontAwesomeIcon2">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="FontAwesomeIcon2"><i class="fa fa-envelope-o"></i></div></a>
+               </div>
+               <label for="" id="Label2">info@yourwebsite.com</label>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-4">
+               <div id="wb_location-icon2">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="location-icon2"><i class="fa fa-twitter"></i></div></a>
+               </div>
+               <div id="wb_location-icon1">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="location-icon1"><i class="fa fa-facebook"></i></div></a>
+               </div>
+               <div id="wb_location-icon4">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="location-icon4"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_location-icon5">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb14tryouts/wb14_basic66.html"><div id="location-icon5"><i class="fa fa-youtube"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_ThemeableMenu1">
+                  <div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <a id="ThemeableMenu1-logo" href="wb14_basic6.html#"><img alt="" title="" src="images/logo32.jpg"></a>
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="ThemeableMenu1-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="">
+                                 <a href="wb14_basic6.html#welcome">Home</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb14_basic6.html#about">About</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb14_basic6.html#products">Products</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb14_basic6.html#footer">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Heading2">
+                  <h1 id="Heading2">Web Site Name or Tagline</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_about">
+      <div id="about">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text4">
+                  <span style="color:#4F4F4F;font-family:Lato;font-size:27px;line-height:33px;"><strong>What We Do</strong></span><span style="color:#4F4F4F;font-family:Lato;font-size:13px;line-height:16px;"><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</span>
+               </div>
+               <input type="submit" id="Button1" name="" value="Call to Action">
+            </div>
+            <div class="col-2">
+               <div id="wb_Text1">
+                  <span style="color:#4F4F4F;font-family:Lato;font-size:27px;line-height:33px;"><strong>Contact Us</strong><br></span><span style="color:#4F4F4F;font-family:Lato;font-size:13px;line-height:16px;"><br>#28, 3nd floor, WYSIWYG Plaza<br>Web City<br>Builder, WB 1969 United States<br><br><br>Phone: (123) 456-7890 <br>Email: name@example.com </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="products">
+      <div id="wb_Card1">
+         <div id="Card1-card-body">
+            <img id="Card1-card-item0" src="images/orange_small.jpg" alt="" title="">
+            <div id="Card1-card-item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</div>
+         </div>
+         <div id="Card1-card-item2"><a href="http://">Learn More</a></div>
+      </div>
+      <div id="wb_Card2">
+         <div id="Card2-card-body">
+            <img id="Card2-card-item0" src="images/green_small.jpg" alt="" title="">
+            <div id="Card2-card-item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</div>
+         </div>
+         <div id="Card2-card-item2"><a href="http://">Learn More</a></div>
+      </div>
+      <div id="wb_Card3">
+         <div id="Card3-card-body">
+            <img id="Card3-card-item0" src="images/red_small.jpg" alt="" title="">
+            <div id="Card3-card-item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</div>
+         </div>
+         <div id="Card3-card-item2"><a href="http://">Learn More</a></div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Text6">
+                  <span style="color:#FFFFFF;">Copyright © Your Website 2018</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-start="opacity:0;" data-250-start="opacity:1;">
+      <div id="wb_up-arrow">
+         <a href="wb14_basic6.html#header"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+</body>
+</html>

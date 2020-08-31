@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Create a 3D Carousel with reveal.js</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/carousel3d.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:14px;top:134px;width:940px;height:1985px;z-index:3;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:171px;width:838px;height:86px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Create a 3D Carousel with reveal.js</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br><br>Here's an idea I'd like to share with you about creating a 3D carousel. This tutorial is just meant for inspiration and I'm sure it's not perfect, but with a little bit of creativity you may be able to use this is a real website.<strong> Not for beginners!<br></strong>If you are not familiar with the Carousel object then please read this tutorial first: <a href="carousel_2.html" class="wwb_link" target="_blank">https://www.wysiwygwebbuilder.tk/carousel.html</a></span></div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:1319px;width:829px;height:595px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Step 4 - 'Hack' the Carousel object<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Insert a <strong>HTML </strong>object and add this code (between the head tags):<br><br></span><span style="color:#228B22;font-family:'Courier New';font-size:12px;">&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/reveal.min.css&quot;&gt;<br>&lt;script src=&quot;./js/reveal.min.js&quot;&gt;&lt;/script&gt;<br>&lt;script&gt;<br>$(document).ready(function()<br>{<br>&nbsp;&nbsp; // disable Carousel script!<br>&nbsp;&nbsp; var $obj = $(&quot;#Carousel1&quot;);<br>&nbsp;&nbsp; $obj.attr('id', 'CarouselHack');<br><br>&nbsp;&nbsp; // stop Carousel timer<br>&nbsp;&nbsp; var timerId = $obj.data('timerId');<br>&nbsp;&nbsp; clearInterval(timerId);<br><br>&nbsp;&nbsp; // hide the Carousel's navigation<br>&nbsp;&nbsp; $(&quot;#Carousel1_back a&quot;).hide();<br>&nbsp;&nbsp; $(&quot;#Carousel1_next a&quot;).hide();<br>&nbsp;&nbsp; $(&quot;.pagination&quot;).hide();<br>&nbsp;&nbsp; <br>&nbsp;&nbsp; // prepare for reveal.js<br>&nbsp;&nbsp; $obj.parent().addClass(&quot;reveal&quot;);<br>&nbsp;&nbsp; $obj.addClass(&quot;slides&quot;);<br><br>&nbsp;&nbsp; // put the slides between section tags<br>&nbsp;&nbsp; var $frames = $obj.find('.frame');<br>&nbsp;&nbsp; $frames.css('display', '');<br>&nbsp;&nbsp; $frames.wrap(&quot;&lt;section&gt;&lt;/section&gt;&quot;);<br><br>&nbsp;&nbsp; // initialize reveal<br>&nbsp;&nbsp; Reveal.initialize({center: false, width: 777, height: 666, transition: 'cube', loop: false});<br>});<br>&lt;/script&gt;<br></span><span style="color:#228B22;font-family:'Courier New';font-size:13px;"><br></span><span style="color:#666666;font-family:Arial;font-size:13px;">The code above will disable the standard Carousel script and prepare the slides for reveal.js<br>reveal.js has many other options so check the documentation for all the details.<br><br><strong>Important: </strong>Make sure you change the width and height values (in the Reveal.initialize call) to match the size of your Carousel object!</span></div>
+<div id="wb_Text1" style="position:absolute;left:81px;top:1955px;width:844px;height:130px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Demo project<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Below you will find a modified version of the 'Carousel Full Width' project that demonstrates the usage of the reveal.js framework.<br><br>Live demo:<br><a href="support/carousel3d/index.html" class="wwb_link">https://www.wysiwygwebbuilder.tk/support/carousel3d/index.html</a><br><br>Demo project (requires version 9.2 or higher):<br><a href="support/carousel3d/carousel3d.zip" class="wwb_link">https://www.wysiwygwebbuilder.tk/support/carousel3d/carousel3d.zip</a></span></div>
+<div id="wb_Image1" style="position:absolute;left:81px;top:825px;width:561px;height:202px;z-index:8;">
+<img src="images/reveal_js1.jpg" id="Image1" alt=""></div>
+<div id="wb_Text5" style="position:absolute;left:81px;top:1051px;width:846px;height:34px;z-index:9;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Step 3 - Add a Carousel object</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>Insert a <strong>Carousel </strong>object and make sure the Mode is set to 'effect-fade'! This effect will not be used, but it prepares the Carousel for reveal.js!</span></div>
+<div id="wb_Image4" style="position:absolute;left:81px;top:1097px;width:516px;height:203px;z-index:10;">
+<img src="images/reveal_js2.jpg" id="Image4" alt=""></div>
+<div id="wb_Image5" style="position:absolute;left:81px;top:271px;width:350px;height:250px;z-index:11;">
+<a href="support/carousel3d/index.html" target="_blank"><img src="images/carousel3d.jpg" id="Image5" alt="" title="3D Carousel Demo"></a></div>
+<div id="wb_Text6" style="position:absolute;left:81px;top:545px;width:838px;height:276px;z-index:12;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>What is reveal.js?</strong><br>reveal.js is a framework for easily creating beautiful presentations using HTML with CSS3 3D transitions.<br>You can learn more about this great framework here: <a href="http://lab.hakim.se/reveal-js/" class="wwb_link" target="_blank">http://lab.hakim.se/reveal-js/</a><br><br>reveal.js uses so-called 'slides' for the presentation. In this tutorial we are going to 'hack' the built-in <a href="carousel.html" class="wwb_link">Carousel</a> object and with only a few lines of code convert it into a reveal.js presentation.<br><br></span><span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Step 1 - Download reveal.js<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Download the latest version of the framework here: <a href="http://github.com/hakimel/reveal.js" class="wwb_link" target="_blank">http://github.com/hakimel/reveal.js</a><br>Unpack the files to a folder on your local disk.<br><br></span><span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Step 2 - Add reveal.js to your Web Builder page <br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Insert a <strong>File Publisher</strong> object to your page and add the following folders from the reveal.js framework:<br>- <strong>css</strong> folder<br>- <strong>js</strong> folder<br>- <strong>lib</strong> folder</span><span style="color:#666666;font-family:Arial;font-size:15px;"><strong><br></strong></span></div>
+</div>
+</body>
+</html>

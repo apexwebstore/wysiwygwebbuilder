@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Conditions - Example 4</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://www.wysiwygwebbuilder.com/support/css/formcalculation.css" rel="stylesheet">
+<link href="http://www.wysiwygwebbuilder.com/support/css/conditions4.css" rel="stylesheet">
+</head>
+<body>
+   <div id="wb_Form1" style="position:absolute;left:30px;top:30px;width:431px;height:259px;z-index:11;">
+      <form name="Form1" method="post" action="mailto:yourname@yourdomain.com" enctype="text/plain" id="Form1">
+         <label for="size" id="Label1" style="position:absolute;left:13px;top:24px;width:93px;height:20px;line-height:20px;z-index:0;">T-Shirt size:</label>
+         <input type="text" id="total" style="position:absolute;left:114px;top:210px;width:86px;height:16px;line-height:16px;z-index:1;" name="total" value="" readonly="" spellcheck="false">
+         <input type="submit" id="Button1" name="" value="Submit" style="position:absolute;left:305px;top:211px;width:96px;height:25px;z-index:2;">
+         <select name="size" size="1" id="size" style="position:absolute;left:114px;top:24px;width:141px;height:28px;z-index:3;">
+            <option selected="" value="10">Small ($10)</option>
+            <option value="15">Medium ($15)</option>
+            <option value="20">Large ($20)</option>
+         </select>
+         <select name="quantity" size="1" id="quantity" style="position:absolute;left:114px;top:71px;width:65px;height:28px;z-index:4;">
+            <option selected="" value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+         </select>
+         <label for="total" id="Label3" style="position:absolute;left:13px;top:210px;width:62px;height:18px;line-height:18px;z-index:5;">Total:</label>
+         <label for="shipping" id="Label4" style="position:absolute;left:13px;top:118px;width:62px;height:20px;line-height:20px;z-index:6;">Shipping:</label>
+         <input type="text" id="shipping" style="position:absolute;left:114px;top:119px;width:55px;height:16px;line-height:16px;z-index:7;" name="shipping" value="5" readonly="" disabled="" spellcheck="false">
+         <label for="quantity" id="Label2" style="position:absolute;left:13px;top:71px;width:62px;height:20px;line-height:20px;z-index:8;">Quantity:</label>
+         <label for="tax" id="Label5" style="position:absolute;left:13px;top:164px;width:62px;height:20px;line-height:20px;z-index:9;">Tax:</label>
+         <input type="text" id="tax" style="position:absolute;left:114px;top:165px;width:55px;height:16px;line-height:16px;z-index:10;" name="tax" value="0.1" readonly="" disabled="" spellcheck="false">
+      </form>
+   </div>
+   <script src="http://www.wysiwygwebbuilder.com/support/js/jquery-1.12.4.min.js"></script>
+   <script src="http://www.wysiwygwebbuilder.com/support/js/conditions4.js"></script>
+</body>
+</html>

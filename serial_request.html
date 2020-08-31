@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Serial Request</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link href="https://www.wysiwygwebbuilder.tk/serial_request.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function ValidateRequestForm()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^([0-9a-z]([-.\w]*[0-9a-z])*@(([0-9a-z])+([-\w]*[0-9a-z])*\.)+[a-z]{2,6})$/i;
+      if (Editbox1.value.length != 0 && !regexp.test(Editbox1.value))
+      {
+         alert("Please enter a valid email address.");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+</head>
+<body>
+<div id="wb_Text1" style="position:absolute;left:0px;top:0px;width:587px;height:128px;z-index:4;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Lost your Serial Number?<br></strong>Your registration information (registration name and serial number) can be found on your receipt when you purchased the software. If you have lost or misplaced your receipt, the information will be sent to the address we have on file in our records. <br><br>Enter the<strong> email address you've used to purchase the software</strong> and click the Request button.<br>Please <a href="mailto:support@pablosoftwaresolutions.com?subject=Request Serial Number" class="wwb_link">contact us</a> if your address has changed. <br></span></div>
+<div id="wb_Form2" style="position:absolute;left:0px;top:147px;width:435px;height:140px;z-index:5;">
+<form name="RequestForm" method="post" action="https://www.wysiwygwebbuilder.tk/serial_thanks.php" id="Form2" onsubmit="return ValidateRequestForm()">
+<div id="wb_Text3" style="position:absolute;left:18px;top:55px;width:51px;height:15px;z-index:0;">
+<span style="color:#666666;font-family:Arial;font-size:12px;">Email:</span></div>
+<input type="submit" id="Button2" name="Request" value="Request" style="position:absolute;left:316px;top:91px;width:96px;height:27px;z-index:1;">
+<input type="text" id="Editbox1" style="position:absolute;left:73px;top:50px;width:337px;height:25px;z-index:2;" name="email" value="" tabindex="2" spellcheck="false">
+<div id="wb_Text7" style="position:absolute;left:16px;top:14px;width:192px;height:22px;z-index:3;">
+<span style="color:#666666;font-family:'Trebuchet MS';font-size:16px;"><strong>Request serial number</strong></span></div>
+</form>
+</div>
+</body>
+</html>

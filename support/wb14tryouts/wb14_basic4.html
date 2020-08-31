@@ -1,0 +1,734 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Basic Template 4</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+</style>
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<style>
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input
+{
+   -webkit-appearance: none;
+}
+#header
+{
+   display: -webkit-flex;
+   display: flex;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   z-index: 7777;
+   padding: 10px 10px 10px 10px;
+   box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   background-color: #343A40;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#wb_home
+{
+   background-color: #007BFF;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+#home
+{
+   display: -webkit-flex;
+   display: flex;
+   min-height: 100vh;
+   padding: 50px 10px 50px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: stretch;
+   align-items: stretch;
+   -webkit-align-content: center;
+   align-content: center;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1024px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#Heading1
+{
+   color: #FFFFFF;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 19px;
+   margin: 0;
+   text-align: left;
+}
+#about
+{
+   display: -webkit-flex;
+   display: flex;
+   min-height: 100vh;
+   padding: 50px 10px 50px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: stretch;
+   align-items: stretch;
+   -webkit-align-content: center;
+   align-content: center;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1024px;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #F5F5F5;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-align-self: auto;
+   align-self: auto;
+   padding: 8px 15px 8px 15px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3
+{
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_Text3 div
+{
+   text-align: center;
+   white-space: nowrap;
+}
+#wb_Card6
+{
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-flex-direction: column;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 100%;
+   flex-basis: 100%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #DEDEDE;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Card6-card-body
+{
+   -webkit-flex: 1 1 auto;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   font-size: 0px;
+}
+#Card6-card-item0
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   color: #FFFFFF;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 64px;
+}
+#Card6-card-item1
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   color: #FFFFFF;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 16px;
+}
+#wb_services
+{
+   background-color: #F5F5F5;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+#services
+{
+   display: -webkit-flex;
+   display: flex;
+   min-height: 100vh;
+   padding: 50px 10px 50px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: stretch;
+   align-items: stretch;
+   -webkit-align-content: center;
+   align-content: center;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1024px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#contact
+{
+   display: -webkit-flex;
+   display: flex;
+   min-height: 100vh;
+   padding: 50px 0px 50px 0px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1280px;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#footer
+{
+   display: -webkit-flex;
+   display: flex;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   background-color: #414A4F;
+   background-image: none;
+   border: 0px solid #414A4F;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#wb_CssMenu1
+{
+   border: 0px #C0C0C0 solid;
+   background-color: transparent;
+   margin: 0;
+   -webkit-flex-grow: 2;
+   flex-grow: 2;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#wb_CssMenu1 ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: inline-block;
+}
+#wb_CssMenu1 li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 4px 0px 0px;
+}
+#wb_CssMenu1 a
+{
+   display: block;
+   float: left;
+   color: #999999;
+   border: 0px #CCCCCC solid;
+   background-color: transparent;
+   background-image: none;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 15px;
+   font-style: normal;
+   text-decoration: none;
+   height: 28px;
+   line-height: 28px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   text-align: center;
+}
+#wb_CssMenu1 li:hover a, #wb_CssMenu1 a:hover, #wb_CssMenu1 .active
+{
+   color: #FFFFFF;
+   background-color: transparent;
+   background-image: none;
+   border: 0px #2E6DA4 solid;
+}
+#wb_CssMenu1 li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_CssMenu1 li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_CssMenu1 br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+#wb_BulletedList1
+{
+   border: 0px solid #C0C0C0;
+   background-color: transparent;
+   background-image: none;
+   margin: 0;
+}
+#wb_BulletedList1 .bullet
+{
+   color: #000000;
+   float: left;
+   font-family: Lato;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 19px;
+   padding: 0px;
+   text-align: left;
+   vertical-align: top;
+   width: 23px;
+}
+#wb_BulletedList1 .item
+{
+   margin-left: 25px;
+   padding: 0px 0 0px 0;
+   vertical-align: top;
+}
+#wb_BulletedList1 .item0
+{
+   text-align: left;
+}
+#wb_BulletedList1 .item1
+{
+   text-align: left;
+}
+#wb_BulletedList1 .item2
+{
+   text-align: left;
+}
+#wb_Heading5
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0px 0px 25px 0px;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 100%;
+   flex-basis: 100%;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#Heading5
+{
+   color: #000000;
+   font-family: Lato;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 100%;
+   flex-basis: 100%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1
+{
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 15px;
+   line-height: 19px;
+}
+#wb_Text1 div
+{
+   text-align: center;
+   white-space: nowrap;
+}
+#wb_Heading2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0px 0px 25px 0px;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 100%;
+   flex-basis: 100%;
+   -webkit-align-self: auto;
+   align-self: auto;
+}
+#Heading2
+{
+   color: #000000;
+   font-family: Lato;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#Editbox1
+{
+   border: 1px solid #CCCCCC;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#000000;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 13px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   line-height: 26px;
+   padding: 4px 4px 4px 4px;
+   margin: 0px 10px 0px 0px;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 50%;
+   flex-basis: 50%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   text-align: left;
+   vertical-align: middle;
+}
+#Editbox1:focus
+{
+   border-color: #66AFE9;
+   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.60);
+   outline: 0;
+}
+#Button1
+{
+   border: 0px solid #007BFF;
+   background-color: #007BFF;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Lato;
+   font-weight: normal;
+   font-size: 13px;
+   -webkit-flex-grow: 0;
+   flex-grow: 0;
+   -webkit-flex-shrink: 0;
+   flex-shrink: 0;
+   -webkit-align-self: auto;
+   align-self: auto;
+   margin: 10px 0px 10px 0px;
+}
+#wb_Heading3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0px 0px 25px 0px;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 100%;
+   flex-basis: 100%;
+   -webkit-align-self: stretch;
+   align-self: stretch;
+}
+#Heading3
+{
+   color: #000000;
+   font-family: Lato;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#StickyLayer
+{
+   background-color: #3E3E3E;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_up-arrow
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+   text-align: center;
+   margin: 0;
+   padding: 4px 4px 4px 4px;
+   vertical-align: top;
+}
+#wb_up-arrow:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+}
+#up-arrow
+{
+   height: 24px;
+   width: 24px;
+}
+#up-arrow i
+{
+   color: #FFFFFF;
+   display: inline-block;
+   font-size: 24px;
+   line-height: 24px;
+   vertical-align: middle;
+   width: 15px;
+}
+#wb_up-arrow:hover i
+{
+   color: #FFFFFF;
+}
+</style>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/scrollspy.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#home']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#home').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#about']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#about').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#services']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#services').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#contact').offset().top }, 600, 'easeOutExpo');
+   });
+});
+</script>
+</head>
+<body data-spy="scroll">
+<div id="header">
+<div id="wb_Heading1" style="display:inline-block;z-index:0;">
+<h1 id="Heading1">Company Name</h1>
+</div>
+<div id="wb_CssMenu1" style="display:inline-block;height:28px;text-align:right;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb14_basic4.html#home" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="wb14_basic4.html#about" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="wb14_basic4.html#services" target="_self">Services</a>
+</li>
+<li><a role="menuitem" href="wb14_basic4.html#contact" target="_self">Contact</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div id="wb_home">
+<div id="home">
+<div id="wb_Card6" style="display:flex;text-align:center;z-index:2;">
+   <div id="Card6-card-body">
+      <div id="Card6-card-item0">Basic Full Page</div>
+      <div id="Card6-card-item1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="about">
+<div id="wb_Heading5" style="display:inline-block;text-align:center;z-index:3;">
+<h1 id="Heading5">About</h1>
+</div>
+<div id="wb_Text1">
+<span style="color:#000000;">Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</span>
+</div>
+</div>
+<div id="wb_services">
+<div id="services">
+<div id="wb_Heading2" style="display:inline-block;text-align:center;z-index:5;">
+<h1 id="Heading2">Services</h1>
+</div>
+<div id="wb_BulletedList1" style="display:inline-block;z-index:6;">
+<div>
+   <div class="bullet" style="">&bull;</div>
+   <div class="item item0"><span style="color:#000000;font-family:Lato;font-size:15px;line-height:21px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. <br><br></span></div>
+</div>
+<div style="clear:both">
+   <div class="bullet" style="">&bull;</div>
+   <div class="item item1"><span style="color:#000000;font-family:Lato;font-size:15px;line-height:21px;">Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.<br><br></span></div>
+</div>
+<div style="clear:both">
+   <div class="bullet" style="">&bull;</div>
+   <div class="item item2"><span style="color:#000000;font-family:Lato;font-size:15px;line-height:21px;">Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. </span></div>
+</div>
+
+</div>
+</div>
+</div>
+<form name="contact" method="post" action="mailto:yourname@yourdomain.com" enctype="text/plain" id="contact">
+<div id="wb_Heading3" style="display:inline-block;text-align:center;z-index:7;">
+<h1 id="Heading3">Contact</h1>
+</div>
+<input type="text" id="Editbox1" style="display:block;height:36px;" name="Editbox1" value="" spellcheck="false" placeholder="Your Email...">
+<input type="submit" id="Button1" name="" value="Send" style="display:block;width:176px;height:35px;z-index:9;">
+</form>
+<div id="footer">
+<div id="wb_Text3">
+<span style="color:#FFFFFF;">© Copyright 2018 https://www.wysiwygwebbuilder.com - All Rights Reserved</span>
+</div>
+</div>
+<div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:18;">
+<div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:11;">
+<a href="wb14_basic4.html#home"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+</body>
+</html>

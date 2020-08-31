@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Responsive Text Example</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+.responsive_style
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   color: #2E74B5;
+   background-color: transparent;
+}
+@media only screen and (min-width: 768px) and (max-width: 969px)
+{
+.responsive_style
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   font-style: normal;
+   text-decoration: none;
+   color: #9932CC;
+   background-color: transparent;
+}
+}
+@media only screen and (max-width: 767px)
+{
+.responsive_style
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 19px;
+   font-style: normal;
+   text-decoration: none;
+   color: #2E8B57;
+   background-color: transparent;
+}
+}
+#wb_indexText1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_indexText1
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_indexText1 div
+{
+   text-align: center;
+   white-space: nowrap;
+}
+#wb_indexHeading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #FFFFFF solid;
+   padding: 0px 0px 0px 0px;
+}
+#indexHeading1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 24px;
+   margin: 0;
+   text-align: center;
+}
+#wb_indexHeading2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #FFFFFF solid;
+   padding: 0px 0px 0px 0px;
+}
+#indexHeading2
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 24px;
+   margin: 0;
+   text-align: center;
+}
+#wb_indexText2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_indexText2 div
+{
+   text-align: center;
+   white-space: nowrap;
+}
+#wb_indexText1
+{
+   position: absolute;
+   left: 236px;
+   top: 103px;
+   width: 499px;
+   height: 96px;
+   text-align: center;
+   z-index: 0;
+}
+#wb_indexText2
+{
+   position: absolute;
+   left: 236px;
+   top: 392px;
+   width: 499px;
+   height: 96px;
+   text-align: center;
+   z-index: 3;
+}
+#wb_indexHeading1
+{
+   position: absolute;
+   left: 236px;
+   top: 62px;
+   width: 509px;
+   height: 41px;
+   text-align: center;
+   z-index: 1;
+}
+#wb_indexHeading2
+{
+   position: absolute;
+   left: 236px;
+   top: 351px;
+   width: 509px;
+   height: 41px;
+   text-align: center;
+   z-index: 2;
+}
+@media only screen and (min-width: 768px) and (max-width: 969px)
+{
+div#container
+{
+   width: 768px;
+}
+#wb_indexText1
+{
+   left: 130px;
+   top: 103px;
+   width: 499px;
+   height: 126px;
+   visibility: visible;
+   display: inline;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText1
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   text-align: center;
+   line-height: 18px;
+}
+#wb_indexHeading1
+{
+   left: 130px;
+   top: 62px;
+   width: 509px;
+   height: 41px;
+   visibility: visible;
+   display: inline;
+   color: #000000;
+   font-size: 24px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexHeading2
+{
+   left: 130px;
+   top: 351px;
+   width: 509px;
+   height: 41px;
+   visibility: visible;
+   display: inline;
+   color: #000000;
+   font-size: 24px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText2
+{
+   left: 130px;
+   top: 392px;
+   width: 499px;
+   height: 126px;
+   visibility: visible;
+   display: inline;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText2
+{
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+}
+}
+@media only screen and (max-width: 767px)
+{
+div#container
+{
+   width: 480px;
+}
+#wb_indexText1
+{
+   left: 41px;
+   top: 103px;
+   width: 398px;
+   height: 220px;
+   visibility: visible;
+   display: inline;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText1
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 19px;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   text-align: center;
+   line-height: 22px;
+}
+#wb_indexHeading1
+{
+   left: 30px;
+   top: 62px;
+   width: 421px;
+   height: 41px;
+   visibility: visible;
+   display: inline;
+   color: #000000;
+   font-size: 24px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexHeading2
+{
+   left: 41px;
+   top: 400px;
+   width: 398px;
+   height: 41px;
+   visibility: visible;
+   display: inline;
+   color: #000000;
+   font-size: 24px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText2
+{
+   left: 41px;
+   top: 441px;
+   width: 398px;
+   height: 220px;
+   visibility: visible;
+   display: inline;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_indexText2
+{
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+}
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="wb_indexText1">
+<span style="color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span></div>
+<div id="wb_indexHeading1">
+<h1 id="indexHeading1">Enable Responsive Fonts Example</h1></div>
+<div id="wb_indexHeading2">
+<h1 id="indexHeading2">Responsive Style Example</h1></div>
+<div id="wb_indexText2">
+<span class="responsive_style">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dark Mode</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/darkmode.css" rel="stylesheet">
+<link href="css/wb15_darkmode.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="transition.js"></script>
+<script src="collapse.js"></script>
+<script src="dropdown.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="tab.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-78 }, 600, 'easeOutQuart');
+      });
+      $("a[href*='#news']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_news').offset().top-78 }, 600, 'easeOutQuart');
+      });
+      $("#newsContainer").owlCarousel({autoplayTimeout:5000, margin: 0, autoplay: true, nav: false, loop: true, dots: true, responsive: {0: {items: 1},480: {items: 1}, slideBy: 1}});
+      $("a[href*='#about']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top-78 }, 600, 'easeOutQuart');
+      });
+      $("a[href*='#team']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_team').offset().top-78 }, 600, 'easeOutQuart');
+      });
+      $("#teamContainer").owlCarousel({autoplayTimeout:5000, margin: 16, autoplay: true, nav: false, loop: true, dots: true, responsive: {0: {items: 1},480: {items: 2}, slideBy: 1}});
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-78 }, 600, 'easeOutQuart');
+      });
+      $(document).on('click','.navigationMenu-navbar-collapse.in',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInCubic');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#aboutTabs a").click(function()
+      {
+         $(this).tab('show');
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_headerIcon1">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon1"><i class="fa fa-phone"></i></div></a>
+               </div>
+               <label for="" id="headerLabel1">Phone: +123 456 7890</label>
+            </div>
+            <div class="col-2">
+               <div id="wb_headerIcon2">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon2"><i class="fa fa-envelope-o"></i></div></a>
+               </div>
+               <label for="" id="headerLabel2">Email: info@yourwebsite.com</label>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-4">
+               <div id="wb_headerIcon3">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon3"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_headerIcon4">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon4"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_headerIcon5">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon5"><i class="fa fa-youtube"></i></div></a>
+               </div>
+               <div id="wb_headerIcon6">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_darkmode__.html"><div id="headerIcon6"><i class="fa fa-twitter"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationHeading">
+                  <h1 id="navigationHeading">Dark Mode</h1>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_navigationMenu">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigationMenu-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="">
+                                 <a href="wb15_darkmode.html#welcome">HOME</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_darkmode.html#news">NEWS</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_darkmode.html#about">ABOUT</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_darkmode.html#team">TEAM</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_darkmode.html#contact">CONTACT</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome-overlay"></div>
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_welcomeHeading">
+                  <h1 id="welcomeHeading">THE ULTIMATE WEB DESIGN TOOLBOX</h1>
+               </div>
+               <div id="wb_welcomeJavaScript">
+                  <div id="typewriter-deluxe">
+                     <span id="typewriter-text"></span>
+                  </div>
+                  <script>                  
+                  var data = "WYSIWYG Web Builder^The ultimate web design toolkit^http://www.wysiwygwebbuilder.com";
+                  var lines = data.split('^');
+                  var reverse = false;
+                  var index = 0;
+                  var text = '';
+                  var typeWriterElement = document.getElementById("typewriter-text");
+                  function typeWriterDeluxe() 
+                  {
+                     var i = index % lines.length;
+                     var line = lines[i];
+                     if (reverse) 
+                     {
+                        text = line.substring(0, text.length - 1);
+                     } 
+                     else 
+                     {
+                        text = line.substring(0, text.length + 1);
+                     }
+                     typeWriterElement.innerHTML = text;
+                     var timeout = 250 - Math.random() * (250/2);
+                     if (reverse) 
+                     { 
+                        timeout /= 2; 
+                     }
+                     if (!reverse && text === line) 
+                     {
+                        timeout = 5000;
+                        reverse = true;
+                     } 
+                     else 
+                     if (reverse && text === '') 
+                     {
+                        reverse = false;
+                        index++;
+                        timeout = 500;
+                     }
+                     setTimeout(typeWriterDeluxe, timeout);
+                  }
+                  typeWriterDeluxe();
+                  </script>
+               </div>
+               <a id="welcomeButton" href="wb15_darkmode.html#news">CLICK ME</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_news">
+      <div id="news">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_newsHeading">
+                  <h2 id="newsHeading">Latest News</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_newsContainer">
+      <div id="newsContainer" class="owl-carousel owl-theme">
+         <div id="wb_newsCard1">
+            <div id="newsCard1-card-body">
+               <div id="newsCard1-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+               <div id="newsCard1-card-item1">MARCH 28, 2019</div>
+            </div>
+         </div>
+         <div id="wb_newsCard2">
+            <div id="newsCard2-card-body">
+               <div id="newsCard2-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+               <div id="newsCard2-card-item1">MARCH 28, 2019</div>
+            </div>
+         </div>
+         <div id="wb_newsCard3">
+            <div id="newsCard3-card-body">
+               <div id="newsCard3-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+               <div id="newsCard3-card-item1">MARCH 28, 2019</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_about">
+      <div id="about">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_aboutImage">
+                     <img src="images/beijing-square.png" id="aboutImage" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_aboutText1">
+                     <p style="font-size:20px;line-height:22.5px;"><span style="font-size:32px;line-height:36px;">Our Company</span></p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;color:#FFFFFF;line-height:20.8px;">Phasellus fringilla convallis libero non aliquam. Morbi justo lorem, varius ultricies pulvinar ac, aliquet quis ipsum. <span style="font-size:13px;line-height:16px;color:#FFFFFF;"><br/></span></p>
+                     <p style="font-family:Arial;font-size:13px;line-height:16px;color:#FFFFFF;line-height:20.8px;"><span style="font-family:Arial;">Suspendisse aliquam pulvinar odio sed rhoncus. Cras pretium diam ut metus tristique, a ultricies sapien euismod. Duis dui diam, maximus ac ligula a, accumsan cursus ante. </span></p>
+                  </div>
+                  <a id="aboutButton" href="wb15_darkmode.html">Read More</a>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="aboutTabs">
+                     <ul class="nav-tabs" role="tablist">
+                        <li class="active" role="presentation"><a href="wb15_darkmode.html#abouttabs-page-0" role="tab" data-toggle="tab" aria-controls="abouttabs-page-0"><span>Vision</span></a></li>
+                        <li role="presentation"><a href="wb15_darkmode.html#abouttabs-page-1" role="tab" data-toggle="tab" aria-controls="abouttabs-page-1"><span>Mission</span></a></li>
+                     </ul>
+                     <div role="tabpanel" class="tab-pane active" id="abouttabs-page-0">
+                        <div id="wb_aboutTabsText1">
+                           <p style="font-family:Arial;line-height:22.13px;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span></p>
+                        </div>
+                     </div>
+                     <div role="tabpanel" class="tab-pane" id="abouttabs-page-1">
+                        <div id="wb_aboutTabsText2">
+                           <p style="font-family:Arial;line-height:22.13px;"><span style="font-family:Arial;">Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</span></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_team">
+      <div id="team">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_teamHeading1">
+                  <h2 id="teamHeading1">Meet Our Wonderful Team</h2>
+               </div>
+               <div id="wb_teamHeading2">
+                  <h3 id="teamHeading2">They are brilliant...</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_teamContainer">
+      <div id="teamContainer" class="owl-carousel owl-theme">
+         <div id="wb_teamCard1">
+            <div id="teamCard1-card-body">
+               <img id="teamCard1-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard1-card-item1">Alicia</div>
+               <div id="teamCard1-card-item2">Designer</div>
+               <div id="teamCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_teamCard2">
+            <div id="teamCard2-card-body">
+               <img id="teamCard2-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard2-card-item1">Alicia</div>
+               <div id="teamCard2-card-item2">Designer</div>
+               <div id="teamCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard2-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard2-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_teamCard3">
+            <div id="teamCard3-card-body">
+               <img id="teamCard3-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard3-card-item1">Alicia</div>
+               <div id="teamCard3-card-item2">Designer</div>
+               <div id="teamCard3-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard3-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard3-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard3-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard3-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard3-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_teamCard4">
+            <div id="teamCard4-card-body">
+               <img id="teamCard4-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard4-card-item1">Alicia</div>
+               <div id="teamCard4-card-item2">Designer</div>
+               <div id="teamCard4-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard4-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard4-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard4-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard4-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard4-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_teamCard5">
+            <div id="teamCard5-card-body">
+               <img id="teamCard5-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard5-card-item1">Alicia</div>
+               <div id="teamCard5-card-item2">Designer</div>
+               <div id="teamCard5-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard5-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard5-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard5-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard5-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard5-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_teamCard6">
+            <div id="teamCard6-card-body">
+               <img id="teamCard6-card-item0" src="images/avatar01.png" alt="" title="">
+               <div id="teamCard6-card-item1">Alicia</div>
+               <div id="teamCard6-card-item2">Designer</div>
+               <div id="teamCard6-card-item3"><i class="fa fa-star"></i></div>
+               <div id="teamCard6-card-item4"><i class="fa fa-star"></i></div>
+               <div id="teamCard6-card-item5"><i class="fa fa-star"></i></div>
+               <div id="teamCard6-card-item6"><i class="fa fa-star"></i></div>
+               <div id="teamCard6-card-item7"><i class="fa fa-star"></i></div>
+               <div id="teamCard6-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeadingText">
+                  <p style="font-family:Arial;"><span style="font-family:Arial;">CONTACT </span><span style="font-family:Arial;font-weight:bold;color:#28A7E9;">INFORMATION</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText">
+                  <p style="line-height:22.4px;">Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.</p>
+                  <p style="line-height:22.4px;">&nbsp;</p>
+                  <p style="color:#28A7E9;line-height:22.4px;"><strong>Address:</strong><span style="color:#FFFFFF;">&nbsp; #28, 3nd floor, WYSIWYG Plaza, Web City, Builder</span></p>
+                  <p style="color:#28A7E9;line-height:22.4px;"><strong>Phone:</strong><span style="color:#FFFFFF;">&nbsp; 1-800-123-4567</span></p>
+                  <p style="color:#28A7E9;line-height:22.4px;"><strong>Email:</strong><span style="color:#FFFFFF;">&nbsp; info@wysiwygmail.com</span></p>
+                  <p style="font-family:Arial;color:#28A7E9;line-height:22.4px;"><span style="font-family:Arial;font-weight:bold;">Fax:</span><span style="font-family:Arial;color:#FFFFFF;">&nbsp; 1-800-123-4566</span></p>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_contactFormInner">
+                  <div id="contactFormInner">
+                     <div class="row">
+                        <div class="col-1">
+                           <div class="col-1-padding">
+                              <input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Name">
+                           </div>
+                        </div>
+                        <div class="col-2">
+                           <div class="col-2-padding">
+                              <input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Email">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <input type="text" id="contactSubject" name="subject" value="" spellcheck="false" placeholder="Subject">
+               <textarea name="message" id="contactMessage" rows="4" cols="40" spellcheck="false" placeholder="Message"></textarea>
+               <input type="submit" id="contactButton" name="" value="Submit">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-start="opacity:0;" data-250-start="opacity:1;">
+      <div id="wb_up-arrow">
+         <a href="wb15_darkmode.html#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_footerText">
+                  <p style="font-family:Arial;"><span style="font-family:Arial;">C</span><span style="font-family:Arial;">opyright </span><span style="font-family:Arial;">©</span><span style="font-family:Arial;"> 2019 WYSIWYG Web Builder</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

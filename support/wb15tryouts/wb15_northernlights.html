@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Northern Lights</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/northernlights.css" rel="stylesheet">
+<link href="css/wb15_northernlights.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="transition.js"></script>
+<script src="collapse.js"></script>
+<script src="dropdown.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="util.js"></script>
+<script src="carousel.js"></script>
+<script src="wb.panel.js"></script>
+<script src="wwb15.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#welcome']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#services').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#projects']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_projects').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#reviews']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_reviews').offset().top }, 600, 'easeOutCubic');
+      });
+      $("#reviewsContainer").owlCarousel({autoplayTimeout:5000, margin: 16, autoplay: true, nav: false, loop: true, dots: true, responsive: {0: {items: 1},480: {items: 2}, slideBy: 1}});
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutCubic');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $(document).on('click','.navigationMenu-navbar-collapse.in',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#welcome-carousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               AnimateCss('wb_welcome-text1', 'slide-left-in', 300, 1000);
+               AnimateCss('wb_welcome-text2', 'slide-right-in', 1000, 1000);
+               AnimateCss('welcome-button1', 'swash-in', 2000, 1000);
+               break;
+            case 1:
+               AnimateCss('wb_welcome-text3', 'scale-in-horizontal-center', 300, 1000);
+               AnimateCss('wb_welcome-text4', 'scale-in-vertical-center', 1000, 1000);
+               AnimateCss('welcome-button2', 'twister-down-in', 2000, 1000);
+               break;
+            case 2:
+               AnimateCss('wb_welcome-text5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcome-button3', 'vanish-in', 2000, 1000);
+               break;
+            case 5:
+               AnimateCss('wb_welcome-text4', 'transform-roll-in', 1000, 1000);
+               break;
+         }
+      });
+      $("#welcome-carousel").bootstrapcarousel({interval:6000, pause: false});
+      $("#projectsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+            case 1:
+               $('#Carousel2').bootstrapcarousel(1);
+               break;
+            case 2:
+               $('#Carousel2').bootstrapcarousel(2);
+               break;
+            case 3:
+               $('#Carousel2').bootstrapcarousel(3);
+               break;
+         }
+      });
+      $("#projectsCarousel").bootstrapcarousel({interval:3000, pause: false});
+      $("#PanelLayer").panel({animate: true, animationDuration: 200, animationEasing: 'easeOutSine', dismissible: true, display: 'overlay', position: 'bottom'});
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_headerIcon1">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="headerIcon1"><i class="fa fa-phone"></i></div></a>
+               </div>
+               <label for="" id="headerLabel1">Call us: +123 456 7890</label>
+            </div>
+            <div class="col-2">
+               <div id="wb_headerIcon2">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="headerIcon2"><i class="fa fa-envelope-o"></i></div></a>
+               </div>
+               <label for="" id="headerLabel2">Contact us: info@yourwebsite.com</label>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-4">
+               <div id="wb_headerIcon3">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="headerIcon3"><i class="fa fa-user"></i></div></a>
+               </div>
+               <label for="" id="headerLabel3">Login</label>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationHeading">
+                  <h1 id="navigationHeading">Northern Lights</h1>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_navigationMenu">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigationMenu-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="">
+                                 <a href="wb15_northernlights.html#welcome">Home</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_northernlights.html#services">About</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_northernlights.html#projects">Projects</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_northernlights.html#reviews">Reviews</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_northernlights.html#contact">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_welcome-carousel">
+                  <div id="welcome-carousel" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#welcome-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#welcome-carousel" data-slide-to="1"></li>
+                        <li data-target="#welcome-carousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text1">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">Welcome to </span><span style="font-size:21px;line-height:24.5px;font-weight:bold;">Northern Lights</span></p>
+                              </div>
+                              <div id="wb_welcome-text2">
+                                 <p style="font-family:Arial;font-size:13px;line-height:16px;"><span style="font-family:Arial;font-size:27px;line-height:30px;font-weight:bold;">We're happy you have found us!</span></p>
+                              </div>
+                              <a id="welcome-button1" href="../../download_2.html" target="_blank">Try for Free</a>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text3">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">This demo uses CSS animations to animate text</span></p>
+                              </div>
+                              <div id="wb_welcome-text4">
+                                 <p style="font-family:Arial;font-size:13px;line-height:16px;"><span style="font-family:Arial;font-size:27px;line-height:30px;font-weight:bold;">More than 150 built-in animations!</span></p>
+                              </div>
+                              <a id="welcome-button2" href="../../download_2.html" target="_blank">Try for Free</a>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcome-text5">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:21px;line-height:24.5px;">Animations are triggered by Carousel slide events</span></p>
+                              </div>
+                              <div id="wb_welcome-text6">
+                                 <p style="font-family:Arial;font-size:13px;line-height:16px;"><span style="font-family:Arial;font-size:27px;line-height:30px;font-weight:bold;">The possibilities are endless...</span></p>
+                              </div>
+                              <a id="welcome-button3" href="../../download_2.html" target="_blank">Try for Free</a>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-item-left carousel-control" href="wb15_northernlights.html#welcome-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-item-right carousel-control" href="wb15_northernlights.html#welcome-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div id="wb_servicesCard1">
+            <div id="servicesCard1-card-body">
+               <div id="servicesCard1-card-item0"><i class="fa fa-laptop"></i></div>
+               <div id="servicesCard1-card-item1">Managed IT Services</div>
+               <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_servicesCard2">
+            <div id="servicesCard2-card-body">
+               <div id="servicesCard2-card-item0"><i class="fa fa-comments-o"></i></div>
+               <div id="servicesCard2-card-item1">Digital Marketing</div>
+               <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_servicesCard3">
+            <div id="servicesCard3-card-body">
+               <div id="servicesCard3-card-item0"><i class="fa fa-euro"></i></div>
+               <div id="servicesCard3-card-item1">Simple Pricing</div>
+               <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_projects">
+      <div id="projects">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_projectsCarousel">
+                     <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                           <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#projectsCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_projectsText2" class="caption">
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:21px;line-height:24.5px;font-weight:bold;">Project 1</span><span style="font-weight:bold;"><br/></span><span style="font-size:15px;line-height:16.5px;">This is a description for the first project.</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-2">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_projectsText3" class="caption">
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">Project 2</span></p>
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:15px;line-height:16.5px;">This is a description for the second project.</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-left carousel-control" href="wb15_northernlights.html#projectsCarousel" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control" href="wb15_northernlights.html#projectsCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_projectsText1">
+                     <p style="font-weight:bold;">Commited to data and privacy</p>
+                     <ul style="font-size:15px;line-height:16.5px;list-style-type:disc;">
+                        <li style="margin:0 0 0 24px;"><p style="font-size:15px;line-height:16.5px;">Lorem ipsum dolor sit amet
+                        </li>
+                        <li style="margin:0 0 0 24px;"><p style="font-size:15px;line-height:16.5px;">Consectetur adipiscing elit. 
+                        </li>
+                        <li style="margin:0 0 0 24px;"><p style="font-size:15px;line-height:16.5px;">Am viverra euismod odiogravida. 
+                        </li>
+                        <li style="margin:0 0 0 24px;"><p style="font-size:15px;line-height:16.5px;">Sed dui lorem.
+                        </li>
+                     </ul>
+                     <p style="font-size:15px;line-height:16.5px;"><span style="font-family:Arial;font-size:15px;line-height:16.5px;color:#33D543;"><br/></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+                  </div>
+                  <input type="submit" id="projectsButton" name="" value="More details">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading1">
+                  <h2 id="reviewsHeading1">WHAT CLIENTS SAY</h2>
+               </div>
+               <div id="wb_reviewsHeading2">
+                  <h3 id="reviewsHeading2">Clean and Modern design is our best specialist</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer" class="owl-carousel owl-theme">
+         <div id="wb_reviewsCard1">
+            <div id="reviewsCard1-card-body">
+               <img id="reviewsCard1-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard1-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard1-card-item2">Developer</div>
+               <div id="reviewsCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard2">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard2-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard2-card-item2">Developer</div>
+               <div id="reviewsCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard3">
+            <div id="reviewsCard3-card-body">
+               <img id="reviewsCard3-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard3-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard3-card-item2">Developer</div>
+               <div id="reviewsCard3-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard3-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard4">
+            <div id="reviewsCard4-card-body">
+               <img id="reviewsCard4-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard4-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard4-card-item2">Developer</div>
+               <div id="reviewsCard4-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard5">
+            <div id="reviewsCard5-card-body">
+               <img id="reviewsCard5-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard5-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard5-card-item2">Developer</div>
+               <div id="reviewsCard5-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard5-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard6">
+            <div id="reviewsCard6-card-body">
+               <img id="reviewsCard6-card-item0" src="images/avatar_green.jpg" alt="" title="">
+               <div id="reviewsCard6-card-item1">Pablo Carrasco</div>
+               <div id="reviewsCard6-card-item2">Developer</div>
+               <div id="reviewsCard6-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard6-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">GET IN TOUCH</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactText1">
+                     <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Newsletter</span></p>
+                  </div>
+                  <input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Enter your email address">
+                  <input type="submit" id="contactButton" name="" value="Submit">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_contactText2">
+                     <p><strong>Contact Us</strong></p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">#28, 3nd floor, WYSIWYG Plaza<span style="font-size:13px;line-height:16px;"><br/></span>Web City<span style="font-size:13px;line-height:16px;"><br/></span>Builder, WB 1969 United States</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">Phone: (123) 456-7890 </p>
+                     <p style="font-size:13px;line-height:16px;">Email: name@example.com </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer" data-start="opacity:0;" data-250-start="opacity:1;">
+      <div id="wb_upIcon">
+         <a href="wb15_northernlights.html#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="PanelLayer">
+      <div id="wb_links">
+         <div id="links">
+            <div class="row">
+               <div class="col-1">
+                  <div class="col-1-padding">
+                     <div id="wb_linksHeading1">
+                        <h3 id="linksHeading1">NAVIGATION</h3>
+                     </div>
+                     <div id="wb_linksMenu1">
+                        <ul role="menubar">
+                           <li class="firstmain"><a role="menuitem" href="wb15_northernlights.html#" target="_self">Home</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">About</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Services</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Products</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-2">
+                  <div class="col-2-padding">
+                     <div id="wb_linksHeading2">
+                        <h3 id="linksHeading2">CONNECT</h3>
+                     </div>
+                     <div id="wb_linksMenu2">
+                        <ul role="menubar">
+                           <li class="firstmain"><a role="menuitem" href="wb15_northernlights.html#" target="_self">Facebook</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Instagram</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Twitter</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">YouTube</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="col-3-padding">
+                     <div id="wb_linksHeading3">
+                        <h3 id="linksHeading3">MORE LINKS</h3>
+                     </div>
+                     <div id="wb_linksMenu3">
+                        <ul role="menubar">
+                           <li class="firstmain"><a role="menuitem" href="wb15_northernlights.html#" target="_self">Lorem&nbsp;Ipsum</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Consectetur&nbsp;Adipisicing</a>
+                           </li>
+                           <li><a role="menuitem" href="wb15_northernlights.html#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_footerIconMenu">
+                  <a href="wb15_northernlights.html#" onclick="TogglePanel('PanelLayer', event);return false;"><div id="footerIconMenu"><i class="fa fa-bars"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p style="font-family:Arial;"><span style="font-family:Arial;">C</span><span style="font-family:Arial;">opyright </span><span style="font-family:Arial;">©</span><span style="font-family:Arial;"> 2019 WYSIWYG Web Builder</span></p>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_footerIcon1">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_footerIcon2">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_footerIcon3">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="footerIcon3"><i class="fa fa-youtube"></i></div></a>
+               </div>
+               <div id="wb_footerIcon4">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_northernlights_.html"><div id="footerIcon4"><i class="fa fa-twitter"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Preloader</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+
+
+<style>
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#preloader
+{
+   background: #FFFFFF url("images/dot-spinner.gif") no-repeat center center;
+   bottom: 0;
+   opacity: 0.75;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 99999;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Heading1
+{
+   color: #777777;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_Text1 p, #wb_Text1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text1 div
+{
+   text-align: justify;
+}
+#PhotoGallery1
+{
+   box-sizing: border-box;
+   font-size: 0;
+   width: 100%;
+   height: 100%;
+   table-layout: fixed;
+   display: table;
+   margin: 0;
+}
+#PhotoGallery1 .thumbnails
+{
+   margin: 0;
+}
+#PhotoGallery1 .thumbnail
+{
+   position: relative;
+   min-height: 1px;
+   box-sizing: border-box;
+   float: left;
+   margin: 0;
+   padding: 3px 3px 3px 3px;
+   width: 50%;
+   text-align: center;
+   vertical-align: top;
+}
+#PhotoGallery1 .frame
+{
+   padding: 4px;
+   background-color: #fff;
+   border: 1px #DDDDDD solid;
+   border-radius: 4px;
+}
+#PhotoGallery1 .thumbnail img
+{
+   border-width: 0;
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 100%;
+   box-sizing: border-box;
+   border-radius: 4px;
+}
+#PhotoGallery1 .clearfix:before,
+#PhotoGallery1 .clearfix:after,
+#PhotoGallery1 .thumbnails:before,
+#PhotoGallery1 .thumbnails:after
+{
+   display: table;
+   content: " ";
+}
+#PhotoGallery1 .clearfix:after,
+#PhotoGallery1 .thumbnails:after
+{
+   clear: both;
+}
+#PhotoGallery1 .visible-col2
+{
+   display: block;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text2
+{
+   color: #A5A5A5;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 15px;
+}
+#wb_Text2 p, #wb_Text2 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text2 div
+{
+   text-align: center;
+}
+</style>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {setTimeout(function(){ $('#preloader').remove(); }, 2000);}
+});
+$(window).on('load', function()
+{
+   setTimeout(function(){ $('#preloader').remove(); }, 2000);
+});
+</script>
+<script>
+// for demo purposes:
+// replace 
+// $('#preloader').remove();
+// with
+// setTimeout(function(){ $('#preloader').remove(); }, 2000);
+// in the published page
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Heading1" style="position:absolute;left:15px;top:32px;width:940px;height:37px;z-index:0;">
+<h1 id="Heading1">Page Preloader</h1></div>
+<div id="wb_Text1" style="position:absolute;left:195px;top:148px;width:581px;height:75px;text-align:justify;z-index:1;">
+<p style="font-family:Arial;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span></p>
+</div>
+<div id="wb_PhotoGallery1" style="position:absolute;left:195px;top:255px;width:581px;height:442px;z-index:2;">
+<div id="PhotoGallery1">
+   <div class="thumbnails">
+      <figure class="thumbnail">
+<div class="frame">
+         <a href="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand1.jpg"><img alt="" src="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand1.jpg"></a>
+</div>
+      </figure>
+      <figure class="thumbnail">
+<div class="frame">
+         <a href="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand2.jpg"><img alt="" src="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand2.jpg"></a>
+</div>
+      </figure>
+      <div class="clearfix visible-col2"></div>
+      <figure class="thumbnail">
+<div class="frame">
+         <a href="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand4.jpg"><img alt="" src="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand4.jpg"></a>
+</div>
+      </figure>
+      <figure class="thumbnail">
+<div class="frame">
+         <a href="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand3.jpg"><img alt="" src="https://www.wysiwygwebbuilder.com/support/wb15tryouts/images/sand3.jpg"></a>
+</div>
+      </figure>
+      <div class="clearfix visible-col2"></div>
+   </div>
+</div></div>
+<div id="wb_Text2" style="position:absolute;left:195px;top:762px;width:581px;height:14px;text-align:center;z-index:3;">
+<p style="font-family:Arial;font-size:13px;"><span style="font-family:Arial;font-size:12px;">Note: for demo purposes this page has a fixed delay of 2 seconds.</span></p>
+</div>
+
+</div>
+<div id="preloader"></div>
+</body>
+</html>

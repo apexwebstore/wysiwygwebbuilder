@@ -1,0 +1,923 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RED</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base/jquery-ui.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/red.css" rel="stylesheet">
+<link href="css/wb15_red.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wb.photocollage.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#home']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_home').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#services']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices()
+   {
+      var $obj = $("#wb_services");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices();
+   $(window).scroll(function(event)
+   {
+      onScrollservices();
+   });
+   $("a[href*='#servicesDivider']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_servicesDivider').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservicesDivider()
+   {
+      var $obj = $("#wb_servicesDivider");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservicesDivider();
+   $(window).scroll(function(event)
+   {
+      onScrollservicesDivider();
+   });
+   $("a[href*='#servicesCards']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_servicesCards').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#quotes']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_quotes').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollquotes()
+   {
+      var $obj = $("#wb_quotes");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollquotes();
+   $(window).scroll(function(event)
+   {
+      onScrollquotes();
+   });
+   $("a[href*='#quotesDivider']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_quotesDivider').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollquotesDivider()
+   {
+      var $obj = $("#wb_quotesDivider");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollquotesDivider();
+   $(window).scroll(function(event)
+   {
+      onScrollquotesDivider();
+   });
+   $("a[href*='#quotesCards']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_quotesCards').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#portfolio']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolio').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolio()
+   {
+      var $obj = $("#wb_portfolio");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolio();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolio();
+   });
+   $("a[href*='#portfolioDivider']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolioDivider').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolioDivider()
+   {
+      var $obj = $("#wb_portfolioDivider");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolioDivider();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolioDivider();
+   });
+   function skrollrInit()
+   {
+      skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+   }
+   skrollrInit();
+   $("a[href*='#portfolioGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolioGrid').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolioGrid()
+   {
+      var $obj = $("#wb_portfolioGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolioGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolioGrid();
+   });
+   $("a[href*='#facts']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollfacts()
+   {
+      var $obj = $("#wb_facts");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollfacts();
+   $(window).scroll(function(event)
+   {
+      onScrollfacts();
+   });
+   $("a[href*='#factsDivider']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_factsDivider').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollfactsDivider()
+   {
+      var $obj = $("#wb_factsDivider");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollfactsDivider();
+   $(window).scroll(function(event)
+   {
+      onScrollfactsDivider();
+   });
+   $("a[href*='#factsGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_factsGrid').offset().top-88 }, 600, 'easeOutCirc');
+   });
+function countUpfactsJavaScript1()
+{
+   var $obj = $('#factsJavaScript1');
+   var count = $obj.attr('data-count');
+   var bottomObj = $obj.offset().top + $obj.outerHeight();
+   var bottomWnd = $(window).scrollTop() + $(window).height();
+   if (bottomWnd > bottomObj && count != 0)
+   {
+      $({countUp: $obj.text()}).animate({countUp: count},
+      {
+         duration: 4000,
+         step: function() { $obj.text(Math.floor(this.countUp)); },
+         complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+      });  
+   }
+}
+$(window).scroll( function()
+{
+   countUpfactsJavaScript1();
+});
+countUpfactsJavaScript1();
+function countUpfactsJavaScript2()
+{
+   var $obj = $('#factsJavaScript2');
+   var count = $obj.attr('data-count');
+   var bottomObj = $obj.offset().top + $obj.outerHeight();
+   var bottomWnd = $(window).scrollTop() + $(window).height();
+   if (bottomWnd > bottomObj && count != 0)
+   {
+      $({countUp: $obj.text()}).animate({countUp: count},
+      {
+         duration: 4000,
+         step: function() { $obj.text(Math.floor(this.countUp)); },
+         complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+      });  
+   }
+}
+$(window).scroll( function()
+{
+   countUpfactsJavaScript2();
+});
+countUpfactsJavaScript2();
+function countUpfactsJavaScript3()
+{
+   var $obj = $('#factsJavaScript3');
+   var count = $obj.attr('data-count');
+   var bottomObj = $obj.offset().top + $obj.outerHeight();
+   var bottomWnd = $(window).scrollTop() + $(window).height();
+   if (bottomWnd > bottomObj && count != 0)
+   {
+      $({countUp: $obj.text()}).animate({countUp: count},
+      {
+         duration: 4000,
+         step: function() { $obj.text(Math.floor(this.countUp)); },
+         complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+      });  
+   }
+}
+$(window).scroll( function()
+{
+   countUpfactsJavaScript3();
+});
+countUpfactsJavaScript3();
+function countUpfactsJavaScript4()
+{
+   var $obj = $('#factsJavaScript4');
+   var count = $obj.attr('data-count');
+   var bottomObj = $obj.offset().top + $obj.outerHeight();
+   var bottomWnd = $(window).scrollTop() + $(window).height();
+   if (bottomWnd > bottomObj && count != 0)
+   {
+      $({countUp: $obj.text()}).animate({countUp: count},
+      {
+         duration: 20000,
+         step: function() { $obj.text(Math.floor(this.countUp)); },
+         complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+      });  
+   }
+}
+$(window).scroll( function()
+{
+   countUpfactsJavaScript4();
+});
+countUpfactsJavaScript4();
+   $("#homeButton").button({ icon: 'ui-primary', iconPosition: 'beginning' });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollcontact()
+   {
+      var $obj = $("#wb_contact");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollcontact();
+   $(window).scroll(function(event)
+   {
+      onScrollcontact();
+   });
+   $("a[href*='#contactDivider']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contactDivider').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollcontactDivider()
+   {
+      var $obj = $("#wb_contactDivider");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollcontactDivider();
+   $(window).scroll(function(event)
+   {
+      onScrollcontactDivider();
+   });
+   $("a[href*='#location']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_location').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("#portfolioCollage").photocollage({ effect: 'css', duration: 600, padding: 20, lazyload: true, matrix: '1,1,2,0,1,1,0,0,2,0,1,1,0,0,1,1' });
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerMenu">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" class="headerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#home" target="_self">Home</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html" target="_self">About</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/services.html" target="_self">Services</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/team.html" target="_self">Team</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/contact.html" target="_self">Contact</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_home">
+<div id="home">
+<div class="col-1">
+<div id="wb_homeImage" data-300-top="transform: scale(1.0,1.0);opacity:1.0;" data--100-top="transform: scale(2.0,2.0);opacity:0.0;">
+<img src="images/pepper-square.jpg" id="homeImage" alt="">
+</div>
+<div id="wb_homeHeading1">
+<h1 id="homeHeading1">RED</h1>
+</div>
+<div id="wb_homeHeading2">
+<h2 id="homeHeading2">Red has always been my color, because red stands out.</h2>
+</div>
+<div id="wb_homeText">
+<p style="font-family:Arial;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span></p>
+
+</div>
+<div id="wb_homeIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="homeIcon1"><i class="fa fa-facebook-square"></i></div></a>
+</div>
+<div id="wb_homeIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="homeIcon2"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_homeIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="homeIcon3"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_homeIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="homeIcon4"><i class="fa fa-twitter"></i></div></a>
+</div>
+<hr id="homeSpacer">
+<div id="wb_homeButton">
+<a class="ui-button ui-widget ui-corner-all" id="homeButton" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#services" id="homeButton">Tell Me More</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services">
+<div id="services">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_servicesHeading" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h1 id="servicesHeading">Services</h1>
+</div>
+<div id="wb_servicesText" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_servicesDivider">
+<div id="servicesDivider">
+<div class="row">
+<div class="col-1">
+<hr id="servicesLine1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+<div class="col-2">
+<div id="wb_servicesIcon" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="servicesIcon"><i class="fa fa-lightbulb-o"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<hr id="servicesLine2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_servicesCards">
+<div id="servicesCards">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_servicesCard1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="servicesCard1-card-body">
+      <div id="servicesCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+      <div id="servicesCard1-card-item1">Design</div>
+      <div id="servicesCard1-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard1-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_servicesCard2" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+   <div id="servicesCard2-card-body">
+      <div id="servicesCard2-card-item0"><i class="fa fa-clock-o"></i></div>
+      <div id="servicesCard2-card-item1">Design</div>
+      <div id="servicesCard2-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard2-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_servicesCard3" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="servicesCard3-card-body">
+      <div id="servicesCard3-card-item0"><i class="fa fa-clock-o"></i></div>
+      <div id="servicesCard3-card-item1">Design</div>
+      <div id="servicesCard3-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard3-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_quotes">
+<div id="quotes">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_quotesHeading" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h1 id="quotesHeading">Quotes</h1>
+</div>
+<div id="wb_quotesText" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<p><em>"Red is such an interesting color to correlate with emotion, because it's on both ends of the spectrum. On one end you have happiness, falling in love, infatuation with someone, passion, all that. On the other end, you've got obsession, jealousy, danger, fear, anger and frustration"</em><span style="font-style:italic;"><br /></span>Taylor Swift</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_quotesDivider">
+<div id="quotesDivider">
+<div class="row">
+<div class="col-1">
+<hr id="quotesLine1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+<div class="col-2">
+<div id="wb_quotesIcon" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="quotesIcon"><i class="fa fa-comments-o"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<hr id="quotesLine2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_quotesCards">
+<div id="quotesCards">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_quotesCard1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="quotesCard1-card-body">
+      <div id="quotesCard1-card-item0">“</div>
+      <div id="quotesCard1-card-item1">Red is the ultimate cure for sadness.</div>
+      <hr id="quotesCard1-card-item2">
+      <div id="quotesCard1-card-item3">Bill Blass</div>
+   </div>
+
+</div>
+<div id="wb_quotesCard3" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="quotesCard3-card-body">
+      <div id="quotesCard3-card-item0">“</div>
+      <div id="quotesCard3-card-item1">I love my red hair. It makes me spunkier.</div>
+      <hr id="quotesCard3-card-item2">
+      <div id="quotesCard3-card-item3">Lindsay Lohan</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_quotesCard2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="quotesCard2-card-body">
+      <div id="quotesCard2-card-item0">“</div>
+      <div id="quotesCard2-card-item1">In Asia, red is the colour of joy; red is the colour of festivities and of celebration. </div>
+      <hr id="quotesCard2-card-item2">
+      <div id="quotesCard2-card-item3">Vincent Tan</div>
+   </div>
+
+</div>
+<div id="wb_quotesCard4" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+   <div id="quotesCard4-card-body">
+      <div id="quotesCard4-card-item0">“</div>
+      <div id="quotesCard4-card-item1">I see a red door and I want to paint it black.</div>
+      <hr id="quotesCard4-card-item2">
+      <div id="quotesCard4-card-item3">Mick Jagger</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_portfolio">
+<div id="portfolio">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_portfolioHeading" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h1 id="portfolioHeading">Portfolio</h1>
+</div>
+<div id="wb_portfolioText" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_portfolioDivider">
+<div id="portfolioDivider">
+<div class="row">
+<div class="col-1">
+<hr id="portfolioLine1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+<div class="col-2">
+<div id="wb_portfolioIcon" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="portfolioIcon"><i class="fa fa-picture-o"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<hr id="portfolioLine2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#home"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_portfolioGrid">
+<div id="portfolioGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_portfolioCollage">
+<div id="portfolioCollage">
+   <div class="thumbnails">
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+      <div class="thumbnail">
+         <a href="images/pepper-square.jpg"><img alt="" src="images/pepper-square.jpg"></a>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_facts">
+<div id="facts">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_factsHeading" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h1 id="factsHeading">Fun Facts</h1>
+</div>
+<div id="wb_factsText" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_factsDivider">
+<div id="factsDivider">
+<div class="row">
+<div class="col-1">
+<hr id="factsLine1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+<div class="col-2">
+<div id="wb_factsIcon" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="factsIcon"><i class="fa fa-info-circle"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<hr id="factsLine2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_factsGrid">
+<div id="factsGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_FontAwesomeIcon1" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="FontAwesomeIcon1"><i class="fa fa-coffee"></i></div></a>
+</div>
+<div id="wb_factsJavaScript1" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<div data-count="1024" id="factsJavaScript1"></div>
+</div>
+<div id="wb_Heading1" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h2 id="Heading1">Cups of coffee</h2>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_FontAwesomeIcon6" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="FontAwesomeIcon6"><i class="fa fa-thumbs-o-up"></i></div></a>
+</div>
+<div id="wb_factsJavaScript2" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<div data-count="128" id="factsJavaScript2"></div>
+</div>
+<div id="wb_Heading2" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h2 id="Heading2">Finished projects</h2>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_FontAwesomeIcon7" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="FontAwesomeIcon7"><i class="fa fa-glass"></i></div></a>
+</div>
+<div id="wb_factsJavaScript3" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<div data-count="16" id="factsJavaScript3"></div>
+</div>
+<div id="wb_Heading3" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h2 id="Heading3">Bottles of wiskey</h2>
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="col-4-padding">
+<div id="wb_FontAwesomeIcon4" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="FontAwesomeIcon4"><i class="fa fa-bug"></i></div></a>
+</div>
+<div id="wb_factsJavaScript4" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<div data-count="10" id="factsJavaScript4"></div>
+</div>
+<div id="wb_Heading4" data--50-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h2 id="Heading4">Bugs</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactHeading" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<h1 id="contactHeading">Contact</h1>
+</div>
+<div id="wb_contactText" data-100-bottom="opacity:0.0;" data--350-bottom="opacity:1.0;">
+<p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contactDivider">
+<div id="contactDivider">
+<div class="row">
+<div class="col-1">
+<hr id="contactLine1" data-100-bottom="transform:translate(-100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+<div class="col-2">
+<div id="wb_contactIcon" data-100-bottom="transform:translate(0px,100%);opacity:0.0;" data--350-bottom="transform:translate(0px,0%);opacity:1.0;">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="contactIcon"><i class="fa fa-envelope-o"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<hr id="contactLine2" data-100-bottom="transform:translate(100%,0px);opacity:0.0;" data--350-bottom="transform:translate(0%,0px);opacity:1.0;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_location">
+<div id="location">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_locationText">
+<p style="font-weight:bold;">Location</p>
+<p>234 Somewhere Street</p>
+<p>Somewhere Town</p>
+<p>10100 Planet Earth&nbsp; </p>
+<p>&nbsp;</p>
+<p style="font-weight:bold;"><span style="font-weight:bold;"><br /></span>Phone</p>
+<p>012 3456 7890 </p>
+<p>&nbsp;</p>
+<p style="font-weight:bold;"><span style="font-weight:bold;"><br /></span>Email</p>
+<p style="font-weight:bold;"><span style="font-weight:normal;">info@something.com </span><br /><br /><br />Social Media</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</div>
+<div id="wb_locationIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="locationIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_locationIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="locationIcon2"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_locationIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="locationIcon3"><i class="fa fa-pinterest"></i></div></a>
+</div>
+<div id="wb_locationIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="locationIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_locationIcon5">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="locationIcon5"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_locationJavaScript">
+<div id="GoogleMaps"></div>
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?key=AIzaSyC3cuJFXc9_msvwnAwrHenVpAZTBjIx-ac'></script>
+<script>
+var map;
+var marker;
+var geocoder;
+function GoogleMapInit(id, latitude, longitude, address) 
+{    
+   var latlng = new google.maps.LatLng(latitude, longitude);
+   var latlngMarker = new google.maps.LatLng(latitude, longitude);
+   var mapOptions = 
+   {        
+      center: latlng,        
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,        
+      scrollwheel: true,
+      streetViewControl: false,        
+      zoom: 8,
+      zoomControl: true,        
+      zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL }
+   }
+   element = document.getElementById(id);
+   map = new google.maps.Map(element, mapOptions);   
+   marker = new google.maps.Marker({ draggable:true, map: map, position: latlngMarker});   
+   geocoder = new google.maps.Geocoder();
+   geocoder.geocode({'address': address}, function(results, status) 
+   {
+      if (status == google.maps.GeocoderStatus.OK) 
+      {
+         map.setCenter(results[0].geometry.location);
+         var marker = new google.maps.Marker(
+         {
+            map: map, 
+            position: results[0].geometry.location
+         });
+      } 
+      else 
+      {
+        //    alert("Geocode was not successful: " + status);
+      }
+   });
+}
+GoogleMapInit('GoogleMaps', 40.7127837, -74.00594130000002, 'New+York,NY');
+</script>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

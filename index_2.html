@@ -1,0 +1,806 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WYSIWYG Web Builder</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://www.wysiwygwebbuilder.tk/css/cupertino/jquery-ui.min.css" rel="stylesheet">
+<link href="https://www.wysiwygwebbuilder.tk/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://www.wysiwygwebbuilder.tk/css/index.css" rel="stylesheet">
+<script src="https://www.wysiwygwebbuilder.tk/jquery-1.12.4.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/jquery-ui.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/util.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/carousel.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/owl.carousel.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/transition.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/collapse.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/dropdown.min.js"></script>
+<link rel="stylesheet" href="https://www.wysiwygwebbuilder.tk/magnificpopup/magnific-popup.css">
+<script src="https://www.wysiwygwebbuilder.tk/magnificpopup/jquery.magnific-popup.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.tk/wwb15.min.js"></script>
+<script>
+function displaylightbox(url, options)
+{
+   options.items = { src: url };
+   options.type = 'iframe';
+   $.magnificPopup.open(options);
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   if ($(window).width() >= 480)
+   {
+      $('#wb_headline-heading').addClass('visibility-hidden');
+      $('#wb_headline-text').addClass('visibility-hidden');
+      $('#wb_headline-button').addClass('visibility-hidden');
+      $('#wb_features-card1').addClass('visibility-hidden');
+      $('#wb_features-card2').addClass('visibility-hidden');
+      $('#wb_features-card3').addClass('visibility-hidden');
+      $('#wb_features-card4').addClass('visibility-hidden');
+      $('#wb_features-card5').addClass('visibility-hidden');
+      $('#wb_features-card6').addClass('visibility-hidden');
+      $('#wb_features-card7').addClass('visibility-hidden');
+      $('#wb_features-card8').addClass('visibility-hidden');
+      $('#wb_features-card9').addClass('visibility-hidden');
+      $('#wb_whatsnew-heading').addClass('visibility-hidden');
+      $('#wb_whatsnew-line').addClass('visibility-hidden');
+      $('#wb_whatsnew-text').addClass('visibility-hidden');
+      $('#wb_upgrade-text').addClass('visibility-hidden');
+      $('#wb_upgrade-heading').addClass('visibility-hidden');
+      $('#wb_upgrade-line').addClass('visibility-hidden');
+      $('#wb_upgrade-button').addClass('visibility-hidden');
+   }
+   $("#intro").bootstrapcarousel({interval:5000, pause: false});
+   $("a[href*='#whatsnew-title']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_whatsnew-title').offset().top-70 }, 600, 'easeOutCubic');
+   });
+   $("#ThemeableButton1").button();
+   $("#upgrade-button").button();
+   $(document).on('click','.header-menu-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("#headline-button").button();
+   function onScrollheadline_trigger()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_headline-trigger");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_headline-heading', 'puff-in', 0, 500);
+         AnimateCss('wb_headline-text', 'puff-in', 500, 500);
+         AnimateCss('wb_headline-button', 'puff-in', 1000, 500);
+      }
+   }
+   onScrollheadline_trigger();
+   $(window).scroll(function(event)
+   {
+      onScrollheadline_trigger();
+   });
+   function onScrollfeatures_trigger1()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_features-trigger1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_features-card1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card2', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card3', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   onScrollfeatures_trigger1();
+   $(window).scroll(function(event)
+   {
+      onScrollfeatures_trigger1();
+   });
+   function onScrollfeatures_trigger2()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_features-trigger2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_features-card4', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card5', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card6', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   onScrollfeatures_trigger2();
+   $(window).scroll(function(event)
+   {
+      onScrollfeatures_trigger2();
+   });
+   function onScrollfeatures_trigger3()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_features-trigger3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_features-card7', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card8', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_features-card9', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   onScrollfeatures_trigger3();
+   $(window).scroll(function(event)
+   {
+      onScrollfeatures_trigger3();
+   });
+   function onScrollwhatsnew_trigger()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_whatsnew-trigger");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_whatsnew-heading', 'text-letterspacing-focus-in', 0, 1500);
+         AnimateCss('wb_whatsnew-line', 'puff-in', 500, 500);
+         AnimateCss('wb_whatsnew-text', 'text-letterspacing-focus-in', 1000, 1000);
+      }
+   }
+   onScrollwhatsnew_trigger();
+   $(window).scroll(function(event)
+   {
+      onScrollwhatsnew_trigger();
+   });
+   function onScrollupgrade_trigger()
+   {
+      if ($(window).width() < 480)
+         return;
+      var $obj = $("#wb_upgrade-trigger");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_upgrade-text', 'puff-in', 1000, 500);
+         AnimateCss('wb_upgrade-heading', 'puff-in', 0, 500);
+         AnimateCss('wb_upgrade-line', 'puff-in', 500, 500);
+         AnimateCss('wb_upgrade-button', 'animate-fade-in-up', 1500, 500);
+      }
+   }
+   onScrollupgrade_trigger();
+   $(window).scroll(function(event)
+   {
+      onScrollupgrade_trigger();
+   });
+   $("#ThemeableButton2").button();
+   $("#ThemeableButton3").button();
+   $("#ThemeableButton4").button();
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+  $('#wb_screenshots-carousel').owlCarousel( { margin: 10, stagePadding: 10, autoplay: true, rewind: true, dotsEach: true, responsive : { 0: { items : 1 }, 768: { items : 2}, 970: { items : 3}}});
+});
+</script>
+
+
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_header-menu" style="display:inline-block;width:100%;text-align:center;z-index:1000;">
+<div id="header-menu" class="header-menu" style="width:100%;height:auto !important;">
+<div class="container">
+<a id="header-menu-logo" href="index_2.html#"><img alt="" title="" src="https://www.wysiwygwebbuilder.tk/images/wb15_logo.png"></a>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-menu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="header-menu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="index_2.html#intro">Home</a>
+</li>
+<li class="">
+<a href="download_2.html">Download</a>
+</li>
+<li class="">
+<a href="purchase_2.html">Purchase</a>
+</li>
+<li class="">
+<a href="getting_started_2.html">Online Tutorials</a>
+</li>
+<li class="">
+<a href="templates_2.html">Templates</a>
+</li>
+<li class="">
+<a href="support_2.html">Support</a>
+</li>
+<li class="">
+<a href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li class="">
+<a href="extensions_2.html">Extensions</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_intro" style="max-width:1140px;margin-left:auto!important;margin-right:auto!important">
+<div id="intro" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#intro" data-slide-to="0" class="active"></li>
+<li data-target="#intro" data-slide-to="1"></li>
+<li data-target="#intro" data-slide-to="2"></li>
+<li data-target="#intro" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="carousel-innerframe">
+<div id="wb_Text5">
+<span style="color:#666666;"><strong>WYSIWYG Web Builder</strong></span>
+</div>
+<div id="wb_Text10">
+<span style="color:#666666;">THE ULTIMATE TOOLBOX FOR CREATING AMAZING WEBSITES</span>
+</div>
+<div id="wb_Image2" style="display:inline-block;width:200px;height:200px;z-index:3;">
+<a href="download_2.html"><img src="https://www.wysiwygwebbuilder.tk/images/wwb15_box_small.png" id="Image2" alt=""></a>
+</div>
+<hr id="spacer" style="display:block;width: 100%;z-index:4;">
+<div id="wb_ThemeableButton1" style="display:inline-block;width:134px;height:38px;z-index:5;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton1" href="download_2.html" id="ThemeableButton1" style="width:100%;height:100%;">TRY NOW</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_Text16">
+<span style="color:#666666;">Desktop publishing for the web, build web sites as easy as Drag &amp; Drop!</span>
+</div>
+<div id="wb_Text1">
+<p style="color:#666666;"> Visually design your website (What-You-See-Is-What-You-Get).&nbsp; <span style="color:#666666;"><br /></span>Just drag &amp; drop objects your web pages</p>
+<p style="color:#666666;">Navigation bars, Menu bar and many other navigation options.<span style="color:#666666;"><br /></span>"One Click Publishing" No FTP program needed. No special hosting required, use with any Hosting Service!</p>
+<p style="color:#666666;">Easily create forms using the built-in Form Wizard plus Form validation tools and built-in CAPTCHA.</p>
+<p style="color:#666666;">Advanced graphics tools like shapes, textart, rotation, shadows and many other image effects.</p>
+<p style="color:#666666;">Fully integrated jQuery UI (Accordion, Tabs etc), animations, effects and built-in ThemeRoller theme editor.</p>
+<p style="color:#666666;">Google compatible sitemap generator / PayPal eCommerce Tools</p>
+<p style="color:#666666;">Many navigation tools available: Navigation bars, tab menus, dropdown menus, sitetree, slidemenus.</p>
+<p style="color:#666666;">Built-in Slide Shows, Photo Galleries, Rollover images, Banners etc.</p>
+<p style="color:#666666;">Support for YouTube, Flash Video, Windows Media Player and many other video formats.</p>
+<p style="color:#666666;">Unique extension (add-on) system with already more than 250 extensions available!</p>
+</div>
+<div id="wb_ThemeableButton2" style="display:inline-block;width:134px;height:38px;z-index:8;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton2" href="download_2.html" id="ThemeableButton2" style="width:100%;height:100%;">TRY NOW</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_Text14">
+<span style="color:#666666;">Create HTML5 / CSS3 websites today!</span>
+</div>
+<div id="wb_Text11">
+<p style="color:#666666;">HTML5 document type (optimized HTML5 output).</p>
+<p style="color:#666666;">HTML5 audio/video and YouTube HTML5 support.</p>
+<p style="color:#666666;">HTML5 forms: native form validation, new input types and options, web storage.</p>
+<p style="color:#666666;">HTML5 &lt;canvas&gt; and &lt;svg&gt; support in shapes and other drawing tools.</p>
+<p style="color:#666666;">CSS3 @font-face. Use non web safe fonts in all modern browsers.</p>
+<p style="color:#666666;">CSS3 opacity, border radius, box shadow.</p>
+<p style="color:#666666;">CSS3 border-image</p>
+<p style="color:#666666;">CSS3 gradients. Add cool gradient effects using native CSS3 (no images).</p>
+<p style="color:#666666;">CSS3 navigation menu. Create awesome menus without using JavaScript or images.</p>
+<p style="color:#666666;">CSS3 animations and transitions. Including support for 2D and 3D transforms!</p>
+<p style="color:#666666;">CSS3 filters and backdrop filters</p>
+</div>
+<div id="wb_ThemeableButton3" style="display:inline-block;width:134px;height:38px;z-index:11;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton3" href="download_2.html" id="ThemeableButton3" style="width:100%;height:100%;">TRY NOW</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_Text13">
+<span style="color:#666666;">Features for advanced users:</span>
+</div>
+<div id="wb_Text12">
+<p style="color:#666666;">Login Tools/Page Password Protection.</p>
+<p style="color:#666666;">Built-in Content Management System with many plug-ins (guestbook, faq, downloads, photo album etc).</p>
+<p style="color:#666666;">Add custom HTML code with the HTML tools.</p>
+<p style="color:#666666;">JavaScript Events: Show/hide objects (with animation), timers, move objects, change styles etc.</p>
+<p style="color:#666666;">Layers: Sticky layer, Docking layer, Floating layer, Modal layer, Anchored layer, Strechable layer and more! </p>
+<p style="color:#666666;">jQuery Theme Manager, create your own themes for the built-in jQuery UI widgets.</p>
+<p style="color:#666666;">Style Manager (global styling, H1, H2, H3 etc). </p>
+<p style="color:#666666;">Master Frames and Master Objects: reuse common elements in your website.<span style="color:#666666;"><br /></span>Flexbox Container and Flex Grid<span style="color:#666666;"><br /></span>Form conditions and calculations</p>
+<p style="color:#666666;">and much more!&nbsp; </p>
+</div>
+<div id="wb_ThemeableButton4" style="display:inline-block;width:134px;height:38px;z-index:14;">
+<a class="ui-button ui-widget ui-corner-all" id="ThemeableButton4" href="download_2.html" id="ThemeableButton4" style="width:100%;height:100%;">TRY NOW</a>
+</div>
+</div>
+</div>
+</div>
+<a class="carousel-item-left carousel-control" href="index_2.html#intro" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+</a>
+<a class="carousel-item-right carousel-control" href="index_2.html#intro" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+
+<div id="wb_headline">
+<div id="headline">
+<div class="row">
+<div class="col-1">
+<div id="wb_headline-heading" style="display:inline-block;width:100%;z-index:15;">
+<h1 id="headline-heading">Now available: Version 15.4</h1>
+</div>
+<div id="wb_headline-text" style="display:inline-block;width:100%;z-index:16;">
+<h2 id="headline-text">More than 200 new features and improvements!</h2>
+</div>
+<div id="wb_headline-trigger" style="display:inline-block;width:100%;z-index:17;">
+<a id="headline-trigger" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+<div id="wb_headline-button" style="display:inline-block;width:134px;height:38px;z-index:18;">
+<a class="ui-button ui-widget ui-corner-all" id="headline-button" href="index_2.html#whatsnew-title" id="headline-button" style="width:100%;height:100%;">LEARN MORE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_features-title">
+<div id="features-title">
+<div class="row">
+<div class="col-1">
+<div id="wb_features-heading" style="display:inline-block;width:100%;z-index:19;">
+<h1 id="features-heading">Features</h1>
+</div>
+<div id="wb_features-line" style="display:inline-block;width:112px;height:3px;z-index:20;position:relative;">
+<div id="features-line"></div>
+</div>
+<div id="wb_features-text" style="display:inline-block;width:100%;z-index:21;">
+<h2 id="features-text">WYSIWYG Web Builder has tools for both beginners and professional designers/developers.</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_features-grid1">
+<div id="features-grid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_features-card1" style="display:flex;width:100%;z-index:22;">
+   <div id="features-card1-card-body">
+      <div id="features-card1-card-item0"><i class="fa fa-mobile"></i></div>
+      <div id="features-card1-card-item1">Responsive Web Design</div>
+      <div id="features-card1-card-item2">Built-in support for layout grid, flexbox, css grid or fixed layouts with breakpoints</div>
+   </div>
+
+</div>
+<div id="wb_features-trigger1" style="display:inline-block;width:100%;z-index:23;">
+<a id="features-trigger1" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_features-card2" style="display:flex;width:100%;z-index:24;">
+   <div id="features-card2-card-body">
+      <div id="features-card2-card-item0"><i class="fa fa-font"></i></div>
+      <div id="features-card2-card-item1">Web Fonts</div>
+      <div id="features-card2-card-item2">Easily add Google Fonts and other Web Fonts to your website.</div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_features-card3" style="display:flex;width:100%;z-index:25;">
+   <div id="features-card3-card-body">
+      <div id="features-card3-card-item0"><i class="fa fa-film"></i></div>
+      <div id="features-card3-card-item1">Animations</div>
+      <div id="features-card3-card-item2">Add amazing pre made animations and transitions or create your own animations. More than 150 pre-defined animations are included. </div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_features-grid2">
+<div id="features-grid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_features-card4" style="display:flex;width:100%;z-index:26;">
+   <div id="features-card4-card-body">
+      <div id="features-card4-card-item0"><i class="fa fa-clock-o"></i></div>
+      <div id="features-card4-card-item1">Pre-made Blocks</div>
+      <div id="features-card4-card-item2">Use pre-made blocks to quickly get started. More than 150 blocks are available!</div>
+   </div>
+
+</div>
+<div id="wb_features-trigger2" style="display:inline-block;width:100%;z-index:27;">
+<a id="features-trigger2" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_features-card5" style="display:flex;width:100%;z-index:28;">
+   <div id="features-card5-card-body">
+      <div id="features-card5-card-item0"><i class="fa fa-check-square-o"></i></div>
+      <div id="features-card5-card-item1">Forms Tools</div>
+      <div id="features-card5-card-item2">Send Emails, Upload Files, Store Data in MySQL or CSV, Auto Responder, Password Protect Pages, Form Validation, Conditons/Calculations</div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_features-card6" style="display:flex;width:100%;z-index:29;">
+   <div id="features-card6-card-body">
+      <div id="features-card6-card-item0"><i class="fa fa-picture-o"></i></div>
+      <div id="features-card6-card-item1">Images & Media</div>
+      <div id="features-card6-card-item2">Image filters, shapes, galleries, carousels, lightboxes, rollover animations, YouTube, Vimeo, HTML5 Video/Audio</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_features-grid3">
+<div id="features-grid3">
+<div class="row">
+<div class="col-1">
+<div id="wb_features-card7" style="display:flex;width:100%;z-index:30;">
+   <div id="features-card7-card-body">
+      <div id="features-card7-card-item0"><a href="iconfonts_3.html"><i class="fa fa-font-awesome"></i></a></div>
+      <div id="features-card7-card-item1">Icon Libraries</div>
+      <div id="features-card7-card-item2">Support for Font Awesome, Material Icons and many other icon libraries</div>
+   </div>
+
+</div>
+<div id="wb_features-trigger3" style="display:inline-block;width:100%;z-index:31;">
+<a id="features-trigger3" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_features-card8" style="display:flex;width:100%;z-index:32;">
+   <div id="features-card8-card-body">
+      <div id="features-card8-card-item0"><a href="navigation_2.html"><i class="fa fa-link"></i></a></div>
+      <div id="features-card8-card-item1">Navigation</div>
+      <div id="features-card8-card-item2">Navigation buttons, drop down menus, fullscreen menu, mega menu, panel menu, breadcrumb, pagination and much more!</div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_features-card9" style="display:flex;width:100%;z-index:33;">
+   <div id="features-card9-card-body">
+      <div id="features-card9-card-item0"><i class="fa fa-puzzle-piece"></i></div>
+      <div id="features-card9-card-item1">Extensions</div>
+      <div id="features-card9-card-item2">Hundreds of extensions to add extra functionality to the software. Including slideshows, navigation, audio/video, webshops, data viewers etc.</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_screenshots">
+<div id="screenshots">
+<div class="row">
+<div class="col-1">
+<div id="wb_screenshots-heading" style="display:inline-block;width:100%;z-index:44;">
+<h1 id="screenshots-heading">SCREENSHOTS</h1>
+</div>
+<div id="wb_screenshots-carousel" style="" class="owl-carousel owl-theme">
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot1" style="display:inline-block;width:233px;height:179px;z-index:34;">
+<a href="javascript:displaylightbox('./images/screenshot1.jpg',{})" target="_self"><img src="https://www.wysiwygwebbuilder.tk/images/screenshot1.png" id="screenshot1" alt="Main screen" title="Main screen"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item active">
+<div class="carousel-innerframe">
+<div id="wb_screenshot2" style="display:inline-block;width:233px;height:179px;z-index:35;">
+<a href="javascript:displaylightbox('./images/screenshot2.jpg',{})" target="_self"><img src="https://www.wysiwygwebbuilder.tk/images/screenshot2.png" id="screenshot2" alt="Responsive websites" title="Responsive websites"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot3" style="display:inline-block;width:233px;height:179px;z-index:36;">
+<a href="javascript:displaylightbox('./images/screenshot3.jpg',{})" target="_self"><img src="https://www.wysiwygwebbuilder.tk/images/screenshot3.png" id="screenshot3" alt="jQuery UI widgets" title="jQuery UI widgets"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot4" style="display:inline-block;width:233px;height:179px;z-index:37;">
+<a href="javascript:displaylightbox('./images/screenshot4.jpg',{})" target="_self"><img src="https://www.wysiwygwebbuilder.tk/images/screenshot4.png" id="screenshot4" alt="Slideshows and Photo Galleries" title="Slideshows and Photo Galleries"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot5" style="display:inline-block;width:233px;height:179px;z-index:38;">
+<a href="javascript:displaylightbox('./images/screenshot5.jpg',{})" target="_self"><img src="https://www.wysiwygwebbuilder.tk/images/screenshot5.png" id="screenshot5" alt="Pre-made Blocks" title="Pre-made Blocks"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot6" style="display:inline-block;width:233px;height:179px;z-index:39;">
+<a href="javascript:displaylightbox('./images/screenshot6.jpg',{})" target="_self"><img src="images/screenshot6_2.png" id="screenshot6" alt="Extension Manager" title="Extension Manager"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot7" style="display:inline-block;width:233px;height:179px;z-index:40;">
+<a href="javascript:displaylightbox('./images/screenshot6.jpg',{})" target="_self"><img src="images/screenshot7_2.png" id="screenshot7" alt="Icon Font libraries" title="Icon Font libraries"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot8" style="display:inline-block;width:233px;height:179px;z-index:41;">
+<a href="javascript:displaylightbox('./images/screenshot6.jpg',{})" target="_self"><img src="images/screenshot8_2.png" id="screenshot8" alt="Animations and transitions" title="Animations and transitions"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot9" style="display:inline-block;width:233px;height:179px;z-index:42;">
+<a href="javascript:displaylightbox('./images/screenshot6.jpg',{})" target="_self"><img src="images/screenshot9_2.png" id="screenshot9" alt="Form Tools" title="Form Tools"></a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_screenshot10" style="display:inline-block;width:233px;height:179px;z-index:43;">
+<a href="javascript:displaylightbox('./images/screenshot6.jpg',{})" target="_self"><img src="images/screenshot10_2.png" id="screenshot10" alt="Shapes and drawing tools" title="Shapes and drawing tools"></a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="wb_whatsnew-title">
+<div id="whatsnew-title">
+<div class="row">
+<div class="col-1">
+<div id="wb_whatsnew-heading" style="display:inline-block;width:100%;z-index:56;">
+<h1 id="whatsnew-heading">What's New?</h1>
+</div>
+<div id="wb_whatsnew-line" style="display:inline-block;width:112px;height:3px;z-index:57;position:relative;">
+<div id="whatsnew-line"></div>
+</div>
+<div id="wb_whatsnew-text" style="display:inline-block;width:100%;z-index:58;">
+<h2 id="whatsnew-text">WYSIWYG Web Builder 15 has more than 200 new features and improvements!</h2>
+</div>
+<div id="wb_whatsnew-trigger" style="display:inline-block;width:100%;z-index:59;">
+<a id="whatsnew-trigger" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_whatsnew-grid">
+<div id="whatsnew-grid">
+<div class="row">
+<div class="col-1">
+<div id="wb_whatsnew-card1" style="display:flex;width:100%;z-index:60;min-height:125px">
+   <div id="whatsnew-card1-card-body">
+      <div id="whatsnew-card1-card-item0"><a href="https://www.wysiwygwebbuilder.tk/shape_dividers_2.html"><i class="fa fa-minus"></i></a></div>
+      <div id="whatsnew-card1-card-item1">Shape Dividers</div>
+      <div id="whatsnew-card1-card-item2">Shape dividers are SVG based shapes that can be used to separate the sections of a page</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card2" style="display:flex;width:100%;z-index:61;min-height:125px">
+   <div id="whatsnew-card2-card-body">
+      <div id="whatsnew-card2-card-item0"><a href="https://www.wysiwygwebbuilder.tk/preloader_2.html"><i class="fa fa-spinner"></i></a></div>
+      <div id="whatsnew-card2-card-item1">Preloaders</div>
+      <div id="whatsnew-card2-card-item2">A preloader is an animation to inform the viewer that the page is being loaded.</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card3" style="display:flex;width:100%;z-index:62;min-height:125px">
+   <div id="whatsnew-card3-card-body">
+      <div id="whatsnew-card3-card-item0"><a href="https://www.wysiwygwebbuilder.tk/support/wb15tryouts/card-container.html"><i class="fa fa-id-card-o"></i></a></div>
+      <div id="whatsnew-card3-card-item1">Cards</div>
+      <div id="whatsnew-card3-card-item2">Added a dedicated container for Cards to simplify laying out a series of cards. Plus Card animations, transitions and more!</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card7" style="display:flex;width:100%;z-index:63;min-height:125px">
+   <div id="whatsnew-card7-card-body">
+      <div id="whatsnew-card7-card-item0"><a href="https://www.wysiwygwebbuilder.tk/toasts_2.html"><i class="fa fa-window-maximize"></i></a></div>
+      <div id="whatsnew-card7-card-item1">Toasts</div>
+      <div id="whatsnew-card7-card-item2">Lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems.</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_whatsnew-card5" style="display:flex;width:100%;z-index:64;min-height:125px">
+   <div id="whatsnew-card5-card-body">
+      <div id="whatsnew-card5-card-item0"><a href="https://www.wysiwygwebbuilder.tk/unsplash_2.html"><i class="fa fa-camera"></i></a></div>
+      <div id="whatsnew-card5-card-item1">Unsplash Integration</div>
+      <div id="whatsnew-card5-card-item2">Browse thousands of free-to-use, high quality images from Unsplash directly within Web Builder</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card6" style="display:flex;width:100%;z-index:65;min-height:125px">
+   <div id="whatsnew-card6-card-body">
+      <div id="whatsnew-card6-card-item0"><a href="https://www.wysiwygwebbuilder.tk/svg_animations_2.html"><i class="fa fa-tasks"></i></a></div>
+      <div id="whatsnew-card6-card-item1">SVG Path Animation</div>
+      <div id="whatsnew-card6-card-item2">SVG path animation adds the ability to animate the border (stroke) of SVG shapes, textart, clipart.</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card4" style="display:flex;width:100%;z-index:66;min-height:125px">
+   <div id="whatsnew-card4-card-body">
+      <div id="whatsnew-card4-card-item0"><a href="https://www.wysiwygwebbuilder.tk/support/wb15tryouts/flipswitch.html"><i class="fa fa-toggle-on"></i></a></div>
+      <div id="whatsnew-card4-card-item1">FlipSwitch</div>
+      <div id="whatsnew-card4-card-item2">A "Flip Switch" (Toggle) can be used as alternative for a checkbox. Inspired by the iPhone checkbox. With many styling options.</div>
+   </div>
+
+</div>
+<div id="wb_whatsnew-card8" style="display:flex;width:100%;z-index:67;min-height:125px">
+   <div id="whatsnew-card8-card-body">
+      <div id="whatsnew-card8-card-item0"><a href="new_features.html"><i class="fa fa-exclamation-circle"></i></a></div>
+      <div id="whatsnew-card8-card-item1">And Much More!</div>
+      <div id="whatsnew-card8-card-item2">Secure FTP, Horizontal accordion, Theme Colors, Border Images, Wrap text around images, etc.</div>
+      <div id="whatsnew-card8-card-item3"><a href="new_features.html">Check out the full list of all new features here!</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_upgrade">
+<div id="upgrade">
+<div class="row">
+<div class="col-1">
+<div id="wb_upgrade-heading" style="display:inline-block;width:100%;z-index:68;">
+<h1 id="upgrade-heading">Upgrade Discount</h1>
+</div>
+<div id="wb_upgrade-line" style="display:inline-block;width:112px;height:3px;z-index:69;position:relative;">
+<div id="upgrade-line"></div>
+</div>
+<div id="wb_upgrade-text" style="display:inline-block;width:100%;z-index:70;">
+<h2 id="upgrade-text">Upgrade from an older version of WYSIWYG Web Builder and save 33% (limited time offer)</h2>
+</div>
+<div id="wb_upgrade-trigger" style="display:inline-block;width:100%;z-index:71;">
+<a id="upgrade-trigger" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+<div id="wb_upgrade-button" style="display:inline-block;width:134px;height:38px;z-index:72;">
+<a class="ui-button ui-widget ui-corner-all" id="upgrade-button" href="https://www.wysiwygwebbuilder.tk/howtoupgrade_2.html" id="upgrade-button" style="width:100%;height:100%;">LEARN MORE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_links">
+<div id="links-overlay"></div>
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<span style="color:#FFFFFF;"><strong>Navigate</strong></span>
+</div>
+<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:74;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/download_2.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/purchase_2.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/templates_2.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/extensions_2.html" target="_self">Extensions</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<span style="color:#FFFFFF;"><strong>Support</strong></span>
+</div>
+<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:76;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/getting_started_2.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk/viewforum.htm" target="_self">FAQ</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/https://www.wysiwygforum.tk" target="_self">Forum</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/support_2.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="privacy_2.html" target="_self">Privacy&nbsp;Policy</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<span style="color:#FFFFFF;"><strong>Follow Us</strong></span>
+</div>
+<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:78;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="https://www.facebook.com/groups/960603263987725" target="_blank">Facebook</a>
+</li>
+<li><a role="menuitem" href="forum/app.php/feed_11" target="_self">RSS</a>
+</li>
+<li><a role="menuitem" href="http://twitter.com/wysiwyg_wb" target="_blank">Twitter</a>
+</li>
+<li><a role="menuitem" href="https://www.youtube.com/channel/UCu3yYRA9WyiFBZEZiAM0bkA" target="_blank">YouTube</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-4">
+<div id="wb_linksText4">
+<span style="color:#FFFFFF;"><strong>More...</strong></span>
+</div>
+<div id="wb_linksMenu4" style="display:inline-block;width:100%;z-index:80;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/free_extras_3.html" target="_self">Free&nbsp;Extras</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.tk/languages_2.html" target="_self">Language&nbsp;Modules</a>
+</li>
+<li><a role="menuitem" href="new_features.html" target="_self">What's&nbsp;New?</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footer-text">
+<span style="color:#D3D3D3;">Copyright © 2020 WYSIWYG Web Builder.&nbsp; All Rights Reserved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

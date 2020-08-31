@@ -1,0 +1,858 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About Me</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base/jquery-ui.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/aboutme.css" rel="stylesheet">
+<link href="css/wb15_aboutme.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="util.js"></script>
+<script src="modal.js"></script>
+<script src="wb.panel.js"></script>
+<script src="wwb15.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#skills']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skills').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#facts']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#portfolio']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolio').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollportfolio()
+      {
+         var $obj = $("#wb_portfolio");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolio();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolio();
+      });
+      $("a[href*='#portfolioLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid1()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid1();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid1();
+      });
+      $("a[href*='#portfolioLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid2()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid2();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid2();
+      });
+      function aspectRatioportfolioRollOverText1()
+      {
+         var $obj = $("#portfolioRollOverText1");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText1();
+      });
+      aspectRatioportfolioRollOverText1();
+      function aspectRatioportfolioRollOverText2()
+      {
+         var $obj = $("#portfolioRollOverText2");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText2();
+      });
+      aspectRatioportfolioRollOverText2();
+      function aspectRatioportfolioRollOverText3()
+      {
+         var $obj = $("#portfolioRollOverText3");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText3();
+      });
+      aspectRatioportfolioRollOverText3();
+      function aspectRatioportfolioRollOverText4()
+      {
+         var $obj = $("#portfolioRollOverText4");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText4();
+      });
+      aspectRatioportfolioRollOverText4();
+      function aspectRatioportfolioRollOverText5()
+      {
+         var $obj = $("#portfolioRollOverText5");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText5();
+      });
+      aspectRatioportfolioRollOverText5();
+      function aspectRatioportfolioRollOverText6()
+      {
+         var $obj = $("#portfolioRollOverText6");
+         var height = $obj.width() / 1.38;
+         $obj.css('height', height + 'px');
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText6();
+      });
+      aspectRatioportfolioRollOverText6();
+      $("#skillsProgressbar1").progressbar(
+      {
+         value: 90,
+         change: function() 
+         {
+            $("#skillsProgressbar1-label").text($(this).progressbar('value') + '%');
+         }
+      });
+      $("#skillsProgressbar2").progressbar(
+      {
+         value: 80,
+         change: function() 
+         {
+            $("#skillsProgressbar2-label").text($(this).progressbar('value') + '%');
+         }
+      });
+      $("#skillsProgressbar3").progressbar(
+      {
+         value: 60,
+         change: function() 
+         {
+            $("#skillsProgressbar3-label").text($(this).progressbar('value') + '%');
+         }
+      });
+      $("#skillsProgressbar4").progressbar(
+      {
+         value: 75,
+         change: function() 
+         {
+            $("#skillsProgressbar4-label").text($(this).progressbar('value') + '%');
+         }
+      });
+   function countUpfactsJavaScript1()
+   {
+      var $obj = $('#factsJavaScript1');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript1();
+   });
+   countUpfactsJavaScript1();
+   function countUpfactsJavaScript2()
+   {
+      var $obj = $('#factsJavaScript2');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript2();
+   });
+   countUpfactsJavaScript2();
+   function countUpfactsJavaScript3()
+   {
+      var $obj = $('#factsJavaScript3');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript3();
+   });
+   countUpfactsJavaScript3();
+   function countUpfactsJavaScript4()
+   {
+      var $obj = $('#factsJavaScript4');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 10000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript4();
+   });
+   countUpfactsJavaScript4();
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'push', position: 'top', toggle: true});
+      $("#PanelMenu1_markup ul li a").click(function(event)
+      {
+          $.panel.hide($("#PanelMenu1_panel"));
+      });
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS)
+      {
+         $('#wb_facts,#wb_contact').css('background-attachment', 'scroll');
+      }
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script><script>   
+   $(document).ready(function () 
+   {
+       if (document.cookie.indexOf("cookienotice=true")<0) 
+       {
+           $("#cookiePopup").modal("show");
+       }
+       $("#cookieCheckBox").change(function () 
+       {
+          document.cookie = "cookienotice=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";    
+          $("#cookiePopup").modal("hide");
+       });
+      
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_aboutMeIcon">
+                  <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="aboutMeIcon"><i class="fa fa-id-card-o"></i></div></a>
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_aboutMeMenu">
+                  <ul role="menubar">
+                     <li class="firstmain"><a role="menuitem" href="wb15_aboutme.html#intro" target="_self">HOME</a>
+                     </li>
+                     <li><a role="menuitem" href="wb15_aboutme.html#skills" target="_self">ABOUT</a>
+                     </li>
+                     <li><a role="menuitem" href="wb15_aboutme.html#services" target="_self">SERVICES</a>
+                     </li>
+                     <li><a role="menuitem" href="wb15_aboutme.html#facts" target="_self">FACTS</a>
+                     </li>
+                     <li><a role="menuitem" href="wb15_aboutme.html#portfolio" target="_self">PORTFOLIO</a>
+                     </li>
+                     <li><a role="menuitem" href="wb15_aboutme.html#contact" target="_self">CONTACT</a>
+                     </li>
+                  </ul>
+               </div>
+               <div id="wb_PanelMenu1">
+                  <a href="wb15_aboutme.html#PanelMenu1_markup" id="PanelMenu1">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+                  <div id="PanelMenu1_markup">
+                     <ul role="menu">
+                        <li role="menuitem"><a href="wb15_aboutme.html#intro">HOME</a></li>
+                        <li role="menuitem"><a href="wb15_aboutme.html#skills">ABOUT</a></li>
+                        <li role="menuitem"><a href="wb15_aboutme.html#services">SERVICES</a></li>
+                        <li role="menuitem"><a href="wb15_aboutme.html#facts">FACTS</a></li>
+                        <li role="menuitem"><a href="wb15_aboutme.html#portfolio">PORTFOLIO</a></li>
+                        <li role="menuitem"><a href="wb15_aboutme.html#contact">CONTACT</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_intro">
+      <div id="intro-divider-top">
+         <svg version="1.1" viewBox="0 0 240 24" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.33" d="M0,13.229V23.87h240V13.27C212.247,6.884,170.508,0,119.81,0 C69.18,0,27.642,6.884,0,13.229z"/>
+            <path class="divider-fill" style="opacity:0.33" d="M0,18.904V24h240v-5.036c-21.641-6.315-64.639-16.257-120.171-16.257 C64.351,2.707,21.572,12.589,0,18.904z"/>
+            <path class="divider-fill" d="M119.829,5.115C47.852,5.115,0,24,0,24h239.961C239.961,24,191.816,5.115,119.829,5.115z"/>
+         </svg>
+      </div>
+      <div id="intro-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+            </path>
+         </svg></div>
+      <div id="intro">
+         <div class="col-1">
+            <div id="wb_homeText">
+               <p style="font-weight:bold;">My Name is Pablo Carrasco</p>
+               <p style="font-size:15px;line-height:16.5px;">&nbsp;</p>
+               <p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">I'm a Web Designer</span></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_skills">
+      <div id="skills">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Skills</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1">HTML</label>
+                                 <div id="skillsProgressbar1">
+                                    <div id="skillsProgressbar1-label">90%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel2">CSS</label>
+                                 <div id="skillsProgressbar2">
+                                    <div id="skillsProgressbar2-label">80%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel3">JavaScript</label>
+                                 <div id="skillsProgressbar3">
+                                    <div id="skillsProgressbar3-label">60%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel4">PHP:</label>
+                                 <div id="skillsProgressbar4">
+                                    <div id="skillsProgressbar4-label">75%</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-weight:bold;">About Me</p>
+                                    <p style="font-size:16px;line-height:18px;line-height:21.6px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span style="font-size:16px;line-height:18px;"><br/></span><span style="font-size:16px;line-height:18px;"><br/></span>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;line-height:21.6px;">&nbsp;</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesHeading">
+                     <h1 id="servicesHeading">SERVICES</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer">
+      <div id="wb_up-arrow">
+         <a href="wb15_aboutme.html#intro"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><i class="fa fa-globe"></i></div>
+                        <div id="servicesCard1-card-item1">WEB DESIGN</div>
+                        <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><i class="fa fa-code"></i></div>
+                        <div id="servicesCard2-card-item1">WEB DEVELOPMENT</div>
+                        <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><i class="fa fa-paint-brush"></i></div>
+                        <div id="servicesCard3-card-item1">GRAPHIC DESIGN</div>
+                        <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid2">
+      <div id="servicesLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard4" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard4-card-body">
+                        <div id="servicesCard4-card-item0"><i class="fa fa-mobile"></i></div>
+                        <div id="servicesCard4-card-item1">RESPONSIVE DESIGN</div>
+                        <div id="servicesCard4-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard5" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard5-card-body">
+                        <div id="servicesCard5-card-item0"><i class="fa fa-camera"></i></div>
+                        <div id="servicesCard5-card-item1">PHOTOGRAPHY</div>
+                        <div id="servicesCard5-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard6" data--500-bottom="opacity:1.0;" data-100-bottom="opacity:0.0;">
+                     <div id="servicesCard6-card-body">
+                        <div id="servicesCard6-card-item0"><i class="fa fa-comments-o"></i></div>
+                        <div id="servicesCard6-card-item1">MARKETING</div>
+                        <div id="servicesCard6-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_facts">
+      <div id="facts-overlay"></div>
+      <div id="facts">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_factsIcon1">
+                     <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="factsIcon1"><i class="fa fa-users"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript1">
+                     <div data-count="128" id="factsJavaScript1"></div>
+                  </div>
+                  <div id="wb_factsHeading1">
+                     <h2 id="factsHeading1">Happy Customers</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_factsIcon2">
+                     <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="factsIcon2"><i class="fa fa-briefcase"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript2">
+                     <div data-count="256" id="factsJavaScript2"></div>
+                  </div>
+                  <div id="wb_factsHeading2">
+                     <h2 id="factsHeading2">Projects</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_factsIcon3">
+                     <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="factsIcon3"><i class="fa fa-diamond"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript3">
+                     <div data-count="64" id="factsJavaScript3"></div>
+                  </div>
+                  <div id="wb_factsHeading3">
+                     <h2 id="factsHeading3">Awards</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_factsIcon4">
+                     <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="factsIcon4"><i class="fa fa-clock-o"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript4">
+                     <div data-count="9999" id="factsJavaScript4"></div>
+                  </div>
+                  <div id="wb_factsHeading4">
+                     <h2 id="factsHeading4">Hours of Work</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolio">
+      <div id="portfolio">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_portfolioHeading">
+                     <h1 id="portfolioHeading">PORTFOLIO</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid1">
+      <div id="portfolioLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText1">
+                     <img alt="ABOUT" class="image" src="images/template01.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText2">
+                     <img alt="ABOUT" class="image" src="images/template02.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText3">
+                     <img alt="ABOUT" class="image" src="images/template03.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid2">
+      <div id="portfolioLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText4">
+                     <img alt="ABOUT" class="image" src="images/template04.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText5">
+                     <img alt="ABOUT" class="image" src="images/template05.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText6">
+                     <img alt="ABOUT" class="image" src="images/template06.jpg">
+                     <div class="caption">
+                        <div class="title">ABOUT</div>
+                        <p class="description">Read more about our company</p>
+                        <a class="link" href="wb15_aboutme.html">More information</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <div id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_contactText1">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Send A Message</span></p>
+                                 </div>
+                                 <input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Name">
+                                 <input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Email">
+                                 <input type="text" id="contactSubject" name="subject" value="" spellcheck="false" placeholder="Subject">
+                                 <textarea name="message" id="contactMessage" rows="4" cols="31" spellcheck="false" placeholder="Message"></textarea>
+                                 <input type="submit" id="contactButton" name="" value="Submit">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="margin:6.67px 0px 6.67px 0px;font-weight:bold;">Contact Me</p>
+                                    <p style="font-size:16px;line-height:18px;line-height:21.6px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span style="font-size:16px;line-height:18px;"><br/></span><span style="font-size:16px;line-height:18px;"><br/></span>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;line-height:21.6px;">&nbsp;</p>
+                                 </div>
+                                 <div id="wb_contactIcon1">
+                                    <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="contactIcon1"><i class="fa fa-facebook"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon2">
+                                    <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="contactIcon2"><i class="fa fa-twitter"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon3">
+                                    <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="contactIcon3"><i class="fa fa-instagram"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon4">
+                                    <a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_aboutme_.html"><div id="contactIcon4"><i class="fa fa-youtube"></i></div></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText3">
+                  <p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="cookiePopup" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+               <div id="wb_cookieHeading">
+                  <h2 id="cookieHeading">This website uses cookies to ensure you get the best experience on our website. </h2>
+               </div>
+               <input type="submit" id="cookieButton" onclick="$('#cookiePopup').modal('hide');return false;" name="" value="Got it!" tabindex="1" autofocus>
+               <hr id="spacer-line">
+               <div id="wb_cookieCheckBox">
+                  <input type="checkbox" id="cookieCheckBox" name="donotshow" value="on" tabindex="2"><label for="cookieCheckBox"></label>
+               </div>
+               <label for="cookieButton" id="newsLetterLabel">Don’t show this popup again</label>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

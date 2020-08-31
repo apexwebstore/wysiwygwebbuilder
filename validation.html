@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form validation</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/wb.validation.css" rel="stylesheet" type="text/css">
+<link href="css/validation.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="wb.validation.min.js"></script>
+<script type="text/javascript">
+function submitForm1()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^([0-9a-z]([-.\w]*[0-9a-z])*@(([0-9a-z])+([-\w]*[0-9a-z])*\.)+[a-z]{2,6})$/i;
+      if (!regexp.test(Editbox1.value))
+      {
+         alert("Please enter a valid email address.");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value == "")
+      {
+         alert("Please enter a value for the \"email\" field.");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $("#Form2").submit(function(event)
+   {
+      var isValid = $.validate.form(this);
+      return isValid;
+   });
+   $("#Editbox2").validate(
+   {
+      required: true,
+      type: 'email',
+      color_text: '#000000',
+      color_hint: '#00FF00',
+      color_error: '#FF0000',
+      color_border: '#808080',
+      nohint: false,
+      font_family: 'Arial',
+      font_size: '13px',
+      position: 'topright',
+      offsetx: 0,
+      offsety: 24,
+      bubble_class: 'bubbleleft',
+      effect: 'fade',
+      error_text: 'Please enter a valid email address'
+   });
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:14px;top:134px;width:940px;height:2292px;z-index:12;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage2" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:13;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:170px;width:851px;height:102px;z-index:14;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Form validation<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>One of the great features of WYSIWYG Web Builder is the powerful form tools. Not only can you easily create forms with the Form Wizard or create them from scratch with the form elements in the toolbox but there are also several form validation options. <br>In this tutorial we will introduce the available validation options.<br></span></div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:638px;width:851px;height:2px;z-index:15;">
+&nbsp;</div>
+<div id="wb_Text3" style="position:absolute;left:81px;top:268px;width:820px;height:66px;z-index:16;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Note:<br></strong>Before you read this tutorial make sure you understand the basics of forms:<br>- <a href="forms.html" class="wwb_link">How do I create a form in WYSIWYG Web Builder?</a><br>- <a href="form_wizard.html" class="wwb_link">How to use the Form Wizard?</a><br></span></div>
+<div id="wb_Text6" style="position:absolute;left:82px;top:365px;width:829px;height:176px;z-index:17;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">The following form elements have support for validation:<br>- captcha<br>- checkbox<br>- combobox<br>- editbox<br>- file upload<br>- radio button<br>- text area<br><br>In this tutorial we focus on the validation of the editbox and in particular <strong>email validation</strong>. More details about the other options can be found in the help. To access the validation tools click the 'Validate' tab in the object's properties.</span></div>
+<div id="wb_Text1" style="position:absolute;left:82px;top:985px;width:851px;height:115px;z-index:18;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">There are 3 validation modes:<strong><br>- Default<br>- Info bubble (real-time)<br>- HTML5<br><br></strong></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong>Default validation</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong><br></strong>Displays a standard JavaScript message.</span></div>
+<div id="wb_Image3" style="position:absolute;left:82px;top:554px;width:515px;height:410px;z-index:19;">
+<img src="images/validation1.jpg" id="Image3" alt=""></div>
+<div id="wb_Text5" style="position:absolute;left:82px;top:1256px;width:851px;height:115px;z-index:20;">
+<span style="color:#666666;font-family:Arial;font-size:16px;"><strong>Info bubble (real-time) validation</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong><br></strong>Select this option to enable real-time validation. The input field will be validated as soon as it loses the focus without the need for the user to press the submit button first.Real-time validation uses info balloons instead of the standard message box, this give your forms a professional look and feel. To configure the style of the balloons click the 'Settings' button. You can configure the colors, font, bubble type, position and animation effect.<br><br>If the validation type is set to 'Info bubble/real time validation' then the Title property will be used for the info text.<br>You can set the Title property in the General section of the object's properties.</span></div>
+<div id="wb_Form1" style="position:absolute;left:82px;top:1118px;width:348px;height:110px;z-index:21;">
+<form name="Form1" method="post" action="mailto:yourname@yourdomain.com" enctype="text/plain" id="Form1" onsubmit="return submitForm1()">
+<input type="text" id="Editbox1" style="position:absolute;left:11px;top:38px;width:323px;height:19px;z-index:3;" name="email" value="" spellcheck="false">
+<div id="wb_Text7" style="position:absolute;left:11px;top:13px;width:250px;height:16px;z-index:4;">
+<span style="color:#696969;font-family:Arial;font-size:13px;">Enter a valid email address:</span></div>
+<input type="submit" id="Button1" name="" value="Submit" style="position:absolute;left:11px;top:71px;width:96px;height:25px;z-index:5;">
+</form>
+</div>
+<div id="wb_Text8" style="position:absolute;left:82px;top:1516px;width:851px;height:723px;z-index:22;">
+<span style="color:#666666;font-family:Arial;font-size:16px;"><strong>HTML5 validation</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong><br></strong>Select this option to use native HTML5 form validation of the browser. Note that this feature is not available in all browsers yet and the appearance of the message will also be different.<br><br>One of the benefits of this option is that you can apply your own styling to the form field based on the state of the input. For instance you can give an edit box a different color when the input is invalid.<br><br>Here's an example how you can assign different style to different validation states using the built-in styles feature of WYSIWYG Web Builder:<br><br><strong>Step 1<br></strong>Open the Style Manager and add a new style. Name it 'validation'.<br>Specify the following values:<br>- border color: <strong>#000000<br></strong>- border style: <strong>Solid</strong><br>- border width: <strong>1</strong><br>- background color: <strong>#FFFFFF<br></strong>Click OK to save the style.<br><br><strong>Step 2<br></strong>Select the new style in the Style Manager and click 'Copy'.<br>Change the name to: <strong>validation:invalid</strong><br>Set the background color to <strong>#FF0000</strong><br>Click OK to save the style.<br><br><strong>Step 3<br></strong>Select the new style in the Style Manager and click 'Copy'.<br>Change the name to: <strong>validation:valid</strong><br>Set the background color to <strong>#00FF00</strong><br>Click OK to save the style.<br><br>Now you have 3 new styles in the Style Manager:<br>validation<br>validation:invalid<br>validation:valid<br><br><strong>Step 4<br></strong>Insert an edit box, open properties and click the Style tab.<br>Now select 'validation' in Predefined Style.<br><br><strong>Step 5<br></strong>Click the 'Validation' tab of the editbox.<br>Set mode to <strong>HTML5.</strong><br>Set data type to <strong>Email address.</strong><br><br></span></div>
+<div id="wb_Form2" style="position:absolute;left:82px;top:1383px;width:348px;height:110px;z-index:23;">
+<form name="Form1" method="post" action="mailto:yourname@yourdomain.com" enctype="text/plain" id="Form2">
+<input type="text" id="Editbox2" style="position:absolute;left:11px;top:38px;width:323px;height:19px;z-index:6;" name="email" value="" spellcheck="false" title="Enter a valid email address">
+<div id="wb_Text9" style="position:absolute;left:11px;top:13px;width:250px;height:16px;z-index:7;">
+<span style="color:#696969;font-family:Arial;font-size:13px;">Enter a valid email address:</span></div>
+<input type="submit" id="Button2" name="" value="Submit" style="position:absolute;left:11px;top:71px;width:96px;height:25px;z-index:8;">
+</form>
+</div>
+<div id="wb_Form3" style="position:absolute;left:82px;top:2227px;width:348px;height:110px;z-index:24;">
+<form name="Form1" method="post" action="mailto:yourname@yourdomain.com" enctype="text/plain" id="Form3">
+<div id="wb_Text10" style="position:absolute;left:11px;top:13px;width:250px;height:16px;z-index:9;">
+<span style="color:#696969;font-family:Arial;font-size:13px;">Enter a valid email address:</span></div>
+<input type="submit" id="Button3" name="" value="Submit" style="position:absolute;left:11px;top:71px;width:96px;height:25px;z-index:10;">
+<div id="Html1" style="position:absolute;left:11px;top:38px;width:329px;height:25px;z-index:11">
+<input type="email" id="Editbox3" style="position:absolute;left:0px;top:0px;width:323px;height:19px;line-height:19px;z-index:10;" name="email" value="" required="required" title="Enter a valid email address" class="validation"></div>
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Explore Delft</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/delft.css" rel="stylesheet">
+<link href="css/wb15_delft.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="transition.js"></script>
+<script src="collapse.js"></script>
+<script src="dropdown.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="util.js"></script>
+<script src="carousel.js"></script>
+<script src="wb.photocollage.js"></script>
+<script src="wwb15.js"></script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#todoCards']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_todoCards').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#planTripLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#planTripLayoutGrid').offset().top }, 600, 'easeInSine');
+      });
+      $("a[href*='#galleryLayoutGrid']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollgalleryLayoutGrid()
+      {
+         var $obj = $("#wb_galleryLayoutGrid");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollgalleryLayoutGrid();
+      $(window).scroll(function(event)
+      {
+         onScrollgalleryLayoutGrid();
+      });
+      $("#reviewsContainer").owlCarousel({autoplayTimeout:5000, margin: 16, autoplay: true, nav: false, loop: true, dots: true, responsive: {0: {items: 1},480: {items: 2}, slideBy: 1}});
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top }, 600, 'easeInSine');
+      });
+      $(document).on('click','.navigationMenu-navbar-collapse.in',function(e)
+      {
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("#Carousel1").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               AnimateCss('wb_welcomeText1', 'slide-left-in', 300, 1000);
+               AnimateCss('wb_welcomeText2', 'slide-right-in', 1000, 1000);
+               AnimateCss('welcomeButton1', 'swash-in', 2000, 1000);
+               break;
+            case 1:
+               AnimateCss('wb_welcomeText3', 'scale-in-horizontal-center', 300, 1000);
+               AnimateCss('wb_welcomeText4', 'scale-in-vertical-center', 1000, 1000);
+               AnimateCss('welcomeButton2', 'twister-down-in', 2000, 1000);
+               break;
+            case 2:
+               AnimateCss('wb_welcomeText5', 'transform-rotate-in', 300, 1000);
+               AnimateCss('welcomeButton3', 'vanish-in', 2000, 1000);
+               break;
+            case 5:
+               AnimateCss('wb_welcomeText6', 'transform-roll-in', 1000, 1000);
+               break;
+         }
+      });
+      $("#Carousel1").bootstrapcarousel({interval:6000, pause: false});
+      $("#attractionsCarousel").on('slid.bs.carousel', function(e)
+      {
+         var index = $(e.relatedTarget).index();
+         switch(index)
+         {
+            case 0:
+               $('#Carousel2').bootstrapcarousel(0);
+               break;
+            case 1:
+               $('#Carousel2').bootstrapcarousel(1);
+               break;
+            case 2:
+               $('#Carousel2').bootstrapcarousel(2);
+               break;
+            case 3:
+               $('#Carousel2').bootstrapcarousel(3);
+               break;
+         }
+      });
+      $("#attractionsCarousel").bootstrapcarousel({interval:0, pause: false});
+      $("#galleryCollage").photocollage({ effect: 'css', duration: 600, padding: 20, lazyload: true, matrix: '1,1,1,2,0,1,2,0,0,0,1,0,0,1,1,2,0,1,2,0,0,0,1,0,0' });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_navigation">
+      <div id="navigation">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_navigationImage">
+                  <img src="images/delftlogo.png" id="navigationImage" alt="">
+               </div>
+            </div>
+            <div class="col-2">
+               <div id="wb_navigationMenu">
+                  <div id="navigationMenu" class="navigationMenu" style="width:100%;height:auto !important;">
+                     <div class="container">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigationMenu-navbar-collapse">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div class="navigationMenu-navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li class="">
+                                 <a href="wb15_delft.html#welcome">Explore Delft</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_delft.html#about">Recommended</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_delft.html#products">Planning Your Trip</a>
+                              </li>
+                              <li class="">
+                                 <a href="wb15_delft.html#footer">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_welcome">
+      <div id="welcome">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_Carousel1">
+                  <div id="Carousel1" class="carousel slide" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#Carousel1" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel1" data-slide-to="1"></li>
+                        <li data-target="#Carousel1" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcomeText1">
+                                 <p style="font-family:Arial;font-size:13px;line-height:16px;"><span style="font-family:Arial;font-size:27px;line-height:30px;font-weight:bold;">Explore Delft</span></p>
+                              </div>
+                              <div id="wb_welcomeText2">
+                                 <p>We made a selection of all the best things you can do, see or taste in Delft and its region </p>
+                              </div>
+                              <input type="submit" id="welcomeButton1" name="" value="Book A Tour">
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcomeText3">
+                                 <p style="font-size:24px;line-height:27.5px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Explore Delft</span></p>
+                              </div>
+                              <div id="wb_welcomeText4">
+                                 <p>We made a selection of all the best things you can do, see or taste in Delft and its region </p>
+                              </div>
+                              <input type="submit" id="welcomeButton2" name="" value="Book A Tour">
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="carousel-innerframe">
+                              <div id="wb_welcomeText5">
+                                 <p style="font-size:21px;line-height:24.5px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Explore Delft</span></p>
+                              </div>
+                              <div id="wb_welcomeText6">
+                                 <p>We made a selection of all the best things you can do, see or taste in Delft and its region </p>
+                              </div>
+                              <input type="submit" id="welcomeButton3" name="" value="Book A Tour">
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-item-left carousel-control" href="wb15_delft.html#Carousel1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-item-right carousel-control" href="wb15_delft.html#Carousel1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_todoCards">
+      <div id="todoCards">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_todoCard1" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard1-card-body">
+                        <div id="todoCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+                        <div id="todoCard1-card-item1">The Golden Age</div>
+                        <div id="todoCard1-card-item2">2019 is all about Delft and The Golden Age</div>
+                        <div id="todoCard1-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_todoCard2" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard2-card-body">
+                        <div id="todoCard2-card-item0"><i class="fa fa-heart"></i></div>
+                        <div id="todoCard2-card-item1">Delft Blue</div>
+                        <div id="todoCard2-card-item2">Everything about the world-famous porcelain</div>
+                        <div id="todoCard2-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_todoCard3" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard3-card-body">
+                        <div id="todoCard3-card-item0"><i class="fa fa-paint-brush"></i></div>
+                        <div id="todoCard3-card-item1">Vermeer</div>
+                        <div id="todoCard3-card-item2">Birthplace of this world-famous artist</div>
+                        <div id="todoCard3-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_todoCard4" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+                     <div id="todoCard4-card-body">
+                        <div id="todoCard4-card-item0"><i class="fa fa-flag"></i></div>
+                        <div id="todoCard4-card-item1">Orange</div>
+                        <div id="todoCard4-card-item2">City of the Royal Family</div>
+                        <div id="todoCard4-card-item3">Learn more ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTrip">
+      <div id="planTrip">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_planTripHeading">
+                  <h2 id="planTripHeading">How To Plan Your Trip</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_planTripLayoutGrid">
+      <div id="planTripLayoutGrid">
+         <div id="wb_planTripCard1">
+            <div id="planTripCard1-card-body">
+               <div id="planTripCard1-card-item0"><i class="fa fa-map-marker"></i></div>
+               <div id="planTripCard1-card-item1">Cheap combitickets</div>
+               <div id="planTripCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard2">
+            <div id="planTripCard2-card-body">
+               <div id="planTripCard2-card-item0"><i class="fa fa-calendar"></i></div>
+               <div id="planTripCard2-card-item1">Getting There </div>
+               <div id="planTripCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+         <div id="wb_planTripCard3">
+            <div id="planTripCard3-card-body">
+               <div id="planTripCard3-card-item0"><i class="fa fa-smile-o"></i></div>
+               <div id="planTripCard3-card-item1">Enjoy the Trip</div>
+               <div id="planTripCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_banner">
+      <div id="banner-overlay"></div>
+      <div id="banner">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_bannerHeading1">
+                  <h2 id="bannerHeading1">IN AND AROUND DELFT</h2>
+               </div>
+               <div id="wb_bannerHeading2">
+                  <h3 id="bannerHeading2">Everything to make your visit more enjoyable</h3>
+               </div>
+               <a id="bannerButton" href="https://www.delft.com/explore-delft/" target="_blank">More details</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_attractions">
+      <div id="attractions">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_attractionsCarousel">
+                     <div id="attractionsCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-target="#attractionsCarousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#attractionsCarousel" data-slide-to="1"></li>
+                           <li data-target="#attractionsCarousel" data-slide-to="2"></li>
+                           <li data-target="#attractionsCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <div class="carousel-item frame-1 active">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_attractionsText2" class="caption">
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:21px;line-height:24.5px;font-weight:bold;">Johannes Vermeer</span><span style="font-weight:bold;"><br/></span><span style="font-size:15px;line-height:16.5px;">Girl with pearl earring</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-2">
+                              <div class="carousel-innerframe">
+                                 <div id="wb_attractionsText3" class="caption">
+                                    <p style="font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:21px;line-height:24.5px;">Adriaen Thomasz Key</span></p>
+                                    <p style="font-size:16px;line-height:18px;"><span style="font-size:15px;line-height:16.5px;">Willem van Oranje</span></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-3">
+                              <div class="carousel-innerframe">
+                              </div>
+                           </div>
+                           <div class="carousel-item frame-4">
+                              <div class="carousel-innerframe">
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-item-left carousel-control" href="wb15_delft.html#attractionsCarousel" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-item-right carousel-control" href="wb15_delft.html#attractionsCarousel" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_attractionsText1">
+                     <p>Delft is a popular tourist attraction in the Netherlands. It is home to Delft University of Technology (TU Delft), regarded as center of technological research and development in the Netherlands, Delft Blue pottery and the currently reigning House of Orange-Nassau. Historically, Delft played a highly influential role in the Dutch Golden Age. It's also the birth place of Johannes Vermeer, a famous Dutch painter.</p>
+                  </div>
+                  <a id="attractionsButton" href="https://www.delft.com/explore-delft/">More details</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_gallery">
+      <div id="gallery">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_galleryHeading">
+                  <h2 id="galleryHeading">Gallery</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_galleryLayoutGrid">
+      <div id="galleryLayoutGrid">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_galleryCollage">
+                     <div id="galleryCollage">
+                        <div class="thumbnails">
+                           <figure class="thumbnail">
+                              <a href="images/delft2.jpg"><img alt="" src="images/delft2.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft18.jpg"><img alt="" src="images/delft18.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft4.jpg"><img alt="" src="images/delft4.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft5.jpg"><img alt="" src="images/delft5.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft8.jpg"><img alt="" src="images/delft8.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft11.jpg"><img alt="" src="images/delft11.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft9.jpg"><img alt="" src="images/delft9.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft13.jpg"><img alt="" src="images/delft13.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft17.jpg"><img alt="" src="images/delft17.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft12.jpg"><img alt="" src="images/delft12.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft15.jpg"><img alt="" src="images/delft15.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft6.jpg"><img alt="" src="images/delft6.jpg"></a>
+                           </figure>
+                           <figure class="thumbnail">
+                              <a href="images/delft16.jpg"><img alt="" src="images/delft16.jpg"></a>
+                           </figure>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviews">
+      <div id="reviews">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_reviewsHeading">
+                  <h2 id="reviewsHeading">What do visitors say?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_reviewsContainer">
+      <div id="reviewsContainer" class="owl-carousel owl-theme">
+         <div id="wb_reviewsCard1">
+            <div id="reviewsCard1-card-body">
+               <img id="reviewsCard1-card-item0" src="images/Meisje_met_de_parel.jpg" alt="" title="">
+               <div id="reviewsCard1-card-item1">Johannes Vermeer</div>
+               <div id="reviewsCard1-card-item2">Painter</div>
+               <div id="reviewsCard1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard2">
+            <div id="reviewsCard2-card-body">
+               <img id="reviewsCard2-card-item0" src="images/Willem-de-Zwijger.jpg" alt="" title="">
+               <div id="reviewsCard2-card-item1">Willem de Zwijger</div>
+               <div id="reviewsCard2-card-item2">Prince of Orange</div>
+               <div id="reviewsCard2-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard2-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_Card1">
+            <div id="Card1-card-body">
+               <img id="Card1-card-item0" src="images/Meisje_met_de_parel.jpg" alt="" title="">
+               <div id="Card1-card-item1">Johannes Vermeer</div>
+               <div id="Card1-card-item2">Painter</div>
+               <div id="Card1-card-item3"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item4"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item5"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item6"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item7"><i class="fa fa-star"></i></div>
+               <div id="Card1-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+         <div id="wb_reviewsCard4">
+            <div id="reviewsCard4-card-body">
+               <img id="reviewsCard4-card-item0" src="images/Willem-de-Zwijger.jpg" alt="" title="">
+               <div id="reviewsCard4-card-item1">Willem de Zwijger</div>
+               <div id="reviewsCard4-card-item2">Prince of Orange</div>
+               <div id="reviewsCard4-card-item3"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item4"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item5"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item6"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item7"><i class="fa fa-star"></i></div>
+               <div id="reviewsCard4-card-item8">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactHeading">
+                  <h2 id="contactHeading">Looking for more inspiration?</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contactForm">
+      <div id="contactForm-divider-top">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+            <path class="divider-fill" d="M500,20 L490,0 h20 L500,20 Z"/>
+         </svg></div>
+      <div id="contactForm">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactText1">
+                     <p style="font-size:13px;line-height:16px;"><span style="font-size:27px;line-height:30px;font-weight:bold;">Receive the best tips</span></p>
+                  </div>
+                  <div id="wb_contactText2">
+                     <p>We only use your e-mail address to send you the best tips about Delft. You can always unsubscribe using the link in the e-mail. </p>
+                  </div>
+                  <input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Your e-mail">
+                  <input type="submit" id="contactButton" name="" value="Subscribe">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_contactText3">
+                     <p><strong>Contact Us</strong></p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">Tourist information VVV Delft </p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">Kerkstraat 3 (Marktplein) </p>
+                     <p style="font-size:13px;line-height:16px;">2611 GX Delft</p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">+31 (0) 6 21 33 06 33 </p>
+                     <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+                     <p style="font-size:13px;line-height:16px;">hello@delft.com</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="StickyLayer" data-start="opacity:0;" data-250-start="opacity:1;">
+      <div id="wb_up-arrow">
+         <a href="wb15_delft.html#welcome"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_footerText">
+                  <p style="font-family:Arial;"><span style="font-family:Arial;">C</span><span style="font-family:Arial;">opyright </span><span style="font-family:Arial;">©</span><span style="font-family:Arial;"> 2019 WYSIWYG Web Builder</span></p>
+               </div>
+            </div>
+            <div class="col-3">
+               <div id="wb_footerIcon1">
+                  <a href="https://www.facebook.com/VisitDelft" target="_blank"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+               </div>
+               <div id="wb_footerIcon2">
+                  <a href="https://www.instagram.com/visitdelft" target="_blank"><div id="footerIcon2"><i class="fa fa-instagram"></i></div></a>
+               </div>
+               <div id="wb_footerIcon3">
+                  <a href="https://www.snapchat.com/add/visitdelft" target="_blank"><div id="footerIcon3"><i class="fa fa-snapchat-ghost"></i></div></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

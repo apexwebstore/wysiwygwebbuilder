@@ -1,0 +1,826 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lavender</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/lavender.css" rel="stylesheet">
+<link href="css/wb15_lavender.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#welcome']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#services']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function skrollrInit()
+   {
+      skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+   }
+   skrollrInit();
+   $("a[href*='#portfolio']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolio').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolio()
+   {
+      var $obj = $("#wb_portfolio");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolio();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolio();
+   });
+   $("a[href*='#portfolioLayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolioLayoutGrid1()
+   {
+      var $obj = $("#wb_portfolioLayoutGrid1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolioLayoutGrid1();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolioLayoutGrid1();
+   });
+   $("a[href*='#portfolioLayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollportfolioLayoutGrid2()
+   {
+      var $obj = $("#wb_portfolioLayoutGrid2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollportfolioLayoutGrid2();
+   $(window).scroll(function(event)
+   {
+      onScrollportfolioLayoutGrid2();
+   });
+   $("a[href*='#questions']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_questions').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#prices']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_prices').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#reviews']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_reviews').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollreviews()
+   {
+      var $obj = $("#wb_reviews");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollreviews();
+   $(window).scroll(function(event)
+   {
+      onScrollreviews();
+   });
+   $("a[href*='#footer']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_footer').offset().top }, 600, 'easeInCubic');
+   });
+   function aspectRatioportfolioRollOverText1()
+   {
+      var $obj = $("#portfolioRollOverText1");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText1();
+   });
+   aspectRatioportfolioRollOverText1();
+   function aspectRatioportfolioRollOverText2()
+   {
+      var $obj = $("#portfolioRollOverText2");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText2();
+   });
+   aspectRatioportfolioRollOverText2();
+   function aspectRatioportfolioRollOverText3()
+   {
+      var $obj = $("#portfolioRollOverText3");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText3();
+   });
+   aspectRatioportfolioRollOverText3();
+   function aspectRatioportfolioRollOverText4()
+   {
+      var $obj = $("#portfolioRollOverText4");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText4();
+   });
+   aspectRatioportfolioRollOverText4();
+   function aspectRatioportfolioRollOverText5()
+   {
+      var $obj = $("#portfolioRollOverText5");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText5();
+   });
+   aspectRatioportfolioRollOverText5();
+   function aspectRatioportfolioRollOverText6()
+   {
+      var $obj = $("#portfolioRollOverText6");
+      var height = $obj.width() / 1.38;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioportfolioRollOverText6();
+   });
+   aspectRatioportfolioRollOverText6();
+   $('#MegaMenu1 .submenu ul li h2 a').addClass('ui-widget-header');
+   $('#MegaMenu1 .submenu ul li a').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('.ui-state-default').hover(function()
+   {
+      $(this).addClass('ui-state-hover');
+   }, function()
+   {
+      $(this).removeClass('ui-state-hover');
+   });
+   $('#MegaMenu1 li').hover(function()
+   {
+      var top = $(this).find('.button').outerHeight();
+      $(this).find('.submenu').css( {'top': top });
+      $(this).find('.submenu').show();
+      var maxWidth = 0;
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').each(function()
+         {
+            $(this).css('width', 'auto');
+            if ($(this).width() > maxWidth)
+               maxWidth = $(this).width();
+         });
+      });
+      $(this).find('ul').each(function()
+      {
+         $(this).find('li').width(maxWidth);
+         $(this).css({'width' : maxWidth+4});
+      });
+      if ($(this).find('.row').length > 0 )
+      {
+         var maxRowWidth = 0;
+         $(this).find('.row').each(function()
+         {
+            var width = 0;
+            $(this).find('ul').each(function()
+            {
+               width += $(this).width();
+            });
+            if (width > maxRowWidth)
+            {
+               maxRowWidth = width;
+            }
+         });
+         $(this).find('.submenu').css({'width' : maxRowWidth});
+         $(this).find('.row:last').css({'margin': '0'});
+      }
+      else
+      {
+         var width = 0;
+         $(this).find('ul').each(function()
+         {
+            width += $(this).width();
+         });
+         $(this).find('.submenu').css({'width' : width});
+      }
+      $(this).find('.submenu').slideDown();
+   }, function()
+   {
+      $(this).find('.submenu').hide();
+   })
+   $('#MegaMenu1 li .submenu').hide();
+   $('#MegaMenu1-nav').click(function()
+   {
+      $('body').removeClass('overflow-no-scroll');
+      $('#wb_MegaMenu1').removeClass('open');
+   });
+   $('#MegaMenu1-hamburger').click(function()
+   {
+      $('body').addClass('overflow-no-scroll');
+      $('#wb_MegaMenu1').addClass('open');
+   });
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_ClipArt1">
+<img src="images/img0011.png" id="ClipArt1" alt="">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_MegaMenu1">
+   <div id="MegaMenu1-hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+   </div>
+   <div id="MegaMenu1-nav">
+   <div id="MegaMenu1-close"><a role="button" aria-hidden="true" href="wb15_lavender.html#">&times;</a></div>
+   <ul role="menubar" class="ui-widget" id="MegaMenu1">
+      <li>
+      <a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html" class="button ui-state-default">Home</a>
+      </li>
+      <li>
+      <a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html" class="button ui-state-default">About</a>
+      </li>
+      <li>
+      <a role="menuitem" href="wb15_lavender.html#" class="button ui-state-default"><i class="fa fa-caret-down arrow"></i>Services</a>
+      <div class="submenu ui-widget-content">
+      <div class="row">
+         <ul>
+            <li><h2>Categories</h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Politics</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Science & Tech&nbsp;&nbsp;</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Business</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Entertainment</a></li>
+            <li><a role="menuitem" href="http://"><i class="fa fa-check-square-o bullet"></i>Top Stories</a></li>
+         </ul>
+         <ul>
+            <li><h2>More</h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Weather</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Health</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Lifestyle</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Pop Culture</a></li>
+            <li><a role="menuitem" href="http://"><i class="fa fa-check-square-o bullet"></i>Sports</a></li>
+         </ul>
+      </div>
+      <div class="row">
+         <ul>
+            <li><h2>Location</h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Europe</a></li>
+            <li><a role="menuitem" href="http://"><i class="fa fa-check-square-o bullet"></i>US</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>World</a></li>
+            <li><a role="menuitem" href="http://"><i class="fa fa-check-square-o bullet"></i>Local</a></li>
+         </ul>
+      </div>
+      </div>
+      </li>
+      <li>
+      <a role="menuitem" href="wb15_lavender.html#" class="button ui-state-default"><i class="fa fa-caret-down arrow"></i>Team</a>
+      <div class="submenu ui-widget-content">
+      <div class="row">
+         <ul>
+            <li><h2>About Us</h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>About Us</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Site Map</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Editorial Guidelines</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Careers</a></li>
+         </ul>
+      </div>
+      <div class="row">
+         <ul>
+            <li><h2>News Services </h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>News RSS</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>News for your Phone</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>News Radio</a></li>
+         </ul>
+      </div>
+      <div class="row">
+         <ul>
+            <li><h2>Legal</h2></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Terms & Conditions</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Privacy & Cookies Notice</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Accessibility Information</a></li>
+            <li><a role="menuitem" href="../../www_wysiwygwebbuilder_default.html"><i class="fa fa-check-square-o bullet"></i>Contact Us</a></li>
+         </ul>
+      </div>
+      </div>
+      </li>
+      <li>
+      <a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/contact.html" class="button ui-state-default">Contact</a>
+      </li>
+   </ul>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_welcome">
+<div id="welcome-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="welcome-divider-bottom">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="welcome">
+<div class="col-1">
+<div id="wb_welcomeText">
+<p style="font-size:15px;line-height:16.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">Welcome to Lavender</span></p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">Lavender is a type of plant found on almost all continents. It has a purplish colour. It has a colour named after it, called lavendar.</span></p>
+
+</div>
+<a id="welcomeButton" href="wb15_lavender.html#services">Read More</a>
+</div>
+</div>
+</div>
+<div id="wb_services">
+<div id="services">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_servicesCard1" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+   <div id="servicesCard1-card-body">
+      <div id="servicesCard1-card-item0"><i class="fa fa-clock-o"></i></div>
+      <div id="servicesCard1-card-item1">Design</div>
+      <div id="servicesCard1-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard1-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_servicesCard2" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+   <div id="servicesCard2-card-body">
+      <div id="servicesCard2-card-item0"><i class="fa fa-gears"></i></div>
+      <div id="servicesCard2-card-item1">Branding</div>
+      <div id="servicesCard2-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard2-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_servicesCard3" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+   <div id="servicesCard3-card-body">
+      <div id="servicesCard3-card-item0"><i class="fa fa-check-circle"></i></div>
+      <div id="servicesCard3-card-item1">Marketing</div>
+      <div id="servicesCard3-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard3-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="col-4-padding">
+<div id="wb_servicesCard4" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+   <div id="servicesCard4-card-body">
+      <div id="servicesCard4-card-item0"><i class="fa fa-users"></i></div>
+      <div id="servicesCard4-card-item1">Support</div>
+      <div id="servicesCard4-card-item2">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="servicesCard4-card-item3">Learn more ></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="wb15_lavender.html#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_portfolio">
+<div id="portfolio-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="portfolio">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_portfolioHeading">
+<h1 id="portfolioHeading">Portfolio</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_portfolioLayoutGrid1">
+<div id="portfolioLayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="portfolioRollOverText1">
+   <img alt="ABOUT" class="image" src="images/template101.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="portfolioRollOverText2">
+   <img alt="ABOUT" class="image" src="images/template102.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="portfolioRollOverText3">
+   <img alt="ABOUT" class="image" src="images/template109.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_portfolioLayoutGrid2">
+<div id="portfolioLayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="portfolioRollOverText4">
+   <img alt="ABOUT" class="image" src="images/template110.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="portfolioRollOverText5">
+   <img alt="ABOUT" class="image" src="images/template107.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="portfolioRollOverText6">
+   <img alt="ABOUT" class="image" src="images/template103.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_questions">
+<div id="questions-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="questions-divider-bottom">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="questions">
+<div class="col-1">
+<div id="wb_questionsHeading1">
+<h2 id="questionsHeading1">Have Questions?</h2>
+</div>
+<div id="wb_questionsHeading2">
+<h1 id="questionsHeading2">GET IN TOUCH WITH US</h1>
+</div>
+<a id="questionsButton" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/contact.html">CONTACT US</a>
+</div>
+</div>
+</div>
+<div id="wb_prices">
+<div id="prices-divider-bottom">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="prices">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_pricesCard1">
+   <div id="pricesCard1-card-body">
+      <img id="pricesCard1-card-item0" src="images/wwb_grey_small.jpg" alt="" title="">
+      <div id="pricesCard1-card-item1">BASIC</div>
+      <hr id="pricesCard1-card-item2">
+      <div id="pricesCard1-card-item3"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item4">Feature One</div>
+      <hr id="pricesCard1-card-item5">
+      <div id="pricesCard1-card-item6"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item7">Feature Two</div>
+      <hr id="pricesCard1-card-item8">
+      <div id="pricesCard1-card-item9"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item10">Feature Three</div>
+      <hr id="pricesCard1-card-item11">
+      <div id="pricesCard1-card-item12">$19.99</div>
+      <div id="pricesCard1-card-item13"><a href="../../purchase_2.html">BUY NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_pricesCard2">
+   <div id="pricesCard2-card-body">
+      <img id="pricesCard2-card-item0" src="images/wwb_lavender_small.jpg" alt="" title="">
+      <div id="pricesCard2-card-item1">STANDARD</div>
+      <hr id="pricesCard2-card-item2">
+      <div id="pricesCard2-card-item3"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item4">All Basic Features</div>
+      <hr id="pricesCard2-card-item5">
+      <div id="pricesCard2-card-item6"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item7">Feature Four</div>
+      <hr id="pricesCard2-card-item8">
+      <div id="pricesCard2-card-item9"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item10">Feature Five</div>
+      <hr id="pricesCard2-card-item11">
+      <div id="pricesCard2-card-item12">$29.99</div>
+      <div id="pricesCard2-card-item13"><a href="../../purchase_2.html">BUY NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_pricesCar3">
+   <div id="pricesCar3-card-body">
+      <img id="pricesCar3-card-item0" src="images/wwb_lavender_small.jpg" alt="" title="">
+      <div id="pricesCar3-card-item1">PRO</div>
+      <hr id="pricesCar3-card-item2">
+      <div id="pricesCar3-card-item3"><i class="fa fa-check"></i></div>
+      <div id="pricesCar3-card-item4">All standard features</div>
+      <hr id="pricesCar3-card-item5">
+      <div id="pricesCar3-card-item6"><i class="fa fa-check"></i></div>
+      <div id="pricesCar3-card-item7">Same Service</div>
+      <hr id="pricesCar3-card-item8">
+      <div id="pricesCar3-card-item9"><i class="fa fa-check"></i></div>
+      <div id="pricesCar3-card-item10">Higher price</div>
+      <hr id="pricesCar3-card-item11">
+      <div id="pricesCar3-card-item12">$39.99</div>
+      <div id="pricesCar3-card-item13"><a href="../../purchase_2.html">BUY NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_reviews">
+<div id="reviews">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_reviewsHeading">
+<h1 id="reviewsHeading">User Reviews</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_reviewsContainer">
+<div id="reviewsContainer-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="reviewsContainer-divider-bottom">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="reviewsContainer">
+<div id="wb_reviewsCard1">
+   <div id="reviewsCard1-card-body">
+      <div id="reviewsCard1-card-item0">“</div>
+      <div id="reviewsCard1-card-item1">I have no special talent. I am only passionately curious. <br><br>A true genius admits that he/she knows nothing.</div>
+      <hr id="reviewsCard1-card-item2">
+      <div id="reviewsCard1-card-item3">Albert Einstein</div>
+   </div>
+
+</div>
+<div id="wb_reviewsCard2">
+   <div id="reviewsCard2-card-body">
+      <div id="reviewsCard2-card-item0">“</div>
+      <div id="reviewsCard2-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</div>
+      <hr id="reviewsCard2-card-item2">
+      <div id="reviewsCard2-card-item3">Lorem Ipsum</div>
+   </div>
+
+</div>
+<div id="wb_reviewsCard3">
+   <div id="reviewsCard3-card-body">
+      <div id="reviewsCard3-card-item0">“</div>
+      <div id="reviewsCard3-card-item1">Make each day your masterpiece.</div>
+      <hr id="reviewsCard3-card-item2">
+      <div id="reviewsCard3-card-item3">John Wooden</div>
+   </div>
+
+</div>
+<div id="wb_Card1">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0">“</div>
+      <div id="Card1-card-item1">Action is the foundational key to all success.</div>
+      <hr id="Card1-card-item2">
+      <div id="Card1-card-item3">Pablo Picasso<br></div>
+   </div>
+
+</div>
+<div id="wb_reviewsCard4">
+   <div id="reviewsCard4-card-body">
+      <div id="reviewsCard4-card-item0">“</div>
+      <div id="reviewsCard4-card-item1">One must work and dare if one really wants to live.</div>
+      <hr id="reviewsCard4-card-item2">
+      <div id="reviewsCard4-card-item3">Vincent van Gogh</div>
+   </div>
+
+</div>
+<div id="wb_reviewsCard6">
+   <div id="reviewsCard6-card-body">
+      <div id="reviewsCard6-card-item0">“</div>
+      <div id="reviewsCard6-card-item1">Action is the foundational key to all success.</div>
+      <hr id="reviewsCard6-card-item2">
+      <div id="reviewsCard6-card-item3">Pablo Picasso<br></div>
+   </div>
+
+</div>
+<div id="wb_reviewsCard5">
+   <div id="reviewsCard5-card-body">
+      <div id="reviewsCard5-card-item0">“</div>
+      <div id="reviewsCard5-card-item1">Choose a job you love and you will never have to work a day in your life.</div>
+      <hr id="reviewsCard5-card-item2">
+      <div id="reviewsCard5-card-item3">Confucius</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_footerHeading1">
+<h1 id="footerHeading1">WYSIWYG Web Builder</h1>
+</div>
+<div id="wb_footerText1">
+<p>The ultimate toolbox for creating amazing websites!</p>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_footerText2">
+<p><strong>Information</strong></p>
+
+</div>
+<div id="wb_footerMenu1">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_lavender.html#" target="_self">About&nbsp;Us</a>
+</li>
+<li><a role="menuitem" href="wb15_lavender.html#" target="_self">Services</a>
+</li>
+<li><a role="menuitem" href="wb15_lavender.html#" target="_self">Portfolio</a>
+</li>
+<li><a role="menuitem" href="wb15_lavender.html#" target="_self">Contact</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_footerText3">
+<p><strong>Legal </strong></p>
+
+</div>
+<div id="wb_footerMenu2">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_lavender.html#" target="_self">Privacy&nbsp;Policy</a>
+</li>
+<li><a role="menuitem" href="wb15_lavender.html#" target="_self">Terms&nbsp;&amp;&nbsp;Conditions</a>
+</li>
+<li><a role="menuitem" href="wb15_lavender.html#" target="_self">Cookie&nbsp;Policy</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="col-4-padding">
+<div id="wb_footerText4">
+<p><strong>Purchase</strong></p>
+
+</div>
+<div id="wb_footerShape">
+<img src="images/img0012.png" id="footerShape" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

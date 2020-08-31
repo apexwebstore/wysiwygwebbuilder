@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trlangle</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/triangle.css" rel="stylesheet">
+<link href="css/wb15_triangle.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.panel.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#welcome']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#services1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services1').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices1()
+   {
+      var $obj = $("#wb_services1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices1();
+   $(window).scroll(function(event)
+   {
+      onScrollservices1();
+   });
+   $("a[href*='#services2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services2').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices2()
+   {
+      var $obj = $("#wb_services2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices2();
+   $(window).scroll(function(event)
+   {
+      onScrollservices2();
+   });
+   $("a[href*='#news']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_news').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollnews()
+   {
+      var $obj = $("#wb_news");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollnews();
+   $(window).scroll(function(event)
+   {
+      onScrollnews();
+   });
+   $("a[href*='#blog']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_blog').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollblog()
+   {
+      var $obj = $("#wb_blog");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollblog();
+   $(window).scroll(function(event)
+   {
+      onScrollblog();
+   });
+   $("a[href*='#blogGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_blogGrid').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollblogGrid()
+   {
+      var $obj = $("#wb_blogGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollblogGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollblogGrid();
+   });
+   $("#menuPanel").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'right', toggle: true});
+   $("#menuPanel_markup ul li a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("#menuPanel-close a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeInCubic');
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_welcome,#moreServices,#wb_contact').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_welcome">
+<div id="welcome-overlay"></div>
+<div id="welcome-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path class="divider-fill" d="M 738 95 L 0 0 v 100 h 1000 V 0 L 738 95 Z"></path></svg></div>
+<div id="welcome">
+<div class="col-1">
+<div id="wb_welcomeText">
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;font-size:32px;line-height:36px;font-weight:bold;">Welcome to the Triangle Template</span></p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services1">
+<div id="services1">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard1" style="display:flex;width:calc(100% - 20px);z-index:1;">
+   <div id="servicesCard1-card-body">
+      <div id="servicesCard1-card-item0">Quality Control</div>
+      <div id="servicesCard1-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard2" style="display:flex;width:calc(100% - 20px);z-index:2;">
+   <div id="servicesCard2-card-body">
+      <div id="servicesCard2-card-item0">Industrial Controls</div>
+      <div id="servicesCard2-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_servicesCard3" style="display:flex;width:calc(100% - 20px);z-index:3;">
+   <div id="servicesCard3-card-body">
+      <div id="servicesCard3-card-item0">Networking</div>
+      <div id="servicesCard3-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services2">
+<div id="services2">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard4" style="display:flex;width:calc(100% - 20px);z-index:4;">
+   <div id="servicesCard4-card-body">
+      <div id="servicesCard4-card-item0">Remote Support</div>
+      <div id="servicesCard4-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard5" style="display:flex;width:calc(100% - 20px);z-index:5;">
+   <div id="servicesCard5-card-body">
+      <div id="servicesCard5-card-item0">Integrated Experience</div>
+      <div id="servicesCard5-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_servicesCard6" style="display:flex;width:calc(100% - 20px);z-index:6;">
+   <div id="servicesCard6-card-body">
+      <div id="servicesCard6-card-item0">Fair Prices</div>
+      <div id="servicesCard6-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_moreServices">
+<div id="moreServices-overlay"></div>
+<div id="moreServices-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="moreServices">
+<div id="wb_moreServicesCard1" style="display:flex;text-align:center;z-index:7;">
+   <div id="moreServicesCard1-card-body">
+      <div id="moreServicesCard1-card-item0"><svg class="svg-icon" viewBox="0 0 256 220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M105 64 C105 65, 104 67, 103 67 C103 68, 101 69, 100 69 C99 69, 98 68, 97 67 C96 67, 96 65, 96 64 C96 60, 93 56, 88 54 C83 52, 78 51, 73 51 C72 51, 70 50, 70 49 C69 48, 68 47, 68 46 C68 45, 69 44, 70 43 C70 42, 72 41, 73 41 C78 41, 82 42, 87 44 C92 45, 96 48, 99 51 C103 55, 105 59, 105 64 Z M128 64 C128 57, 126 51, 123 45 C119 39, 115 34, 110 31 C105 27, 99 24, 92 22 C86 20, 79 19, 73 19 C66 19, 60 20, 53 22 C47 24, 41 27, 36 31 C30 34, 26 39, 23 45 C20 51, 18 57, 18 64 C18 74, 21 82, 28 90 C29 91, 30 93, 32 95 C34 97, 35 98, 36 99 C49 114, 55 128, 56 142 L89 142 C90 128, 97 114, 109 99 C110 98, 112 97, 114 95 C116 93, 117 91, 118 90 C124 82, 128 74, 128 64 Z M146 64 C146 79, 141 92, 131 103 C127 107, 123 111, 121 115 C118 119, 115 123, 112 129 C109 134, 108 139, 107 144 C112 147, 114 151, 114 156 C114 159, 113 162, 110 165 C113 167, 114 170, 114 174 C114 179, 112 183, 107 186 C109 188, 109 190, 109 192 C109 197, 108 200, 105 202 C102 205, 98 206, 94 206 C92 210, 89 213, 85 216 C81 218, 77 220, 73 220 C68 220, 64 218, 60 216 C57 213, 54 210, 52 206 C47 206, 44 205, 41 202 C38 200, 36 197, 36 192 C36 190, 37 188, 38 186 C34 183, 32 179, 32 174 C32 170, 33 167, 35 165 C33 162, 32 159, 32 156 C32 151, 34 147, 38 144 C38 139, 36 134, 33 129 C31 123, 28 119, 25 115 C22 111, 19 107, 14 103 C5 92, 0 79, 0 64 C0 55, 2 46, 6 38 C10 30, 16 23, 23 18 C30 12, 37 8, 46 5 C55 2, 64 0, 73 0 C82 0, 91 2, 99 5 C108 8, 116 12, 123 18 C130 23, 135 30, 140 38 C144 46, 146 55, 146 64"/>
+   </g>
+</svg>
+</div>
+      <hr id="moreServicesCard1-card-item1">
+      <div id="moreServicesCard1-card-item2">SERVICES 1</div>
+      <div id="moreServicesCard1-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+<div id="wb_moreServicesCard2" style="display:flex;text-align:center;z-index:8;">
+   <div id="moreServicesCard2-card-body">
+      <div id="moreServicesCard2-card-item0"><svg class="svg-icon" viewBox="0 0 256 220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M105 64 C105 65, 104 67, 103 67 C103 68, 101 69, 100 69 C99 69, 98 68, 97 67 C96 67, 96 65, 96 64 C96 60, 93 56, 88 54 C83 52, 78 51, 73 51 C72 51, 70 50, 70 49 C69 48, 68 47, 68 46 C68 45, 69 44, 70 43 C70 42, 72 41, 73 41 C78 41, 82 42, 87 44 C92 45, 96 48, 99 51 C103 55, 105 59, 105 64 Z M128 64 C128 57, 126 51, 123 45 C119 39, 115 34, 110 31 C105 27, 99 24, 92 22 C86 20, 79 19, 73 19 C66 19, 60 20, 53 22 C47 24, 41 27, 36 31 C30 34, 26 39, 23 45 C20 51, 18 57, 18 64 C18 74, 21 82, 28 90 C29 91, 30 93, 32 95 C34 97, 35 98, 36 99 C49 114, 55 128, 56 142 L89 142 C90 128, 97 114, 109 99 C110 98, 112 97, 114 95 C116 93, 117 91, 118 90 C124 82, 128 74, 128 64 Z M146 64 C146 79, 141 92, 131 103 C127 107, 123 111, 121 115 C118 119, 115 123, 112 129 C109 134, 108 139, 107 144 C112 147, 114 151, 114 156 C114 159, 113 162, 110 165 C113 167, 114 170, 114 174 C114 179, 112 183, 107 186 C109 188, 109 190, 109 192 C109 197, 108 200, 105 202 C102 205, 98 206, 94 206 C92 210, 89 213, 85 216 C81 218, 77 220, 73 220 C68 220, 64 218, 60 216 C57 213, 54 210, 52 206 C47 206, 44 205, 41 202 C38 200, 36 197, 36 192 C36 190, 37 188, 38 186 C34 183, 32 179, 32 174 C32 170, 33 167, 35 165 C33 162, 32 159, 32 156 C32 151, 34 147, 38 144 C38 139, 36 134, 33 129 C31 123, 28 119, 25 115 C22 111, 19 107, 14 103 C5 92, 0 79, 0 64 C0 55, 2 46, 6 38 C10 30, 16 23, 23 18 C30 12, 37 8, 46 5 C55 2, 64 0, 73 0 C82 0, 91 2, 99 5 C108 8, 116 12, 123 18 C130 23, 135 30, 140 38 C144 46, 146 55, 146 64"/>
+   </g>
+</svg>
+</div>
+      <hr id="moreServicesCard2-card-item1">
+      <div id="moreServicesCard2-card-item2">SERVICES 2</div>
+      <div id="moreServicesCard2-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+<div id="wb_moreServicesCard3" style="display:flex;text-align:center;z-index:9;">
+   <div id="moreServicesCard3-card-body">
+      <div id="moreServicesCard3-card-item0"><svg class="svg-icon" viewBox="0 0 256 220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M105 64 C105 65, 104 67, 103 67 C103 68, 101 69, 100 69 C99 69, 98 68, 97 67 C96 67, 96 65, 96 64 C96 60, 93 56, 88 54 C83 52, 78 51, 73 51 C72 51, 70 50, 70 49 C69 48, 68 47, 68 46 C68 45, 69 44, 70 43 C70 42, 72 41, 73 41 C78 41, 82 42, 87 44 C92 45, 96 48, 99 51 C103 55, 105 59, 105 64 Z M128 64 C128 57, 126 51, 123 45 C119 39, 115 34, 110 31 C105 27, 99 24, 92 22 C86 20, 79 19, 73 19 C66 19, 60 20, 53 22 C47 24, 41 27, 36 31 C30 34, 26 39, 23 45 C20 51, 18 57, 18 64 C18 74, 21 82, 28 90 C29 91, 30 93, 32 95 C34 97, 35 98, 36 99 C49 114, 55 128, 56 142 L89 142 C90 128, 97 114, 109 99 C110 98, 112 97, 114 95 C116 93, 117 91, 118 90 C124 82, 128 74, 128 64 Z M146 64 C146 79, 141 92, 131 103 C127 107, 123 111, 121 115 C118 119, 115 123, 112 129 C109 134, 108 139, 107 144 C112 147, 114 151, 114 156 C114 159, 113 162, 110 165 C113 167, 114 170, 114 174 C114 179, 112 183, 107 186 C109 188, 109 190, 109 192 C109 197, 108 200, 105 202 C102 205, 98 206, 94 206 C92 210, 89 213, 85 216 C81 218, 77 220, 73 220 C68 220, 64 218, 60 216 C57 213, 54 210, 52 206 C47 206, 44 205, 41 202 C38 200, 36 197, 36 192 C36 190, 37 188, 38 186 C34 183, 32 179, 32 174 C32 170, 33 167, 35 165 C33 162, 32 159, 32 156 C32 151, 34 147, 38 144 C38 139, 36 134, 33 129 C31 123, 28 119, 25 115 C22 111, 19 107, 14 103 C5 92, 0 79, 0 64 C0 55, 2 46, 6 38 C10 30, 16 23, 23 18 C30 12, 37 8, 46 5 C55 2, 64 0, 73 0 C82 0, 91 2, 99 5 C108 8, 116 12, 123 18 C130 23, 135 30, 140 38 C144 46, 146 55, 146 64"/>
+   </g>
+</svg>
+</div>
+      <hr id="moreServicesCard3-card-item1">
+      <div id="moreServicesCard3-card-item2">SERVICES 3</div>
+      <div id="moreServicesCard3-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_news">
+<div id="news">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_newsHeading" style="display:inline-block;width:100%;z-index:10;">
+<h1 id="newsHeading">READ THE LATEST NEWS</h1>
+</div>
+<a id="newsButton" href="wb15_triangle.html#" style="display:inline-block;width:154px;height:35px;z-index:11;">VISIT BLOG</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_blog">
+<div id="blog-divider-top">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="blog">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_blogHeading" style="display:inline-block;width:100%;z-index:12;">
+<h1 id="blogHeading">BLOG</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_blogGrid">
+<div id="blogGrid">
+<div class="row">
+<div class="col-1">
+<div id="wb_blogCard1" style="display:flex;width:100%;text-align:right;z-index:13;">
+   <div id="blogCard1-card-body">
+      <div style="overflow:hidden"><img id="blogCard1-card-item0" src="images/beijing01.jpg" alt="" title=""></div>
+      <div id="blogCard1-card-item1">Card title</div>
+      <div id="blogCard1-card-item2"><svg class="svg-icon" viewBox="0 0 172 148" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M86 40 L86 83 C86 84, 86 85, 85 86 C85 86, 84 86, 83 86 L52 86 C51 86, 51 86, 50 86 C49 85, 49 84, 49 83 L49 77 C49 76, 49 76, 50 75 C51 74, 51 74, 52 74 L74 74 L74 40 C74 39, 74 39, 75 38 C75 38, 76 37, 77 37 L83 37 C84 37, 85 38, 85 38 C86 39, 86 39, 86 40 Z M119 100 C124 92, 126 84, 126 74 C126 65, 124 56, 119 48 C114 40, 108 34, 100 29 C92 24, 83 22, 74 22 C64 22, 56 24, 48 29 C40 34, 33 40, 29 48 C24 56, 22 65, 22 74 C22 84, 24 92, 29 100 C33 108, 40 115, 48 119 C56 124, 64 126, 74 126 C83 126, 92 124, 100 119 C108 115, 114 108, 119 100 Z M138 37 C144 48, 147 61, 147 74 C147 88, 144 100, 138 111 C131 122, 122 131, 111 138 C99 145, 87 148, 74 148 C60 148, 48 145, 37 138 C25 131, 17 122, 10 111 C3 100, 0 88, 0 74 C0 61, 3 48, 10 37 C17 26, 25 17, 37 10 C48 4, 60 0, 74 0 C87 0, 99 4, 111 10 C122 17, 131 26, 138 37"/>
+   </g>
+</svg>
+</div>
+      <hr id="blogCard1-card-item3">
+      <div id="blogCard1-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="blogCard1-card-item5">Read more >></div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_blogCard2" style="display:flex;width:100%;text-align:right;z-index:14;">
+   <div id="blogCard2-card-body">
+      <div style="overflow:hidden"><img id="blogCard2-card-item0" src="images/beijing01.jpg" alt="" title=""></div>
+      <div id="blogCard2-card-item1">Card title</div>
+      <div id="blogCard2-card-item2"><svg class="svg-icon" viewBox="0 0 172 148" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M86 40 L86 83 C86 84, 86 85, 85 86 C85 86, 84 86, 83 86 L52 86 C51 86, 51 86, 50 86 C49 85, 49 84, 49 83 L49 77 C49 76, 49 76, 50 75 C51 74, 51 74, 52 74 L74 74 L74 40 C74 39, 74 39, 75 38 C75 38, 76 37, 77 37 L83 37 C84 37, 85 38, 85 38 C86 39, 86 39, 86 40 Z M119 100 C124 92, 126 84, 126 74 C126 65, 124 56, 119 48 C114 40, 108 34, 100 29 C92 24, 83 22, 74 22 C64 22, 56 24, 48 29 C40 34, 33 40, 29 48 C24 56, 22 65, 22 74 C22 84, 24 92, 29 100 C33 108, 40 115, 48 119 C56 124, 64 126, 74 126 C83 126, 92 124, 100 119 C108 115, 114 108, 119 100 Z M138 37 C144 48, 147 61, 147 74 C147 88, 144 100, 138 111 C131 122, 122 131, 111 138 C99 145, 87 148, 74 148 C60 148, 48 145, 37 138 C25 131, 17 122, 10 111 C3 100, 0 88, 0 74 C0 61, 3 48, 10 37 C17 26, 25 17, 37 10 C48 4, 60 0, 74 0 C87 0, 99 4, 111 10 C122 17, 131 26, 138 37"/>
+   </g>
+</svg>
+</div>
+      <hr id="blogCard2-card-item3">
+      <div id="blogCard2-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="blogCard2-card-item5">Read more >></div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_blogCard3" style="display:flex;width:100%;text-align:right;z-index:15;">
+   <div id="blogCard3-card-body">
+      <div style="overflow:hidden"><img id="blogCard3-card-item0" src="images/beijing01.jpg" alt="" title=""></div>
+      <div id="blogCard3-card-item1">Card title</div>
+      <div id="blogCard3-card-item2"><svg class="svg-icon" viewBox="0 0 172 148" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M86 40 L86 83 C86 84, 86 85, 85 86 C85 86, 84 86, 83 86 L52 86 C51 86, 51 86, 50 86 C49 85, 49 84, 49 83 L49 77 C49 76, 49 76, 50 75 C51 74, 51 74, 52 74 L74 74 L74 40 C74 39, 74 39, 75 38 C75 38, 76 37, 77 37 L83 37 C84 37, 85 38, 85 38 C86 39, 86 39, 86 40 Z M119 100 C124 92, 126 84, 126 74 C126 65, 124 56, 119 48 C114 40, 108 34, 100 29 C92 24, 83 22, 74 22 C64 22, 56 24, 48 29 C40 34, 33 40, 29 48 C24 56, 22 65, 22 74 C22 84, 24 92, 29 100 C33 108, 40 115, 48 119 C56 124, 64 126, 74 126 C83 126, 92 124, 100 119 C108 115, 114 108, 119 100 Z M138 37 C144 48, 147 61, 147 74 C147 88, 144 100, 138 111 C131 122, 122 131, 111 138 C99 145, 87 148, 74 148 C60 148, 48 145, 37 138 C25 131, 17 122, 10 111 C3 100, 0 88, 0 74 C0 61, 3 48, 10 37 C17 26, 25 17, 37 10 C48 4, 60 0, 74 0 C87 0, 99 4, 111 10 C122 17, 131 26, 138 37"/>
+   </g>
+</svg>
+</div>
+      <hr id="blogCard3-card-item3">
+      <div id="blogCard3-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="blogCard3-card-item5">Read more >></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menuLayer" style="position:fixed;text-align:left;left:auto;right:0px;top:0px;width:71px;height:74px;z-index:37;z-index:11111;">
+<div id="wb_menuPanel" style="position:absolute;left:9px;top:12px;width:50px;height:50px;text-align:center;z-index:16;">
+<a href="wb15_triangle.html#menuPanel_markup" id="menuPanel">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="menuPanel_markup">
+   <div id="menuPanel-close"><a role="button" aria-hidden="true" href="wb15_triangle.html#">&times;</a></div>
+<ul role="menu">
+   <li role="menuitem"><a href="wb15_triangle.html#home">Home</a></li>
+   <li role="menuitem"><a href="wb15_triangle.html#about">About Me</a></li>
+   <li role="menuitem"><a href="wb15_triangle.html#next-website">Blog</a></li>
+   <li role="menuitem"><a href="wb15_triangle.html#projects">Projects</a></li>
+   <li role="menuitem"><a href="wb15_triangle.html#galleryGrid">Gallery</a></li>
+   <li role="menuitem"><a href="wb15_triangle.html#footer">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:11px;top:auto;bottom:11px;width:50px;height:50px;z-index:38;">
+<div id="wb_upIcon" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:17;">
+<a href="wb15_triangle.html#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_contact">
+<div id="contact-overlay"></div>
+<div id="contact-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path class="divider-fill" d="M 738 95 L 0 0 v 100 h 1000 V 0 L 738 95 Z"></path></svg></div>
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div id="wb_contactHeading" style="display:inline-block;width:100%;z-index:18;">
+<h2 id="contactHeading">Contact</h2>
+</div>
+<div id="wb_contactText">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. </p>
+
+</div>
+</div>
+<div class="col-2">
+<input type="text" id="contactName" style="display:block;width: 100%;height:42px;z-index:20;" name="name" value="" spellcheck="false" placeholder="Your Name">
+<input type="text" id="contactEmail" style="display:block;width: 100%;height:42px;z-index:21;" name="email" value="" spellcheck="false" placeholder="Email">
+<input type="text" id="contactPhone" style="display:block;width: 100%;height:42px;z-index:22;" name="phone" value="" spellcheck="false" placeholder="Phone">
+<textarea name="message" id="contactMessage" style="display:block;width: 100%;;height:108px;z-index:23;" rows="4" cols="41" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send" style="display:block;width: 100%;;height:56px;z-index:24;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div id="wb_footerText">
+<p>© WYSIWYG Web Builder 2019. All Rights Reserved.</p>
+
+</div>
+<div id="wb_footerIcon1" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:26;">
+<a href="wb15_triangle.html"><div id="footerIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_footerIcon2" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:27;">
+<a href="wb15_triangle.html"><div id="footerIcon2"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_footerIcon3" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:28;">
+<a href="wb15_triangle.html"><div id="footerIcon3"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_footerIcon4" style="display:inline-block;width:28px;height:28px;text-align:center;z-index:29;">
+<a href="wb15_triangle.html"><div id="footerIcon4"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+</div>
+</body>
+</html>

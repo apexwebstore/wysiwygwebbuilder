@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>An introduction to Timers</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/timers.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="wwb15.min.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape2" style="position:absolute;left:14px;top:134px;width:940px;height:2125px;z-index:3;">
+<div id="Shape2"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:171px;width:829px;height:80px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>An introduction to Timers</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br><br>The Timer object makes it possible to trigger actions based on timer events. For example show or hide an object after x milliseconds. <br>Timers can also start/stop other timers! All event actions are supported (animate, show/hide, rotate, media, JavaScript etc). <br>In this tutorial we will use the Timer object to show and hide an object. </span></div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:566px;width:829px;height:164px;z-index:6;">
+<div style="position:absolute;left:0px;top:0px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;">The Timer object supports two types:</span></div>
+<div style="margin-left:12px;position:absolute;left:0px;top:14px;width:829px;height:8px;"><span style="color:#666666;font-family:Arial;font-size:15px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Interval, </strong>executes a function, over and over again, at specified time intervals.</span></div>
+<div style="margin-left:12px;position:absolute;left:0px;top:31px;width:829px;height:8px;"><span style="color:#666666;font-family:Arial;font-size:15px;"><strong>&#8226; </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Timeout, </strong>executes a function, once, after waiting a specified number of milliseconds.</span></div>
+<div style="position:absolute;left:0px;top:47px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;">&nbsp; </span></div>
+<div style="position:absolute;left:0px;top:62px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;">The <strong>Interval</strong> property specifies the interval in milliseconds.</span></div>
+<div style="position:absolute;left:0px;top:77px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;"><br></span></div>
+<div style="position:absolute;left:0px;top:92px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Auto start</strong>, specifies whether to automatically start the timer. If this option is not enabled you can start the timer through events (for example </span></div>
+<div style="position:absolute;left:0px;top:107px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;">on click of a button).</span></div>
+<div style="position:absolute;left:0px;top:121px;width:829px;height:7px;"><span style="color:#666666;font-family:Arial;font-size:13px;">&nbsp; </span></div>
+</div>
+<div id="wb_Text3" style="position:absolute;left:81px;top:921px;width:829px;height:291px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:16px;"><strong>Show/hide an object with a timer<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Timers are often used to show or hide objects. In this example we will show an object with a timer and then hide it again after a few seconds.<br> <br><strong>Step 1<br></strong>Add a shape (or any other object). Take note of the ID of the Shape. If it's the first shape on the page then it will usually be called 'Shape1'.<br>For this example we have added some text to the shape: This message will hide after a few seconds...<br> <br><strong>Step 2<br></strong>Open the Object Manager and uncheck 'Visible' for the Shape. This will initially hide the object on page load.<br> <br><strong>Step 3<br></strong>Add a timer object (Timer1). Set the Type to 'Timeout' and 'Interval' to 5000 (= 5 seconds).<br> <br><strong>Step 4<br></strong>Click the 'Events' tab and add an event to show the shape. Select the 'Show with effect' action and set the target to 'Shape1'.<br> <br><br></span></div>
+<div id="wb_Image1" style="position:absolute;left:81px;top:270px;width:242px;height:273px;z-index:8;">
+<img src="images/timer1.jpg" id="Image1" alt=""></div>
+<div id="wb_Text1" style="position:absolute;left:81px;top:1456px;width:829px;height:112px;z-index:9;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 5<br></strong>Add a second timer (Timer2). This timer will be used to hide the Shape.<br>Set the Type to 'Timeout' and 'Interval' to 5000. <br>Uncheck&nbsp; 'Auto start' so the timer will not start automatically!<br><br><strong>Step 6<br></strong>Click the 'Events' tab and add an event to hide the shape: Select the 'Hide with effect' action and set the target to 'Shape1'.</span></div>
+<div id="wb_Image5" style="position:absolute;left:81px;top:1176px;width:448px;height:262px;z-index:10;">
+<img src="images/timer3.jpg" id="Image5" alt=""></div>
+<div id="wb_Image4" style="position:absolute;left:81px;top:714px;width:515px;height:185px;z-index:11;">
+<img src="images/timer2.jpg" id="Image4" alt=""></div>
+<div id="wb_Image6" style="position:absolute;left:81px;top:1587px;width:448px;height:262px;z-index:12;">
+<img src="images/timer4.jpg" id="Image6" alt=""></div>
+<div id="wb_Text5" style="position:absolute;left:81px;top:1871px;width:829px;height:32px;z-index:13;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 7<br></strong>Go back to the settings of Timer1 and add another event. This one will start the second timer (Timer2).</span></div>
+<div id="wb_Image7" style="position:absolute;left:81px;top:1921px;width:447px;height:165px;z-index:14;">
+<img src="images/timer5.jpg" id="Image7" alt=""></div>
+<div id="wb_Text6" style="position:absolute;left:81px;top:2113px;width:829px;height:64px;z-index:15;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">Now preview the page in the browser to view the results: the shape will be displayed after 5 seconds and then disappear after another 5 seconds.<br><br></span></div>
+<div id="wb_Shape1" style="position:absolute;left:291px;top:0px;width:389px;height:53px;visibility:hidden;z-index:16;">
+<img src="images/timershape.png" id="Shape1" alt="" style="width:389px;height:53px;"></div>
+<script type="text/javascript">
+var wb_Timer1;
+function TimerStartTimer1()
+{
+   wb_Timer1 = setTimeout(function()
+   {
+      var event = null;
+      ShowObjectWithEffect('wb_Shape1', 1, 'dropup', 700, 'easeOutElastic');
+      TimerStartTimer2();
+   }, 3000);
+}
+function TimerStopTimer1()
+{
+   clearTimeout(wb_Timer1);
+}
+TimerStartTimer1();
+</script>
+
+<script type="text/javascript">
+var wb_Timer2;
+function TimerStartTimer2()
+{
+   wb_Timer2 = setTimeout(function()
+   {
+      var event = null;
+      ShowObjectWithEffect('wb_Shape1', 0, 'fade', 2000);
+   }, 5000);
+}
+function TimerStopTimer2()
+{
+   clearTimeout(wb_Timer2);
+}
+</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#CardContainer1
+{
+   display: -webkit-flex;
+   display: flex;
+   position: relative;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+   -webkit-align-items: stretch;
+   align-items: stretch;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+@media all and (max-width:480px) 
+{
+#CardContainer1
+{
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+}
+}
+#wb_Card1
+{
+   position: relative;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 0%;
+   flex-basis: 0%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 1px solid #DEDEDE;
+   border-radius: 3px;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Card1-card-body
+{
+   -webkit-flex: 1 1 auto;
+   flex: 1 1 auto;
+   font-size: 0px;
+}
+#Card1-card-header
+{
+   box-sizing: border-box;
+   border-bottom: 1px solid #DEDEDE;
+   border-radius: 3px 3px 0 0;
+   margin: 0;
+   padding: 12px 20px 12px 20px;
+   background-color: #F7F7F7;
+   background-image: none;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card1-card-item1
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+}
+#Card1-card-item2
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card1-card-item3
+{
+   display: inline-block;
+   height: 35px;
+   box-sizing: border-box;
+   align-self: center;
+   border-radius: 0 0 3px 3px;
+   margin: 25px 20px 20px 20px;
+   padding: 10px 16px 10px 16px;
+   border: 1px solid #0275D8;
+   border-radius: 4px;
+   background-color: #0275D8;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card1-card-item3 a
+{
+   color: inherit;
+   text-decoration: none;
+}
+#wb_Card2
+{
+   position: relative;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 0%;
+   flex-basis: 0%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 1px solid #DEDEDE;
+   border-radius: 3px;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Card2-card-body
+{
+   -webkit-flex: 1 1 auto;
+   flex: 1 1 auto;
+   font-size: 0px;
+}
+#Card2-card-header
+{
+   box-sizing: border-box;
+   border-bottom: 1px solid #DEDEDE;
+   border-radius: 3px 3px 0 0;
+   margin: 0;
+   padding: 12px 20px 12px 20px;
+   background-color: #F7F7F7;
+   background-image: none;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card2-card-item1
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+}
+#Card2-card-item2
+{
+   box-sizing: border-box;
+   margin: 20px 20px 20px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card2-card-item3
+{
+   display: inline-block;
+   height: 35px;
+   box-sizing: border-box;
+   align-self: center;
+   border-radius: 0 0 3px 3px;
+   margin: 25px 20px 20px 20px;
+   padding: 10px 16px 10px 16px;
+   border: 1px solid #0275D8;
+   border-radius: 4px;
+   background-color: #0275D8;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card2-card-item3 a
+{
+   color: inherit;
+   text-decoration: none;
+}
+#wb_Card3
+{
+   position: relative;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   -webkit-flex-shrink: 1;
+   flex-shrink: 1;
+   -webkit-flex-basis: 0%;
+   flex-basis: 0%;
+   -webkit-align-self: auto;
+   align-self: auto;
+   background-color: transparent;
+   background-image: none;
+   border: 1px solid #DEDEDE;
+   border-radius: 3px;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Card3-card-body
+{
+   -webkit-flex: 1 1 auto;
+   flex: 1 1 auto;
+   font-size: 0px;
+}
+#Card3-card-header
+{
+   box-sizing: border-box;
+   border-bottom: 1px solid #DEDEDE;
+   border-radius: 3px 3px 0 0;
+   margin: 0;
+   padding: 12px 20px 12px 20px;
+   background-color: #F7F7F7;
+   background-image: none;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card3-card-item1
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+}
+#Card3-card-item2
+{
+   box-sizing: border-box;
+   margin: 20px 20px 0px 20px;
+   padding: 0;
+   color: #292B2C;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card3-card-item3
+{
+   display: inline-block;
+   height: 35px;
+   box-sizing: border-box;
+   align-self: center;
+   border-radius: 0 0 3px 3px;
+   margin: 25px 20px 20px 20px;
+   padding: 10px 16px 10px 16px;
+   border: 1px solid #0275D8;
+   border-radius: 4px;
+   background-color: #0275D8;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#Card3-card-item3 a
+{
+   color: inherit;
+   text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div id="CardContainer1">
+<div id="wb_Card1" style="display:flex;text-align:center;z-index:0;">
+   <div id="Card1-card-header">Header</div>
+   <div id="Card1-card-body">
+      <div id="Card1-card-item1">Card title</div>
+      <div id="Card1-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+      <div id="Card1-card-item3">Read More</div>
+
+</div>
+<div id="wb_Card2" style="display:flex;text-align:center;z-index:1;">
+   <div id="Card2-card-header">Header</div>
+   <div id="Card2-card-body">
+      <div id="Card2-card-item1">Card title</div>
+      <div id="Card2-card-item2">Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
+   </div>
+      <div id="Card2-card-item3">Read More</div>
+
+</div>
+<div id="wb_Card3" style="display:flex;text-align:center;z-index:2;">
+   <div id="Card3-card-header">Header</div>
+   <div id="Card3-card-body">
+      <div id="Card3-card-item1">Card title</div>
+      <div id="Card3-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+      <div id="Card3-card-item3">Read More</div>
+
+</div>
+</div>
+</body>
+</html>

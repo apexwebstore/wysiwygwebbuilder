@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Awesome</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/awesome.css" rel="stylesheet">
+<link href="css/wb15_awesome.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.panel.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#home']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_home').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#news']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_news').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollnews()
+   {
+      var $obj = $("#wb_news");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollnews();
+   $(window).scroll(function(event)
+   {
+      onScrollnews();
+   });
+   $("a[href*='#team']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_team').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollteam()
+   {
+      var $obj = $("#wb_team");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollteam();
+   $(window).scroll(function(event)
+   {
+      onScrollteam();
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollcontact()
+   {
+      var $obj = $("#wb_contact");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollcontact();
+   $(window).scroll(function(event)
+   {
+      onScrollcontact();
+   });
+   $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'push', position: 'top', toggle: true});
+   $("#PanelMenu1_markup ul li a").click(function(event)
+   {
+       $.panel.hide($("#PanelMenu1_panel"));
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_home').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_headerMenu">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" class="headerMenu-effect" href="wb15_awesome.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_awesome.html" target="_self">Services</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_awesome.html" target="_self">About</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_awesome.html" target="_self">Product</a>
+</li>
+<li><a role="menuitem" class="headerMenu-effect" href="wb15_awesome.html" target="_self">Contact</a>
+</li>
+</ul>
+
+</div>
+<div id="wb_PanelMenu1">
+<a href="wb15_awesome.html#PanelMenu1_markup" id="PanelMenu1">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="PanelMenu1_markup">
+<ul role="menu">
+   <li role="menuitem"><a href="wb15_awesome.html">Home</a></li>
+   <li role="menuitem"><a href="wb15_awesome.html">Services</a></li>
+   <li role="menuitem"><a href="wb15_awesome.html">About</a></li>
+   <li role="menuitem"><a href="wb15_awesome.html">Product</a></li>
+   <li role="menuitem"><a href="wb15_awesome.html">Contact</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_home">
+<div id="home">
+<div class="col-1">
+<div id="wb_homeText">
+<p style="font-size:15px;line-height:16.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">Awesome</span></p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span></p>
+
+</div>
+<div id="wb_homeShape">
+<img src="images/img0002.png" id="homeShape" alt="">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_CardContainer1">
+<div id="CardContainer1">
+<div id="wb_Card1">
+   <div id="Card1-card-body">
+      <div id="Card1-card-item0"><svg class="svg-icon" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M91 12 C110 4, 129 0, 150 0 C170 0, 189 4, 208 12 C226 20, 242 31, 256 44 C269 57, 280 73, 288 92 C296 110, 300 130, 300 150 C300 170, 296 190, 288 208 C280 227, 269 243, 256 256 C242 270, 226 280, 208 288 C189 296, 170 300, 150 300 C129 300, 110 296, 91 288 C73 280, 57 270, 43 256 C30 243, 19 227, 11 208 C4 190, 0 170, 0 150 C0 130, 4 110, 11 92 C19 73, 30 57, 43 44 C57 31, 73 20, 91 12 Z M210 37 C191 27, 171 22, 150 22 C128 22, 108 27, 89 37 L122 69 C131 66, 140 64, 150 64 C159 64, 168 66, 178 69 Z M36 211 L69 178 C65 169, 64 160, 64 150 C64 141, 65 131, 69 122 L36 90 C26 109, 21 129, 21 150 C21 171, 26 191, 36 211 Z M89 264 C108 274, 128 279, 150 279 C171 279, 191 274, 210 264 L178 231 C168 234, 159 236, 150 236 C140 236, 131 234, 122 231 Z M104 196 C117 208, 132 214, 150 214 C167 214, 182 208, 195 196 C208 183, 214 168, 214 150 C214 132, 208 117, 195 105 C182 92, 167 86, 150 86 C132 86, 117 92, 104 105 C92 117, 85 132, 85 150 C85 168, 92 183, 104 196 Z M231 178 L263 211 C273 191, 278 171, 278 150 C278 129, 273 109, 263 90 L231 122 C234 131, 235 141, 235 150 C235 160, 234 169, 231 178"/>
+   </g>
+</svg>
+</div>
+      <div id="Card1-card-item1">Awesome Support</div>
+      <hr id="Card1-card-item2">
+      <div id="Card1-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="Card1-card-item4">Read More</div>
+   </div>
+
+</div>
+<div id="wb_Card2">
+   <div id="Card2-card-body">
+      <div id="Card2-card-item0"><svg class="svg-icon" viewBox="0 0 300 193" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M278 97 C261 71, 240 51, 214 38 C221 49, 225 62, 225 75 C225 96, 217 114, 203 128 C188 143, 170 150, 150 150 C129 150, 111 143, 97 128 C82 114, 75 96, 75 75 C75 62, 78 49, 85 38 C59 51, 38 71, 21 97 C36 120, 54 138, 77 152 C99 165, 123 172, 150 172 C176 172, 200 165, 222 152 C245 138, 263 120, 278 97 Z M155 38 C157 37, 158 35, 158 33 C158 30, 157 28, 155 27 C154 25, 152 25, 150 25 C136 25, 124 30, 114 40 C104 50, 99 61, 99 75 C99 78, 99 80, 101 81 C103 83, 104 83, 107 83 C109 83, 111 83, 112 81 C114 80, 115 78, 115 75 C115 66, 118 58, 125 51 C132 44, 140 41, 150 41 C152 41, 154 40, 155 38 Z M296 85 C298 89, 300 93, 300 97 C300 101, 298 104, 296 108 C281 134, 260 155, 233 170 C207 186, 179 193, 150 193 C120 193, 92 186, 66 170 C40 154, 19 134, 3 108 C1 104, 0 101, 0 97 C0 93, 1 89, 3 85 C19 60, 40 39, 66 24 C92 8, 120 0, 150 0 C179 0, 207 8, 233 24 C260 39, 281 60, 296 85"/>
+   </g>
+</svg>
+</div>
+      <div id="Card2-card-item1">Awesome Design</div>
+      <hr id="Card2-card-item2">
+      <div id="Card2-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="Card2-card-item4">Read More</div>
+   </div>
+
+</div>
+<div id="wb_Card3">
+   <div id="Card3-card-body">
+      <div id="Card3-card-item0"><svg class="svg-icon" viewBox="0 0 300 214" version="1.1" xmlns="http://www.w3.org/2000/svg">
+   <g transform="scale(1)">
+   <path d="M73 202 C76 200, 77 197, 77 193 C77 189, 76 186, 73 183 C71 181, 68 179, 64 179 C60 179, 57 181, 55 183 C52 186, 51 189, 51 193 C51 197, 52 200, 55 202 C57 205, 60 206, 64 206 C68 206, 71 205, 73 202 Z M112 166 L112 48 C112 47, 112 46, 111 44 C110 43, 108 43, 107 43 L21 43 C20 43, 18 43, 17 44 C16 46, 16 47, 16 48 L16 166 C16 168, 16 169, 17 170 C18 171, 20 171, 21 171 L107 171 C108 171, 110 171, 111 170 C112 169, 112 168, 112 166 Z M77 27 C79 27, 80 26, 80 24 C80 22, 79 21, 77 21 L51 21 C49 21, 48 22, 48 24 C48 26, 49 27, 51 27 Z M128 21 L128 193 C128 199, 126 204, 122 208 C118 212, 113 214, 107 214 L21 214 C15 214, 10 212, 6 208 C2 204, 0 199, 0 193 L0 21 C0 16, 2 11, 6 6 C10 2, 15 0, 21 0 L107 0 C113 0, 118 2, 122 6 C126 11, 128 16, 128 21"/>
+   </g>
+</svg>
+</div>
+      <div id="Card3-card-item1">Awesome Development</div>
+      <hr id="Card3-card-item2">
+      <div id="Card3-card-item3">Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div id="Card3-card-item4">Read More</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_news">
+<div id="news">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_newsHeading">
+<h1 id="newsHeading">Awesome News</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_WrapTextLayoutGrid">
+<div id="WrapTextLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="WrapText1">
+<div id="WrapText1-float">
+<div id="WrapText1Letter"><span>T</span></div>
+</div>
+<div class="WrapText1">his flexible text block was created with a 'Wrap Text" object. A floating Banner object was used to implement the 'Initial Letter" effect. 
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="WrapText2">
+<div id="WrapText2-float">
+<div id="wb_WrapText2Image">
+<img src="images/macbook-square.jpg" id="WrapText2Image" alt="">
+</div>
+</div>
+<div class="WrapText2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_team">
+<div id="team">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_teamHeading">
+<h1 id="teamHeading">Our Awesome Team</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_CardContainer2">
+<div id="CardContainer2">
+<div id="wb_teamCard1">
+   <div id="teamCard1-card-body">
+      <img id="teamCard1-card-item0" src="images/avatar_male_round.jpg" alt="" title="">
+      <div id="teamCard1-card-item1">JOHN DOE</div>
+      <hr id="teamCard1-card-item2">
+      <div id="teamCard1-card-item3">Developer</div>
+   </div>
+
+</div>
+<div id="wb_teamCard2">
+   <div id="teamCard2-card-body">
+      <img id="teamCard2-card-item0" src="images/avatar_female_round.jpg" alt="" title="">
+      <div id="teamCard2-card-item1">JANE DOE</div>
+      <hr id="teamCard2-card-item2">
+      <div id="teamCard2-card-item3">Designer</div>
+   </div>
+
+</div>
+<div id="wb_teamCard3">
+   <div id="teamCard3-card-body">
+      <img id="teamCard3-card-item0" src="images/avatar_male_round.jpg" alt="" title="">
+      <div id="teamCard3-card-item1">JAMES DOE</div>
+      <hr id="teamCard3-card-item2">
+      <div id="teamCard3-card-item3">Project Manager</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactHeading">
+<h1 id="contactHeading">Give Awesome Feedback</h1>
+</div>
+<div id="wb_contactText">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contacForm">
+<div id="contacForm">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<label for="contactName" id="contactLabel1">Name</label>
+<input type="text" id="contactName" name="name" value="" spellcheck="false">
+<label for="contactEmail" id="contactLabel2">Email</label>
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false">
+<label for="contactOption" id="contactLabel3">Select an option</label>
+<select name="option" size="1" id="contactOption">
+<option selected value="option-1">Option 1</option>
+<option value="option-2">Option 2</option>
+<option value="option-3">Option 3</option>
+</select>
+<label for="contactMessage" id="contactLabel4">Message</label>
+<textarea name="message" id="contactMessage" rows="3" cols="65" spellcheck="false"></textarea>
+<div id="wb_contactUpdates">
+<input type="checkbox" name="" id="contactUpdates" value="" checked>
+<label id="contactUpdates-label" for="contactUpdates">
+<span id="contactUpdates-inner"></span>
+<span id="contactUpdates-switch"></span>
+</label>
+
+</div>
+<label for="contactUpdates" id="contactLabel5">Please send awesome product updates and offers via email.</label>
+<hr id="contactSpacer">
+<input type="submit" id="contactButton" name="" value="Submit">
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#home"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+</body>
+</html>

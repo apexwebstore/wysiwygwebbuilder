@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mysterious Guy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/mysteriousguy.css" rel="stylesheet">
+<link href="css/wb15_mysteriousguy.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.panel.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top }, 600, 'easeOutCubic');
+   });
+   function onScrollintro()
+   {
+      var $obj = $("#wb_intro");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollintro();
+   $(window).scroll(function(event)
+   {
+      onScrollintro();
+   });
+   $("a[href*='#services1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services1').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices1()
+   {
+      var $obj = $("#wb_services1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices1();
+   $(window).scroll(function(event)
+   {
+      onScrollservices1();
+   });
+   $("a[href*='#services2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services2').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices2()
+   {
+      var $obj = $("#wb_services2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices2();
+   $(window).scroll(function(event)
+   {
+      onScrollservices2();
+   });
+   $("a[href*='#services3']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_services3').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollservices3()
+   {
+      var $obj = $("#wb_services3");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollservices3();
+   $(window).scroll(function(event)
+   {
+      onScrollservices3();
+   });
+   $("a[href*='#reviews']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_reviews').offset().top }, 600, 'easeOutCubic');
+   });
+   function onScrollreviews()
+   {
+      var $obj = $("#wb_reviews");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollreviews();
+   $(window).scroll(function(event)
+   {
+      onScrollreviews();
+   });
+   $("a[href*='#reviewsLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_reviewsLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollreviewsLayoutGrid()
+   {
+      var $obj = $("#wb_reviewsLayoutGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollreviewsLayoutGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollreviewsLayoutGrid();
+   });
+   $("#menuPanel").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'left', toggle: true});
+   $("#menuPanel_markup ul li a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("#menuPanel-close a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutCubic');
+   });
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header-overlay"></div>
+<div id="header">
+<div class="col-1">
+<div id="wb_headerText">
+<p style="font-family:Arial;font-size:16px;line-height:18px;font-style:italic;"><span style="font-family:Arial;font-size:32px;line-height:36px;font-weight:bold;">Mysterious Guy</span></p>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerIcon" style="display:inline-block;width:32px;height:32px;text-align:center;z-index:1;">
+<div id="headerIcon"><i class="fa fa-envelope"></i></div>
+</div>
+<img src="images/img0001.jpg" id="headerBanner" alt="info@wysiwygmail.com" style="border-width:0;display:inline-block;width:216px;height:32px;z-index:2;">
+</div>
+</div>
+</div>
+<div id="wb_intro">
+<div id="intro-divider-top">
+<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="divider-fill" d="M0 100 C40 0 60 0 100 100 Z" />
+</svg></div>
+<div id="intro">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_introHeading" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="introHeading">MYSTERIOUS GUY</h1>
+</div>
+<div id="wb_introText">
+<p>No matter what you do, you won't be able to understand him, or to get straight answers, he is the guy who is friends with everyone, can talk to whom they want, but still shares no secrets, no pain, nothing with someone else than themselves... he is the guy that walks with his hands in his pockets, looks around once a while, doesn't talk much, probably smokes, and have more than one talent, but doesn't use it to draw other's attention..</p>
+
+</div>
+<a id="introButton" href="wb15_mysteriousguy.html#contact" style="display:inline-block;width:190px;height:48px;z-index:5;">Get In Touch</a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_introImage" style="display:inline-block;width:100%;height:auto;z-index:6;">
+<img src="images/wwb_businessman.png" id="introImage" alt="">
+</div>
+</div>
+</div>
+</div>
+<div id="intro-divider-bottom">
+<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="divider-fill" d="M0 100 C40 0 60 0 100 100 Z" />
+</svg></div>
+</div>
+<div id="wb_services1">
+<div id="services1">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard1" style="display:flex;width:100%;z-index:7;">
+   <div id="servicesCard1-card-body">
+      <div id="servicesCard1-card-item0"><i class="fa fa-lightbulb-o"></i></div>
+      <div id="servicesCard1-card-item1">Creative Ideas</div>
+      <div id="servicesCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard2" style="display:flex;width:100%;z-index:8;">
+   <div id="servicesCard2-card-body">
+      <div id="servicesCard2-card-item0"><i class="fa fa-paint-brush"></i></div>
+      <div id="servicesCard2-card-item1">Graphics Design</div>
+      <div id="servicesCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services2">
+<div id="services2">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard3" style="display:flex;width:100%;z-index:9;">
+   <div id="servicesCard3-card-body">
+      <div id="servicesCard3-card-item0"><i class="fa fa-code"></i></div>
+      <div id="servicesCard3-card-item1">Web Application</div>
+      <div id="servicesCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard4" style="display:flex;width:100%;z-index:10;">
+   <div id="servicesCard4-card-body">
+      <div id="servicesCard4-card-item0"><i class="fa fa-paint-brush"></i></div>
+      <div id="servicesCard4-card-item1">Graphics Design</div>
+      <div id="servicesCard4-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_services3">
+<div id="services3">
+<div class="row">
+<div class="col-1">
+<div id="wb_servicesCard5" style="display:flex;width:100%;z-index:11;">
+   <div id="servicesCard5-card-body">
+      <div id="servicesCard5-card-item0"><i class="fa fa-tag"></i></div>
+      <div id="servicesCard5-card-item1">Branding & Identity</div>
+      <div id="servicesCard5-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_servicesCard6" style="display:flex;width:100%;z-index:12;">
+   <div id="servicesCard6-card-body">
+      <div id="servicesCard6-card-item0"><i class="fa fa-comments-o"></i></div>
+      <div id="servicesCard6-card-item1">Online Marketing</div>
+      <div id="servicesCard6-card-item2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_reviews">
+<div id="reviews">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_reviewsHeading" style="display:inline-block;width:100%;z-index:13;">
+<h1 id="reviewsHeading">REVIEWS</h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_reviewsLayoutGrid">
+<div id="reviewsLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div id="wb_reviewsCard1" style="display:flex;width:calc(100% - 20px);text-align:center;z-index:14;">
+   <div id="reviewsCard1-card-body">
+      <div id="reviewsCard1-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+      <img id="reviewsCard1-card-item1" src="images/avatar_bw.jpg" alt="" title="">
+      <div id="reviewsCard1-card-item2">PABLO CARRASCO</div>
+      <div id="reviewsCard1-card-item3">Developer</div>
+      <div id="reviewsCard1-card-item4"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard1-card-item5"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard1-card-item6"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard1-card-item7"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard1-card-item8"><i class="fa fa-star"></i></div>
+   </div>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_reviewsCard2" style="display:flex;width:calc(100% - 20px);text-align:center;z-index:15;">
+   <div id="reviewsCard2-card-body">
+      <div id="reviewsCard2-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+      <img id="reviewsCard2-card-item1" src="images/avatar_bw.jpg" alt="" title="">
+      <div id="reviewsCard2-card-item2">PABLO CARRASCO</div>
+      <div id="reviewsCard2-card-item3">Developer</div>
+      <div id="reviewsCard2-card-item4"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard2-card-item5"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard2-card-item6"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard2-card-item7"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard2-card-item8"><i class="fa fa-star"></i></div>
+   </div>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_reviewsCard3" style="display:flex;width:calc(100% - 20px);text-align:center;z-index:16;">
+   <div id="reviewsCard3-card-body">
+      <div id="reviewsCard3-card-item0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis."</div>
+      <img id="reviewsCard3-card-item1" src="images/avatar_bw.jpg" alt="" title="">
+      <div id="reviewsCard3-card-item2">PABLO CARRASCO</div>
+      <div id="reviewsCard3-card-item3">Developer</div>
+      <div id="reviewsCard3-card-item4"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard3-card-item5"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard3-card-item6"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard3-card-item7"><i class="fa fa-star"></i></div>
+      <div id="reviewsCard3-card-item8"><i class="fa fa-star"></i></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menuLayer" style="position:fixed;text-align:left;left:0px;top:0px;width:71px;height:74px;z-index:33;z-index:11111;">
+<div id="wb_menuPanel" style="position:absolute;left:9px;top:12px;width:50px;height:50px;z-index:17;">
+<a href="wb15_mysteriousguy.html#menuPanel_markup" id="menuPanel">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="menuPanel_markup">
+   <div id="menuPanel-close"><a role="button" aria-hidden="true" href="wb15_mysteriousguy.html#">&times;</a></div>
+<ul role="menu">
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#header">Home</a></li>
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#services1">About Me</a></li>
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#services2">Blog</a></li>
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#services3">Projects</a></li>
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#reviews">Reviews</a></li>
+   <li role="menuitem"><a href="wb15_mysteriousguy.html#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:11px;top:auto;bottom:11px;width:50px;height:50px;z-index:34;">
+<div id="wb_upIcon" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:18;">
+<a href="wb15_mysteriousguy.html#home"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_contact">
+<div id="contact-overlay"></div>
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div id="wb_contactHeading" style="display:inline-block;width:100%;z-index:19;">
+<h2 id="contactHeading">Contact Me</h2>
+</div>
+<input type="text" id="contactName" style="display:block;width: 100%;height:42px;z-index:20;" name="name" value="" spellcheck="false" placeholder="Name">
+<input type="text" id="contactEmail" style="display:block;width: 100%;height:42px;z-index:21;" name="email" value="" spellcheck="false" placeholder="Email">
+<input type="text" id="contactPhone" style="display:block;width: 100%;height:42px;z-index:22;" name="phone" value="" spellcheck="false" placeholder="Phone">
+<textarea name="message" id="contactMessage" style="display:block;width: 100%;;height:111px;z-index:23;" rows="4" cols="82" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send" style="display:block;width: 100%;;height:56px;z-index:24;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div id="wb_footerText">
+<p>© WYSIWYG Web Builder 2019. All Rights Reserved.</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>

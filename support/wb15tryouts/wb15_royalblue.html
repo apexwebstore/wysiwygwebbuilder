@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Royal Blue</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/royalblue.css" rel="stylesheet">
+<link href="css/wb15_royalblue.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.panel.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#menuPanel").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'overlay', position: 'right', toggle: true});
+   $("#menuPanel_markup ul li a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("#menuPanel-close a").click(function(event)
+   {
+       $.panel.hide($("#menuPanel_panel"));
+   });
+   $("a[href*='#homeBookmark']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_homeBookmark').offset().top }, 600, 'easeOutQuad');
+   });
+   $("a[href*='#aboutBookmark']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_aboutBookmark').offset().top }, 600, 'easeInOutQuad');
+   });
+   $("a[href*='#woodenShoesBookmark']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_woodenShoesBookmark').offset().top }, 600, 'easeOutQuad');
+   });
+   $("a[href*='#windMillsBookmark']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_windMillsBookmark').offset().top }, 600, 'easeOutQuad');
+   });
+   $("a[href*='#contactBookmark']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contactBookmark').offset().top }, 600, 'easeOutQuad');
+   });
+});
+</script>
+</head>
+<body>
+<div id="menuLayer">
+<div id="wb_menuPanel">
+<a href="wb15_royalblue.html#menuPanel_markup" id="menuPanel">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="menuPanel_markup">
+   <div id="menuPanel-close"><a role="button" aria-hidden="true" href="wb15_royalblue.html#">&times;</a></div>
+<ul role="menu">
+   <li role="menuitem"><a href="wb15_royalblue.html#homeBookmark">Home</a></li>
+   <li role="menuitem"><a href="wb15_royalblue.html#aboutBookmark">About Me</a></li>
+   <li role="menuitem"><a href="wb15_royalblue.html#woodenShoesBookmark">Wooden Shoes</a></li>
+   <li role="menuitem"><a href="wb15_royalblue.html#windMillsBookmark">Windmills</a></li>
+   <li role="menuitem"><a href="wb15_royalblue.html#contactBookmark">Contact</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="wb15_royalblue.html#homeBookmark"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<form name="FlexGrid1" method="post" action="mailto:yourname@yourdomain.com" enctype="multipart/form-data" id="FlexGrid1">
+<div id="FlexGrid1-grid">
+<div class="intro">
+<div id="wb_homeText">
+<p style="font-size:15px;line-height:16.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">ROYAL BLUE</span></p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">This template demonstrates how to use a single Flex Grid for the entire layout</span></p>
+
+</div>
+<a id="homeButton" href="wb15_royalblue.html#aboutBookmark">Learn More</a>
+</div>
+<div class="photo1">
+<div id="wb_homeBookmark">
+<a id="homeBookmark">&nbsp;</a>
+
+</div>
+</div>
+<div class="banner1">
+<div id="wb_aboutBookmark">
+<a id="aboutBookmark">&nbsp;</a>
+
+</div>
+<div id="wb_aboutHeading">
+<h1 id="aboutHeading">About</h1>
+</div>
+<div id="wb_aboutText">
+<p style="line-height:19.2px;">Delft Blue is the world-famous pottery that has been produced in the city of Delft since the 17th century. Between 1600 and 1800, it was popular among rich families who would show off their Delft Blue collections to one another. Although the Delftware potters preferred to call their pottery “porcelain”, it was only a cheaper version of the real Chinese porcelain. Delft Blue was not made from the typical porcelain clay, but from clay that was coated with a tin glaze after it was fired. In spite of this, Delft Blue achieved unrivalled popularity, and at its peak, there were 33 factories in Delft. Of all of these factories, the only one remaining today is Royal Delft.</p>
+
+</div>
+<hr id="aboutLine">
+</div>
+<div class="houses">
+</div>
+<div class="banner2">
+<div id="wb_woodenShoesBookmark">
+<a id="woodenShoesBookmark">&nbsp;</a>
+
+</div>
+<div id="wb_woodenShoesHeading">
+<h1 id="woodenShoesHeading">Wooden Shoes</h1>
+</div>
+</div>
+<div class="photo2">
+</div>
+<div class="info">
+<div id="wb_woodenShoesText">
+<p style="font-family:Arial;line-height:19.2px;"><span style="font-family:Arial;">“</span>Wooden shoes<span style="font-family:Arial;">”</span> or clogs have been traditional footwear for hundreds of years. </p>
+<p style="font-family:Arial;line-height:19.2px;">Today, most of the Dutch do not wear clogs and it is mostly tourists who buy them to take home as souvenirs. So you are unlikely to meet someone wearing clogs on the streets.</p>
+<p style="font-family:Arial;line-height:19.2px;">&nbsp;</p>
+<p style="font-family:Arial;line-height:19.2px;">Farmers do still wear them sometimes however. You may well run into someone wearing clogs “in the wild” in villages like Staphorst and Bunschoten, where people still wear traditional clothing.</p>
+
+</div>
+</div>
+<div class="banner3">
+<div id="wb_windMillsBookmark">
+<a id="windMillsBookmark">&nbsp;</a>
+
+</div>
+<div id="wb_windMillsHeading">
+<h1 id="windMillsHeading">Windmills</h1>
+</div>
+<div id="wb_windMillsText">
+<p style="font-family:Arial;"><span style="font-family:Arial;">A</span> windmill is a structure that converts the energy of wind into rotational energy by means of vanes called sails or blades. Centuries ago, windmills usually were used to mill grain, pump water, or both. There are windmills that convert the rotational energy directly into heat. </p>
+
+</div>
+</div>
+<div class="image1">
+<div id="wb_windMillsImage1">
+<img src="images/royal_blue7.png" id="windMillsImage1" alt="">
+</div>
+<div id="wb_windMillsTitle1">
+<p style="font-family:Arial;font-weight:bold;"><span style="font-family:Arial;">Windmill One</span></p>
+
+</div>
+</div>
+<div class="image2">
+<div id="wb_windMillsImage2">
+<img src="images/royal_blue7.png" id="windMillsImage2" alt="">
+</div>
+<div id="wb_windMillsTitle2">
+<p style="font-family:Arial;font-weight:bold;"><span style="font-family:Arial;">Windmill Two</span></p>
+
+</div>
+</div>
+<div class="image3">
+<div id="wb_windMillsImage3">
+<img src="images/royal_blue7.png" id="windMillsImage3" alt="">
+</div>
+<div id="wb_windMillsTitle3">
+<p style="font-family:Arial;font-weight:bold;"><span style="font-family:Arial;">Windmill Three</span></p>
+
+</div>
+</div>
+<div class="image4">
+<div id="wb_windMillsImage4">
+<img src="images/royal_blue7.png" id="windMillsImage4" alt="">
+</div>
+<div id="wb_windMillsTitle4">
+<p style="font-family:Arial;font-weight:bold;"><span style="font-family:Arial;">Windmill Four</span></p>
+
+</div>
+</div>
+<div class="banner4">
+<div id="wb_contactBookmark">
+<a id="contactBookmark">&nbsp;</a>
+
+</div>
+<div id="wb_contactHeading">
+<h2 id="contactHeading">Any questions? </h2>
+</div>
+</div>
+<div class="contact">
+<div id="wb_contactTitle">
+<h1 id="contactTitle">Feel free to contact us.</h1>
+</div>
+<div id="wb_contactText">
+<p style="line-height:22.4px;">Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.</p>
+<p style="line-height:22.4px;">&nbsp;</p>
+<p style="line-height:22.4px;"><strong>Address:</strong>&nbsp; #28, 3nd floor, WYSIWYG Plaza, Web City, Builder</p>
+<p style="line-height:22.4px;"><strong>Phone:</strong>&nbsp; 1-800-123-4567</p>
+<p style="line-height:22.4px;"><strong>Email:</strong>&nbsp; info@wysiwygmail.com</p>
+<p style="font-family:Arial;line-height:22.4px;"><span style="font-family:Arial;font-weight:bold;">Fax:</span><span style="font-family:Arial;">&nbsp; 1-800-123-4566</span></p>
+
+</div>
+</div>
+<div class="form">
+<input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Your Name">
+<input type="text" id="contactPhone" name="phone" value="" spellcheck="false" placeholder="Phone">
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Email">
+<textarea name="message" id="contactMessage" rows="4" cols="37" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Submit">
+</div>
+<div class="footer">
+<div id="wb_footerText">
+<p>About - Contact - Terms of Use - Privacy Policy<br />© WYSIWYG Web Builder 2019. All Rights Reserved.</p>
+
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

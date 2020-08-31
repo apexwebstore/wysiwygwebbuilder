@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Contact Form</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link href="https://www.wysiwygwebbuilder.tk/css/contact_form.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function submitRequestForm()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f0-9-]*$/;
+      if (!regexp.test(Editbox1.value))
+      {
+         alert("Please enter only letter, digit and whitespace characters in the \"name\" field.");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value == "")
+      {
+         alert("Please enter a value for the \"name\" field.");
+         Editbox1.focus();
+         return false;
+      }
+      if (Editbox1.value.length < 3)
+      {
+         alert("Please enter at least 3 characters in the \"name\" field.");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   var Editbox2 = document.getElementById('Editbox2');
+   if (!(Editbox2.disabled || Editbox2.style.display === 'none' || Editbox2.style.visibility === 'hidden'))
+   {
+      regexp = /^([0-9a-z]([-.\w]*[0-9a-z])*@(([0-9a-z])+([-\w]*[0-9a-z])*\.)+[a-z]{2,6})$/i;
+      if (Editbox2.value.length != 0 && !regexp.test(Editbox2.value))
+      {
+         alert("Please enter a valid email address.");
+         Editbox2.focus();
+         return false;
+      }
+   }
+   var Editbox3 = document.getElementById('Editbox3');
+   if (!(Editbox3.disabled || Editbox3.style.display === 'none' || Editbox3.style.visibility === 'hidden'))
+   {
+      regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f0-9-]*$/;
+      if (!regexp.test(Editbox3.value))
+      {
+         alert("Please enter only letter, digit and whitespace characters in the \"orderid\" field.");
+         Editbox3.focus();
+         return false;
+      }
+      if (Editbox3.value == "")
+      {
+         alert("Please enter a value for the \"orderid\" field.");
+         Editbox3.focus();
+         return false;
+      }
+      if (Editbox3.value.length < 5)
+      {
+         alert("Please enter at least 5 characters in the \"orderid\" field.");
+         Editbox3.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+</head>
+<body>
+<div id="wb_Text2" style="position:absolute;left:0px;top:3px;width:719px;height:167px;z-index:9;">
+<span style="color:#666666;font-family:Arial;font-size:12px;">Please complete the form below, and we will respond to your question via e-mail. In your message, please be sure to include all relevant information such as order ID so that we may better serve you. <br><br><br>Please <strong>do not use this form for product support!</strong> The quickest and easiest way to get answers to your all your WYSIWYG Web Builder related questions is through the support forum: <a href="forum.html" class="wwb_link" target="_blank">https://www.wysiwygforum.tk/</a><br><br><br></span><span style="color:#696969;font-family:Arial;font-size:13px;"><strong>Do you have a question about UPGRADING? <br></strong></span><span style="color:#666666;font-family:Arial;font-size:12px;">Then please read this first: <a href="https://www.wysiwygwebbuilder.tk/howtoupgrade_2.html" class="wwb_link">https://www.wysiwygwebbuilder.tk/howtoupgrade.html</a><br></span></div>
+<div id="wb_Form1" style="position:absolute;left:0px;top:183px;width:719px;height:391px;z-index:10;">
+<form name="RequestForm" method="post" action="https://www.wysiwygwebbuilder.tk/contact_thanks.php" id="Form1" onsubmit="return submitRequestForm()">
+<div id="wb_Text1" style="position:absolute;left:0px;top:41px;width:55px;height:15px;z-index:0;">
+<span style="color:#666666;font-family:Arial;font-size:12px;"><strong>Email:</strong></span></div>
+<input type="submit" id="Button1" name="Send" value="Send" style="position:absolute;left:610px;top:355px;width:96px;height:25px;z-index:1;">
+<div id="wb_Text3" style="position:absolute;left:0px;top:11px;width:55px;height:15px;z-index:2;">
+<span style="color:#666666;font-family:Arial;font-size:12px;"><strong>Name:</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:0px;top:71px;width:125px;height:15px;z-index:3;">
+<span style="color:#666666;font-family:Arial;font-size:12px;"><strong>Order number:</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:0px;top:103px;width:130px;height:15px;z-index:4;">
+<span style="color:#666666;font-family:Arial;font-size:12px;"><strong>Message:</strong></span></div>
+<input type="text" id="Editbox1" style="position:absolute;left:143px;top:10px;width:561px;height:18px;z-index:5;" name="name" value="" tabindex="2" spellcheck="false">
+<input type="text" id="Editbox2" style="position:absolute;left:143px;top:40px;width:561px;height:18px;z-index:6;" name="email" value="" tabindex="2" spellcheck="false">
+<input type="text" id="Editbox3" style="position:absolute;left:143px;top:70px;width:561px;height:18px;z-index:7;" name="orderid" value="" tabindex="2" spellcheck="false">
+<textarea name="description" id="TextArea1" style="position:absolute;left:143px;top:100px;width:561px;height:243px;z-index:8;" rows="14" cols="60" spellcheck="false"></textarea>
+</form>
+</div>
+</body>
+</html>

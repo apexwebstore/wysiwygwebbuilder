@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Snow World</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="snowworld.css" rel="stylesheet">
+<link href="wb14_snowworld.css" rel="stylesheet">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/transition.js"></script>
+<script src="js/collapse.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/affix.js"></script>
+<script src="js/wwb14.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#wb_aboutText').addClass('visibility-hidden');
+   $('#wb_aboutTextArt').addClass('visibility-hidden');
+   $('#wb_spaceIcon').addClass('visibility-hidden');
+   $('#wb_spaceHeading1').addClass('visibility-hidden');
+   $('#wb_spaceHeading2').addClass('visibility-hidden');
+   $('#wb_reviewsImage1').addClass('visibility-hidden');
+   $('#wb_reviewsImage2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("a[href*='#home']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_home').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#reviews']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_reviews').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#morereviews']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_morereviews').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function morereviewsScroll()
+   {
+      var $obj = $("#wb_morereviews");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   morereviewsScroll();
+   $(window).scroll(function(event)
+   {
+      morereviewsScroll();
+   });
+   $("a[href*='#facts']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#about']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function aboutScroll()
+   {
+      var $obj = $("#wb_about");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_aboutText', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('wb_aboutTextArt', 'animate-fade-in-up', 300, 800);
+      }
+   }
+   aboutScroll();
+   $(window).scroll(function(event)
+   {
+      aboutScroll();
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function spaceBookmarkScroll()
+   {
+      var $obj = $("#wb_spaceBookmark");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_spaceIcon', 'puff-in', 0, 500);
+         AnimateCss('wb_spaceHeading1', 'puff-in', 500, 500);
+         AnimateCss('wb_spaceHeading2', 'puff-in', 1000, 500);
+      }
+   }
+   spaceBookmarkScroll();
+   $(window).scroll(function(event)
+   {
+      spaceBookmarkScroll();
+   });
+   function Bookmark1Scroll()
+   {
+      var $obj = $("#wb_Bookmark1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_reviewsImage1', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   Bookmark1Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark1Scroll();
+   });
+   function Bookmark2Scroll()
+   {
+      var $obj = $("#wb_Bookmark2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_reviewsImage2', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   Bookmark2Scroll();
+   $(window).scroll(function(event)
+   {
+      Bookmark2Scroll();
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_home,#wb_about').css('background-attachment', 'scroll');
+   }
+});
+</script>
+<script>
+// NOTE: this code will fix the header at the top of the page. It will also change the background when in fixed mode (via the CSS classes above).
+$(document).ready(function()
+{
+   $("#wb_header").affix({offset:{top: $("#wb_header").offset().top}});
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_Logo" style="display:inline-block;width:100%;z-index:0;vertical-align:top;">
+<ul id="Logo">
+<li><a href="wb14_snowworld.html">Snow World</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;z-index:1001;">
+<div id="ThemeableMenu1" class="ThemeableMenu1" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu1-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu1-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="wb14_snowworld.html#home">Home</a>
+</li>
+<li class="">
+<a href="wb14_snowworld.html#reviews">Reviews</a>
+</li>
+<li class="">
+<a href="wb14_snowworld.html#facts">Facts</a>
+</li>
+<li class="">
+<a href="wb14_snowworld.html#about">About</a>
+</li>
+<li class="">
+<a href="wb14_snowworld.html#contact">Contact</a>
+</li>
+<li class="">
+<a href="wb14_snowworld.html#links">Links</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_home">
+<div id="home">
+<div class="col-1">
+<div id="wb_homeText">
+<span style="color:#FFFFFF;font-family:'Open Sans';font-size:32px;line-height:43px;"><strong>Welcome to the Snow World</strong></span><span style="color:#FFFFFF;font-family:'Open Sans';font-size:15px;line-height:22px;"><br></span><span style="color:#FFFFFF;font-family:'Open Sans';font-size:16px;line-height:22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_reviews">
+<div id="reviews">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_reviewsImage1" style="display:inline-block;width:100%;height:auto;z-index:3;">
+<img src="images/snow2x.jpg" id="reviewsImage1" alt="">
+</div>
+<div id="wb_Bookmark1" style="display:inline-block;width:100%;z-index:4;">
+<a id="Bookmark1" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_reviewsHeading1" style="display:inline-block;width:100%;z-index:5;">
+<h1 id="reviewsHeading1">Review 1</h1>
+</div>
+<div id="wb_reviewsHeading2" style="display:inline-block;width:100%;z-index:6;">
+<h2 id="reviewsHeading2">by Pamela Snowberry</h2>
+</div>
+<div id="wb_reviewsText1">
+<span style="color:#969696;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span>
+</div>
+<div id="wb_reviewsShape1" style="display:inline-block;width:102px;height:44px;z-index:8;position:relative;">
+<img src="images/readmore1.png" id="reviewsShape1" alt="" style="width:102px;height:44px;">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_morereviews">
+<div id="morereviews">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_reviewsHeading3" style="display:inline-block;width:100%;z-index:9;">
+<h1 id="reviewsHeading3">Review 2</h1>
+</div>
+<div id="wb_reviewsHeading4" style="display:inline-block;width:100%;z-index:10;">
+<h2 id="reviewsHeading4">by Susan Snowfield</h2>
+</div>
+<div id="wb_reviewsText2">
+<span style="color:#969696;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</span>
+</div>
+<div id="wb_reviewsShape2" style="display:inline-block;width:102px;height:44px;z-index:12;position:relative;">
+<img src="images/readmore2.png" id="reviewsShape2" alt="" style="width:102px;height:44px;">
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_reviewsImage2" style="display:inline-block;width:100%;height:auto;z-index:13;">
+<img src="images/snow1x.jpg" id="reviewsImage2" alt="">
+</div>
+<div id="wb_Bookmark2" style="display:inline-block;width:100%;z-index:14;">
+<a id="Bookmark2" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_spaceGrid">
+<div id="spaceGrid">
+<div class="row">
+<div class="col-1">
+<div id="wb_spaceIcon" style="display:inline-block;width:100px;height:100px;text-align:center;z-index:15;">
+<div id="spaceIcon"><i class="fa fa-snowflake-o"></i></div>
+</div>
+<div id="wb_spaceHeading1" style="display:inline-block;width:100%;text-align:center;z-index:16;">
+<h2 id="spaceHeading1">Lorem ipsum dolor sit amet!</h2>
+</div>
+<div id="wb_spaceHeading2" style="display:inline-block;width:100%;text-align:center;z-index:17;">
+<h2 id="spaceHeading2">Praesent libero. Sed cursus ante dapibus diam.</h2>
+</div>
+<div id="wb_spaceBookmark" style="display:inline-block;width:100%;z-index:18;">
+<a id="spaceBookmark" style="visibility:hidden;">&nbsp;</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_facts">
+<div id="facts">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_factsCard1" style="display:flex;width:100%;z-index:19;">
+   <div id="factsCard1-card-body">
+      <div id="factsCard1-card-item0"><a href="http://"><i class="fa fa-smile-o"></i></a></div>
+      <div id="factsCard1-card-item1">Fun!</div>
+      <div id="factsCard1-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_factsCard2" style="display:flex;width:100%;z-index:20;">
+   <div id="factsCard2-card-body">
+      <div id="factsCard2-card-item0"><a href="http://"><i class="fa fa-snowflake-o"></i></a></div>
+      <div id="factsCard2-card-item1">Snow</div>
+      <div id="factsCard2-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_factsCard3" style="display:flex;width:100%;z-index:21;">
+   <div id="factsCard3-card-body">
+      <div id="factsCard3-card-item0"><a href="http://"><i class="fa fa-thermometer-empty"></i></a></div>
+      <div id="factsCard3-card-item1">Cold...</div>
+      <div id="factsCard3-card-item2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_about">
+<div id="about">
+<div class="row">
+<div class="col-1">
+<div id="wb_aboutText">
+<span style="color:#FFFFFF;font-family:'Open Sans';font-size:32px;line-height:43px;"><strong>Built With</strong></span>
+</div>
+<div id="wb_aboutTextArt" style="display:inline-block;width:calc(100% - 100px);z-index:23;position:relative;">
+<svg id="aboutTextArt" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0" viewBox="0 0 840 246" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="aboutTextArt_shape" d="M85 1 L110 6 L119 63 L133 9 L155 13 L166 67 L174 17 L193 20 L179 108 L157 108 L144 47 L130 108 L105 108Z  M205 22 L236 26 L251 56 L267 31 L292 34 L264 76 L264 109 L239 109 L239 75Z  M302 85 L327 84 L328 87 L329 89 L329 90 L330 92 L333 94 L335 95 L338 96 L342 96 L344 96 L346 96 L348 96 L350 95 L352 92 L352 89 L352 87 L350 85 L348 83 L345 82 L342 81 L337 80 L329 78 L323 76 L317 73 L313 70 L310 67 L307 64 L306 60 L306 56 L306 51 L309 46 L311 43 L314 41 L317 40 L320 39 L324 38 L329 37 L335 37 L341 37 L348 38 L354 40 L360 41 L364 44 L367 47 L371 51 L372 55 L373 60 L351 60 L350 58 L349 56 L348 54 L347 53 L345 52 L343 51 L341 51 L338 50 L336 50 L334 50 L333 51 L332 51 L330 53 L329 55 L330 57 L331 59 L334 60 L337 61 L340 62 L348 63 L353 65 L359 67 L363 69 L369 73 L373 77 L375 82 L376 87 L375 94 L371 99 L370 102 L366 104 L364 106 L360 108 L356 109 L352 110 L347 110 L341 110 L336 110 L331 110 L327 109 L323 109 L320 108 L316 106 L314 105 L311 103 L308 99 L305 95 L303 90 L302 85Z  M401 41 L427 41 L427 110 L401 110Z  M447 40 L469 38 L477 78 L488 36 L511 34 L525 75 L534 32 L560 29 L540 109 L514 109 L500 62 L486 109 L464 110Z  M572 27 L597 23 L612 50 L628 18 L658 14 L624 71 L624 109 L600 109 L600 73Z  M707 70 L707 49 L746 45 L746 91 L743 93 L740 96 L738 98 L735 100 L732 101 L730 103 L727 104 L726 105 L721 107 L716 108 L711 109 L705 109 L702 109 L699 108 L696 108 L693 107 L691 107 L688 106 L686 104 L684 103 L680 100 L677 96 L674 91 L671 86 L670 80 L668 74 L667 67 L667 60 L668 52 L669 45 L670 39 L672 32 L674 26 L678 21 L681 16 L686 12 L690 9 L695 7 L700 5 L707 4 L712 3 L718 2 L722 3 L726 3 L730 5 L733 6 L735 8 L738 11 L740 14 L742 18 L744 22 L744 27 L720 36 L719 34 L717 31 L716 29 L715 28 L713 27 L711 26 L708 26 L706 26 L704 27 L702 27 L701 28 L699 29 L698 30 L696 31 L695 33 L693 35 L693 37 L692 39 L691 42 L690 44 L689 47 L689 50 L689 54 L689 57 L689 61 L689 65 L689 68 L690 71 L691 74 L692 76 L693 78 L693 80 L695 82 L696 83 L698 84 L699 85 L701 86 L702 86 L704 86 L707 86 L708 86 L711 86 L712 85 L714 85 L716 83 L718 82 L721 81 L723 79 L723 69 L707 70 Z M3 122 L29 121 L38 186 L50 121 L73 121 L84 181 L91 121 L111 120 L96 226 L75 230 L62 162 L49 235 L23 239Z  M189 180 L148 185 L148 188 L149 191 L150 193 L151 195 L152 197 L155 198 L156 199 L159 199 L161 198 L162 198 L164 197 L166 196 L166 195 L167 194 L168 192 L169 191 L189 190 L186 196 L184 201 L181 205 L178 208 L175 211 L170 213 L165 215 L159 216 L153 217 L148 217 L144 216 L141 215 L138 213 L134 210 L132 206 L129 202 L127 198 L126 192 L125 186 L124 180 L124 175 L125 171 L126 166 L127 163 L128 159 L130 155 L132 152 L133 149 L136 146 L138 143 L142 141 L144 139 L147 138 L151 137 L154 136 L158 136 L164 136 L169 137 L173 138 L176 140 L180 143 L182 146 L184 149 L186 153 L188 158 L189 164 L189 170 L189 177Z  M170 168 L169 164 L168 161 L167 158 L166 157 L165 155 L163 154 L161 153 L159 153 L156 154 L154 155 L152 157 L151 160 L150 162 L149 164 L148 167 L148 170Z  M210 120 L234 119 L234 148 L236 146 L237 145 L239 144 L241 142 L243 142 L245 141 L248 140 L250 140 L253 140 L255 140 L257 141 L259 142 L261 143 L264 144 L265 145 L267 147 L268 149 L269 151 L270 153 L271 156 L272 158 L273 161 L273 164 L273 168 L273 172 L272 177 L271 181 L270 185 L268 188 L267 191 L264 194 L262 196 L259 198 L257 200 L254 201 L250 201 L248 202 L245 202 L242 201 L240 200 L238 199 L236 198 L234 196 L232 194 L232 203 L210 206Z  M233 172 L234 176 L234 179 L235 181 L236 183 L238 185 L240 185 L241 186 L243 186 L245 185 L247 185 L249 183 L250 182 L251 180 L252 177 L252 174 L253 170 L252 167 L252 164 L251 162 L250 160 L249 159 L247 158 L245 157 L244 157 L241 158 L240 159 L238 160 L236 161 L235 164 L234 166 L234 169 L233 172Z  M335 119 L383 119 L389 119 L394 120 L398 121 L401 123 L404 126 L406 129 L407 132 L407 136 L407 139 L406 142 L404 144 L403 147 L399 149 L394 151 L399 152 L402 154 L404 155 L407 157 L408 160 L410 162 L411 165 L411 168 L410 173 L408 178 L407 180 L404 182 L403 184 L400 185 L396 187 L390 188 L387 188 L384 189 L381 189 L380 189 L335 191Z  M362 147 L372 146 L376 146 L377 146 L380 145 L380 144 L381 144 L382 142 L383 141 L383 139 L382 137 L380 135 L380 134 L377 133 L376 133 L372 133 L362 133Z  M362 175 L375 174 L377 174 L380 174 L382 173 L384 172 L385 170 L386 166 L385 164 L384 162 L382 161 L380 160 L377 160 L374 160 L362 160Z  M497 192 L475 191 L475 181 L473 184 L470 186 L468 188 L465 189 L463 190 L460 190 L457 191 L454 191 L450 190 L446 189 L442 187 L440 184 L437 181 L436 177 L435 173 L435 167 L435 131 L456 131 L456 163 L456 166 L457 168 L458 170 L459 171 L460 172 L461 173 L463 173 L464 174 L466 174 L468 173 L469 172 L471 171 L472 169 L473 167 L474 164 L474 160 L474 132 L497 132Z  M523 119 L545 119 L545 134 L523 133Z  M523 140 L545 141 L545 198 L523 195Z  M570 119 L592 119 L592 205 L570 202Z  M675 120 L675 218 L654 214 L654 204 L651 207 L650 209 L647 211 L646 212 L643 213 L641 213 L638 213 L636 213 L632 212 L630 211 L628 210 L626 209 L624 207 L622 205 L620 203 L618 200 L617 194 L614 188 L614 182 L614 175 L614 171 L614 168 L614 164 L615 161 L616 158 L617 156 L618 153 L619 151 L621 149 L623 148 L624 146 L627 145 L628 144 L631 144 L633 144 L636 144 L638 144 L641 144 L642 145 L645 146 L646 147 L649 149 L651 150 L652 153 L652 120Z  M652 180 L652 176 L651 173 L651 170 L650 168 L648 166 L646 164 L644 164 L642 163 L641 163 L639 164 L637 165 L636 166 L635 168 L634 171 L633 174 L633 178 L633 182 L634 185 L635 188 L636 191 L637 192 L639 194 L641 195 L642 195 L644 195 L646 195 L648 194 L650 192 L651 190 L651 187 L652 184 L652 180Z  M762 197 L717 191 L718 195 L718 198 L719 201 L720 203 L721 206 L724 208 L726 209 L728 210 L730 210 L731 210 L733 209 L734 208 L735 207 L736 206 L737 205 L738 203 L761 210 L759 213 L758 216 L756 218 L754 220 L753 223 L751 224 L749 226 L748 227 L746 228 L744 229 L742 230 L740 230 L736 230 L734 230 L730 230 L728 229 L722 228 L718 226 L714 224 L711 221 L707 218 L705 214 L703 210 L701 205 L699 199 L698 194 L698 187 L697 181 L698 176 L698 172 L698 167 L699 164 L700 160 L702 156 L703 153 L705 150 L707 147 L709 145 L712 143 L714 141 L717 140 L721 139 L724 139 L727 139 L733 139 L738 141 L743 143 L746 145 L750 149 L753 153 L756 157 L758 163 L758 166 L759 169 L760 172 L761 176 L762 180 L762 184 L762 188 L762 193Z  M739 178 L738 173 L737 169 L736 166 L735 163 L734 161 L732 160 L730 159 L728 158 L726 158 L726 159 L725 159 L723 160 L722 160 L721 162 L721 163 L720 164 L719 166 L718 169 L718 172 L717 175Z  M783 143 L802 144 L802 160 L803 157 L804 155 L805 153 L805 151 L806 150 L807 148 L808 147 L809 146 L810 144 L812 143 L814 143 L816 142 L819 143 L821 144 L824 146 L827 148 L820 175 L818 174 L816 173 L815 172 L814 172 L813 172 L812 172 L811 172 L810 173 L810 174 L809 175 L808 176 L807 178 L806 180 L805 183 L805 186 L805 190 L805 194 L804 198 L804 204 L804 209 L804 242 L783 238 L783 143"/>
+</defs>
+<clipPath id="aboutTextArt_clippath">
+   <use xlink:href="#aboutTextArt_shape"/>
+</clipPath>
+<use xlink:href="#aboutTextArt_shape" clip-path="url(#aboutTextArt_clippath)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+</svg>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactHeading1" style="display:inline-block;width:100%;z-index:24;">
+<h2 id="contactHeading1">Any questions? <br>Feel free to contact us.</h2>
+</div>
+<div id="wb_contactText1">
+<span style="color:#4F4F4F;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh</span>
+</div>
+<div id="wb_contactIcon1" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:26;">
+<div id="contactIcon1"><i class="fa fa-envelope-o"></i></div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<label for="facts" id="Label1" style="display:block;width:100%;;height:25px;line-height:17px;z-index:27;">Name</label>
+<input type="text" id="editboxName" style="display:block;width: 100%;height:34px;z-index:28;" name="Editbox1" value="" spellcheck="false">
+<label for="factsCard2" id="Label2" style="display:block;width:100%;;height:41px;line-height:17px;z-index:29;">Email</label>
+<input type="text" id="editboxEmail" style="display:block;width: 100%;height:34px;z-index:30;" name="email" value="" spellcheck="false">
+<label for="Html1" id="Label3" style="display:block;width:100%;;height:41px;line-height:17px;z-index:31;">Message</label>
+<textarea name="message" id="editboxMessage" style="display:block;width: 100%;;height:100px;z-index:32;" rows="3" cols="47" spellcheck="false"></textarea>
+<input type="submit" id="Button1" name="" value="SEND" style="display:inline-block;width:92px;height:39px;z-index:33;">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_social">
+<div id="social">
+<div class="row">
+<div class="col-1">
+<div id="wb_socialIcon1" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:34;">
+<a href="wb14_snowworld.html"><div id="socialIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_socialIcon2" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:35;">
+<a href="wb14_snowworld.html"><div id="socialIcon2"><i class="fa fa-instagram"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_socialIcon3" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:36;">
+<a href="wb14_snowworld.html"><div id="socialIcon3"><i class="fa fa-twitter"></i></div></a>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_socialIcon4" style="display:inline-block;width:40px;height:40px;text-align:center;z-index:37;">
+<a href="wb14_snowworld.html"><div id="socialIcon4"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_links">
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<span style="color:#696969;"><strong>NAVIGATE</strong></span>
+</div>
+<div id="wb_linksMenu1" style="display:inline-block;width:100%;z-index:39;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb14_snowworld.html#" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Services</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Products</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<span style="color:#696969;"><strong>CONNECT</strong></span>
+</div>
+<div id="wb_linksMenu2" style="display:inline-block;width:100%;z-index:41;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb14_snowworld.html#" target="_self">Facebook</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Instagram</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Twitter</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">YouTube</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<span style="color:#696969;"><strong>MORE LINKS</strong></span>
+</div>
+<div id="wb_linksMenu3" style="display:inline-block;width:100%;z-index:43;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb14_snowworld.html#" target="_self">Lorem&nbsp;Ipsum</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Consectetur&nbsp;Adipisicing</a>
+</li>
+<li><a role="menuitem" href="wb14_snowworld.html#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text16">
+<span style="color:#000000;">Copyright © 2018 WYSIWYG Web Builder.&nbsp; All Rights Reserved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:57;">
+<div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:45;">
+<a href="wb14_snowworld.html#home"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+
+</body>
+</html>

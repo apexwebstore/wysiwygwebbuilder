@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Shape Dividers</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
+<style>
+body
+{
+   background-color: #2B579A;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#LayerHeader
+{
+   background-color: #2B579A;
+   background-image: none;
+   margin: 0;
+}
+#LayerTeeth
+{
+   background-color: #FBFBFB;
+   background-image: none;
+   margin: 0;
+}
+#LayerTeeth-divider-top
+{
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 50px;
+   line-height: 0;
+   left: 0;
+}
+#LayerTeeth-divider-top svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerTeeth-divider-top .divider-fill
+{
+   fill: #2B579A;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerTeeth-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+}
+#LayerTeeth-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerTeeth-divider-bottom .divider-fill
+{
+   fill: #2B579A;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerCloudy
+{
+   background-color: #2B579A;
+   background-image: none;
+   margin: 0;
+}
+#LayerCloudy-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   transform: scaleY(-1.0);
+}
+#LayerCloudy-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerCloudy-divider-bottom .divider-fill
+{
+   fill: #FFFFFF;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerFan
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 0;
+}
+#LayerFan-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+}
+#LayerFan-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerFan-divider-bottom .divider-fill
+{
+   fill: #2B579A;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerCurve1
+{
+   background-color: #2B579A;
+   background-image: none;
+   margin: 0;
+}
+#LayerCurve1-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+}
+#LayerCurve1-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerCurve1-divider-bottom .divider-fill
+{
+   fill: #FFFFFF;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerCurve2
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 0;
+}
+#LayerCurve2-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+}
+#LayerCurve2-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerCurve2-divider-bottom .divider-fill
+{
+   fill: #2B579A;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#LayerCurve3
+{
+   background-color: #2B579A;
+   background-image: none;
+   margin: 0;
+}
+#LayerCurve3-divider-bottom
+{
+   overflow: hidden;
+   position: absolute;
+   line-height: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+}
+#LayerCurve3-divider-bottom svg
+{
+   display: block;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%); 
+}
+#LayerCurve3-divider-bottom .divider-fill
+{
+   fill: #FFFFFF;
+   transform-origin: center;
+   transform: rotateY(0deg);
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 125px 0px 50px 0px;
+   text-align: center;
+}
+#Heading1
+{
+   color: #2B579A;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 75px 0px 50px 0px;
+   text-align: center;
+}
+#Heading2
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 100px 0px 50px 0px;
+   text-align: center;
+}
+#Heading3
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 100px 0px 50px 0px;
+   text-align: center;
+}
+#Heading4
+{
+   color: #2B579A;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading5
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 100px 0px 50px 0px;
+   text-align: center;
+}
+#Heading5
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading6
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 100px 0px 50px 0px;
+   text-align: center;
+}
+#Heading6
+{
+   color: #2B579A;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#LayerTilt
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 0;
+}
+#wb_Heading7
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 75px 0px 50px 0px;
+   text-align: center;
+}
+#Heading7
+{
+   color: #2B579A;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Heading8
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 100px 0px 50px 0px;
+   text-align: center;
+}
+#Heading8
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="LayerHeader" style="position:relative;text-align:left;width:100%;height:200px;float:left;clear:left;display:block;z-index:8;">
+<div id="wb_Heading2" style="display:inline-block;width:100%;z-index:0;">
+<h1 id="Heading2">Shape Dividers</h1>
+</div>
+</div>
+<div id="LayerTeeth" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:9;">
+<div id="LayerTeeth-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 75" preserveAspectRatio="none">
+<polygon class="divider-fill" points="75,75 100,50 125,75 150,50 175,75 200,50 225,75 250,50 275,75 300,50 325,75 350,50 375,75 400,50 425,75 450,50 475,75 500,50 525,75 550,50 575,75 600,50 625,75 650,50 675,75 700,50 725,75 750,50 775,75 800,50 825,75 850,50 875,75 900,50 925,75 950,50 975,75 1000,50 1000,0 0,0 0,50 25,75 50,50 " />
+</svg></div>
+<div id="LayerTeeth-divider-bottom">
+<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="divider-fill" d="M-5 100 Q 0 20 5 100 Z M0 100 Q 5 0 10 100 M5 100 Q 10 30 15 100 M10 100 Q 15 10 20 100 M15 100 Q 20 30 25 100 M20 100 Q 25 -10 30 100 M25 100 Q 30 10 35 100 M30 100 Q 35 30 40 100 M35 100 Q 40 10 45 100 M40 100 Q 45 50 50 100 M45 100 Q 50 20 55 100 M50 100 Q 55 40 60 100 M55 100 Q 60 60 65 100 M60 100 Q 65 50 70 100 M65 100 Q 70 20 75 100 M70 100 Q 75 45 80 100 M75 100 Q 80 30 85 100 M80 100 Q 85 20 90 100 M85 100 Q 90 50 95 100 M90 100 Q 95 25 100 100 M95 100 Q 100 15 105 100 Z">
+    </path>
+</svg></div>
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:1;">
+<h1 id="Heading1">Teeth</h1>
+</div>
+</div>
+<div id="LayerCloudy" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:10;">
+<div id="LayerCloudy-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 138" preserveAspectRatio="none">
+<polygon class="divider-fill" style="opacity:0.2" points="0,136.28 0,36.28 1000,36.28 1000,136.28 500,46.28"  />
+<polygon class="divider-fill" style="opacity:0.4" points="0,104.43 0,36.28 1000,36.28 1000,104.43 500,44.43" />
+<polygon class="divider-fill" style="opacity:0.6" points="0,72.57 0,36.28 1000,36.28 1000,72.57 500,42.57" />
+<rect class="divider-fill" width="1000" height="36.290001" x="0" y="0" />
+</svg></div>
+<div id="wb_Heading3" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="Heading3">Cloudy</h1>
+</div>
+</div>
+<div id="LayerFan" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:11;">
+<div id="LayerFan-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 279.24" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.25" d="M1000 0S331.54-4.18 0 279.24h1000z"/>
+<path class="divider-fill" d="M1000 279.24s-339.56-44.3-522.95-109.6S132.86 23.76 0 25.15v254.09z"/>
+</svg></div>
+<div id="wb_Heading4" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading4">Fan</h1>
+</div>
+</div>
+<div id="LayerCurve1" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:12;">
+<div id="LayerCurve1-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 458.89" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M394.87 433.4C488.07 402 572.38 322.71 656.53 241c-73.83 19-145.79 48.57-216.67 77.31-98.09 39.78-199.68 78.93-304.4 86.55 84.78 42.95 173.24 57.58 259.41 28.54zM656.53 241c45.78-11.75 92.27-19.4 139.69-20.19 70.57-1.16 138.4 12.7 203.78 36.37V0c-59.88 17.86-118.67 47.58-174.92 89.39C767.3 132.33 712 187.19 656.53 241zM135.46 404.86C88.86 381.25 43.38 349.08 0 310.9v82.75a378.35 378.35 0 0 0 81.63 12.23 485.13 485.13 0 0 0 53.83-1.02z"/>
+<path class="divider-fill" d="M1000 458.89V257.18c-65.38-23.67-133.21-37.53-203.78-36.37-47.42.79-93.91 8.44-139.69 20.19-84.15 81.71-168.46 161-261.66 192.4-86.17 29-174.63 14.41-259.41-28.54a485.13 485.13 0 0 1-53.83 1A378.35 378.35 0 0 1 0 393.65v65.24z"/>
+</svg></div>
+<div id="wb_Heading5" style="display:inline-block;width:100%;z-index:4;">
+<h1 id="Heading5">Curve 1</h1>
+</div>
+</div>
+<div id="LayerCurve2" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:13;">
+<div id="LayerCurve2-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 22" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.33" d="m 239.971,0.03506085 c -4.61,-0.17416486 -9.552,0.31166344 -15,1.20998745 C 204.576,4.6559297 198.738,12.530015 185.552,17.095884 163.344,24.776555 144.006,3.7851053 119.933,3.7851053 94.252,3.7851053 89.447,26.941699 57.427,20.331684 34.632,15.582483 27.625,7.6350655 10.323,10.13754 7.613,10.540869 3.77,11.090863 0,11.796689 V 22 H 240 V 0.03506085 Z" />
+<path class="divider-fill" d="m 239.99,5.2731131 c -4.825,-0.584952 -10.606,-0.1919374 -17.48,0.813449 -20.276,2.943954 -24.593,9.9542389 -38.892,13.9026649 -23.967,6.65383 -39.71,-14.633855 -61.787,-14.633855 -23.521,0 -37.345,20.794132 -63.486,15.119183 C 39.701,16.406396 32.922,9.5240694 15.861,11.69936 9.751,12.476249 4.438,14.039168 0,17.816679 V 22 H 240 V 6.6011371 Z" />
+<path class="divider-fill" style="opacity:0.33" d="M 222.049,3.2571465 C 201.246,6.7240757 196.851,14.983196 182.2,19.643048 157.589,27.470666 141.472,2.4081215 118.858,2.4081215 94.734,2.4081215 80.571,26.930123 53.776,20.210617 34.707,15.400719 27.743,7.3112169 10.27,9.8648154 6.553,10.414678 3.121,11.28141 0,12.399774 V 22 H 240 V 2.3242443 C 234.979,1.6345862 229.1,2.0912517 222.049,3.2571465 Z" />
+</svg>
+</div>
+<div id="wb_Heading6" style="display:inline-block;width:100%;z-index:5;">
+<h1 id="Heading6">Curve 2</h1>
+</div>
+</div>
+<div id="LayerCurve3" style="position:relative;text-align:left;width:100%;height:250px;float:left;clear:left;display:block;z-index:14;">
+<div id="LayerCurve3-divider-bottom">
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polygon class="divider-fill" points="0,100 100,0 100,100"/>
+  </svg></div>
+<div id="wb_Heading8" style="display:inline-block;width:100%;z-index:6;">
+<h1 id="Heading8">Curve 3</h1>
+</div>
+</div>
+<div id="LayerTilt" style="position:relative;text-align:left;width:100%;height:200px;float:left;clear:left;display:block;z-index:15;">
+<div id="wb_Heading7" style="display:inline-block;width:100%;z-index:7;">
+<h1 id="Heading7">Tilt</h1>
+</div>
+</div>
+</body>
+</html>

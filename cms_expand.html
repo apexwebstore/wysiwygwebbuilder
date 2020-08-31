@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Expandable CMS View</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/cms_expand.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="headerLayer" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:33px;z-index:3;">
+<div id="headerLayer_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+</div>
+</div>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:14px;top:134px;width:940px;height:2096px;z-index:4;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:5;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:168px;width:848px;height:380px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>How to dynamically expand the CMS View based on the content of the page?<br><br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">Note: For advanced users only, some JavaScript knowledge is required! This script is provided &quot;AS IS&quot;, we do not provide support on scripts.<br><br>A frequently requested feature is to have the ability to create a expandable CMS view, so no scrollbars will be displayed in the view itself.<br>And although it would be difficult to automate this process, it is quite easy to manually implement this functionality with only a few lines of JavaScript. We will use the same layout as the CMS demo template for the content view. <br><br><strong>Step 1<br></strong>Make sure you understand how the CMS tools work before continuing with this tutorial.<br>Please read this first: <a href="cms_tools_2.html" class="wwb_link" target="_blank">https://www.wysiwygwebbuilder.tk/cms_tools.html</a><br><br><strong>Step 2<br></strong>Modify the layout of the Content View, so if will be 'expandable'. If you take a look at the original Content View, you will notice that we have used one shape for the entire 'body' of the page. We will now break this shape into 3 parts:<br><strong>• Top of the body.</strong> This part will have a fixed position. We've used just a standard image for this.<br><strong>• Middle of the body.</strong> This part will expand together with the content of current page. This is a layer with background image is set to 'vertical repeat' so that it will fill the entire layer.<br><strong>• Footer (layer)</strong>, which contains the bottom of the body and the copyright message (this part will move down if the height of the content increases).<br><br>When you download the example project (at the end of this tutorial) you will notice that all 3 parts are nicely aligned so that it looks like one image. Also make sure the 'CMS view' is not part of Layer1!</span></div>
+<div id="wb_Text1" style="position:absolute;left:83px;top:1142px;width:808px;height:623px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 3<br></strong>Now let's write the code to make it all work. Insert the following code between the &lt;head&gt; tag:<br><br></span><span style="color:#C54949;font-family:'Courier New';font-size:11px;">&lt;script type=&quot;text/javascript&quot;&gt;<br>$(document).ready(function()<br>{<br>&nbsp;&nbsp; // ID of CMS view<br>&nbsp;&nbsp; var cmsViewID = &quot;#wb_CmsView1&quot;;<br><br>&nbsp;&nbsp; // ID of body layer<br>&nbsp;&nbsp; var cmsBodyLayer = &quot;#Layer1&quot;;<br><br>&nbsp;&nbsp; // ID of footer layer<br>&nbsp;&nbsp; var cmsFooterLayer = &quot;#Layer2&quot;;<br><br>&nbsp;&nbsp; // do not change anything after this...<br><br>&nbsp;&nbsp; // set height of CMS view to 'auto'<br>&nbsp;&nbsp; $(cmsViewID).css('height', 'auto'); <br><br>&nbsp;&nbsp; // set overflow to visible<br>&nbsp;&nbsp; $(cmsViewID).css('overflowY', 'visible'); <br><br>&nbsp;&nbsp; // get (dynamic) height of CMS view<br>&nbsp;&nbsp; var height = $(cmsViewID).outerHeight(); <br><br>&nbsp;&nbsp; // save old height<br>&nbsp;&nbsp; var oldHeight = $(cmsBodyLayer).height();<br><br>&nbsp;&nbsp; // calculate new height<br>&nbsp;&nbsp; var newHeight = height + $(cmsViewID).offset().top - $(cmsBodyLayer).offset().top; <br><br>&nbsp;&nbsp; // do not shrink layout, only expand...<br>&nbsp;&nbsp; if (newHeight &gt; oldHeight)<br>&nbsp;&nbsp; {<br>&nbsp;&nbsp; &nbsp;&nbsp; $(cmsBodyLayer).height(newHeight); <br><br>&nbsp;&nbsp; &nbsp;&nbsp; // move footer<br>&nbsp;&nbsp; &nbsp;&nbsp; var newTop = $(cmsBodyLayer).offset().top + $(cmsBodyLayer).height();<br>&nbsp;&nbsp; &nbsp;&nbsp; $(cmsFooterLayer).offset({ top: newTop });<br>&nbsp;&nbsp; }<br>});<br>&lt;/script&gt;<br></span></div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:1789px;width:808px;height:400px;z-index:8;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">Take note of the 3 ID variables. You may need to change these if the names of your objects are different. The '#' must be included!<br>var cmsViewID = &quot;#wb_CmsView1&quot;;<br><br>The ID of the Cms View object. The defaul value is <strong>wb_CmsView1</strong><br><br>var cmsBodyLayer = &quot;#<strong>Layer1</strong>&quot;;<br>The ID of the (expandable) body layer<br><br>var cmsFooterLayer = &quot;#<strong>Layer2</strong>&quot;;<br>ID of footer layer.<br><br>No other changes should be necesarry.<br><br><strong>Important note:</strong> <br>The script uses jQuery but because the page contains a 'CMS Search' object, there is no need to include the jQuery library reference. If your page does not already contain any jQuery objects then you wil have to add this reference yourself!<br><br><br><strong>Step 4<br></strong>Publish the page...<br><br><br>Download example project:<br><a href="support/cms_expand.zip" class="wwb_link">https://www.wysiwygwebbuilder.tk/support/cms_expand.zip</a><br></span></div>
+<div id="wb_Image3" style="position:absolute;left:83px;top:557px;width:800px;height:585px;z-index:9;">
+<img src="images/cms_expand.png" id="Image3" alt=""></div>
+</div>
+</body>
+</html>

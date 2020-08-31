@@ -1,0 +1,2299 @@
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#menuLayer
+{
+   background-color: transparent;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_menuPanel a, #menuPanel_markup li a
+{
+   display: block;
+   text-align: center;
+   vertical-align: middle;
+}
+#menuPanel_markup
+{
+   display: none;
+   margin: 0;
+   padding: 75px 0px 0px 0px;
+}
+#menuPanel_panel #menuPanel_markup
+{
+   display: block;
+}
+#menuPanel_markup ul
+{
+   list-style: none;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#menuPanel_markup li a, #menuPanel_markup li a:hover
+{
+   padding: 10px 10px 10px 10px;
+   box-shadow: none;
+}
+#menuPanel_markup .divider
+{
+   height: 1px;
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #2E2E2E;
+}
+#menuPanel_panel
+{
+   display: none;
+   position: absolute;
+   position: fixed;
+   top: 0;
+   height: 100%;
+   width: 250px;
+   z-index: 9999;
+}
+#menuPanel_markup li a
+{
+   color: #FFFFFF;
+   border: 0px solid #2E2E2E;
+   background-color: #294485;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+}
+#wb_menuPanel a
+{
+   color: #F7F7F7;
+   border: 0px solid #FFFFFF;
+   background-color: #294485;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+}
+#menuPanel_markup li a:hover
+{
+   color: #FFFFFF;
+   background-color: #294485;
+   border: 0px solid #2E2E2E;
+}
+#wb_menuPanel a:hover
+{
+   color: #F7F7F7;
+   background-color: #294485;
+   border: 0px solid #FFFFFF;
+}
+#menuPanel_panel
+{
+   background-color: #294485;
+   overflow-y: auto;
+}
+#menuPanel .line
+{
+   width: 16px;
+   height: 3px;
+   background: #F7F7F7;
+   display: block;
+   margin: 3px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+#menuPanel .line:first-child
+{
+   margin-top: 17px;
+}
+#menuPanel.open .line:nth-child(1)
+{
+   -webkit-transform: translateY(6px) rotate(45deg);
+   -moz-transform: translateY(6px) rotate(45deg);
+   transform: translateY(6px) rotate(45deg);
+}
+#menuPanel.open .line:nth-child(2)
+{
+   opacity: 0;
+}
+#menuPanel.open .line:nth-child(3)
+{
+   -webkit-transform: translateY(-6px) rotate(-45deg);
+   -moz-transform: translateY(-6px) rotate(-45deg);
+   transform: translateY(-6px) rotate(-45deg);
+}
+#menuPanel
+{
+   line-height: 50px;
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   z-index: 999;
+}
+#menuPanel-close
+{
+   display: none;
+   text-align: right;
+}
+#menuPanel-close a
+{
+   color: #F7F7F7;
+   display: inline-block;
+   font-size: 32px;
+   font-weight: bold;
+   padding: 5px 10px 5px 10px;
+   text-decoration: none;
+}
+#menuPanel-close a:hover
+{
+   color: #F7F7F7;
+}
+@media all and (max-width:768px) 
+{
+#menuPanel_panel
+{
+   width: 100%;
+}
+body
+{
+   margin-left: 0 !important;
+}
+#menuPanel-close
+{
+   display: block;
+}
+}
+#upStickyLayer
+{
+   background-color: #294485;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_upIcon
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+   text-align: center;
+   margin: 0;
+   padding: 4px 4px 4px 4px;
+   vertical-align: top;
+}
+#wb_upIcon:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+}
+#upIcon
+{
+   height: 24px;
+   width: 24px;
+}
+#upIcon i
+{
+   color: #FFFFFF;
+   display: inline-block;
+   font-size: 24px;
+   line-height: 24px;
+   vertical-align: middle;
+   width: 14px;
+}
+#wb_upIcon:hover i
+{
+   color: #FFFFFF;
+}
+#FlexGrid1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 10px 10px 10px 10px;
+}
+#FlexGrid1-grid
+{
+   display: grid;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1140px;
+   font-size: 0px;
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 400px 400px 300px 150px 400px 200px auto 150px 400px 100px;
+   grid-template-areas:
+      "intro intro intro photo1 photo1 photo1 photo1 photo1"
+      "banner1 banner1 banner1 banner1 banner1 banner1 banner1 banner1"
+      "houses houses houses houses houses houses houses houses"
+      "banner2 banner2 banner2 banner2 banner2 banner2 banner2 banner2"
+      "photo2 photo2 photo2 photo2 info info info info"
+      "banner3 banner3 banner3 banner3 banner3 banner3 banner3 banner3"
+      "image1 image1 image2 image2 image3 image3 image4 image4"
+      "banner4 banner4 banner4 banner4 banner4 banner4 banner4 banner4"
+      "contact contact contact contact form form form form"
+      "footer footer footer footer footer footer footer footer";
+}
+#FlexGrid1 .intro
+{
+   display: flex;
+   grid-area: intro;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .photo1
+{
+   display: flex;
+   grid-area: photo1;
+   background-color: transparent;
+   background-image: url(../images/royal_blue5.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+}
+#FlexGrid1 .banner1
+{
+   display: flex;
+   grid-area: banner1;
+   background-color: transparent;
+   background-image: url(../images/royal_blue_bk2.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .houses
+{
+   display: flex;
+   grid-area: houses;
+   background-color: transparent;
+   background-image: url(../images/houses.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner2
+{
+   display: flex;
+   grid-area: banner2;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .photo2
+{
+   display: flex;
+   grid-area: photo2;
+   background-color: transparent;
+   background-image: url(../images/royal_blue6.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .info
+{
+   display: flex;
+   grid-area: info;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner3
+{
+   display: flex;
+   grid-area: banner3;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image1
+{
+   display: flex;
+   grid-area: image1;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image2
+{
+   display: flex;
+   grid-area: image2;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image3
+{
+   display: flex;
+   grid-area: image3;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image4
+{
+   display: flex;
+   grid-area: image4;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner4
+{
+   display: flex;
+   grid-area: banner4;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .contact
+{
+   display: flex;
+   grid-area: contact;
+   background-color: transparent;
+   background-image: url(../images/royal_blue_contact.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+}
+#FlexGrid1 .form
+{
+   display: flex;
+   grid-area: form;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+}
+#FlexGrid1 .footer
+{
+   display: flex;
+   grid-area: footer;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#wb_homeText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 50px 50px 50px 50px;
+   margin: 0;
+   text-align: center;
+}
+#wb_homeText
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 32px;
+   line-height: 36px;
+}
+#wb_homeText p, #wb_homeText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_homeText div
+{
+   text-align: center;
+}
+#homeButton
+{
+   line-height: 40px;
+   text-align: center;
+   text-decoration: none;
+   vertical-align: top;
+   border: 1px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   margin: 0;
+}
+#wb_aboutText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0px 25px 25px 25px;
+   text-align: center;
+}
+#wb_aboutText
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_aboutText p, #wb_aboutText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_aboutText div
+{
+   text-align: center;
+}
+#wb_aboutHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0px 0px 25px 0px;
+   padding: 0;
+   text-align: center;
+}
+#aboutHeading
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+   margin: 0;
+   text-align: center;
+}
+#aboutLine
+{
+   border-color: #294485;
+   border-style: solid;
+   border-bottom-width: 7px;
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   height: 0 !important;
+   line-height: 0px !important;
+   margin: 0;
+   padding: 0;
+}
+#wb_woodenShoesText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0px 25px 0px 25px;
+   text-align: center;
+}
+#wb_woodenShoesText
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_woodenShoesText p, #wb_woodenShoesText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_woodenShoesText div
+{
+   text-align: center;
+}
+#wb_woodenShoesHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#woodenShoesHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+   margin: 0;
+   text-align: center;
+}
+#contactName
+{
+   border: 2px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   box-sizing: border-box;
+   line-height: 22px;
+   padding: 8px 12px 8px 12px;
+   margin: 25px 25px 10px 25px;
+   text-align: left;
+}
+#contactName::placeholder
+{
+   color: #294485;
+   opacity: 1;
+}
+#contactName::-ms-input-placeholder
+{
+   color: #294485;
+}
+#contactEmail
+{
+   border: 2px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   box-sizing: border-box;
+   line-height: 22px;
+   padding: 8px 12px 8px 12px;
+   margin: 5px 25px 10px 25px;
+   text-align: left;
+}
+#contactEmail::placeholder
+{
+   color: #294485;
+   opacity: 1;
+}
+#contactEmail::-ms-input-placeholder
+{
+   color: #294485;
+}
+#contactPhone
+{
+   border: 2px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   box-sizing: border-box;
+   line-height: 22px;
+   padding: 8px 12px 8px 12px;
+   margin: 5px 25px 10px 25px;
+   text-align: left;
+}
+#contactPhone::placeholder
+{
+   color: #294485;
+   opacity: 1;
+}
+#contactPhone::-ms-input-placeholder
+{
+   color: #294485;
+}
+#contactMessage
+{
+   border: 2px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color :#294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   box-sizing: border-box;
+   padding: 8px 12px 8px 12px;
+   margin: 5px 25px 10px 25px;
+   text-align: left;
+   overflow: auto;
+   resize: none;
+}
+#contactMessage::placeholder
+{
+   color: #294485;
+   opacity: 1;
+}
+#contactMessage::-ms-input-placeholder
+{
+   color: #294485;
+}
+#contactButton
+{
+   border: 1px solid #FFFFFF;
+   background-color: #FFFFFF;
+   background-image: none;
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   margin: 10px 0px 10px 0px;
+}
+#wb_contactHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#contactHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+   margin: 0;
+   text-align: center;
+}
+#wb_contactText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 10px 25px 0px 25px;
+   text-align: left;
+}
+#wb_contactText
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   line-height: 16.5px;
+}
+#wb_contactText p, #wb_contactText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_contactText div
+{
+   text-align: left;
+}
+#wb_footerText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 10px 10px 10px 10px;
+   margin: 10px 0px 10px 0px;
+   text-align: center;
+}
+#wb_footerText
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_footerText p, #wb_footerText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_footerText div
+{
+   text-align: center;
+}
+#wb_windMillsHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0px 0px 10px 0px;
+   padding: 0;
+   text-align: center;
+}
+#windMillsHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+   margin: 0;
+   text-align: center;
+}
+#wb_windMillsImage1
+{
+   margin: 0;
+   vertical-align: top;
+}
+#windMillsImage1
+{
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   padding: 0;
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+}
+#windMillsImage1:hover
+{
+   -webkit-transform: rotate(720deg) ;
+   -moz-transform: rotate(720deg) ;
+   transform: rotate(720deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#windMillsImage1
+{
+   -webkit-transform: rotate(0deg) ;
+   -moz-transform: rotate(0deg) ;
+   transform: rotate(0deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#wb_windMillsImage2
+{
+   margin: 0;
+   vertical-align: top;
+}
+#windMillsImage2
+{
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   padding: 0;
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+}
+#windMillsImage2:hover
+{
+   -webkit-transform: rotate(720deg) ;
+   -moz-transform: rotate(720deg) ;
+   transform: rotate(720deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#windMillsImage2
+{
+   -webkit-transform: rotate(0deg) ;
+   -moz-transform: rotate(0deg) ;
+   transform: rotate(0deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#wb_windMillsImage3
+{
+   margin: 0;
+   vertical-align: top;
+}
+#windMillsImage3
+{
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   padding: 0;
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+}
+#windMillsImage3:hover
+{
+   -webkit-transform: rotate(720deg) ;
+   -moz-transform: rotate(720deg) ;
+   transform: rotate(720deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#windMillsImage3
+{
+   -webkit-transform: rotate(0deg) ;
+   -moz-transform: rotate(0deg) ;
+   transform: rotate(0deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#wb_windMillsImage4
+{
+   margin: 0;
+   vertical-align: top;
+}
+#windMillsImage4
+{
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   padding: 0;
+   display: block;
+   width: 100%;
+   height: auto;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: top;
+}
+#windMillsImage4:hover
+{
+   -webkit-transform: rotate(720deg) ;
+   -moz-transform: rotate(720deg) ;
+   transform: rotate(720deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#windMillsImage4
+{
+   -webkit-transform: rotate(0deg) ;
+   -moz-transform: rotate(0deg) ;
+   transform: rotate(0deg) ;
+   -webkit-transition: -webkit-transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   -moz-transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0ms;
+}
+#wb_windMillsTitle1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 25px 25px 25px 25px;
+   text-align: center;
+}
+#wb_windMillsTitle1
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+}
+#wb_windMillsTitle1 p, #wb_windMillsTitle1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsTitle1 div
+{
+   text-align: center;
+}
+#wb_windMillsTitle2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 25px 25px 25px 25px;
+   text-align: center;
+}
+#wb_windMillsTitle2
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+}
+#wb_windMillsTitle2 p, #wb_windMillsTitle2 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsTitle2 div
+{
+   text-align: center;
+}
+#wb_windMillsTitle3 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 25px 25px 25px 25px;
+   text-align: center;
+}
+#wb_windMillsTitle3
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+}
+#wb_windMillsTitle3 p, #wb_windMillsTitle3 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsTitle3 div
+{
+   text-align: center;
+}
+#wb_windMillsTitle4 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 25px 25px 25px 25px;
+   text-align: center;
+}
+#wb_windMillsTitle4
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 18px;
+}
+#wb_windMillsTitle4 p, #wb_windMillsTitle4 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsTitle4 div
+{
+   text-align: center;
+}
+#wb_contactTitle
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 25px 25px 0px 25px;
+   padding: 0;
+   text-align: left;
+}
+#contactTitle
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 21px;
+   margin: 0;
+   text-align: left;
+}
+#wb_windMillsText 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   margin: 0px 25px 0px 25px;
+   text-align: center;
+}
+#wb_windMillsText
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_windMillsText p, #wb_windMillsText ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsText div
+{
+   text-align: center;
+}
+#homeButton
+{
+   display: inline-block;
+   width: 138px;
+   height: 40px;
+   z-index: 3;
+}
+#contactEmail
+{
+   display: block;
+   width: calc(100% - 50px);
+   height: 42px;
+   z-index: 29;
+}
+#contactBookmark
+{
+   visibility: hidden;
+}
+#wb_windMillsBookmark
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 12;
+}
+#contactPhone
+{
+   display: block;
+   width: calc(100% - 50px);
+   height: 42px;
+   z-index: 28;
+}
+#contactName
+{
+   display: block;
+   width: calc(100% - 50px);
+   height: 42px;
+   z-index: 27;
+}
+#wb_menuPanel
+{
+   position: absolute;
+   left: 8px;
+   top: 12px;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   z-index: 0;
+}
+#contactButton
+{
+   display: inline-block;
+   width: 128px;
+   height: 39px;
+   z-index: 31;
+}
+#wb_aboutHeading
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 6;
+}
+#menuLayer
+{
+   position: fixed;
+   text-align: left;
+   left: auto;
+   right: 0px;
+   top: 0px;
+   width: 71px;
+   height: 74px;
+   z-index: 33;
+   z-index: 11111;
+}
+#wb_homeBookmark
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 4;
+}
+#wb_windMillsImage1
+{
+   display: inline-block;
+   width: 100%;
+   height: auto;
+   z-index: 15;
+}
+#wb_woodenShoesHeading
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 10;
+}
+#wb_contactTitle
+{
+   display: inline-block;
+   width: calc(100% - 50px);
+   z-index: 25;
+}
+#wb_windMillsImage2
+{
+   display: inline-block;
+   width: 100%;
+   height: auto;
+   z-index: 17;
+}
+#windMillsBookmark
+{
+   visibility: hidden;
+}
+#wb_woodenShoesBookmark
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 9;
+}
+#wb_contactBookmark
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 23;
+}
+#wb_windMillsImage3
+{
+   display: inline-block;
+   width: 100%;
+   height: auto;
+   z-index: 19;
+}
+#wb_windMillsImage4
+{
+   display: inline-block;
+   width: 100%;
+   height: auto;
+   z-index: 21;
+}
+#wb_windMillsHeading
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 13;
+}
+#homeBookmark
+{
+   visibility: hidden;
+}
+#contactMessage
+{
+   display: block;
+   width: calc(100% - 50px);
+   height: 108px;
+   z-index: 30;
+}
+#aboutBookmark
+{
+   visibility: hidden;
+}
+#wb_aboutBookmark
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 5;
+}
+#upStickyLayer
+{
+   position: fixed;
+   text-align: left;
+   left: auto;
+   right: 11px;
+   top: auto;
+   bottom: 11px;
+   width: 50px;
+   height: 50px;
+   z-index: 34;
+}
+#woodenShoesBookmark
+{
+   visibility: hidden;
+}
+#wb_upIcon
+{
+   position: absolute;
+   left: 9px;
+   top: 8px;
+   width: 24px;
+   height: 24px;
+   text-align: center;
+   z-index: 1;
+}
+#wb_contactHeading
+{
+   display: inline-block;
+   width: 100%;
+   z-index: 24;
+}
+#aboutLine
+{
+   display: inline-block;
+   width: 250px;
+   z-index: 8;
+}
+@media only screen and (max-width: 969px)
+{
+body
+{
+   background-color: #FFFFFF;
+   background-image: none;
+}
+#menuLayer
+{
+   width: 71px;
+   height: 74px;
+   visibility: visible;
+   display: inline;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_menuPanel
+{
+   left: 8px;
+   top: 12px;
+   width: 50px;
+   height: 50px;
+   visibility: visible;
+   display: inline;
+   margin: 0;
+}
+#menuPanel
+{
+   line-height: 50px;
+   width: 50px;
+   height: 50px;
+}
+#menuPanel .line:first-child
+{
+   margin-top: 17px;
+}
+#upStickyLayer
+{
+   width: 50px;
+   height: 50px;
+   visibility: visible;
+   display: inline;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #294485;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_upIcon
+{
+   left: 9px;
+   top: 8px;
+   width: 24px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+   color: #FFFFFF;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 0;
+   padding: 4px 4px 4px 4px;
+}
+#upIcon
+{
+   width: 24px;
+   height: 24px;
+}
+#upIcon i
+{
+   line-height: 24px;
+   font-size: 24px;
+   width: 14px;
+}
+#FlexGrid1
+{
+   visibility: visible;
+   display: grid;
+   font-size: 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+}
+#FlexGrid1-grid
+{
+   margin: 0;
+}
+#FlexGrid1-grid
+{
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-columns: 1fr;
+   grid-template-rows: 400px 400px 400px 200px 150px 400px 300px 150px auto auto auto auto 150px 350px auto auto;
+   grid-template-areas:
+      "intro"
+      "photo1"
+      "banner1"
+      "houses"
+      "banner2"
+      "photo2"
+      "info"
+      "banner3"
+      "image1"
+      "image2"
+      "image3"
+      "image4"
+      "banner4"
+      "contact"
+      "form"
+      "footer";
+}
+#FlexGrid1 .intro
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .photo1
+{
+   display: flex;
+   background-color: transparent;
+   background-image: url(../images/royal_blue5.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner1
+{
+   display: flex;
+   background-color: transparent;
+   background-image: url(../images/royal_blue_bk2.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .houses
+{
+   display: flex;
+   background-color: transparent;
+   background-image: url(../images/houses.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner2
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .photo2
+{
+   display: flex;
+   background-color: transparent;
+   background-image: url(../images/royal_blue6.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .info
+{
+   display: flex;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner3
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image1
+{
+   display: flex;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image2
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image3
+{
+   display: flex;
+   background-color: #8296C6;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .image4
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .banner4
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .contact
+{
+   display: flex;
+   background-color: transparent;
+   background-image: url(../images/royal_blue_contact.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: scroll;
+   background-size: cover;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .form
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .footer
+{
+   display: flex;
+   background-color: #294485;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#wb_homeText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_homeText
+{
+   margin: 0;
+   padding: 50px 50px 50px 50px;
+}
+#homeButton
+{
+   width: 138px;
+   height: 40px;
+   visibility: visible;
+   display: inline-block;
+   color: #294485;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 0;
+}
+#homeButton
+{
+   line-height: 40px;
+}
+#wb_aboutText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_aboutText
+{
+   margin: 0px 25px 25px 25px;
+   padding: 0;
+}
+#wb_aboutHeading
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 37px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 0px 0px 25px 0px;
+   padding: 0;
+}
+#wb_aboutHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   text-align: center;
+}
+#aboutHeading
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+}
+#aboutLine
+{
+   width: 250px;
+   height: 7px;
+   visibility: visible;
+   display: inline-block;
+   margin: 0;
+}
+#aboutLine
+{
+   border-color: #294485;
+   border-bottom-width: 7px;
+}
+#wb_woodenShoesText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_woodenShoesText
+{
+   margin: 0px 25px 0px 25px;
+   padding: 0;
+}
+#wb_woodenShoesHeading
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   color: #FFFFFF;
+   font-size: 37px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_woodenShoesHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   text-align: center;
+}
+#woodenShoesHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+}
+#contactName
+{
+   width: calc(100% - 50px);
+   height: 42px;
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 25px 25px 10px 25px;
+   padding: 8px 12px 8px 12px;
+   text-align: left;
+}
+#contactName
+{
+   line-height: -13px;
+}
+#contactEmail
+{
+   width: calc(100% - 50px);
+   height: 42px;
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 5px 25px 10px 25px;
+   padding: 8px 12px 8px 12px;
+   text-align: left;
+}
+#contactEmail
+{
+   line-height: 7px;
+}
+#contactPhone
+{
+   width: calc(100% - 50px);
+   height: 42px;
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 5px 25px 10px 25px;
+   padding: 8px 12px 8px 12px;
+   text-align: left;
+}
+#contactPhone
+{
+   line-height: 7px;
+}
+#contactMessage
+{
+   width: calc(100% - 50px);
+   height: 108px;
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 5px 25px 10px 25px;
+   padding: 8px 12px 8px 12px;
+   text-align: left;
+}
+#contactButton
+{
+   width: 128px;
+   height: 39px;
+   visibility: visible;
+   display: inline-block;
+   color: #294485;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: #FFFFFF;
+   background-image: none;
+   margin: 10px 0px 10px 0px;
+}
+#wb_contactHeading
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   color: #FFFFFF;
+   font-size: 37px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_contactHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   text-align: center;
+}
+#contactHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+}
+#wb_contactText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_contactText
+{
+   margin: 10px 25px 0px 25px;
+   padding: 0;
+}
+#wb_footerText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_footerText
+{
+   margin: 10px 0px 10px 0px;
+   padding: 10px 10px 10px 10px;
+}
+#wb_windMillsHeading
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   color: #FFFFFF;
+   font-size: 37px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 0px 0px 10px 0px;
+   padding: 0;
+}
+#wb_windMillsHeading
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   text-align: center;
+}
+#windMillsHeading
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 37px;
+}
+#wb_windMillsImage1
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsImage2
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsImage3
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsImage4
+{
+   width: 100%;
+   visibility: visible;
+   display: block;
+   margin: 0;
+   padding: 0;
+}
+#wb_windMillsTitle1
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_windMillsTitle1
+{
+   margin: 25px 25px 25px 25px;
+   padding: 0;
+}
+#wb_windMillsTitle2
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_windMillsTitle2
+{
+   margin: 25px 25px 25px 25px;
+   padding: 0;
+}
+#wb_windMillsTitle3
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_windMillsTitle3
+{
+   margin: 25px 25px 25px 25px;
+   padding: 0;
+}
+#wb_windMillsTitle4
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_windMillsTitle4
+{
+   margin: 25px 25px 25px 25px;
+   padding: 0;
+}
+#wb_contactTitle
+{
+   width: calc(100% - 50px);
+   visibility: visible;
+   display: block;
+   color: #294485;
+   font-size: 21px;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   text-decoration: none;
+   background-color: transparent;
+   background-image: none;
+   margin: 25px 25px 0px 25px;
+   padding: 0;
+}
+#wb_contactTitle
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   text-align: left;
+}
+#contactTitle
+{
+   color: #294485;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 21px;
+}
+#wb_windMillsText
+{
+   visibility: visible;
+   display: block;
+   background-color: transparent;
+   background-image: none;
+}
+#wb_windMillsText
+{
+   margin: 0px 25px 0px 25px;
+   padding: 0;
+}
+#wb_homeBookmark
+{
+   visibility: visible;
+   display: inline-block;
+}
+#wb_aboutBookmark
+{
+   visibility: visible;
+   display: inline-block;
+}
+#wb_woodenShoesBookmark
+{
+   visibility: visible;
+   display: inline-block;
+}
+#wb_windMillsBookmark
+{
+   visibility: visible;
+   display: inline-block;
+}
+#wb_contactBookmark
+{
+   visibility: visible;
+   display: inline-block;
+}
+}

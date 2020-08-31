@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Toasts</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/toasts.css" rel="stylesheet">
+<script src="jquery-1.7.2.min.js"></script>
+<script src="util.min.js"></script>
+<script src="toast.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#Toast1").toast({animation: true, autohide: true, delay: 10000});
+   $("#Toast1").toast('show');
+   $("#Toast2").toast({animation: true, autohide: true, delay: 16000});
+   setTimeout(function(){ $("#Toast2").toast('show'); }, 4000);
+   $("#Toast3").toast({animation: true, autohide: false, delay: 0});
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:15px;top:138px;width:940px;height:1812px;z-index:3;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:78px;top:171px;width:808px;height:86px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>An introduction to Toasts</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br><br>Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They can be displayed at page load or with delay. Multiple Toasts will automatically stack vertically. <br></span></div>
+<div id="wb_Text3" style="position:absolute;left:81px;top:471px;width:808px;height:64px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Text</strong></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong><br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">The text of a Toast object can be edited just like standard text. So, the same formatting and edit tools are available, including styles, line spacing, letter spacing, bullets, find/replace, lorem ipsum, responsive fonts and link support.cons.<br></span></div>
+<div id="wb_Text1" style="position:absolute;left:81px;top:1417px;width:808px;height:384px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Show Delay</strong><br>Specifies the delay (in milliseconds) before the Toast is shown. Set to '-1' to initially hide the Toast, so you can control it via events (show/hide).<br><br><strong>Hide Delay<br></strong>Delays hiding the toast in milliseconds. Set to '0' to disable auto hide.<br><br><strong>Title<br></strong>Specifies the title of the toast.<br><br><strong>Sub Title<br></strong>Specifies the (optional) sub title. <br><br><strong>Position<br></strong>Specifies the placement of the Toast. <br>This is a global property. This means that it will affect the placement of all Toasts on the current page!<br><br><strong>Header Style<br></strong>Specifies the style of the header.<br><br><strong>Icon<br></strong>The header can also include an icon from one of the available icon libraries.<br><br></span></div>
+<div id="wb_Image1" style="position:absolute;left:81px;top:257px;width:310px;height:188px;z-index:8;">
+<img src="images/toast1.jpg" id="Image1" alt=""></div>
+<div id="wb_Image2" style="position:absolute;left:81px;top:529px;width:800px;height:284px;z-index:9;">
+<img src="images/toast2.jpg" id="Image2" alt=""></div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:854px;width:808px;height:32px;z-index:10;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Toast Properties </strong></span><span style="color:#666666;font-family:Arial;font-size:16px;"><strong><br></strong></span></div>
+<div id="wb_Image3" style="position:absolute;left:81px;top:885px;width:500px;height:508px;z-index:11;">
+<img src="images/toast3.jpg" id="Image3" alt=""></div>
+<input type="submit" id="Button1" onclick="$('#Toast3').toast('show');return false;" name="" value="Show Toast" style="position:absolute;left:81px;top:1835px;width:130px;height:34px;z-index:12;">
+<input type="submit" id="Button2" onclick="$('#Toast3').toast('hide');return false;" name="" value="Hide Toast" style="position:absolute;left:224px;top:1835px;width:130px;height:34px;z-index:13;">
+<div id="wb_Text5" style="position:absolute;left:81px;top:1811px;width:808px;height:16px;z-index:14;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">These buttons use events to show/hide a Toast object:</span></div>
+
+
+
+</div>
+<div aria-live="polite" aria-atomic="true" id="toasts">
+   <div id="Toast1" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+      <strong>First Notification</strong>
+      <small class="text-muted">just now</small>
+      <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="toast-body"><p style="color:#000000;"><span style="color:#000000;">Hello, Welcome this website!</span></p>
+<p style="color:#000000;"><img alt="" width="16" height="16" src="images/Toast11.png"><span style="color:#000000;">&nbsp; </span><img alt="" width="16" height="16" src="images/Toast12.png"><span style="color:#000000;">&nbsp; </span><img alt="" width="16" height="16" src="images/Toast13.png"></p></div>
+   </div>
+   <div id="Toast2" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+      <strong>Second Notification</strong>
+      <small class="text-muted">just now</small>
+      <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="toast-body"><p style="color:#000000;"><span style="color:#000000;">Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They can be displayed at page load or with delay. Multiple Toasts will automatically stack vertically. </span></p></div>
+   </div>
+   <div id="Toast3" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+      <strong>Triggered by Event</strong>
+      <small class="text-muted"></small>
+      <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="toast-body"><p style="color:#000000;"><span style="color:#000000;">Toasts can be shown/hidden via events.</span></p>
+<p>&nbsp;</p>
+<p style="color:#000000;"><span style="color:#000000;">Multiple toasts will be stacked.</span></p></div>
+   </div>
+</div>
+</body>
+</html>

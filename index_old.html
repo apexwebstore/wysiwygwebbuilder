@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WYSIWYG Web Builder</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://www.wysiwygwebbuilder.com/css/index_old.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.com/wb.carousel.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.com/wb.newsviewer.min.js"></script>
+<script src="https://www.wysiwygwebbuilder.com/wb.panel.min.js"></script>
+<link rel="stylesheet" href="fancybox/jquery.fancybox.min.css">
+<script src="fancybox/jquery.fancybox.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   var Carousel1Opts =
+   {
+      delay: 8000,
+      duration: 2000,
+      easing: 'easeOutQuart',
+      mode: 'forward',
+      direction: '',
+      scalemode: 2,
+      pagination: true,
+      pagination_img_default: 'images/Carousel1-default.png',
+      pagination_img_active: 'images/Carousel1-active.png',
+      pause: null,
+      start: 0
+   };
+   $("#Carousel1").carousel(Carousel1Opts);
+   $("#Carousel1_back a").click(function()
+   {
+      $('#Carousel1').carousel('prev');
+   });
+   $("#Carousel1_next a").click(function()
+   {
+      $('#Carousel1').carousel('next');
+   });
+   $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 7000, pause: 7000, animation: 4, animationDuration: 500, sortOrder: 0, dataSource: 'twitter', param: 'wysiwyg_wb', url: 'newsfeedticker1_twitter.php', target: '_self', dateFormat: 'twitter', maxItems: 25});
+   $("a[data-fancybox='SlideShow1']").attr('rel', 'SlideShow1');
+   $("a[rel^='SlideShow1']").fancybox({});
+   $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'push', position: 'top', toggle: true});
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Image1">
+<img src="images/header.png" id="Image1" alt=""></div>
+<div id="wb_Text3">
+<span style="color:#2A54C2;font-family:Arial;font-size:11px;">Follow us on:</span></div>
+<div id="wb_Shape1">
+<div id="Shape1"></div></div>
+<div id="wb_Image16">
+<img src="https://www.wysiwygwebbuilder.com/images/shadow_horizontal_18.png" id="Image16" alt=""></div>
+<div id="wb_Shape2">
+<div id="Shape2"></div></div>
+<div id="wb_Shape3">
+<div id="Shape3"></div></div>
+<div id="wb_Text7">
+<span style="color:#666666;"><a href="blocks.html" class="wwb_link">Blocks</a> are ‘building blocks’ that make it possible to quickly create a website by dragging predefined blocks to the workspace.</span></div>
+<div id="wb_Carousel1">
+<div id="Carousel1">
+<div class="frame">
+<div id="wb_Image2">
+<img src="https://www.wysiwygwebbuilder.com/images/screens.png" id="Image2" alt=""></div>
+<div id="wb_Text10">
+<span style="color:#666666;">&#8226; Visually design your website (What-You-See-Is-What-You-Get).<br>&#8226; No HTML knowledge required! Just drag &amp; drop objects to the page!<br>&#8226; Outputs standard HTML4, HTML5, XHTML, CSS3, PHP.<br>&#8226; Responsive Web Design<br>&#8226; HTML5 Audio/Video, YouTube, Vimeo and more! <br>&#8226; Slidehows, photo galleries, rollover images, rollover text.<br>&#8226; Navigation bars, Menu bar and many other navigation options.<br><br><strong><a href="download.html" class="wwb_link">Try it now!</a></strong></span></div>
+<div id="wb_Text5">
+<span style="color:#666666;">Just released: <strong>WYSIWYG Web Builder 15!</strong></span></div>
+</div>
+<div class="frame">
+<div id="wb_Text1">
+<span style="color:#666666;"><strong>&#8226;</strong> &quot;One Click Publishing&quot; No FTP program needed. No special hosting required, use with any Hosting Service!<br><strong>&#8226;</strong> Easily create forms using the built-in Form Wizard plus Form validation tools and built-in CAPTCHA.<br><strong>&#8226;</strong> Advanced graphics tools like shapes, textart, rotation, shadows and many other image effects.<br><strong>&#8226;</strong> Fully integrated jQuery UI (Accordion, Tabs etc), animations, effects and built-in ThemeRoller theme editor.<br><strong>&#8226;</strong> Google compatible sitemap generator / PayPal eCommerce Tools<br><strong>&#8226;</strong> Many navigation tools available: Navigation bars, tab menus, dropdown menus, sitetree, slidemenus.<br><strong>&#8226;</strong> Built-in Slide Shows, Photo Galleries, Rollover images, Banners etc.<br><strong>&#8226;</strong> Support for YouTube, Flash Video, Windows Media Player and many other video formats.<br><strong>&#8226;</strong> Unique extension (add-on) system with already more than 250 extensions available!</span></div>
+<div id="wb_Text16">
+<span style="color:#666666;">Desktop publishing for the web, build web sites as easy as Drag &amp; Drop!</span></div>
+</div>
+<div class="frame">
+<div id="wb_Text11">
+<span style="color:#666666;"><strong>&#8226;</strong> HTML5 document type (optimized HTML5 output).<br><strong>&#8226;</strong> HTML5 audio/video and YouTube HTML5 support.<br><strong>&#8226;</strong> HTML5 forms: native form validation, new input types and options, web storage.<br><strong>&#8226;</strong> HTML5 &lt;canvas&gt; and &lt;svg&gt; support in shapes and other drawing tools.<br><strong>&#8226;</strong> CSS3 @font-face. Use non web safe fonts in all modern browsers.<br><strong>&#8226;</strong> CSS3 opacity, border radius, box shadow.<br><strong>&#8226;</strong> CSS3 gradients. Add cool gradient effects using native CSS3 (no images).<br><strong>&#8226;</strong> CSS3 navigation menu. Create awesome menus without using JavaScript or images.<br><strong>&#8226;</strong> CSS3 animations and transitions. Including support for 2D and 3D transforms!</span></div>
+<div id="wb_Text14">
+<span style="color:#666666;">Create HTML5 / CSS3 websites today!</span></div>
+</div>
+<div class="frame">
+<div id="wb_Text13">
+<span style="color:#666666;">Features for advanced users:</span></div>
+<div id="wb_Text12">
+<span style="color:#666666;"><strong>&#8226;</strong> Login Tools/Page Password Protection.<br><strong>&#8226;</strong> Built-in Content Management System with many plug-ins (guestbook, faq, downloads, photo album etc).<br><strong>&#8226;</strong> Add custom HTML code with the HTML tools.<br><strong>&#8226;</strong> JavaScript Events: Show/hide objects (with animation), timers, move objects, change styles etc.<br><strong>&#8226;</strong> Layers: Sticky layer, Docking layer, Floating layer, Modal layer, Anchored layer, Strechable layer and more! <br><strong>&#8226;</strong> jQuery Theme Manager, create your own themes for the built-in jQuery UI widgets.<br><strong>&#8226;</strong> Style Manager (global styling, H1, H2, H3 etc). <br><strong>&#8226;</strong> Master Frames and Master Objects: reuse common element in your website.<br><strong>&#8226;</strong> and much more!&nbsp; </span></div>
+</div>
+</div>
+<div id="Carousel1_back"><a><img alt="Back" src="https://www.wysiwygwebbuilder.com/images/arrow-prev.png"></a></div>
+<div id="Carousel1_next"><a><img alt="Next" src="https://www.wysiwygwebbuilder.com/images/arrow-next.png"></a></div>
+</div>
+<div id="wb_Image8">
+<img src="https://www.wysiwygwebbuilder.com/images/img0014.png" id="Image8" alt=""></div>
+<div id="wb_Shape5">
+<div id="Shape5"></div></div>
+<div id="wb_Image10">
+<img src="https://www.wysiwygwebbuilder.com/images/img0016.png" id="Image10" alt=""></div>
+<div id="wb_Shape6">
+<div id="Shape6"></div></div>
+<div id="wb_Image15">
+<img src="https://www.wysiwygwebbuilder.com/images/img0018.png" id="Image15" alt=""></div>
+<div id="NewsFeedTicker1">
+</div>
+<div id="SlideShow1">
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot1.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 1"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot1.jpg" alt="Screenshot 1" title="Screenshot 1"></a>
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot2.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 2"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot2.jpg" style="display:none;" alt="Screenshot 2" title="Screenshot 2"></a>
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot3.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 3"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot3.jpg" style="display:none;" alt="Screenshot 3" title="Screenshot 3"></a>
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot4.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 4"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot4.jpg" style="display:none;" alt="Screenshot 4" title="Screenshot 4"></a>
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot5.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 4"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot5.jpg" style="display:none;" alt="Screenshot 4" title="Screenshot 4"></a>
+<a href="https://www.wysiwygwebbuilder.com/images/screenshot6.jpg" target="_blank" data-fancybox="SlideShow1" title="Screenshot 5"><img class="image" src="https://www.wysiwygwebbuilder.com/images/screenshot6.jpg" style="display:none;" alt="Screenshot 5" title="Screenshot 5"></a>
+</div>
+<div id="wb_footerShape">
+<div id="footerShape"></div></div>
+<div id="wb_Text2">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:11px;">Follow us on</span><span style="color:#FFFFFF;font-family:Arial;font-size:11px;">:</span></div>
+<div id="wb_TwitterImg">
+<a href="http://twitter.com/wysiwyg_wb" target="_blank"><img src="https://www.wysiwygwebbuilder.com/images/twitter-icon.png" id="TwitterImg" alt="" title="WYSIWYG Web Builder on Twitter"></a></div>
+<div id="wb_Text17">
+<span style="color:#FFFFFF;font-family:'Open Sans';font-size:19px;"><strong>News:</strong></span></div>
+<div id="wb_Text20">
+<span style="color:#FFFFFF;font-family:'Open Sans';font-size:19px;"><strong>Screen shots:</strong></span></div>
+<div id="wb_JavaScript1">
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) 
+{
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); 
+   js.id = id;
+   js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+   fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-like" data-href="https://www.wysiwygwebbuilder.tk/" data-size="small" data-share="true" data-layout="button_count" data-width="89" data-height="29" data-show-faces="true" data-action="like" data-colorscheme="light" data-font="arial"></div>
+
+</div>
+<div id="wb_Image7">
+<img src="https://www.wysiwygwebbuilder.com/images/img0024.png" id="Image7" alt=""></div>
+<div id="wb_Shape7">
+<div id="Shape7"></div></div>
+<div id="wb_Image3">
+<img src="https://www.wysiwygwebbuilder.com/images/img0026.png" id="Image3" alt=""></div>
+<div id="wb_Shape4">
+<div id="Shape4"></div></div>
+<div id="wb_Image4">
+<img src="https://www.wysiwygwebbuilder.com/images/img0028.png" id="Image4" alt=""></div>
+<div id="wb_Shape8">
+<div id="Shape8"></div></div>
+<div id="wb_Shape9">
+<div id="Shape9"></div></div>
+<div id="wb_Shape10">
+<div id="Shape10"></div></div>
+<div id="wb_Shape11">
+<div id="Shape11"></div></div>
+<div id="wb_Shape12">
+<div id="Shape12"></div></div>
+<div id="wb_Image5">
+<img src="https://www.wysiwygwebbuilder.com/images/img0038.png" id="Image5" alt=""></div>
+<div id="wb_Image6">
+<img src="https://www.wysiwygwebbuilder.com/images/img0039.png" id="Image6" alt=""></div>
+<div id="wb_Image9">
+<img src="https://www.wysiwygwebbuilder.com/images/img0048.png" id="Image9" alt=""></div>
+<div id="wb_Image12">
+<img src="https://www.wysiwygwebbuilder.com/images/img0051.png" id="Image12" alt=""></div>
+<div id="wb_Image13">
+<img src="https://www.wysiwygwebbuilder.com/images/img0052.png" id="Image13" alt=""></div>
+<div id="wb_Text24">
+<span style="color:#666666;">Open Graph Meta Tags, Table improvements <br>HTML5 Semantic Tags and much more!<br><a href="https://www.wysiwygwebbuilder.com/new_features_2.html" class="wwb_link">Check out the full list of all new features here</a>!</span></div>
+<div id="wb_Text25">
+<span style="color:#666666;"><a href="flexbox.html" class="wwb_link">Flexbox</a> is a new CSS layout mode that introduces a powerful way to lay out, align and distribute objects.</span></div>
+<div id="wb_Text18">
+<span style="color:#666666;">Show/hide/enable/disable objects based on the value/selection of a form input field. Or <a href="conditions.html" class="wwb_link">calculate</a>&nbsp; values based on values/selections of other fields.</span></div>
+<div id="wb_Text30">
+<span style="color:#5D5D5E;">With <a href="scroll_transitions.html" class="wwb_link">Scroll transitions</a></span><span style="color:#666666;"> you can animate CSS properties of objects depending on the position of the scrollbar.</span></div>
+<div id="wb_Text31">
+<span style="color:#666666;"><a href="https://www.wysiwygwebbuilder.com/picture.html" class="wwb_link">Picture </a>object, <a href="https://www.wysiwygwebbuilder.com/photocollage.html" class="wwb_link">Photo Collage</a>, Material Icons<br><a href="http://wysiwygwebbuilder.com/forum/viewtopic.php?f=74&t=75660&start=15#p379460" class="wwb_link" target="_blank">Instagram Integration</a> (Photo Gallery/Slideshow)<br><a href="http://wysiwygwebbuilder.com/support/wb12tryouts/wb12_rolloverlayer.html" class="wwb_link">Rollover Layer</a>, new <a href="http://wysiwygwebbuilder.com/forum/viewtopic.php?f=74&t=75660&start=15#p379459" class="wwb_link">SlideShow animations</a> and more!</span></div>
+<div id="wb_Text32">
+<span style="color:#666666;">Added Flexbox support!<br>Different <a href="layoutgrid_advanced.html" class="wwb_link">column widths/counts</a> in breakpoints<br>Hide columns in breakpoints and more!</span></div>
+<div id="wb_Text34">
+<span style="color:#666666;">Create </span><span style="color:#5D5D5E;"><a href="carousel_fullpage.html" class="wwb_link">full page</a> layouts with the Carousel.</span><span style="color:#666666;"><br></span></div>
+<div id="wb_FacebookImg">
+<a href="https://www.facebook.com/groups/960603263987725" target="_blank"><img src="https://www.wysiwygwebbuilder.com/images/facebook.png" id="FacebookImg" alt="" title="WYSIWYG Web Builder on Facebook"></a></div>
+<div id="Html1">
+<img src="https://www.wysiwygwebbuilder.com/images/screens.png" id="Image2" alt=""></div>
+<nav id="wb_PanelMenu1">
+<a href="index_old.html#PanelMenu1_markup" id="PanelMenu1">Menu</a>
+<div id="PanelMenu1_markup">
+   <div id="PanelMenu1-logo"><img alt="" src="https://www.wysiwygwebbuilder.com/images/wwb5.gif"></div>
+<ul role="menu">
+   <li role="menuitem"><a href="index_old.html" title="Home">Home</a></li>
+   <li role="menuitem"><a href="download.html">Download</a></li>
+   <li role="menuitem"><a href="purchase.html">Purchase</a></li>
+   <li role="menuitem"><a href="getting_started.html">Online Tutorials</a></li>
+   <li role="menuitem"><a href="templates.html">Templates</a></li>
+   <li role="menuitem"><a href="support.html">Support</a></li>
+   <li role="menuitem"><a href="https://www.wysiwygwebbuilder.com/forum.html" target="_blank">Forum</a></li>
+   <li role="menuitem"><a href="extensions.html">Extensions</a></li>
+</ul>
+</div>
+</nav>
+<div id="wb_Image11">
+<a href="index_old.html#" onclick="ShowPanel('PanelMenu1', event);return false;"><img src="https://www.wysiwygwebbuilder.com/images/menu_icon.png" id="Image11" alt=""></a></div>
+
+<div id="wb_Heading1">
+<h2 id="Heading1">Blocks</h2></div>
+<div id="wb_Heading2">
+<h2 id="Heading2">Flexbox</h2></div>
+<div id="wb_Heading3">
+<h2 id="Heading3">Form Conditions and Calculations</h2></div>
+<div id="wb_Heading4">
+<h2 id="Heading4">Scroll Transitions</h2></div>
+<div id="wb_Heading5">
+<h2 id="Heading5">Layout Grid</h2></div>
+<div id="wb_Heading6">
+<h2 id="Heading6">Images and Galleries</h2></div>
+<div id="wb_Heading7">
+<h2 id="Heading7">Full Page Layouts</h2></div>
+<div id="wb_Heading8">
+<h2 id="Heading8">More than 125 New Features!</h2></div>
+<div id="wb_Heading9">
+<h1 id="Heading9">WYSIWYG Web Builder 15 Feature Highlights:</h1></div>
+<div id="wb_rssLogo">
+<a href="https://www.wysiwygwebbuilder.com/forum/app.php/feed_12" target="_blank"><img src="https://www.wysiwygwebbuilder.com/images/rss.png" id="rssLogo" alt=""></a></div>
+<hr id="spacer">
+</div>
+<div id="headerLayer">
+<div id="headerLayer_Container">
+<div id="wb_CssMenu1">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index_old.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygwebbuilder.com/forum/index_15.htm" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

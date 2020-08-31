@@ -1,0 +1,697 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>At The Coast</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/atthecoast.css" rel="stylesheet">
+<link href="css/wb15_atthecoast.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="transition.js"></script>
+<script src="collapse.js"></script>
+<script src="dropdown.js"></script>
+<script src="affix.min.js"></script>
+<script src="wb.animatesvg.min.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_factsIcon').addClass('visibility-hidden');
+   $('#wb_factsHeading1').addClass('visibility-hidden');
+   $('#wb_factsHeading2').addClass('visibility-hidden');
+   $('#wb_infoBlockImage1').addClass('visibility-hidden');
+   $('#wb_reviewsImage2').addClass('visibility-hidden');
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $(document).on('click','.headerMenu-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("a[href*='#home']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_home').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#infoBlock1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoBlock1').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#infoblock2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_infoblock2').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#facts']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#factsLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_factsLayoutGrid').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#about']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   function onScrollsocial()
+   {
+      var $obj = $("#wb_social");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimationResume('wb_socialIcon3');
+      }
+   }
+   onScrollsocial();
+   $(window).scroll(function(event)
+   {
+      onScrollsocial();
+   });
+   $("a[href*='#links']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_links').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   function onScrollfactsBookmark()
+   {
+      var $obj = $("#wb_factsBookmark");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_factsIcon', 'puff-in', 0, 500);
+         AnimateCss('wb_factsHeading1', 'puff-in', 500, 500);
+         AnimateCss('wb_factsHeading2', 'puff-in', 1000, 500);
+      }
+   }
+   onScrollfactsBookmark();
+   $(window).scroll(function(event)
+   {
+      onScrollfactsBookmark();
+   });
+   function onScrollinfoBlockBookmark1()
+   {
+      var $obj = $("#wb_infoBlockBookmark1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_infoBlockImage1', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   onScrollinfoBlockBookmark1();
+   $(window).scroll(function(event)
+   {
+      onScrollinfoBlockBookmark1();
+   });
+   function onScrollinfoBlockBookmark2()
+   {
+      var $obj = $("#wb_infoBlockBookmark2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_reviewsImage2', 'animate-fade-in-up', 0, 1000);
+      }
+   }
+   onScrollinfoBlockBookmark2();
+   $(window).scroll(function(event)
+   {
+      onScrollinfoBlockBookmark2();
+   });
+   $("#aboutTextArt").animatesvg(
+   {
+      delay: 500,
+      duration: 4000,
+      easing: 'linear',
+      loop: true
+   });
+   function onScrollaboutTextArt()
+   {
+      var $obj = $("#aboutTextArt");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         $('#aboutTextArt').animatesvg('animate');
+      }
+   }
+   onScrollaboutTextArt();
+   $(window).scroll(function(event)
+   {
+      onScrollaboutTextArt();
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_home,#wb_about,#wb_factsCard1,#wb_factsCard2').css('background-attachment', 'scroll');
+   }
+});
+</script>
+<script>
+// NOTE: this code will fix the header at the top of the page. It will also change the background when in fixed mode (via the CSS classes above).
+$(document).ready(function()
+{
+   $("#wb_header").affix({offset:{top: $("#wb_header").offset().top}});
+});
+</script>
+</head>
+<body>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerLogo">
+<ul id="headerLogo">
+<li><a href="http://">At The Coast</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerMenu">
+<div id="headerMenu" class="headerMenu" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerMenu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="headerMenu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html#home">Home</a>
+</li>
+<li class="dropdown">
+<a href="wb15_atthecoast.html#" class="dropdown-toggle" data-toggle="dropdown">Information<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="wb15_atthecoast.html#infoBlock1">Item 1</a></li>
+<li><a href="wb15_atthecoast.html#infoblock2">Item 2</a></li>
+<li><a href="wb15_atthecoast.html#infoBlock1">Item 3</a></li>
+</ul>
+</li>
+<li class="">
+<a href="wb15_atthecoast.html#facts">Facts</a>
+</li>
+<li class="">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html#about">About</a>
+</li>
+<li class="">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html#contact">Contact</a>
+</li>
+<li class="">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html#links">Links</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_home">
+<div id="home-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M 505.29,47.51947 C 346.07,47.51947 235.61,230.3 0,230.3 V 0.3 h 508 z" />
+<path class="divider-fill" style="opacity:0.4" d="M 485.29,47.44 C 326.07,47.44 235.61,214.36 0,214.36 V 0.2 h 485.29 z" />
+<path class="divider-fill" style="opacity:0.5" d="m 485.29,48.46999 q -9.42,-0.31 -20,-0.32 c -159.22,0 -229.68,151 -465.29,151 v -198.24 h 485.29 z" />
+<path class="divider-fill" d="M 0,182 V -0.27 H 1000 V 24.4 C 787.4,24.4 781,99.85 702.92,99.85 645,99.85 632.92,46.97 445.29,46.97 286.07,46.97 235.61,182 0,182 Z" />
+</svg></div>
+<div id="home">
+<div class="col-1">
+<div id="wb_homeText">
+<p style="font-weight:bold;">Everything’s better at the coast</p>
+<p style="font-size:15px;line-height:16.5px;">&nbsp;</p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span></p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="wb_infoBlock1">
+<div id="infoBlock1">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_infoBlockBookmark1">
+<a id="infoBlockBookmark1">&nbsp;</a>
+
+</div>
+<div id="wb_infoBlockImage1">
+<img src="images/coast1.jpg" id="infoBlockImage1" alt="">
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_infoBlockHeading1">
+<h1 id="infoBlockHeading1">Monster</h1>
+</div>
+<div id="wb_infoBlockHeading2">
+<h2 id="infoBlockHeading2">Town in the Netherlands</h2>
+</div>
+<div id="wb_infoBlockText1">
+<p>Monster is a town in the Dutch province of South Holland. It is a part of the municipality of Westland, and lies about 10 km south-west of The Hague. </p>
+<p>&nbsp;</p>
+<p>The village of Monster has a population of around 11,580</p>
+
+</div>
+<div id="wb_infoBlockShape1">
+<a href="https://nl.wikipedia.org/wiki/Monster_(Zuid-Holland)"><img src="images/img0001.png" id="infoBlockShape1" alt=""></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_infoblock2">
+<div id="infoblock2">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_infoBlockHeading3">
+<h1 id="infoBlockHeading3">History</h1>
+</div>
+<div id="wb_infoBlockHeading4">
+<h2 id="infoBlockHeading4">from Wikipedia</h2>
+</div>
+<div id="wb_infoBlockText2">
+<p>There is a great deal of uncertainty over the origin of the name "Monster". It is probably derived from the Latin monasterium, meaning monastery. The name was also used for the ground that belonged to a monastery. Another explanation was that Monster was derived from the old-Dutch word monster, which meant amongst others "big church" (from Latin: monstrum), which is supported by the fact that Monster had those days one of the largest churches in the area.</p>
+
+</div>
+<div id="wb_infoBlockShape2">
+<a href="https://en.wikipedia.org/wiki/Monster,_South_Holland"><img src="images/img0002.png" id="infoBlockShape2" alt=""></a>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_infoBlockBookmark2">
+<a id="infoBlockBookmark2">&nbsp;</a>
+
+</div>
+<div id="wb_reviewsImage2">
+<img src="images/coast3.jpg" id="reviewsImage2" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_facts">
+<div id="facts">
+<div class="row">
+<div class="col-1">
+<div id="wb_factsIcon">
+<div id="factsIcon"><i class="fa fa-sun-o"></i></div>
+</div>
+<div id="wb_factsHeading1">
+<h2 id="factsHeading1">Life's a Beach</h2>
+</div>
+<div id="wb_factsHeading2">
+<h2 id="factsHeading2">Praesent libero. Sed cursus ante dapibus diam.</h2>
+</div>
+<div id="wb_factsBookmark">
+<a id="factsBookmark">&nbsp;</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_factsLayoutGrid">
+<div id="factsLayoutGrid-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 458.89" preserveAspectRatio="none">
+<path class="divider-fill" style="opacity:0.3" d="M394.87 433.4C488.07 402 572.38 322.71 656.53 241c-73.83 19-145.79 48.57-216.67 77.31-98.09 39.78-199.68 78.93-304.4 86.55 84.78 42.95 173.24 57.58 259.41 28.54zM656.53 241c45.78-11.75 92.27-19.4 139.69-20.19 70.57-1.16 138.4 12.7 203.78 36.37V0c-59.88 17.86-118.67 47.58-174.92 89.39C767.3 132.33 712 187.19 656.53 241zM135.46 404.86C88.86 381.25 43.38 349.08 0 310.9v82.75a378.35 378.35 0 0 0 81.63 12.23 485.13 485.13 0 0 0 53.83-1.02z"/>
+<path class="divider-fill" d="M1000 458.89V257.18c-65.38-23.67-133.21-37.53-203.78-36.37-47.42.79-93.91 8.44-139.69 20.19-84.15 81.71-168.46 161-261.66 192.4-86.17 29-174.63 14.41-259.41-28.54a485.13 485.13 0 0 1-53.83 1A378.35 378.35 0 0 1 0 393.65v65.24z"/>
+</svg></div>
+<div id="factsLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_factsCard1">
+   <div id="factsCard1-card-body">
+      <div id="factsCard1-card-item0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+   <div id="factsCard1-card-footer">Ter Heijde</div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_factsCard2">
+   <div id="factsCard2-card-body">
+      <div id="factsCard2-card-item0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis.</div>
+   </div>
+   <div id="factsCard2-card-footer">Tessel</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_about">
+<div id="about-divider-top">
+<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="divider-fill" d="M0 100 C40 0 60 0 100 100 Z" />
+</svg></div>
+<div id="about-divider-bottom">
+<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="divider-fill" d="M0 100 C40 0 60 0 100 100 Z" />
+</svg></div>
+<div id="about">
+<div class="row">
+<div class="col-1">
+<div id="wb_aboutText">
+<p style="font-family:Arial;font-size:16px;line-height:18px;"><span style="font-family:Arial;font-size:32px;line-height:36px;font-weight:bold;">Built With</span></p>
+
+</div>
+<div id="wb_aboutTextArt">
+<svg id="aboutTextArt" height="100%" width="100%" viewBox="0 0 840 246" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="aboutTextArt-shape0" d="M84 1 L110 6 L119 63 L132 9 L155 13 L166 67 L173 17 L193 20 L178 108 L156 108 L143 47 L130 108 L105 108Z" />
+   <path id="aboutTextArt-shape1" d="M205 22 L235 26 L251 56 L267 31 L292 34 L264 76 L264 109 L239 109 L239 75Z" />
+   <path id="aboutTextArt-shape2" d="M302 85 L327 84 C328 88, 329 90, 330 92 C333 95, 337 96, 341 96 C345 96, 348 96, 349 95 C352 93, 352 91, 352 89 C352 88, 352 86, 350 85 C348 83, 343 82, 337 80 C326 77, 318 74, 313 70 C308 67, 306 62, 306 56 C306 52, 306 49, 309 46 C311 42, 315 40, 320 39 C325 37, 332 37, 341 37 C351 38, 359 40, 364 44 C369 48, 372 53, 373 60 L351 60 C350 57, 348 55, 347 53 C344 51, 342 50, 338 50 C335 50, 334 50, 332 51 C330 52, 329 54, 329 55 C329 56, 330 57, 331 58 C333 60, 335 61, 340 62 C351 64, 358 67, 362 69 C367 71, 371 74, 372 77 C375 80, 376 83, 376 87 C376 91, 374 96, 371 99 C369 103, 365 106, 360 108 C355 109, 348 110, 341 110 C327 110, 317 108, 311 103 C306 98, 303 92, 302 85 Z" />
+   <path id="aboutTextArt-shape3" d="M401 41 L427 41 L427 110 L401 110Z" />
+   <path id="aboutTextArt-shape4" d="M447 40 L469 38 L476 78 L488 36 L511 34 L525 75 L534 32 L560 29 L540 109 L514 109 L500 62 L486 109 L464 110Z" />
+   <path id="aboutTextArt-shape5" d="M572 27 L597 23 L612 50 L628 18 L657 14 L624 71 L624 108 L600 109 L600 73Z" />
+   <path id="aboutTextArt-shape6" d="M707 70 L707 49 L746 45 L746 91 C738 98, 731 103, 726 105 C720 107, 713 109, 705 109 C696 109, 689 107, 684 103 C679 99, 674 93, 671 86 C669 78, 667 70, 667 60 C667 49, 669 40, 672 32 C674 24, 679 17, 686 12 C691 8, 698 5, 707 4 C715 2, 721 2, 726 3 C730 5, 735 7, 738 11 C740 15, 743 21, 744 27 L720 36 C719 32, 717 30, 715 28 C712 26, 709 26, 706 26 C701 27, 697 30, 693 35 C690 40, 689 48, 689 57 C689 68, 690 76, 693 80 C697 85, 701 87, 707 86 C709 86, 712 86, 714 84 C716 83, 720 82, 723 79 L723 69 L707 70 Z" />
+   <path id="aboutTextArt-shape7" d="M3 122 L29 121 L38 186 L50 121 L72 121 L84 181 L91 121 L111 120 L96 226 L75 230 L62 162 L49 235 L23 239Z" />
+   <path id="aboutTextArt-shape8" d="M189 180 L148 185 C148 189, 149 193, 151 195 C153 198, 156 199, 159 199 C161 198, 163 198, 165 196 C166 195, 167 193, 169 191 L189 190 C185 198, 182 204, 178 208 C174 212, 167 215, 159 216 C151 217, 145 217, 141 215 C136 212, 132 208, 129 202 C126 196, 124 189, 124 180 C124 167, 128 157, 133 149 C140 141, 148 136, 158 136 C166 136, 172 137, 176 140 C181 143, 184 148, 186 153 C189 159, 189 167, 189 177 Z" />
+   <path id="aboutTextArt-shape9" d="M169 168 C169 163, 168 159, 166 157 C164 154, 162 153, 159 153 C156 154, 152 156, 151 159 C149 162, 148 165, 148 170 Z" />
+   <path id="aboutTextArt-shape10" d="M210 119 L234 119 L234 148 C236 146, 238 144, 241 142 C244 141, 247 140, 250 140 C257 140, 263 142, 267 147 C271 152, 273 159, 273 168 C273 174, 272 180, 270 185 C268 190, 265 193, 262 196 C259 199, 254 201, 250 201 C246 202, 243 202, 240 200 C237 199, 235 197, 231 194 L231 203 L210 206Z" />
+   <path id="aboutTextArt-shape11" d="M233 172 C233 178, 234 181, 236 183 C238 185, 240 186, 243 186 C246 185, 248 184, 250 182 C251 179, 252 176, 252 170 C252 166, 251 162, 250 160 C248 158, 246 157, 244 157 C240 158, 238 159, 236 161 C234 164, 233 168, 233 172 Z" />
+   <path id="aboutTextArt-shape12" d="M335 119 L383 119 C391 119, 397 120, 401 123 C405 127, 407 131, 407 136 C407 140, 406 144, 403 147 C401 149, 398 150, 394 151 C400 152, 404 154, 407 157 C409 160, 411 164, 411 168 C411 172, 410 175, 408 178 C406 181, 404 183, 400 185 C398 186, 394 187, 390 188 C385 189, 381 189, 380 189 L335 191Z" />
+   <path id="aboutTextArt-shape13" d="M362 147 L372 146 C376 146, 379 146, 380 144 C382 143, 383 142, 383 139 C383 137, 382 136, 380 135 C379 133, 376 133, 372 133 L362 133Z" />
+   <path id="aboutTextArt-shape14" d="M362 175 L374 174 C379 174, 381 173, 384 172 C385 171, 386 169, 386 166 C386 164, 385 163, 384 162 C381 160, 379 160, 374 160 L362 160Z" />
+   <path id="aboutTextArt-shape15" d="M497 192 L475 191 L475 181 C472 185, 469 187, 465 189 C462 190, 458 191, 454 191 C448 190, 443 188, 440 184 C436 180, 435 175, 435 167 L435 131 L456 131 L456 163 C456 167, 457 170, 459 171 C460 173, 462 174, 464 174 C467 174, 469 173, 471 171 C473 169, 474 165, 474 160 L474 132 L497 132Z" />
+   <path id="aboutTextArt-shape16" d="M523 119 L545 119 L545 134 L523 133Z" />
+   <path id="aboutTextArt-shape17" d="M523 140 L545 141 L545 198 L523 195Z" />
+   <path id="aboutTextArt-shape18" d="M570 119 L592 119 L592 205 L570 201Z" />
+   <path id="aboutTextArt-shape19" d="M675 120 L675 218 L654 214 L654 204 C651 208, 648 211, 646 212 C642 213, 639 213, 636 213 C628 212, 623 207, 618 200 C615 193, 614 185, 614 175 C614 164, 615 157, 619 151 C623 146, 629 143, 636 144 C639 144, 642 144, 645 146 C647 148, 650 150, 652 153 L652 120Z" />
+   <path id="aboutTextArt-shape20" d="M652 180 C652 175, 651 171, 649 168 C647 165, 645 163, 642 163 C640 163, 637 164, 636 166 C634 169, 633 173, 633 178 C633 184, 634 188, 636 191 C637 193, 640 195, 642 195 C645 196, 647 195, 649 192 C651 190, 652 186, 652 180 Z" />
+   <path id="aboutTextArt-shape21" d="M762 197 L717 191 C717 196, 719 200, 720 203 C722 207, 725 209, 728 210 C730 210, 732 210, 734 208 C735 207, 736 206, 738 203 L760 210 C757 218, 753 224, 748 227 C743 230, 736 231, 727 229 C721 228, 715 225, 711 221 C707 218, 703 212, 701 205 C698 198, 697 190, 697 181 C697 168, 699 158, 705 150 C710 142, 717 138, 727 139 C735 139, 741 141, 746 145 C751 150, 755 155, 758 163 C760 171, 762 180, 762 192 Z" />
+   <path id="aboutTextArt-shape22" d="M739 178 C738 171, 737 166, 735 163 C733 160, 730 159, 728 158 C725 158, 721 160, 720 164 C718 166, 717 170, 717 175 Z" />
+   <path id="aboutTextArt-shape23" d="M783 143 L802 144 L802 160 C804 153, 806 148, 808 146 C810 143, 813 142, 816 142 C819 142, 823 144, 827 148 L820 175 C817 173, 815 172, 814 172 C811 171, 809 173, 807 177 C805 183, 804 193, 804 209 L804 242 L783 238 L783 143" />
+</defs>
+<clipPath id="aboutTextArt-clippath0">
+   <use xlink:href="#aboutTextArt-shape0"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape0" clip-path="url(#aboutTextArt-clippath0)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath1">
+   <use xlink:href="#aboutTextArt-shape1"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape1" clip-path="url(#aboutTextArt-clippath1)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath2">
+   <use xlink:href="#aboutTextArt-shape2"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape2" clip-path="url(#aboutTextArt-clippath2)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath3">
+   <use xlink:href="#aboutTextArt-shape3"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape3" clip-path="url(#aboutTextArt-clippath3)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath4">
+   <use xlink:href="#aboutTextArt-shape4"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape4" clip-path="url(#aboutTextArt-clippath4)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath5">
+   <use xlink:href="#aboutTextArt-shape5"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape5" clip-path="url(#aboutTextArt-clippath5)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath6">
+   <use xlink:href="#aboutTextArt-shape6"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape6" clip-path="url(#aboutTextArt-clippath6)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath7">
+   <use xlink:href="#aboutTextArt-shape7"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape7" clip-path="url(#aboutTextArt-clippath7)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath8">
+   <use xlink:href="#aboutTextArt-shape8"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape8" clip-path="url(#aboutTextArt-clippath8)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath9">
+   <use xlink:href="#aboutTextArt-shape9"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape9" clip-path="url(#aboutTextArt-clippath9)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath10">
+   <use xlink:href="#aboutTextArt-shape10"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape10" clip-path="url(#aboutTextArt-clippath10)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath11">
+   <use xlink:href="#aboutTextArt-shape11"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape11" clip-path="url(#aboutTextArt-clippath11)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath12">
+   <use xlink:href="#aboutTextArt-shape12"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape12" clip-path="url(#aboutTextArt-clippath12)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath13">
+   <use xlink:href="#aboutTextArt-shape13"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape13" clip-path="url(#aboutTextArt-clippath13)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath14">
+   <use xlink:href="#aboutTextArt-shape14"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape14" clip-path="url(#aboutTextArt-clippath14)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath15">
+   <use xlink:href="#aboutTextArt-shape15"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape15" clip-path="url(#aboutTextArt-clippath15)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath16">
+   <use xlink:href="#aboutTextArt-shape16"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape16" clip-path="url(#aboutTextArt-clippath16)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath17">
+   <use xlink:href="#aboutTextArt-shape17"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape17" clip-path="url(#aboutTextArt-clippath17)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath18">
+   <use xlink:href="#aboutTextArt-shape18"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape18" clip-path="url(#aboutTextArt-clippath18)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath19">
+   <use xlink:href="#aboutTextArt-shape19"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape19" clip-path="url(#aboutTextArt-clippath19)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath20">
+   <use xlink:href="#aboutTextArt-shape20"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape20" clip-path="url(#aboutTextArt-clippath20)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath21">
+   <use xlink:href="#aboutTextArt-shape21"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape21" clip-path="url(#aboutTextArt-clippath21)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath22">
+   <use xlink:href="#aboutTextArt-shape22"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape22" clip-path="url(#aboutTextArt-clippath22)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="aboutTextArt-clippath23">
+   <use xlink:href="#aboutTextArt-shape23"/>
+</clipPath>
+<use xlink:href="#aboutTextArt-shape23" clip-path="url(#aboutTextArt-clippath23)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+</svg>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactHeading1">
+<h2 id="contactHeading1">Any questions? <br>Feel free to contact us.</h2>
+</div>
+<div id="wb_contactText1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh</p>
+
+</div>
+<div id="wb_contactIcon1">
+<div id="contactIcon1"><i class="fa fa-envelope-o"></i></div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<label for="contactName" id="contactLabel1">Name</label>
+<input type="text" id="contactName" name="Editbox1" value="" spellcheck="false">
+<label for="contactEmail" id="contactLabel2">Email</label>
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false">
+<label for="contactMessage" id="contactLabel3">Message</label>
+<textarea name="message" id="contactMessage" rows="4" cols="43" spellcheck="false"></textarea>
+<input type="submit" id="contactButton" name="" value="SEND">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_social">
+<div id="social">
+<div class="row">
+<div class="col-1">
+<div id="wb_socialIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html"><div id="socialIcon1"><i class="fa fa-facebook"></i></div></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_socialIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html"><div id="socialIcon2"><i class="fa fa-instagram"></i></div></a>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_socialIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html"><div id="socialIcon3"><i class="fa fa-twitter"></i></div></a>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_socialIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html"><div id="socialIcon4"><i class="fa fa-youtube"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_links">
+<div id="links-divider-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 25" preserveAspectRatio="none">
+<path class="divider-fill" d="m 0,0 v 3.8265306 c 0,0 393.8,0 483.4,0 9.2,0 16.6,9.4387754 16.6,21.1734694 0,-11.607143 7.4,-21.1734694 16.6,-21.1734694 89.6,0 483.4,0 483.4,0 V 0 Z" />
+</svg>
+</div>
+<div id="links">
+<div class="row">
+<div class="col-1">
+<div id="wb_linksText1">
+<p><strong>NAVIGATE</strong></p>
+
+</div>
+<div id="wb_linksMenu1">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">About</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Services</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Products</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_linksText2">
+<p><strong>CONNECT</strong></p>
+
+</div>
+<div id="wb_linksMenu2">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Facebook</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Instagram</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Twitter</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">YouTube</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+<div id="wb_linksText3">
+<p><strong>MORE LINKS</strong></p>
+
+</div>
+<div id="wb_linksMenu3">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Lorem&nbsp;Ipsum</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Dolor&nbsp;Sit&nbsp;Amet</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Consectetur&nbsp;Adipisicing</a>
+</li>
+<li><a role="menuitem" href="wb15_atthecoast.html#" target="_self">Sed&nbsp;Do&nbsp;Eiusmod</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerText">
+<p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_atthecoast__.html#home"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+
+<script>
+var wb_Timer1;
+function TimerStartTimer1()
+{
+   wb_Timer1 = setTimeout(function()
+   {
+      var event = null;
+      AnimateCss('wb_homeText', 'transform-tada', 0, 800);
+   }, 2000);
+}
+function TimerStopTimer1()
+{
+   clearTimeout(wb_Timer1);
+}
+TimerStartTimer1();
+</script>
+
+<script>
+var wb_Timer2;
+function TimerStartTimer2()
+{
+   wb_Timer2 = setInterval(function()
+   {
+      var event = null;
+      AnimateCss('wb_homeText', 'transform-spring', 0, 800);
+   }, 8000);
+}
+function TimerStopTimer2()
+{
+   clearInterval(wb_Timer2);
+}
+TimerStartTimer2();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modal Layer</title>
+<meta name="generator" content="WYSIWYG Web Builder 10 - http://www.wysiwygwebbuilder.com">
+<style type="text/css">
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-size: 13px;
+   margin: 0;
+   text-align: center;
+}
+</style>
+<link href="http://www.wysiwygwebbuilder.com/support/layers/cupertino/jquery.ui.all.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#Layer3
+{
+   background-color: #FAFAFA;
+   border: 1px #666666 solid;
+   overflow: visible;
+}
+.ui-dialog
+{
+   border-width: 0;
+   padding: 0;
+}
+.ui-widget-content
+{
+   border-width: 0;
+   padding: 0;
+}
+#Layer3-close
+{
+   position: absolute;
+   top: -16px;
+   right: -16px;
+   width: 32px;
+   height: 32px;
+   background: url('images/layer_close.png') top left no-repeat;
+   cursor: pointer;
+   z-index: 999;
+}
+#TextArt1
+{
+   border-width: 0;
+}
+#Shape1
+{
+   border-width: 0;
+}
+</style>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.button.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.draggable.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.position.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.resizable.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.dialog.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.effect.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery.ui.effect-fade.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/wwb10.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   var Layer3Opts =
+   {
+      modal: true,
+      width: 598,
+      height: 243,
+      position: { my: 'center', at: 'center', of: window },
+      resizable: false,
+      draggable: false,
+      closeOnEscape: true,
+      show: 'fade',
+      hide: 'fade',
+      autoOpen: true
+   };
+   $("#Layer3").dialog(Layer3Opts);
+   $('.ui-dialog-titlebar').hide();
+   $('.ui-dialog').removeClass('ui-corner-all');
+   $('#Layer3').css({'padding':'0','height':'243px'});
+   $("#Layer3-close").click( function()
+   {
+      $("#Layer3").dialog('close');
+   });
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:53px;top:81px;width:864px;height:182px;text-align:center;z-index:2;">
+<span style="color:#666666;font-family:Arial;font-size:19px;">Modal Layer Demo<br></span><span style="color:#666666;font-family:Arial;font-size:13px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.<br><br>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br><br><a href="modal_layer.html#" onclick="$('#Layer3').dialog('open');return false;">Click here to open the Modal Layer</a></span></div>
+<div id="wb_Text3" style="position:absolute;left:268px;top:1500px;width:434px;height:50px;text-align:center;z-index:3;">
+<span style="color:#666666;font-family:Arial;font-size:15px;">Copyright WYSIWYG Web Builder<br><br></span></div>
+<div id="Layer3" style="text-align:left;width:598px;height:243px;z-index:4;" title="Sticky Layer - Center/Top">
+<div id="wb_TextArt1" style="position:absolute;left:91px;top:61px;width:422px;height:160px;z-index:0;">
+<img src="http://www.wysiwygwebbuilder.com/support/layers/images/img0001.png" id="TextArt1" alt="WYSIWYG Web Builder" title="WYSIWYG Web Builder" style="width:422px;height:160px;"></div>
+<div id="wb_Shape1" style="position:absolute;left:0px;top:0px;width:597px;height:23px;z-index:1;">
+<img src="http://www.wysiwygwebbuilder.com/support/layers/images/img0002.gif" id="Shape1" alt="" style="width:597px;height:23px;"></div>
+<a id="Layer3-close"> </a>
+</div>
+</div>
+</body>
+</html>

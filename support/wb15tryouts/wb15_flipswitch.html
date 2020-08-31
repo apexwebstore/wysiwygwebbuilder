@@ -1,0 +1,1304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flipswitch Experiments</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#wb_Heading18
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Heading18
+{
+   color: #777777;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#wb_FlipSwitch1
+{
+   margin: 0;
+}
+#FlipSwitch1
+{
+   display: none;
+}
+#FlipSwitch1-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #636363;
+   border-radius: 36px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch1-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch1-inner:before, #FlipSwitch1-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 36px;
+   padding: 0;
+   line-height: 36px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 36px;
+   text-align: center;
+}
+#FlipSwitch1-inner:before
+{
+   content: "On";
+   padding-right: 36px;
+   background-color: #0275D8;
+   color: #FFFFFF;
+   border-radius: 36px 0 0 36px;
+}
+#FlipSwitch1-inner:after
+{
+   content: "Off";
+   padding-left: 36px;
+   background-color: #FFFFFF;
+   color: #000000;
+   border-radius: 0 36px 36px 0;
+}
+#FlipSwitch1-switch
+{
+   display: block;
+   width: 34px;
+   margin: 0px;
+   background: #FFFFFF;
+   border: 2px solid #636363;
+   border-radius: 36px;
+   box-shadow: 0px 0px 5px rgba(0,0,0,0.30);
+   position: absolute;
+   top: 3px;
+   bottom: 3px;
+   right: 97px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label
+{
+   border-color: #636363;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label #FlipSwitch1-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label #FlipSwitch1-switch
+{
+   right: 3px;
+   background: #FFFFFF;
+   border-color: #636363;
+}
+#wb_FlipSwitch2
+{
+   margin: 0;
+}
+#FlipSwitch2
+{
+   display: none;
+}
+#FlipSwitch2-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #DDDDDD;
+   border-radius: 42px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 30px;
+   margin: 8px;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch2-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch2-inner:before, #FlipSwitch2-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 26px;
+   padding: 0;
+   line-height: 26px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 26px;
+   text-align: center;
+}
+#FlipSwitch2-inner:before
+{
+   content: "";
+   padding-right: 42px;
+   background-color: #FFFFFF;
+   color: #FFFFFF;
+   border-radius: 26px 0 0 26px;
+}
+#FlipSwitch2-inner:after
+{
+   content: "";
+   padding-left: 42px;
+   background-color: #FFFFFF;
+   color: #000000;
+   border-radius: 0 26px 26px 0;
+}
+#FlipSwitch2-switch
+{
+   display: block;
+   width: 42px;
+   margin: 0px;
+   background: #DDDDDD;
+   border: 2px solid #DDDDDD;
+   border-radius: 42px;
+   box-shadow: 0px 0px 8px rgba(0,0,0,0.30);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 90px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch2:checked + #FlipSwitch2-label
+{
+   border-color: #27A1CA;
+}
+#FlipSwitch2:checked + #FlipSwitch2-label #FlipSwitch2-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch2:checked + #FlipSwitch2-label #FlipSwitch2-switch
+{
+   right: 2px;
+   background: #27A1CA;
+   border-color: #27A1CA;
+}
+#wb_FlipSwitch3
+{
+   margin: 0;
+}
+#FlipSwitch3
+{
+   display: none;
+}
+#FlipSwitch3-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #ADB5BD;
+   border-radius: 37px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch3-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch3-inner:before, #FlipSwitch3-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 37px;
+   padding: 0;
+   line-height: 37px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 37px;
+   text-align: center;
+}
+#FlipSwitch3-inner:before
+{
+   content: "";
+   padding-right: 37px;
+   background-color: #007BFF;
+   color: #FFFFFF;
+   border-radius: 37px 0 0 37px;
+}
+#FlipSwitch3-inner:after
+{
+   content: "";
+   padding-left: 37px;
+   background-color: #FFFFFF;
+   color: #000000;
+   border-radius: 0 37px 37px 0;
+}
+#FlipSwitch3-switch
+{
+   display: block;
+   width: 29px;
+   margin: 0px;
+   background: #ADB5BD;
+   border: 2px solid #ADB5BD;
+   border-radius: 37px;
+   box-shadow: 0px 0px 8px rgba(0,0,0,0.30);
+   position: absolute;
+   top: 6px;
+   bottom: 6px;
+   right: 99px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch3:checked + #FlipSwitch3-label
+{
+   border-color: #007BFF;
+}
+#FlipSwitch3:checked + #FlipSwitch3-label #FlipSwitch3-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch3:checked + #FlipSwitch3-label #FlipSwitch3-switch
+{
+   right: 6px;
+   background: #FFFFFF;
+   border-color: #FFFFFF;
+}
+#wb_FlipSwitch4
+{
+   margin: 0;
+}
+#FlipSwitch4
+{
+   display: none;
+}
+#FlipSwitch4-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #FE0000;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch4-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch4-inner:before, #FlipSwitch4-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 43px;
+   padding: 0;
+   line-height: 43px;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   box-sizing: border-box;
+   text-align: center;
+}
+#FlipSwitch4-inner:before
+{
+   content: "YES";
+   padding-right: 43px;
+   background-color: #32CD33;
+   color: #FFFFFF;
+}
+#FlipSwitch4-inner:after
+{
+   content: "NO";
+   padding-left: 43px;
+   background-color: #FE0000;
+   color: #FFFFFF;
+}
+#FlipSwitch4-switch
+{
+   display: block;
+   width: 37px;
+   margin: 0px;
+   background: #FE0000;
+   border: 2px solid #FFFFFF;
+   position: absolute;
+   top: 5px;
+   bottom: 5px;
+   right: 92px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch4:checked + #FlipSwitch4-label
+{
+   border-color: #32CD33;
+}
+#FlipSwitch4:checked + #FlipSwitch4-label #FlipSwitch4-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch4:checked + #FlipSwitch4-label #FlipSwitch4-switch
+{
+   right: 5px;
+   background: #32CD33;
+   border-color: #FFFFFF;
+}
+#wb_FlipSwitch5
+{
+   margin: 0;
+}
+#FlipSwitch5
+{
+   display: none;
+}
+#FlipSwitch5-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+   transition: border-color 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}
+#FlipSwitch5-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+   transition: margin 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}
+#FlipSwitch5-inner:before, #FlipSwitch5-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch5-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #ADDAAD;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch5-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch5-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+   transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch5:checked + #FlipSwitch5-label
+{
+   border-color: #ADDAAD;
+}
+#FlipSwitch5:checked + #FlipSwitch5-label #FlipSwitch5-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch5:checked + #FlipSwitch5-label #FlipSwitch5-switch
+{
+   right: 2px;
+   background: #5CB85C;
+   border-color: #5CB85C;
+}
+#wb_FlipSwitch6
+{
+   margin: 0;
+}
+#FlipSwitch6
+{
+   display: none;
+}
+#FlipSwitch6-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #CCCCCC;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch6-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch6-inner:before, #FlipSwitch6-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 43px;
+   padding: 0;
+   line-height: 43px;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   box-sizing: border-box;
+   text-align: center;
+}
+#FlipSwitch6-inner:before
+{
+   content: "";
+   padding-right: 43px;
+   background-color: #2196F3;
+   color: #FFFFFF;
+}
+#FlipSwitch6-inner:after
+{
+   content: "";
+   padding-left: 43px;
+   background-color: #CCCCCC;
+   color: #FFFFFF;
+}
+#FlipSwitch6-switch
+{
+   display: block;
+   width: 35px;
+   margin: 0px;
+   background: #FFFFFF;
+   border: 2px solid #FFFFFF;
+   position: absolute;
+   top: 6px;
+   bottom: 6px;
+   right: 55px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch6:checked + #FlipSwitch6-label
+{
+   border-color: #2196F3;
+}
+#FlipSwitch6:checked + #FlipSwitch6-label #FlipSwitch6-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch6:checked + #FlipSwitch6-label #FlipSwitch6-switch
+{
+   right: 6px;
+   background: #FFFFFF;
+   border-color: #FFFFFF;
+}
+#wb_FlipSwitch7
+{
+   margin: 0;
+}
+#FlipSwitch7
+{
+   display: none;
+}
+#FlipSwitch7-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #CCCCCC;
+   border-radius: 43px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   -webkit-transition: border-color 300ms ease-in 0s;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch7-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms ease-in 0s;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch7-inner:before, #FlipSwitch7-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 43px;
+   padding: 0;
+   line-height: 43px;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 43px;
+   text-align: center;
+}
+#FlipSwitch7-inner:before
+{
+   content: "";
+   padding-right: 43px;
+   background-color: #444444;
+   color: #FFFFFF;
+   border-radius: 43px 0 0 43px;
+}
+#FlipSwitch7-inner:after
+{
+   content: "";
+   padding-left: 43px;
+   background-color: #CCCCCC;
+   color: #FFFFFF;
+   border-radius: 0 43px 43px 0;
+}
+#FlipSwitch7-switch
+{
+   display: block;
+   width: 35px;
+   margin: 0px;
+   background: #FFFFFF;
+   border: 2px solid #FFFFFF;
+   border-radius: 43px;
+   position: absolute;
+   top: 6px;
+   bottom: 6px;
+   right: 55px;
+   -webkit-transition: all 300ms ease-in 0s;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch7:checked + #FlipSwitch7-label
+{
+   border-color: #444444;
+}
+#FlipSwitch7:checked + #FlipSwitch7-label #FlipSwitch7-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch7:checked + #FlipSwitch7-label #FlipSwitch7-switch
+{
+   right: 6px;
+   background: #FFFFFF;
+   border-color: #FFFFFF;
+}
+#wb_FlipSwitch8
+{
+   margin: 0;
+}
+#FlipSwitch8
+{
+   display: none;
+}
+#FlipSwitch8-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+   transition: border-color 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+}
+#FlipSwitch8-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+   transition: margin 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+}
+#FlipSwitch8-inner:before, #FlipSwitch8-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch8-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #9FC2E0;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch8-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch8-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+   transition: all 300ms cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch8:checked + #FlipSwitch8-label
+{
+   border-color: #9FC2E0;
+}
+#FlipSwitch8:checked + #FlipSwitch8-label #FlipSwitch8-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch8:checked + #FlipSwitch8-label #FlipSwitch8-switch
+{
+   right: 2px;
+   background: #428BCA;
+   border-color: #428BCA;
+}
+#wb_FlipSwitch9
+{
+   margin: 0;
+}
+#FlipSwitch9
+{
+   display: none;
+}
+#FlipSwitch9-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+   transition: border-color 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+}
+#FlipSwitch9-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+   transition: margin 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+}
+#FlipSwitch9-inner:before, #FlipSwitch9-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch9-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #F7D6A6;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch9-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch9-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+   transition: all 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch9:checked + #FlipSwitch9-label
+{
+   border-color: #F7D6A6;
+}
+#FlipSwitch9:checked + #FlipSwitch9-label #FlipSwitch9-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch9:checked + #FlipSwitch9-label #FlipSwitch9-switch
+{
+   right: 2px;
+   background: #F0AD4E;
+   border-color: #F0AD4E;
+}
+#wb_FlipSwitch10
+{
+   margin: 0;
+}
+#FlipSwitch10
+{
+   display: none;
+}
+#FlipSwitch10-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(1, 0, 0, 1) 0s;
+   transition: border-color 300ms cubic-bezier(1, 0, 0, 1) 0s;
+}
+#FlipSwitch10-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(1, 0, 0, 1) 0s;
+   transition: margin 300ms cubic-bezier(1, 0, 0, 1) 0s;
+}
+#FlipSwitch10-inner:before, #FlipSwitch10-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch10-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #EBA8A7;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch10-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch10-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(1, 0, 0, 1) 0s;
+   transition: all 300ms cubic-bezier(1, 0, 0, 1) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch10:checked + #FlipSwitch10-label
+{
+   border-color: #EBA8A7;
+}
+#FlipSwitch10:checked + #FlipSwitch10-label #FlipSwitch10-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch10:checked + #FlipSwitch10-label #FlipSwitch10-switch
+{
+   right: 2px;
+   background: #D9534F;
+   border-color: #D9534F;
+}
+#wb_FlipSwitch11
+{
+   margin: 0;
+}
+#FlipSwitch11
+{
+   display: none;
+}
+#FlipSwitch11-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+   transition: border-color 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+}
+#FlipSwitch11-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+   transition: margin 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+}
+#FlipSwitch11-inner:before, #FlipSwitch11-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch11-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #ACDFEE;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch11-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch11-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+   transition: all 300ms cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch11:checked + #FlipSwitch11-label
+{
+   border-color: #ACDFEE;
+}
+#FlipSwitch11:checked + #FlipSwitch11-label #FlipSwitch11-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch11:checked + #FlipSwitch11-label #FlipSwitch11-switch
+{
+   right: 2px;
+   background: #5BC0DE;
+   border-color: #5BC0DE;
+}
+#wb_FlipSwitch12
+{
+   margin: 0;
+}
+#FlipSwitch12
+{
+   display: none;
+}
+#FlipSwitch12-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #818181;
+   border-radius: 33px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 25px;
+   margin: 6px;
+   -webkit-transition: border-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+   transition: border-color 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+#FlipSwitch12-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   -webkit-transition: margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+   transition: margin 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+#FlipSwitch12-inner:before, #FlipSwitch12-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 21px;
+   padding: 0;
+   line-height: 21px;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 21px;
+   text-align: center;
+}
+#FlipSwitch12-inner:before
+{
+   content: "";
+   padding-right: 33px;
+   background-color: #BBBBBB;
+   color: #FFFFFF;
+   border-radius: 21px 0 0 21px;
+}
+#FlipSwitch12-inner:after
+{
+   content: "";
+   padding-left: 33px;
+   background-color: #818181;
+   color: #000000;
+   border-radius: 0 21px 21px 0;
+}
+#FlipSwitch12-switch
+{
+   display: block;
+   width: 33px;
+   margin: 0px;
+   background: #F1F1F1;
+   border: 2px solid #F1F1F1;
+   border-radius: 33px;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.63);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 49px;
+   -webkit-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+   transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch12:checked + #FlipSwitch12-label
+{
+   border-color: #BBBBBB;
+}
+#FlipSwitch12:checked + #FlipSwitch12-label #FlipSwitch12-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch12:checked + #FlipSwitch12-label #FlipSwitch12-switch
+{
+   right: 2px;
+   background: #777777;
+   border-color: #777777;
+}
+#Label1
+{
+   border: 0px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+   vertical-align: top;
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Heading1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   margin: 0;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="wb_Heading18" style="position:absolute;left:15px;top:32px;width:940px;height:37px;z-index:0;">
+<h1 id="Heading18">Flipswitch Experiments</h1></div>
+<div id="wb_FlipSwitch1" style="position:absolute;left:418px;top:263px;width:134px;height:40px;z-index:1;">
+<input type="checkbox" name="" id="FlipSwitch1" value="">
+<label id="FlipSwitch1-label" for="FlipSwitch1">
+<span id="FlipSwitch1-inner"></span>
+<span id="FlipSwitch1-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch2" style="position:absolute;left:418px;top:171px;width:134px;height:46px;z-index:2;">
+<input type="checkbox" name="" id="FlipSwitch2" value="" checked>
+<label id="FlipSwitch2-label" for="FlipSwitch2">
+<span id="FlipSwitch2-inner"></span>
+<span id="FlipSwitch2-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch3" style="position:absolute;left:418px;top:349px;width:134px;height:41px;z-index:3;">
+<input type="checkbox" name="" id="FlipSwitch3" value="">
+<label id="FlipSwitch3-label" for="FlipSwitch3">
+<span id="FlipSwitch3-inner"></span>
+<span id="FlipSwitch3-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch4" style="position:absolute;left:418px;top:436px;width:134px;height:47px;z-index:4;">
+<input type="checkbox" name="" id="FlipSwitch4" value="">
+<label id="FlipSwitch4-label" for="FlipSwitch4">
+<span id="FlipSwitch4-inner"></span>
+<span id="FlipSwitch4-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch5" style="position:absolute;left:443px;top:888px;width:84px;height:37px;z-index:5;">
+<input type="checkbox" name="" id="FlipSwitch5" value="" checked>
+<label id="FlipSwitch5-label" for="FlipSwitch5">
+<span id="FlipSwitch5-inner"></span>
+<span id="FlipSwitch5-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch6" style="position:absolute;left:437px;top:529px;width:96px;height:47px;z-index:6;">
+<input type="checkbox" name="" id="FlipSwitch6" value="" checked>
+<label id="FlipSwitch6-label" for="FlipSwitch6">
+<span id="FlipSwitch6-inner"></span>
+<span id="FlipSwitch6-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch7" style="position:absolute;left:437px;top:620px;width:96px;height:47px;z-index:7;">
+<input type="checkbox" name="" id="FlipSwitch7" value="" checked>
+<label id="FlipSwitch7-label" for="FlipSwitch7">
+<span id="FlipSwitch7-inner"></span>
+<span id="FlipSwitch7-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch8" style="position:absolute;left:443px;top:832px;width:84px;height:37px;z-index:8;">
+<input type="checkbox" name="" id="FlipSwitch8" value="" checked>
+<label id="FlipSwitch8-label" for="FlipSwitch8">
+<span id="FlipSwitch8-inner"></span>
+<span id="FlipSwitch8-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch9" style="position:absolute;left:443px;top:1000px;width:84px;height:37px;z-index:9;">
+<input type="checkbox" name="" id="FlipSwitch9" value="" checked>
+<label id="FlipSwitch9-label" for="FlipSwitch9">
+<span id="FlipSwitch9-inner"></span>
+<span id="FlipSwitch9-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch10" style="position:absolute;left:443px;top:1056px;width:84px;height:37px;z-index:10;">
+<input type="checkbox" name="" id="FlipSwitch10" value="" checked>
+<label id="FlipSwitch10-label" for="FlipSwitch10">
+<span id="FlipSwitch10-inner"></span>
+<span id="FlipSwitch10-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch11" style="position:absolute;left:443px;top:944px;width:84px;height:37px;z-index:11;">
+<input type="checkbox" name="" id="FlipSwitch11" value="" checked>
+<label id="FlipSwitch11-label" for="FlipSwitch11">
+<span id="FlipSwitch11-inner"></span>
+<span id="FlipSwitch11-switch"></span>
+</label>
+</div>
+<div id="wb_FlipSwitch12" style="position:absolute;left:443px;top:776px;width:84px;height:37px;z-index:12;">
+<input type="checkbox" name="" id="FlipSwitch12" value="" checked>
+<label id="FlipSwitch12-label" for="FlipSwitch12">
+<span id="FlipSwitch12-inner"></span>
+<span id="FlipSwitch12-switch"></span>
+</label>
+</div>
+<label for="" id="Label1" style="position:absolute;left:450px;top:1273px;width:92px;height:21px;line-height:21px;z-index:13;"></label>
+<div id="wb_Heading1" style="position:absolute;left:340px;top:736px;width:291px;height:26px;z-index:14;">
+<h2 id="Heading1">Easing effects</h2></div>
+</div>
+</body>
+</html>

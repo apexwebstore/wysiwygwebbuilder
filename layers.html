@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>How to create a draggable window using layers?</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/layers.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+isMouseover = false;
+isDragging = false;
+
+function MouseDownLayer(e)
+{
+   documentTag = "HTML";
+   srcElement = e.target;  
+   layerElement = document.getElementById("Layer1");  
+
+   while (srcElement.id != "Layer1TitleBar" && srcElement.tagName != documentTag)
+   {
+      srcElement = srcElement.parentNode;
+   }  
+   if (srcElement.id == "Layer1TitleBar")
+   {
+      offsetX = e.clientX;
+      offsetY = e.clientY;
+      currentX = parseInt(layerElement.style.left);
+      currentY = parseInt(layerElement.style.top);
+      isDragging = true;
+      document.onmousemove = MouseMoveLayer;
+  }
+}
+
+function MouseMoveLayer(e)
+{
+   if (!isDragging) return;
+   
+   layerElement.style.left = currentX+e.clientX-offsetX + "px"; 
+   layerElement.style.top = currentY+e.clientY-offsetY + "px";
+   return false;  
+}
+
+document.onmousedown = MouseDownLayer;
+document.onmouseup = Function("isDragging=false");
+
+</script></head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:14px;top:134px;width:940px;height:2165px;z-index:6;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage2" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:7;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text2" style="position:absolute;left:82px;top:170px;width:807px;height:198px;z-index:8;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>How to create a draggable window using layers?<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>In this tutorial we will show you how to use a layer to create a draggable layer that be used much like a popup window. This method is often used to display advertisement or other messages.<br><br><strong>Step 1<br></strong>Create a new page in WYSIWYG Web Builder and insert a layer object:<br>Menu-&gt;Insert-&gt;Layout-&gt;Layer<br>Make note of the ID in the properties window, you will need that ID later. If this is the first layer of the page it will probably be called '<strong>Layer1</strong>'. You can change the ID in the Properties window if you like.<br><br></span></div>
+<div id="wb_Text1" style="position:absolute;left:81px;top:1941px;width:808px;height:48px;z-index:9;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Note:</strong><br>If the ID of your layer object is not '<strong>Layer1</strong>', you should replace all instances of '<strong>Layer1</strong>' in the code above to the ID name of your layer!<br></span></div>
+<div id="wb_Text3" style="position:absolute;left:82px;top:731px;width:807px;height:48px;z-index:10;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 2<br></strong>Insert a HTML object to the page and drag it on the layer. Note that if you drag an object on a layer it will become part of that layer. We will use this HTML object to create a title bar for the window.</span></div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:817px;width:807px;height:32px;z-index:11;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 3<br></strong>Double click the HTML object and copy/paste the code below in the HTML field. This code will create a titlebar with a close button.</span></div>
+<div id="wb_Text5" style="position:absolute;left:81px;top:2012px;width:807px;height:224px;z-index:12;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 5<br></strong>Add some content to the layer. This can be text, an image or any other object(s) from the toolbox!<br><strong><br><br>Step 6<br></strong>Now you can <a href="publish.html" class="wwb_link" target="_blank">publish</a> or <a href="preview.html" class="wwb_link" target="_blank">preview</a> the page to view the result;)<br><br><strong><br>Step 7 (optional)<br></strong>Optionally you can use <a href="events.html" class="wwb_link" target="_blank">events</a> to hide or show the layer (and all its contents).<br>a) Add an object with event support (like an image, shape or form element)<br>b) Open the Events properties of the object<br>c) Insert an 'OnClick' event<br>d) Use the <strong>Show</strong> or <strong>Hide</strong> action to control the visibility of the layer. Set the target to '<strong>Layer1</strong>'.</span></div>
+<div id="wb_Image3" style="position:absolute;left:81px;top:348px;width:292px;height:369px;z-index:13;">
+<img src="images/layer1.jpg" id="Image3" alt=""></div>
+<textarea name="htmlCode" id="TextArea1" style="position:absolute;left:81px;top:871px;width:806px;height:285px;z-index:14;" rows="18" cols="98" spellcheck="false" wrap="off"><table border="0" bgcolor="#103C7B" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+   <td id="Layer1TitleBar" style="cursor:move" width="100%">
+      <ilayer width="100%" onSelectStart="return false">
+      <layer width="100%" onMouseover="isMouseover=true" onMouseout="isMouseover=false">
+      <font face="Arial" color="#FFFFFF" style="font-size:13px;text-decoration:none"><b>This is the layer title bar</b></font>
+      </layer>
+      </ilayer>
+   </td>
+   <td style="cursor:hand" valign="top">
+      <a href="layers.html#" onClick="layerElement.style.visibility='hidden';return false">
+      <font color="#FFFFFF" face="Arial" style="font-size:13px;text-decoration:none"><b>X</b></font>
+      </a>
+   </td>
+</tr>
+</table></textarea>
+<div id="wb_Text6" style="position:absolute;left:81px;top:1196px;width:592px;height:32px;z-index:15;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 4<br></strong>Open Menu-&gt;Page-&gt;Page HTML, select <strong>Between head tag</strong> and copy/paste this code:</span></div>
+<textarea name="htmlCode2" id="TextArea2" style="position:absolute;left:81px;top:1244px;width:806px;height:674px;z-index:16;" rows="38" cols="96" spellcheck="false" wrap="off"><Script type="text/javascript">
+
+isMouseover = false;
+isDragging = false;
+
+function MouseDownLayer(e)
+{
+   documentTag = "HTML";
+   srcElement = e.target;  
+   layerElement = document.getElementById("Layer1");  
+
+   while (srcElement.id != "Layer1TitleBar" && srcElement.tagName != documentTag)
+   {
+      srcElement = srcElement.parentNode;
+   }  
+   if (srcElement.id == "Layer1TitleBar")
+   {
+      offsetX = e.clientX;
+      offsetY = e.clientY;
+      currentX = parseInt(layerElement.style.left);
+      currentY = parseInt(layerElement.style.top);
+      isDragging = true;
+      document.onmousemove = MouseMoveLayer;
+  }
+}
+
+function MouseMoveLayer(e)
+{
+   if (!isDragging) return;
+   
+   layerElement.style.left = currentX+e.clientX-offsetX + "px"; 
+   layerElement.style.top = currentY+e.clientY-offsetY + "px";
+   return false;  
+}
+
+document.onmousedown = MouseDownLayer;
+document.onmouseup = Function("isDragging=false");
+
+</Script></textarea>
+<div id="Layer1" style="position:absolute;text-align:left;left:394px;top:272px;width:344px;height:223px;z-index:17;">
+<div id="Html1" style="position:absolute;left:5px;top:6px;width:333px;height:26px;z-index:3">
+<table border="0" bgcolor="#103C7B" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+   <td id="Layer1TitleBar" style="cursor:move" width="100%">
+      <ilayer width="100%" onSelectStart="return false">
+      <layer width="100%" onMouseover="isMouseover=true" onMouseout="isMouseover=false">
+      <font face="Arial" color="#FFFFFF" style="font-size:13px;text-decoration:none"><b>This is the layer title bar</b></font>
+      </layer>
+      </ilayer>
+   </td>
+   <td style="cursor:hand" valign="top">
+      <a href="layers.html#" onClick="layerElement.style.visibility='hidden';return false">
+      <font color="#FFFFFF" face="arial" style="font-size:13px;text-decoration:none"><b>X</b></font>
+      </a>
+   </td>
+</tr>
+</table>  </div>
+<div id="wb_Text7" style="position:absolute;left:7px;top:40px;width:331px;height:96px;z-index:4;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">This is a demonstration of a draggable layer.<br>Use the title bar to move the window around.<br>To close the window click the 'X' in the title bar.<br><br>A layer can hold any kind of content, like text, images or any other object from the toolbox!</span></div>
+<div id="wb_Image5" style="position:absolute;left:118px;top:156px;width:111px;height:48px;z-index:5;">
+<img src="images/wwb5logo.jpg" id="Image5" alt=""></div>
+</div>
+</div>
+</body>
+</html>

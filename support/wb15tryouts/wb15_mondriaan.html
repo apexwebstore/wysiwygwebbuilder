@@ -1,0 +1,1118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Piet Mondrian</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+</style>
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<style>
+@-webkit-keyframes heartbeat-2
+{
+   0% { -webkit-transform: rotate(0deg) ;  }
+   20% { -webkit-transform: rotate(0deg) scale(1.25,1.25) ;  }
+   40% { -webkit-transform: rotate(0deg) scale(1.0,1.0) ;  }
+   60% { -webkit-transform: rotate(0deg) scale(1.25,1.25) ;  }
+   80% { -webkit-transform: rotate(0deg) scale(1.0,1.0) ;  }
+   100% { -webkit-transform: rotate(0deg) scale(1.0,1.0) ;  }
+}
+@-moz-keyframes heartbeat-2
+{
+   0% { -moz-transform: rotate(0deg) ;  }
+   20% { -moz-transform: rotate(0deg) scale(1.25,1.25) ;  }
+   40% { -moz-transform: rotate(0deg) scale(1.0,1.0) ;  }
+   60% { -moz-transform: rotate(0deg) scale(1.25,1.25) ;  }
+   80% { -moz-transform: rotate(0deg) scale(1.0,1.0) ;  }
+   100% { -moz-transform: rotate(0deg) scale(1.0,1.0) ;  }
+}
+@keyframes heartbeat-2
+{
+   0% { transform: rotate(0deg) ;  }
+   20% { transform: rotate(0deg) scale(1.25,1.25) ;  }
+   40% { transform: rotate(0deg) scale(1.0,1.0) ;  }
+   60% { transform: rotate(0deg) scale(1.25,1.25) ;  }
+   80% { transform: rotate(0deg) scale(1.0,1.0) ;  }
+   100% { transform: rotate(0deg) scale(1.0,1.0) ;  }
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#FlexGrid1
+{
+   display: grid;
+   height: 100vh;
+   background-color: #000000;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 10px 10px 10px 10px;
+   font-size: 0px;
+   grid-column-gap: 10px;
+   grid-row-gap: 10px;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+      "m1 m1 m2 m2 m2 m3 m3 m4"
+      "m1 m1 m2 m2 m2 m3 m3 m4"
+      "m5 m6 m6 m6 m6 m7 m7 m22"
+      "m5 m6 m6 m6 m6 m7 m7 m22"
+      "m5 m6 m6 m6 m6 m7 m7 m22"
+      "m10 m6 m6 m6 m6 m8 m9 m22"
+      "m10 m6 m6 m6 m6 m8 m9 m22"
+      "m10 m6 m6 m6 m6 m8 m9 m22"
+      "m10 m11 m11 m12 m12 m14 m14 m22"
+      "m10 m11 m11 m12 m12 m14 m14 m22"
+      "m17 m11 m11 m13 m13 m15 m15 m16"
+      "m17 m11 m11 m13 m13 m15 m15 m16"
+      "m17 m18 m18 m19 m19 m15 m15 m16"
+      "m17 m21 m21 m20 m20 m20 m20 m16";
+}
+#FlexGrid1 .m1
+{
+   display: flex;
+   grid-area: m1;
+   background-color: #CEDBE3;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m2
+{
+   display: flex;
+   grid-area: m2;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m3
+{
+   display: flex;
+   grid-area: m3;
+   background-color: #FAE70E;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m4
+{
+   display: flex;
+   grid-area: m4;
+   background-color: #CEDBE3;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m5
+{
+   display: flex;
+   grid-area: m5;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m6
+{
+   display: flex;
+   grid-area: m6;
+   background-color: #EE1C25;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m7
+{
+   display: flex;
+   grid-area: m7;
+   background-color: #FAE70E;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m22
+{
+   display: flex;
+   grid-area: m22;
+   background-color: #CEDBE3;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m10
+{
+   display: flex;
+   grid-area: m10;
+   background-color: #CEDBE3;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m8
+{
+   display: flex;
+   grid-area: m8;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m9
+{
+   display: flex;
+   grid-area: m9;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m11
+{
+   display: flex;
+   grid-area: m11;
+   background-color: #000000;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m12
+{
+   display: flex;
+   grid-area: m12;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m14
+{
+   display: flex;
+   grid-area: m14;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m17
+{
+   display: flex;
+   grid-area: m17;
+   background-color: #FAE70E;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m13
+{
+   display: flex;
+   grid-area: m13;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m15
+{
+   display: flex;
+   grid-area: m15;
+   background-color: #27367B;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m16
+{
+   display: flex;
+   grid-area: m16;
+   background-color: #EE1C25;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m18
+{
+   display: flex;
+   grid-area: m18;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m19
+{
+   display: flex;
+   grid-area: m19;
+   background-color: #000000;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m21
+{
+   display: flex;
+   grid-area: m21;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#FlexGrid1 .m20
+{
+   display: flex;
+   grid-area: m20;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 0;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: center;
+   align-content: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 20px 20px 20px 20px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 13.5px;
+}
+#wb_Text1 p, #wb_Text1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+#Heading1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   margin: 0;
+   text-align: center;
+}
+#Heading1:hover
+{
+   letter-spacing: 10px;
+   -webkit-transition: letter-spacing 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   -moz-transition: letter-spacing 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   transition: letter-spacing 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+}
+#Heading1
+{
+   -webkit-transition: all 600ms linear 0ms;
+   -moz-transition: all 600ms linear 0ms;
+   transition: all 600ms linear 0ms;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 10px 10px 10px 10px;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text2
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 16px;
+}
+#wb_Text2 p, #wb_Text2 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text2 div
+{
+   text-align: justify;
+}
+#wb_PanelMenu1 a, #PanelMenu1_markup li a
+{
+   display: block;
+   text-align: center;
+   vertical-align: middle;
+}
+#PanelMenu1_markup
+{
+   display: none;
+   margin: 0;
+   padding: 0;
+}
+#PanelMenu1_panel #PanelMenu1_markup
+{
+   display: block;
+}
+#PanelMenu1_markup ul
+{
+   list-style: none;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#PanelMenu1_markup li a, #PanelMenu1_markup li a:hover
+{
+   padding: 20px 20px 20px 20px;
+   border-width: 0 0 10px 0 !important;
+   border-radius: 0;
+   box-shadow: none;
+}
+#PanelMenu1_markup .divider
+{
+   height: 1px;
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #000000;
+}
+#PanelMenu1_panel
+{
+   display: none;
+   position: absolute;
+   position: fixed;
+   width: 100%;
+   z-index: 9999;
+}
+#PanelMenu1_overlay
+{
+   display: none;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000000;
+   opacity: 0.55;
+   z-index: 9998;
+}
+#PanelMenu1_markup li a
+{
+   color: #000000;
+   border: 10px solid #000000;
+   background-color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+   font-style: normal;
+   text-decoration: none;
+}
+#wb_PanelMenu1 a
+{
+   color: #000000;
+   border: 0px solid #CEDBE3;
+   background-color: #CEDBE3;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+   font-style: normal;
+   text-decoration: none;
+}
+#PanelMenu1_markup li:nth-child(n+2) a, #PanelMenu1_markup li:nth-child(n+2) a:hover
+{
+   border-top-color: transparent !important;
+}
+#PanelMenu1_markup li a:hover
+{
+   color: #FFFFFF;
+   background-color: #000000;
+   border: 10px solid #000000;
+}
+#wb_PanelMenu1 a:hover
+{
+   color: #000000;
+   background-color: #CEDBE3;
+   border: 0px solid #CEDBE3;
+}
+#PanelMenu1_panel
+{
+   background-color: #FFFFFF;
+   overflow-y: auto;
+}
+#PanelMenu1 .line
+{
+   width: 48px;
+   height: 9px;
+   background: #000000;
+   display: block;
+   margin: 9px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+#PanelMenu1 .line:first-child
+{
+   margin-top: 0px;
+}
+#PanelMenu1.open .line:nth-child(1)
+{
+   -webkit-transform: translateY(18px) rotate(45deg);
+   -moz-transform: translateY(18px) rotate(45deg);
+   transform: translateY(18px) rotate(45deg);
+}
+#PanelMenu1.open .line:nth-child(2)
+{
+   opacity: 0;
+}
+#PanelMenu1.open .line:nth-child(3)
+{
+   -webkit-transform: translateY(-18px) rotate(-45deg);
+   -moz-transform: translateY(-18px) rotate(-45deg);
+   transform: translateY(-18px) rotate(-45deg);
+}
+#PanelMenu1
+{
+   line-height: 48px;
+   width: 48px;
+   height: 48px;
+   position: absolute;
+   z-index: 999;
+}
+#wb_FontAwesomeIcon1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_FontAwesomeIcon1:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#FontAwesomeIcon1
+{
+   height: 64px;
+   width: 64px;
+}
+#FontAwesomeIcon1 i
+{
+   color: #000000;
+   display: inline-block;
+   font-size: 64px;
+   line-height: 64px;
+   vertical-align: middle;
+   width: 54px;
+}
+#wb_FontAwesomeIcon1:hover i
+{
+   color: #000000;
+}
+#wb_FontAwesomeIcon1:hover
+{
+   -webkit-transform: rotate(360deg) scale(1.1,1.1) ;
+   -moz-transform: rotate(360deg) scale(1.1,1.1) ;
+   transform: rotate(360deg) scale(1.1,1.1) ;
+   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   -moz-transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+}
+#wb_FontAwesomeIcon1
+{
+   -webkit-transition: all 600ms linear 0ms;
+   -moz-transition: all 600ms linear 0ms;
+   transition: all 600ms linear 0ms;
+}
+#wb_FontAwesomeIcon2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_FontAwesomeIcon2:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#FontAwesomeIcon2
+{
+   height: 64px;
+   width: 64px;
+}
+#FontAwesomeIcon2 i
+{
+   color: #000000;
+   display: inline-block;
+   font-size: 64px;
+   line-height: 64px;
+   vertical-align: middle;
+   width: 67px;
+}
+#wb_FontAwesomeIcon2:hover i
+{
+   color: #000000;
+}
+#wb_FontAwesomeIcon2:hover
+{
+   -webkit-transform: rotate(0deg) scale(1.2,1.2) ;
+   -moz-transform: rotate(0deg) scale(1.2,1.2) ;
+   transform: rotate(0deg) scale(1.2,1.2) ;
+   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   -moz-transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+}
+#wb_FontAwesomeIcon2
+{
+   -webkit-transition: all 600ms linear 0ms;
+   -moz-transition: all 600ms linear 0ms;
+   transition: all 600ms linear 0ms;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   padding: 20px 20px 20px 20px;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 13.5px;
+}
+#wb_Text3 p, #wb_Text3 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#wb_FontAwesomeIcon3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_FontAwesomeIcon3:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#FontAwesomeIcon3
+{
+   height: 64px;
+   width: 64px;
+}
+#FontAwesomeIcon3 i
+{
+   color: #000000;
+   display: inline-block;
+   font-size: 64px;
+   line-height: 64px;
+   vertical-align: middle;
+   width: 63px;
+}
+#wb_FontAwesomeIcon3:hover i
+{
+   color: #000000;
+}
+#wb_FontAwesomeIcon3:hover
+{
+   -webkit-transform: rotate(0deg) scale(1.2,1.2) ;
+   -moz-transform: rotate(0deg) scale(1.2,1.2) ;
+   transform: rotate(0deg) scale(1.2,1.2) ;
+   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   -moz-transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+}
+#wb_FontAwesomeIcon3
+{
+   -webkit-transition: all 600ms linear 0ms;
+   -moz-transition: all 600ms linear 0ms;
+   transition: all 600ms linear 0ms;
+}
+#wb_FontAwesomeIcon5
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   -webkit-animation: heartbeat-2 1000ms linear 0ms infinite normal both;
+   -moz-animation: heartbeat-2 1000ms linear 0ms infinite normal both;
+   animation: heartbeat-2 1000ms linear 0ms infinite normal both;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_FontAwesomeIcon5:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#FontAwesomeIcon5
+{
+   height: 64px;
+   width: 64px;
+}
+#FontAwesomeIcon5 i
+{
+   color: #000000;
+   display: inline-block;
+   font-size: 64px;
+   line-height: 64px;
+   vertical-align: middle;
+   width: 63px;
+}
+#wb_FontAwesomeIcon5:hover i
+{
+   color: #000000;
+}
+#wb_FontAwesomeIcon6
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+   display:inline-block;
+   position:relative;
+}
+#wb_FontAwesomeIcon6:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+}
+#FontAwesomeIcon6
+{
+   height: 64px;
+   width: 64px;
+}
+#FontAwesomeIcon6 i
+{
+   color: #000000;
+   display: inline-block;
+   font-size: 64px;
+   line-height: 64px;
+   vertical-align: middle;
+   width: 58px;
+}
+#wb_FontAwesomeIcon6:hover i
+{
+   color: #000000;
+}
+#wb_FontAwesomeIcon6:hover
+{
+   -webkit-transform: rotate(0deg) scale(1.2,1.2) ;
+   -moz-transform: rotate(0deg) scale(1.2,1.2) ;
+   transform: rotate(0deg) scale(1.2,1.2) ;
+   -webkit-transition: -webkit-transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   -moz-transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+   transition: transform 600ms cubic-bezier(0.39, 0.575, 0.565, 1) 0ms;
+}
+#wb_FontAwesomeIcon6
+{
+   -webkit-transition: all 600ms linear 0ms;
+   -moz-transition: all 600ms linear 0ms;
+   transition: all 600ms linear 0ms;
+}
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.panel.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#PanelMenu1").panel({animate: true, animationDuration: 800, animationEasing: 'easeOutCubic', dismissible: true, display: 'overlay', position: 'top', toggle: true, overlay: true});
+});
+</script>
+</head>
+<body>
+<div id="FlexGrid1">
+<div class="m1">
+<div id="wb_Text3">
+<p style="font-family:Arial;"><span style="font-family:Arial;">This template uses a flex grid to create a responsive Mondrian artwork</span></p>
+
+</div>
+</div>
+<div class="m2">
+</div>
+<div class="m3">
+</div>
+<div class="m4">
+<div id="wb_PanelMenu1" style="display:inline-block;width:48px;height:48px;text-align:center;z-index:1;">
+<a href="wb15_mondriaan.html#PanelMenu1_markup" id="PanelMenu1">
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span>
+</a>
+<div id="PanelMenu1_markup">
+<ul role="menu">
+   <li role="menuitem"><a href="http://www.mondriantrust.com/" target="_blank">Mondrian Trust</a></li>
+   <li role="menuitem"><a href="https://www.moma.org/artists/4057" target="_blank">Museum of Modern Art</a></li>
+   <li role="menuitem"><a href="https://www.gemeentemuseum.nl/en/collection/composition-large-red-plane-yellow-black-gray-and-blue" target="_blank">Gemeentemuseum Den Haag</a></li>
+   <li role="menuitem"><a href="https://www.guggenheim.org/artwork/artist/piet-mondrian" target="_blank">Guggenheim New York</a></li>
+   <li role="menuitem"><a href="https://en.wikipedia.org/wiki/Piet_Mondrian" target="_blank">Wikipedia</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="m5">
+<div id="wb_FontAwesomeIcon1" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:2;">
+<a href="https://en.wikipedia.org/wiki/Piet_Mondrian" target="_blank"><div id="FontAwesomeIcon1"><i class="fa fa-info-circle"></i></div></a>
+</div>
+</div>
+<div class="m6">
+<div id="wb_Heading1" style="display:inline-block;width:100%;z-index:3;">
+<h1 id="Heading1">Mondrian <br>Template</h1>
+</div>
+</div>
+<div class="m7">
+<div id="wb_FontAwesomeIcon2" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:4;">
+<a href="https://www.gemeentemuseum.nl/en/collection/composition-large-red-plane-yellow-black-gray-and-blue" target="_blank"><div id="FontAwesomeIcon2"><i class="fa fa-camera"></i></div></a>
+</div>
+</div>
+<div class="m22">
+</div>
+<div class="m10">
+</div>
+<div class="m8">
+</div>
+<div class="m9">
+</div>
+<div class="m11">
+<div id="wb_Text2">
+<p style="font-family:Arial;"><span style="font-family:Arial;">Composition with Red Blue and Yellow is a 1921 painting by Piet Mondrian. A well-known work of art, Mondrian contributes to the abstract visual language in a large way despite using a relatively small canvas. Thick, black brushwork defines the borders of the different geometric figures. Comparably, the black brushwork on the canvas is minimal but it is masterfully applied to become one of the defining features of the work. </span></p>
+
+</div>
+</div>
+<div class="m12">
+<div id="wb_FontAwesomeIcon5" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:6;">
+<a href="https://www.moma.org/artists/4057" target="_blank" title="Museum of Modern Art"><div id="FontAwesomeIcon5"><i class="fa fa-eye"></i></div></a>
+</div>
+</div>
+<div class="m14">
+</div>
+<div class="m17">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:7;">
+<a href="https://www.guggenheim.org/artwork/artist/piet-mondrian" target="_blank"><div id="FontAwesomeIcon3"><i class="fa fa-paint-brush"></i></div></a>
+</div>
+</div>
+<div class="m13">
+</div>
+<div class="m15">
+</div>
+<div class="m16">
+<div id="wb_FontAwesomeIcon6" style="display:inline-block;width:64px;height:64px;text-align:center;z-index:8;">
+<a href="http://www.mondriantrust.com/" target="_blank" title="Mondrian Trust"><div id="FontAwesomeIcon6"><i class="fa fa-shopping-cart"></i></div></a>
+</div>
+</div>
+<div class="m18">
+</div>
+<div class="m19">
+</div>
+<div class="m21">
+</div>
+<div class="m20">
+<div id="wb_Text1">
+<p style="font-family:Arial;"><span style="font-family:Arial;">Copyright WYSIWYG Web Builder 2019</span></p>
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Customizing the Signup Form</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="https://www.wysiwygwebbuilder.tk/css/customize_signup.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:14px;top:134px;width:940px;height:2507px;z-index:3;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header_2.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index_2.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download_2.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase_2.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started_2.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates_2.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support_2.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions_2.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:169px;width:808px;height:342px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>Customizing the Signup Form </strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>In this tutorial we will show you how to add additional fields to the signup object of the login tools.<br>This tutorial assumes that you have knowledge of PHP and MySQL. This method does not work for the text based database, because the structure of that database cannot be changed.<br><br><strong>Step 1</strong><br>Before you can add addtional field to the signup form you will need to the create additional fields in the MySQL database.<br>So first let's login to phpMyAdmin and create those new fields. The following fields will be added:<br>&#8226; address<br>&#8226; city<br>&#8226; state<br>&#8226; code<br>&#8226; phone<br>We can use the following SQL statement to insert the fileds to the database:<br>(Note that the other fields were already created by the SQL script from the help!)</span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br><br></span><span style="color:#000000;font-family:'Courier New';font-size:13px;">ALTER TABLE `USERS` ADD `address` VARCHAR( 100 ) NOT NULL ,<br>ADD `city` VARCHAR( 100 ) NOT NULL ,<br>ADD `code` VARCHAR( 10 ) NOT NULL ,<br>ADD `phone` VARCHAR( 25 ) NOT NULL ,<br>ADD `state` VARCHAR( 25 ) NOT NULL ;</span></div>
+<div id="wb_Text5" style="position:absolute;left:80px;top:1070px;width:809px;height:64px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 2</strong><br>Right click the signup form and select 'Convert to form' from the context menu.<br>This will convert the static signup form into native Web builder objects so you can fully customize the layout and code as you like.<br>Your page will now have a form and an HTML object with the form processing code.</span></div>
+<div id="wb_Text1" style="position:absolute;left:79px;top:2021px;width:723px;height:272px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 4</strong><br>Modify the script, so the new fields will also be stored in the database.<br>Double click the &lt;HTML&gt; - Signup object to edit the script.<br><br>After </span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br></span><span style="color:#000000;font-family:'Courier New';font-size:13px;"><br>$newfullname = $_POST['fullname'];</span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br><br></span><span style="color:#666666;font-family:Arial;font-size:13px;">insert the variables for the new fields. Note that in this example we did not implement any input validation. You can add that later if you wish.</span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br></span><span style="color:#000000;font-family:'Courier New';font-size:13px;"><br>// extra fields<br>$address = $_POST['address'];<br>$city = $_POST['city'];<br>$code = $_POST['code'];<br>$phone = $_POST['phone'];<br>$state = $_POST['state'];</span></div>
+<div id="wb_Text2" style="position:absolute;left:79px;top:2325px;width:739px;height:160px;z-index:8;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 5</strong><br>And finally modify the SQL statement:</span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br><br></span><span style="color:#000000;font-family:'Courier New';font-size:13px;">$sql = &quot;INSERT `&quot;.$mysql_table.&quot;` (`username`, `password`, `fullname`, `email`, `active`, `address`, `city`, `code`, `phone`, `state`) VALUES ('$newusername', '$crypt_pass', '$newfullname', '$newemail', 1, '$address', '$city', '$code', '$phone', '$state')&quot;;</span><span style="color:#2A54C2;font-family:Arial;font-size:13px;"><br><br></span><span style="color:#666666;font-family:Arial;font-size:13px;"><strong><br>Step 6</strong><br>Publish the page to test the new form/script.</span></div>
+<div id="wb_Text7" style="position:absolute;left:80px;top:1562px;width:809px;height:48px;z-index:9;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Step 3</strong><br>Add the extra fields to form. The easiest way to do this to copy/paste one of the existing fields so you the objects will have the same style. Don't forget to change the <strong>ID</strong> and <strong>Name</strong> of each field. In this example these are named them 'address', 'city', 'code', 'state' and 'phone'.</span></div>
+<div id="wb_Text9" style="position:absolute;left:79px;top:2524px;width:723px;height:48px;z-index:10;">
+<span style="color:#666666;font-family:Arial;font-size:13px;">You can download the example project here:<br><a href="support/customize_signup.zip" class="wwb_link">https://www.wysiwygwebbuilder.tk/support/customize_signup.zip</a><br></span></div>
+<div id="wb_Image3" style="position:absolute;left:80px;top:528px;width:668px;height:513px;z-index:11;">
+<img src="https://www.wysiwygwebbuilder.tk/images/signup1.jpg" id="Image3" alt=""></div>
+<div id="wb_Image4" style="position:absolute;left:80px;top:1150px;width:326px;height:389px;z-index:12;">
+<img src="https://www.wysiwygwebbuilder.tk/images/signup2.jpg" id="Image4" alt=""></div>
+<div id="wb_Image5" style="position:absolute;left:80px;top:1642px;width:390px;height:361px;z-index:13;">
+<img src="https://www.wysiwygwebbuilder.tk/images/signup3.jpg" id="Image5" alt=""></div>
+</div>
+</body>
+</html>

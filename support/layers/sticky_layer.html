@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sticky Layer</title>
+<meta name="generator" content="WYSIWYG Web Builder 10 - http://www.wysiwygwebbuilder.com">
+<style type="text/css">
+div#container
+{
+   width: 970px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-size: 13px;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#Layer1
+{
+   background-color: #FAFAFA;
+   border: 1px #666666 solid;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text2 div
+{
+   text-align: center;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text3 div
+{
+   text-align: center;
+}
+#Layer2
+{
+   background-color: #FAFAFA;
+   border: 1px #666666 solid;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text4 div
+{
+   text-align: center;
+}
+#Layer3
+{
+   background-color: #FAFAFA;
+   border: 1px #666666 solid;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text5 div
+{
+   text-align: center;
+}
+</style>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://www.wysiwygwebbuilder.com/support/layers/wb.stickylayer.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $("#Layer1").stickylayer({orientation: 1, position: [0, 0], delay: 0});
+   $("#Layer2").stickylayer({orientation: 3, position: [0, 0], delay: 500});
+   $("#Layer3").stickylayer({orientation: 5, position: [0, 0], delay: 0, keepOriginalPos: true});
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:360px;top:81px;width:250px;height:22px;text-align:center;z-index:3;">
+<span style="color:#666666;font-family:Arial;font-size:19px;">Sticky Layer Demo</span></div>
+<div id="wb_Text3" style="position:absolute;left:268px;top:1500px;width:434px;height:50px;text-align:center;z-index:4;">
+<span style="color:#666666;font-family:Arial;font-size:15px;">Copyright WYSIWYG Web Builder<br><br></span></div>
+</div>
+<div id="Layer1" style="position:absolute;text-align:left;left:4px;top:3px;width:200px;height:200px;z-index:5;" title="Sticky Layer - Top/Left">
+<div id="wb_Text2" style="position:absolute;left:12px;top:89px;width:172px;height:30px;text-align:center;z-index:0;">
+<span style="color:#666666;font-family:Arial;font-size:12px;">Sticky Layer - Top/Left<br>(no animation)</span></div>
+</div>
+<div id="Layer2" style="position:absolute;text-align:left;left:767px;top:545px;width:200px;height:200px;z-index:6;" title="Sticky Layer - Bottom/Right">
+<div id="wb_Text4" style="position:absolute;left:12px;top:89px;width:172px;height:30px;text-align:center;z-index:1;">
+<span style="color:#666666;font-family:Arial;font-size:12px;">Sticky Layer - Bottom/Right<br>(with animation)</span></div>
+</div>
+<div id="Layer3" style="position:absolute;text-align:left;left:185px;top:226px;width:598px;height:109px;z-index:7;" title="Sticky Layer - Center/Top">
+<div id="wb_Text5" style="position:absolute;left:66px;top:38px;width:457px;height:31px;text-align:center;z-index:2;">
+<span style="color:#666666;font-family:Arial;font-size:12px;">Sticky Layer with<br>'</span><span style="color:#666666;font-family:Arial;font-size:13px;">Keep original position until layer is about to be hidden'</span></div>
+</div>
+</body>
+</html>

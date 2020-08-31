@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Coffee Time</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/coffeeshop.css" rel="stylesheet">
+<link href="css/wb15_coffeetime.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="util.js"></script>
+<script src="carousel.js"></script>
+<script src="transition.js"></script>
+<script src="collapse.js"></script>
+<script src="dropdown.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#LayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#introLayoutGrid']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_introLayoutGrid').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   function onScrollintroLayoutGrid()
+   {
+      var $obj = $("#wb_introLayoutGrid");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollintroLayoutGrid();
+   $(window).scroll(function(event)
+   {
+      onScrollintroLayoutGrid();
+   });
+   $("a[href*='#coffee']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#coffee').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#about']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#facts']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#prices']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_prices').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutExpo');
+   });
+   $("#aboutCarousel").bootstrapcarousel({interval:3000, pause: false});
+   $(document).on('click','.headerMenu-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_intro,#wb_introLayoutGrid,#wb_pricesCard2,#wb_pricesCard1,#wb_pricesCard3,#aboutCarousel').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_FontAwesomeIcon1">
+<div id="FontAwesomeIcon1"><i class="fa fa-coffee"></i></div>
+</div>
+<div id="wb_Breadcrumb1">
+<ul id="Breadcrumb1">
+<li><a href="http://">Coffee Time</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="headerIcon1"><i class="fa fa-phone"></i></div></a>
+</div>
+<div id="wb_Heading3">
+<h3 id="Heading3">Call us: <br>+123 456 7890</h3>
+</div>
+</div>
+<div class="col-3">
+<a id="headerButton" href="wb15_coffeetime.html#">BOOK NOW</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerMenu">
+<div id="headerMenu" class="headerMenu" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".headerMenu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="headerMenu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="wb15_coffeetime.html#intro">Home</a>
+</li>
+<li class="">
+<a href="wb15_coffeetime.html#about">About</a>
+</li>
+<li class="">
+<a href="wb15_coffeetime.html#coffee">Coffee</a>
+</li>
+<li class="">
+<a href="wb15_coffeetime.html#prices">Prices</a>
+</li>
+<li class="">
+<a href="wb15_coffeetime.html#contact">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_FontAwesomeIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="FontAwesomeIcon2"><i class="fa fa-rss"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="FontAwesomeIcon3"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="FontAwesomeIcon4"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_FontAwesomeIcon5">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="FontAwesomeIcon5"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_intro">
+<div id="intro">
+<div class="col-1">
+<div id="wb_introText">
+<p style="font-size:15px;line-height:16.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">Coffee Makes Everything Better</span></p>
+<p style="font-family:Arial;font-size:16px;line-height:18px;color:#BDA797;"><span style="font-family:Arial;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh.</span></p>
+
+</div>
+<div id="wb_introShape">
+<a href="wb15_coffeetime.html#introLayoutGrid"><img src="images/img0001.png" id="introShape" alt=""></a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_introLayoutGrid">
+<div id="introLayoutGrid">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_introIcon">
+<div id="introIcon"><i class="fa fa-heart-o"></i></div>
+</div>
+<div id="wb_introHeading">
+<h1 id="introHeading">With Enough Coffee Anything Is Possible</h1>
+</div>
+<div id="wb_Text1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_coffee">
+<div id="coffee">
+<div id="wb_coffeeCard1">
+   <div id="coffeeCard1-card-body">
+      <img id="coffeeCard1-card-item0" src="images/coffee04.png" alt="" title="">
+      <div id="coffeeCard1-card-item1">Robusta Coffee</div>
+      <div id="coffeeCard1-card-item2"><i class="fa fa-coffee"></i></div>
+      <hr id="coffeeCard1-card-item3">
+      <div id="coffeeCard1-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="coffeeCard1-card-item5">Read more >></div>
+   </div>
+
+</div>
+<div id="wb_coffeeCard2">
+   <div id="coffeeCard2-card-body">
+      <img id="coffeeCard2-card-item0" src="images/coffee05.png" alt="" title="">
+      <div id="coffeeCard2-card-item1">Arabica Coffee</div>
+      <div id="coffeeCard2-card-item2"><i class="fa fa-coffee"></i></div>
+      <hr id="coffeeCard2-card-item3">
+      <div id="coffeeCard2-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="coffeeCard2-card-item5">Read more >></div>
+   </div>
+
+</div>
+<div id="wb_coffeeCard3">
+   <div id="coffeeCard3-card-body">
+      <img id="coffeeCard3-card-item0" src="images/coffee07.png" alt="" title="">
+      <div id="coffeeCard3-card-item1">Premium Coffee Beans</div>
+      <div id="coffeeCard3-card-item2"><i class="fa fa-coffee"></i></div>
+      <hr id="coffeeCard3-card-item3">
+      <div id="coffeeCard3-card-item4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
+      <div id="coffeeCard3-card-item5">Read more >></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div id="wb_about">
+<div id="about">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_aboutText">
+<p style="font-size:20px;line-height:22.5px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">Our Company</span></p>
+<p style="font-size:13px;line-height:16px;">&nbsp;</p>
+<p style="font-size:13px;line-height:16px;line-height:20.8px;">Phasellus fringilla convallis libero non aliquam. Morbi justo lorem, varius ultricies pulvinar ac, aliquet quis ipsum. <span style="font-size:13px;line-height:16px;"><br /></span></p>
+<p style="font-family:Arial;font-size:13px;line-height:16px;line-height:20.8px;"><span style="font-family:Arial;">Suspendisse aliquam pulvinar odio sed rhoncus. Cras pretium diam ut metus tristique, a ultricies sapien euismod. Duis dui diam, maximus ac ligula a, accumsan cursus ante. </span></p>
+
+</div>
+<a id="aboutButton" href="wb15_coffeetime.html">Read More</a>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_aboutCarousel">
+<div id="aboutCarousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#aboutCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#aboutCarousel" data-slide-to="1"></li>
+<li data-target="#aboutCarousel" data-slide-to="2"></li>
+<li data-target="#aboutCarousel" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="carousel-innerframe">
+<div id="wb_aboutCard1">
+   <div id="aboutCard1-card-body">
+      <div id="aboutCard1-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="aboutCard1-card-item1">"I am a survivalist. I can ask for coffee in six languages"</div>
+      <img id="aboutCard1-card-item2" src="images/coffee07.png" alt="" title="">
+      <div id="aboutCard1-card-item3">TIM THOMAS</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_aboutCard2">
+   <div id="aboutCard2-card-body">
+      <div id="aboutCard2-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="aboutCard2-card-item1">"Life begins after coffee"</div>
+      <img id="aboutCard2-card-item2" src="images/coffee07.png" alt="" title="">
+      <div id="aboutCard2-card-item3">JOHN JONES</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_aboutCard3">
+   <div id="aboutCard3-card-body">
+      <div id="aboutCard3-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="aboutCard3-card-item1">"I don’t drink coffee to wake up. I wake up to drink coffee"</div>
+      <img id="aboutCard3-card-item2" src="images/coffee07.png" alt="" title="">
+      <div id="aboutCard3-card-item3">DEBRA DAVIS</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-innerframe">
+<div id="wb_aboutCard4">
+   <div id="aboutCard4-card-body">
+      <div id="aboutCard4-card-item0"><i class="fa fa-quote-right"></i></div>
+      <div id="aboutCard4-card-item1">"Behind every successful person is a substantial amount of coffee"</div>
+      <img id="aboutCard4-card-item2" src="images/coffee07.png" alt="" title="">
+      <div id="aboutCard4-card-item3">PAUL PERRY</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_facts">
+<div id="facts">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_factsCard1">
+   <div id="factsCard1-card-body">
+      <div id="factsCard1-card-item0"><i class="fa fa-heart-o"></i></div>
+      <div id="factsCard1-card-item1">15000</div>
+      <div id="factsCard1-card-item2">HAPPY CUSTOMERS</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_factsCard2">
+   <div id="factsCard2-card-body">
+      <div id="factsCard2-card-item0"><i class="fa fa-coffee"></i></div>
+      <div id="factsCard2-card-item1">50000</div>
+      <div id="factsCard2-card-item2">CUPS OF COFFEE</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_factsCard3">
+   <div id="factsCard3-card-body">
+      <div id="factsCard3-card-item0"><i class="fa fa-heart-o"></i></div>
+      <div id="factsCard3-card-item1">12500</div>
+      <div id="factsCard3-card-item2">CUP CAKES</div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="col-4-padding">
+<div id="wb_factsCard4">
+   <div id="factsCard4-card-body">
+      <div id="factsCard4-card-item0"><i class="fa fa-star-o"></i></div>
+      <div id="factsCard4-card-item1">2500</div>
+      <div id="factsCard4-card-item2">GREAT REVIEWS</div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_prices">
+<div id="prices">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_pricesCard1">
+   <div id="pricesCard1-card-header">CAPPUCCINO</div>
+   <div id="pricesCard1-card-body">
+      <hr id="pricesCard1-card-item1">
+      <div id="pricesCard1-card-item2"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item3">Foam</div>
+      <hr id="pricesCard1-card-item4">
+      <div id="pricesCard1-card-item5"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item6">Espresso</div>
+      <hr id="pricesCard1-card-item7">
+      <div id="pricesCard1-card-item8"><i class="fa fa-check"></i></div>
+      <div id="pricesCard1-card-item9">Steamed Milk</div>
+      <hr id="pricesCard1-card-item10">
+      <div id="pricesCard1-card-item11">$9.99</div>
+      <div id="pricesCard1-card-item12"><a href="../../purchase_2.html">ORDER NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_pricesCard2">
+   <div id="pricesCard2-card-header">CAPPUCCINO DELUXE</div>
+   <div id="pricesCard2-card-body">
+      <hr id="pricesCard2-card-item1">
+      <div id="pricesCard2-card-item2"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item3">Foam</div>
+      <hr id="pricesCard2-card-item4">
+      <div id="pricesCard2-card-item5"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item6">Caramel</div>
+      <hr id="pricesCard2-card-item7">
+      <div id="pricesCard2-card-item8"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item9">Espresso</div>
+      <hr id="pricesCard2-card-item10">
+      <div id="pricesCard2-card-item11"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item12">Steamed Milk</div>
+      <hr id="pricesCard2-card-item13">
+      <div id="pricesCard2-card-item14"><i class="fa fa-check"></i></div>
+      <div id="pricesCard2-card-item15">Lemon Cheesecake</div>
+      <hr id="pricesCard2-card-item16">
+      <div id="pricesCard2-card-item17">$14.99</div>
+      <div id="pricesCard2-card-item18"><a href="../../purchase_2.html">ORDER NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-4">
+<div class="col-4-padding">
+<div id="wb_pricesCard3">
+   <div id="pricesCard3-card-header">CAFEE MOCHA</div>
+   <div id="pricesCard3-card-body">
+      <hr id="pricesCard3-card-item1">
+      <div id="pricesCard3-card-item2"><i class="fa fa-check"></i></div>
+      <div id="pricesCard3-card-item3">Milk</div>
+      <hr id="pricesCard3-card-item4">
+      <div id="pricesCard3-card-item5"><i class="fa fa-check"></i></div>
+      <div id="pricesCard3-card-item6">Cream</div>
+      <hr id="pricesCard3-card-item7">
+      <div id="pricesCard3-card-item8"><i class="fa fa-check"></i></div>
+      <div id="pricesCard3-card-item9">Espresso</div>
+      <hr id="pricesCard3-card-item10">
+      <div id="pricesCard3-card-item11">$9.99</div>
+      <div id="pricesCard3-card-item12"><a href="../../purchase_2.html">ORDER NOW</a></div>
+   </div>
+
+</div>
+</div>
+</div>
+<div class="col-5">
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="wb15_coffeetime.html#intro"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<label for="coffeeCard2" id="contactLabel1">Follow Us</label>
+<div id="wb_contactIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="contactIcon1"><i class="fa fa-rss"></i></div></a>
+</div>
+<div id="wb_contactIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="contactIcon2"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_contactIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="contactIcon3"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_contactIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/wb15_coffeetime__.html"><div id="contactIcon4"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<label for="coffeeCard2" id="contactLabel4">Address</label>
+<div id="wb_contactAddress">
+<p>#28, 3nd floor, WYSIWYG Plaza<br />Web City, Builder, WB 1969</p>
+<p style="font-family:Arial;">Phone: 100 121 34567</p>
+<p style="font-family:Arial;">Fax: 100 121 34568</p>
+<p style="font-family:Arial;">Email: info@wysiwygmail.com</p>
+
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_contactLabel2">
+<h3 id="contactLabel2">Visit our shop</h3>
+</div>
+<table id="contactTable">
+<tr>
+<td class="cell0"><p><strong>Monday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Tuesday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Wednesday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Thursday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Friday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Saturday</strong></p>
+</td>
+<td class="cell1"><p>10:00 - 18:00</p>
+</td>
+</tr>
+<tr>
+<td class="cell0"><p><strong>Sunday</strong></p>
+</td>
+<td class="cell1"><p>Closed</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<label for="coffeeCard2" id="contactLabel3">Contact Us</label>
+<input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Name">
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Email">
+<textarea name="message" id="contactMessage" rows="2" cols="25" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send">
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

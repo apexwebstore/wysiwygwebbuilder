@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vive La Paris</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/vivelaparis.css" rel="stylesheet">
+<link href="css/wb15_vivelaparis.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wb.animatesvg.min.js"></script>
+<script src="wwb15.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#floatingHeader']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_floatingHeader').offset().top }, 600, 'easeInSine');
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#welcome']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollintro()
+   {
+      var $obj = $("#wb_intro");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollintro();
+   $(window).scroll(function(event)
+   {
+      onScrollintro();
+   });
+   $("a[href*='#images']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_images').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollimages()
+   {
+      var $obj = $("#wb_images");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollimages();
+   $(window).scroll(function(event)
+   {
+      onScrollimages();
+   });
+   $("a[href*='#news']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_news').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollnews()
+   {
+      var $obj = $("#wb_news");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollnews();
+   $(window).scroll(function(event)
+   {
+      onScrollnews();
+   });
+   $("a[href*='#questions']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_questions').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#signup']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_signup').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function aspectRatioimagesRollOverText1()
+   {
+      var $obj = $("#imagesRollOverText1");
+      var height = $obj.width() / 1.33;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioimagesRollOverText1();
+   });
+   aspectRatioimagesRollOverText1();
+   function aspectRatioimagesRollOverText2()
+   {
+      var $obj = $("#imagesRollOverText2");
+      var height = $obj.width() / 1.33;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioimagesRollOverText2();
+   });
+   aspectRatioimagesRollOverText2();
+   function aspectRatioimagesRollOverText3()
+   {
+      var $obj = $("#imagesRollOverText3");
+      var height = $obj.width() / 1.33;
+      $obj.css('height', height + 'px');
+   }
+   $(window).resize(function()
+   {
+      aspectRatioimagesRollOverText3();
+   });
+   aspectRatioimagesRollOverText3();
+   $("#TextArt1").animatesvg(
+   {
+      delay: 500,
+      duration: 2000,
+      easing: 'linear'
+   });
+   $("#TextArt1").animatesvg('animate');
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_welcome,#wb_questions').css('background-attachment', 'scroll');
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_floatingHeader">
+<div id="floatingHeader">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="headerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+</div>
+<div id="wb_headerIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="headerIcon2"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_headerIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="headerIcon3"><i class="fa fa-twitter-square"></i></div></a>
+</div>
+<div id="wb_headerIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="headerIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+</div>
+<div class="col-2">
+</div>
+<div class="col-3">
+<div id="wb_headerBreadcrumb">
+<ul id="headerBreadcrumb">
+<li><a href="http://">PRIVACY POLICY</a></li>
+<li><a href="http://">SOCIAL MEDIA</a></li>
+<li><a href="http://">TERMS OF SERVICE</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerImage">
+<img src="images/eiffel-64.png" id="headerImage" alt="">
+</div>
+<div id="wb_headerLogo">
+<ul id="headerLogo">
+<li><a href="http://">PARIS</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_headerMenu">
+<label class="toggle" for="headerMenu-submenu" id="headerMenu-title">PARIS<span id="headerMenu-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
+<input type="checkbox" id="headerMenu-submenu">
+<ul class="headerMenu" id="headerMenu" role="menu">
+<li><a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#home">HOME</a></li>
+<li><a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">ABOUT</a></li>
+<li><a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/gallery.html">GALLERY</a></li>
+<li><a role="menuitem" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/blog.html">BLOG</a></li>
+</ul>
+
+</div>
+<a id="headerButton" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/contact.html">CONTACT</a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_welcome">
+<div id="welcome-overlay"></div>
+<div id="welcome">
+<div class="col-1">
+<div id="wb_TextArt1">
+<svg id="TextArt1" height="176" width="416" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="TextArt1-shape0" d="M64 1 L41 81 L24 83 L2 1 L19 1 L33 56 L48 1Z" />
+   <path id="TextArt1-shape1" d="M111 77 L75 79 L75 65 L85 65 L86 14 L76 14 L76 1 L112 1 L111 14 L102 14 L101 64 L111 64Z" />
+   <path id="TextArt1-shape2" d="M186 1 L163 75 L146 76 L124 1 L141 1 L155 51 L170 1Z" />
+   <path id="TextArt1-shape3" d="M201 75 L201 1 L246 1 L246 15 L217 15 L218 27 L243 28 L244 42 L218 42 L218 60 L246 61 L246 75Z" />
+   <path id="TextArt1-shape4" d="M338 80 L294 77 L293 1 L309 1 L310 64 L338 65Z" />
+   <path id="TextArt1-shape5" d="M348 81 L367 1 L385 1 L409 86 L392 84 L387 67 L367 66 L363 82Z" />
+   <path id="TextArt1-shape6" d="M384 52 L376 24 L370 51 L384 52 Z" />
+   <path id="TextArt1-shape7" d="M100 113 C100 117, 99 120, 98 123 C97 126, 96 129, 94 132 C93 133, 92 134, 90 136 C89 137, 88 138, 86 139 C84 140, 83 141, 81 142 C79 142, 77 143, 74 143 L66 144 L65 169 L48 172 L50 93 L75 91 C80 91, 83 91, 85 91 C88 92, 91 93, 93 95 C95 96, 97 99, 98 102 C99 105, 100 109, 100 113 Z" />
+   <path id="TextArt1-shape8" d="M83 115 C83 113, 83 111, 82 110 C81 108, 80 107, 79 107 C77 106, 76 106, 75 106 C73 106, 71 106, 69 106 L66 106 L66 129 L67 129 C69 129, 70 129, 71 129 C73 129, 74 128, 75 128 C76 128, 77 127, 78 127 C79 126, 80 126, 80 125 C82 124, 82 122, 82 121 C83 119, 83 117, 83 115 Z" />
+   <path id="TextArt1-shape9" d="M110 164 L134 87 L152 87 L174 159 L157 160 L153 145 L132 147 L127 162Z" />
+   <path id="TextArt1-shape10" d="M149 132 L143 108 L135 133Z" />
+   <path id="TextArt1-shape11" d="M253 161 L232 160 L213 132 L207 132 L207 159 L190 159 L190 86 L217 86 C221 86, 224 86, 227 87 C230 88, 232 89, 235 90 C237 92, 239 94, 240 97 C241 99, 242 103, 242 107 C242 112, 241 117, 239 120 C237 124, 234 126, 230 128 Z" />
+   <path id="TextArt1-shape12" d="M225 109 C225 107, 225 105, 224 104 C223 102, 222 101, 221 101 C220 100, 219 100, 217 100 C216 100, 215 99, 212 99 L207 99 L207 119 L212 119 C214 119, 216 119, 218 119 C219 118, 221 118, 222 117 C223 116, 224 115, 224 114 C225 112, 225 111, 225 109 Z" />
+   <path id="TextArt1-shape13" d="M301 165 L265 162 L265 149 L274 149 L273 101 L264 100 L264 87 L299 89 L300 102 L290 102 L291 151 L301 152Z" />
+   <path id="TextArt1-shape14" d="M340 172 C335 171, 331 170, 327 168 C323 167, 320 165, 317 163 L316 144 L318 145 C321 148, 325 151, 329 154 C332 156, 336 157, 340 158 C341 158, 342 158, 344 158 C345 158, 347 158, 347 157 C349 157, 350 156, 350 155 C351 154, 352 153, 352 151 C352 149, 351 147, 350 146 C348 145, 347 144, 345 143 C343 142, 340 141, 338 140 C335 139, 333 138, 330 137 C325 134, 322 131, 320 127 C318 123, 316 119, 316 114 C316 106, 319 101, 323 97 C329 93, 335 91, 343 92 C347 92, 350 93, 354 94 C358 95, 362 97, 365 99 L365 117 L364 117 C361 114, 358 112, 354 110 C351 107, 347 106, 344 106 C342 106, 341 106, 340 106 C339 106, 337 106, 336 107 C335 107, 334 108, 334 109 C333 110, 333 111, 333 113 C333 115, 333 116, 334 118 C336 119, 338 120, 341 121 C343 122, 346 123, 348 124 C350 125, 352 126, 354 127 C359 129, 363 133, 365 136 C367 140, 369 144, 369 150 C369 158, 366 164, 361 168 C356 172, 349 173, 340 172 L340 172" />
+</defs>
+<clipPath id="TextArt1-clippath0">
+   <use xlink:href="#TextArt1-shape0"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape0" clip-path="url(#TextArt1-clippath0)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath1">
+   <use xlink:href="#TextArt1-shape1"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape1" clip-path="url(#TextArt1-clippath1)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath2">
+   <use xlink:href="#TextArt1-shape2"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape2" clip-path="url(#TextArt1-clippath2)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath3">
+   <use xlink:href="#TextArt1-shape3"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape3" clip-path="url(#TextArt1-clippath3)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath4">
+   <use xlink:href="#TextArt1-shape4"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape4" clip-path="url(#TextArt1-clippath4)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath5">
+   <use xlink:href="#TextArt1-shape5"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape5" clip-path="url(#TextArt1-clippath5)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath6">
+   <use xlink:href="#TextArt1-shape6"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape6" clip-path="url(#TextArt1-clippath6)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath7">
+   <use xlink:href="#TextArt1-shape7"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape7" clip-path="url(#TextArt1-clippath7)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath8">
+   <use xlink:href="#TextArt1-shape8"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape8" clip-path="url(#TextArt1-clippath8)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath9">
+   <use xlink:href="#TextArt1-shape9"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape9" clip-path="url(#TextArt1-clippath9)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath10">
+   <use xlink:href="#TextArt1-shape10"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape10" clip-path="url(#TextArt1-clippath10)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath11">
+   <use xlink:href="#TextArt1-shape11"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape11" clip-path="url(#TextArt1-clippath11)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath12">
+   <use xlink:href="#TextArt1-shape12"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape12" clip-path="url(#TextArt1-clippath12)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath13">
+   <use xlink:href="#TextArt1-shape13"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape13" clip-path="url(#TextArt1-clippath13)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+<clipPath id="TextArt1-clippath14">
+   <use xlink:href="#TextArt1-shape14"/>
+</clipPath>
+<use xlink:href="#TextArt1-shape14" clip-path="url(#TextArt1-clippath14)" style="fill:none;stroke:#FFFFFF;stroke-width:4"/>
+</svg>
+
+</div>
+<hr id="Line1">
+<div id="wb_FontAwesomeIcon6">
+<a href="wb15_vivelaparis.html#intro"><div id="FontAwesomeIcon6"><i class="fa fa-angle-double-down"></i></div></a>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_intro">
+<div id="intro">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_introText">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_images">
+<div id="images">
+<div class="row">
+<div class="col-1">
+<div id="imagesRollOverText1">
+   <img alt="ABOUT" class="image" src="images/paris12.jpg"></a>
+   <div class="caption">
+      <div class="title">ABOUT</div>
+      <p class="description">Read more about our company</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+<div class="col-2">
+<div id="imagesRollOverText2">
+   <img alt="GALLERY" class="image" src="images/paris31.jpg"></a>
+   <div class="caption">
+      <div class="title">GALLERY</div>
+      <p class="description">View our gallery</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+<div class="col-3">
+<div id="imagesRollOverText3">
+   <img alt="BLOG" class="image" src="images/paris6.jpg"></a>
+   <div class="caption">
+      <div class="title">BLOG</div>
+      <p class="description">Read the blog</p>
+      <a class="link" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html">More information</a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_news">
+<div id="news">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_newsHeading">
+<h1 id="newsHeading">READ THE LATEST NEWS</h1>
+</div>
+<a id="newsButton" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/blog.html">VISIT BLOG</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_questions">
+<div id="questions-overlay"></div>
+<div id="questions">
+<div class="col-1">
+<div id="wb_questionsHeading1">
+<h2 id="questionsHeading1">Have Questions?</h2>
+</div>
+<div id="wb_questionsHeading2">
+<h1 id="questionsHeading2">GET IN TOUCH WITH US</h1>
+</div>
+<a id="questionsButton" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/contact.html">CONTACT US</a>
+</div>
+</div>
+</div>
+<div id="wb_signup" class="triangles-top">
+<div id="signup">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_signupText">
+<p style="font-size:13px;line-height:16px;"><span style="font-size:32px;line-height:36px;font-weight:bold;">Sign up for the newsletter</span><span style="font-weight:bold;"><br /></span></p>
+<p style="font-size:15px;line-height:16.5px;">Get notified about new content on this website</p>
+
+</div>
+<input type="text" id="signupEmail" name="email" value="" spellcheck="false" placeholder="EMAIL ADDRESS">
+<input type="submit" id="signupButton" name="" value="SUBMIT">
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div id="wb_footerIcon1">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="footerIcon1"><i class="fa fa-facebook-square"></i></div></a>
+</div>
+<div id="wb_footerIcon2">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="footerIcon2"><i class="fa fa-youtube-play"></i></div></a>
+</div>
+<div id="wb_footerIcon3">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="footerIcon3"><i class="fa fa-twitter-square"></i></div></a>
+</div>
+<div id="wb_footerIcon4">
+<a href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html"><div id="footerIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_footerHeading">
+<h1 id="footerHeading">PARIS</h1>
+</div>
+<div id="wb_footerText1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. </p>
+
+</div>
+<div id="wb_footerMenu">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" class="footerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/index.html#home" target="_self">HOME</a>
+</li>
+<li><a role="menuitem" class="footerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/about.html" target="_self">ABOUT</a>
+</li>
+<li><a role="menuitem" class="footerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/gallery.html" target="_self">GALLERY</a>
+</li>
+<li><a role="menuitem" class="footerMenu-effect" href="http://www.wysiwygwebbuilder.com/support/wb15tryouts/blog.html" target="_self">BLOG</a>
+</li>
+<li><a role="menuitem" class="footerMenu-effect" href="wb15_vivelaparis.html#contactUs" target="_self">CONTACT</a>
+</li>
+</ul>
+
+</div>
+<div id="wb_footerText2">
+<p>Copyright © 2019 WYSIWYG Web Builder.&nbsp; All Rights Reserved</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="wb15_vivelaparis.html#welcome"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+</body>
+</html>

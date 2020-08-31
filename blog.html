@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="iso-8859-1">
+<title>An introduction to the Blog object</title>
+<meta name="description" content="Web Builder is a WYSIWYG (What-You-See-Is-What-You-Get) program used to create web pages. The program generates HTML tags while you point and click on desired functions; you can create a web page without learning HTML.">
+<meta name="keywords" content="WYSIWYG Web Builder, HTML generator, website, templates, web design, no HTML knowlegde">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<meta name="generator" content="WYSIWYG Web Builder - https://www.wysiwygwebbuilder.tk">
+<link href="css/blog.css" rel="stylesheet">
+<script src="jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" href="mobiletouchgallery/mobile-touch-gallery.css">
+<script src="mobiletouchgallery/mobile-touch-gallery.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[data-rel='PhotoGallery1']").attr('rel', 'PhotoGallery1');
+   $("a[rel^='PhotoGallery1']").mobileTouchGallery();
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Shape1" style="position:absolute;left:18px;top:136px;width:940px;height:2110px;z-index:3;">
+<div id="Shape1"></div></div>
+<div id="wb_MasterPage1" style="position:absolute;left:0px;top:0px;width:970px;height:184px;z-index:4;">
+<div id="wb_headerLogo" style="position:absolute;left:0px;top:0px;width:970px;height:160px;z-index:0;">
+<img src="images/header.png" id="headerLogo" alt=""></div>
+<div id="wb_headerMenu" style="position:absolute;left:145px;top:0px;width:713px;height:32px;z-index:1;">
+<ul role="menubar">
+<li class="firstmain"><a role="menuitem" href="index.html" target="_self">Home</a>
+</li>
+<li><a role="menuitem" href="download.html" target="_self">Download</a>
+</li>
+<li><a role="menuitem" href="purchase.html" target="_self">Purchase</a>
+</li>
+<li><a role="menuitem" href="getting_started.html" target="_self">Online&nbsp;Tutorials</a>
+</li>
+<li><a role="menuitem" href="templates.html" target="_self">Templates</a>
+</li>
+<li><a role="menuitem" href="support.html" target="_self">Support</a>
+</li>
+<li><a role="menuitem" href="https://www.wysiwygforum.tk" target="_blank">Forum</a>
+</li>
+<li><a role="menuitem" href="extensions.html" target="_self">Extensions</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="wb_Text4" style="position:absolute;left:81px;top:172px;width:863px;height:216px;z-index:5;">
+<span style="color:#666666;font-family:Arial;font-size:19px;"><strong>An introduction to the Blog object</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br><br>The word 'blog' is short for web log. A blog is a journal that's posted on the web for other to read. The Blog object provides an easy way to implement a blog on your website without special requirements on the web server, because all content is static (it's edited in Web Builder). <br>But unlike its name suggests, the Blog can be be used fore more than just a blog. It is also a quick way to display all kinds of data is a list or grid.<br><br>A blog item can have a subject, description, date and optionally an image.<br><br></span><span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Adding items<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">To add a new entry to your Blog, click the Add button in the properties. Give the entry a title and then type your blog's message in the text area.<br>Optionally you can insert an image and a link to a related web page. How the link is embedded in the item depends on the selected layout. <br>For most layouts the link will be assigned to the title. But some layouts also have a 'Read more' button.<br></span></div>
+<div id="wb_Text2" style="position:absolute;left:81px;top:1128px;width:838px;height:130px;z-index:6;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Layouts<br></strong></span><span style="color:#666666;font-family:Arial;font-size:13px;">One of the great features of the blog is the ability to change the layout of the items. There are several predefined layouts available and more variations can be downloaded from the website: <a href="free_extras_3.html" class="wwb_link" target="_blank">https://www.wysiwygwebbuilder.tk/free_extras.html</a><br><br>You can also create your own layouts (with HTML/CSS templates). The templates are stored in the folder Documents\WYSIWYG Web Builder\system\blog\. Note that this requires some knowlegde of HTML/CSS!<br><br>Here are a few example layouts (click for a larger image):</span></div>
+<div id="wb_Text3" style="position:absolute;left:81px;top:895px;width:838px;height:224px;z-index:7;">
+<span style="color:#666666;font-family:Arial;font-size:13px;"><strong>Comment Text</strong>, each entry will have a link at the bottom to allow readers to send comments. The default text is 'Send Comments', but you can change this to anything you like. If you leave this field blank, no link will be displayed. <strong>Comment Email</strong>, specifies the email address where the comments will be send to.<br><br><strong>Pagination </strong>displays a small subset of the items art any one time, while allowing the user to move through it with navigation buttons. The 'Items per page' property specifies how many items will be displayed per page. Click the Style button to change the appearance of the paginate buttons<br><br><strong>Order<br></strong>Specifies the order of the items on the page ('Ascending' or 'Descending').<br><br><strong>Columns<br></strong>Specifies whether to display the blog items in columns. This option is responsive, so each breakpoint can have different number of columns.<br><br></span></div>
+<div id="wb_Text6" style="position:absolute;left:81px;top:1735px;width:808px;height:50px;z-index:8;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Carousel</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>Blog items can also be displayed in a Carousel. When this option is enabled the blog will display the items in a Carousel slideshow:<br></span></div>
+<div id="wb_Image1" style="position:absolute;left:81px;top:388px;width:498px;height:486px;z-index:9;">
+<img src="images/blog1.jpg" id="Image1" alt=""></div>
+<div id="wb_PhotoGallery1" style="position:absolute;left:81px;top:1277px;width:808px;height:453px;z-index:10;">
+<table id="PhotoGallery1">
+   <tr>
+      <td class="thumbnail"><a href="images/blog2.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img0" src="images/blog2.jpg"></a></td>
+      <td class="thumbnail"><a href="images/blog3.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img1" src="images/blog3.jpg"></a></td>
+      <td class="thumbnail"><a href="images/blog4.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img2" src="images/blog4.jpg"></a></td>
+   </tr>
+   <tr>
+      <td class="thumbnail"><a href="images/blog5.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img3" src="images/blog5.jpg"></a></td>
+      <td class="thumbnail"><a href="images/blog6.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img4" src="images/blog6.jpg"></a></td>
+      <td class="thumbnail"><a href="images/blog7.jpg" data-rel="PhotoGallery1"><img alt="" id="PhotoGallery1_img5" src="images/blog7.jpg"></a></td>
+   </tr>
+</table>
+</div>
+<iframe name="InlineFrame1" id="InlineFrame1" style="position:absolute;left:81px;top:1785px;width:808px;height:223px;z-index:11;" src="blog_carousel.html" scrolling="no"></iframe>
+<div id="wb_Text1" style="position:absolute;left:81px;top:2174px;width:808px;height:50px;z-index:12;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>More information</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>More details about the blog options is available in the help.<br></span></div>
+<div id="wb_Text5" style="position:absolute;left:81px;top:2039px;width:808px;height:130px;z-index:13;">
+<span style="color:#666666;font-family:Arial;font-size:15px;"><strong>Responsive Blog</strong></span><span style="color:#666666;font-family:Arial;font-size:13px;"><br>The blog supports Responsive Fonts so the object can have different font sizes in breakpoints. This can be useful if you need a larger font for smaller screens. Each breakpoint can have a different text size.<br><br>Also the number of columns can be different in breakpoints. So larger breakpoints ycan have more columns then smaller ones. When the blog is part of a Layout Grid it will automctally stretch based on the screen width.<br><br></span></div>
+</div>
+</body>
+</html>

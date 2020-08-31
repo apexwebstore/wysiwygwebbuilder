@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Site Search Demo</title>
+<meta name="generator" content="WYSIWYG Web Builder - http://www.wysiwygwebbuilder.com">
+<link href="http://www.wysiwygwebbuilder.com/support/sitesearch/search.css" rel="stylesheet">
+<link href="http://www.wysiwygwebbuilder.com/support/sitesearch/index.css" rel="stylesheet">
+<script src="http://www.wysiwygwebbuilder.com/support/sitesearch/js/jquery-1.12.4.min.js"></script>
+<script src="http://www.wysiwygwebbuilder.com/support/sitesearch/js/searchindex.js"></script>
+<script src="http://www.wysiwygwebbuilder.com/support/sitesearch/js/wb.sitesearch.js"></script>
+<script>   
+   var features = '';
+   function searchPage(features)
+   {
+      searchResults('SiteSearch1', 'Layer1', 250, 3, true, true, true, true, 'No results', ' result(s) found for search term: ', 'seconds');
+      return false;
+   }
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      searchParseURL('SiteSearch1');
+   });
+</script>
+</head>
+<body>
+   <div id="container">
+      <form name="SiteSearch1_form" id="SiteSearch1_form" role="search" accept-charset="UTF-8" onsubmit="return searchPage(features)">
+         <input type="text" id="SiteSearch1" style="position:absolute;left:159px;top:139px;width:252px;height:16px;z-index:0;" name="SiteSearch1" value="" spellcheck="false" placeholder="Search this website" role="searchbox"></form>
+      <input type="button" id="Button1" onclick="searchPage();return false;" name="Search" value="Search" style="position:absolute;left:426px;top:139px;width:96px;height:26px;z-index:1;">
+      <div id="Layer1" style="position:absolute;text-align:left;left:159px;top:215px;width:650px;height:407px;z-index:2;">
+      </div>
+      <div id="wb_Text1" style="position:absolute;left:159px;top:193px;width:250px;height:16px;z-index:3;">
+         <span style="color:#000000;">Results:</span>
+      </div>
+      <div id="wb_Heading1" style="position:absolute;left:159px;top:32px;width:479px;height:40px;z-index:4;">
+         <h1 id="Heading1">Site Search Demo</h1>
+      </div>
+      <div id="wb_Text2" style="position:absolute;left:159px;top:110px;width:250px;height:16px;z-index:5;">
+         <span style="color:#696969;">Tip: search for 'lorem' or 'lorem -ipsum'</span>
+      </div>
+   </div>
+</body>
+</html>
